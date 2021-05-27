@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<Item name="Automated External Defibrilator" identifier="aed" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="A device that produces a controlled shock to treat cardiac arrest." useinhealthinterface="True" scale="0.185">
+	<Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" useinhealthinterface="True" scale="0.185">
 		<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.5"/>
 		<Fabricate suitablefabricators="fabricator" requiredtime="10">
@@ -101,7 +101,7 @@
 			</Projectile>
 		</Item>
 	</Override>
-	<Item name="Scalpel" identifier="advscalpel" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A tool used to make incisions during surgery." useinhealthinterface="True" scale="0.090">
+	<Item name="" identifier="advscalpel" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.090">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -148,7 +148,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="Hemostat" identifier="advhemostat" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A tool used to clamp bleeding during surgery." useinhealthinterface="True" scale="0.125">
+	<Item name="" identifier="advhemostat" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.125">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -181,7 +181,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="Surgical drill" identifier="surgicaldrill" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A tool used to drill bones" useinhealthinterface="True" scale="0.085">
+	<Item name="" identifier="surgicaldrill" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.085">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -225,7 +225,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="Osteosynthesis Implants" identifier="osteosynthesisimplants" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="Titanium implants for osteosynthesis." useinhealthinterface="True" scale="0.4">
+	<Item name="" identifier="osteosynthesisimplants" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.4">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -265,7 +265,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="Retractors" identifier="advretractors" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A tool used to retract skin during surgery." useinhealthinterface="True" scale="0.08">
+	<Item name="" identifier="advretractors" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.08">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -299,7 +299,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="Surgical Saw" identifier="surgerysaw" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A tool used to saw through bones." useinhealthinterface="True" scale="0.15">
+	<Item name="" identifier="surgerysaw" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.15">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator" outcondition="100.0">
@@ -341,7 +341,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="Suture" identifier="suture" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="Suture for suturing wounds and incisions." useinhealthinterface="True" scale="0.075">
+	<Item name="" identifier="suture" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.075">
 		<PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1"/>
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5"/>
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
@@ -407,7 +407,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="Tweezers" identifier="tweezers" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="Used to remove foreign bodies." useinhealthinterface="True" scale="0.07">
+	<Item name="" identifier="tweezers" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.07">
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
 			<RequiredItem identifier="steel"/>
@@ -440,7 +440,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="Tourniquet" identifier="tourniquet" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="A device to stop blood flow through a vein or artery." useinhealthinterface="True" scale="0.1">
+	<Item name="" identifier="tourniquet" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.1">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1"/>
 		<Fabricate suitablefabricators="medicalfabricator" outcondition="100.0">
@@ -727,7 +727,7 @@
 			</MeleeWeapon>
 		</Item>
 	</Override>
-	<Item name="Mannitolit" identifier="mannitolit" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="Medicine for brain regeneration" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+	<Item name="" identifier="mannitolit" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
 		<PreferredContainer primary="medcab" spawnprobability="0.05"/>
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.25"/>
 		<PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01"/>
@@ -785,7 +785,7 @@
 			</StatusEffect>
 		</Projectile>
 	</Item>
-	<Item name="Operating table" identifier="operatingtable" scale="0.4" Tags="smallitem,medical" maxstacksize="1" category="medical" description="Used to keep patients immobile for surgery and equipped with ALV." isshootable="true">
+	<Item name="" identifier="operatingtable" scale="0.4" Tags="smallitem,medical" maxstacksize="1" category="medical" isshootable="true">
 		<Upgrade gameversion="0.12.0.0" noninteractable="false"/>
 		<Body width="416" height="192" density="40"/>
 		<Price baseprice="400" soldeverywhere="false">

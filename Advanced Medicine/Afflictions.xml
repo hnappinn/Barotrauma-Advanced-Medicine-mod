@@ -2,9 +2,9 @@
 <Afflictions>
 
 <Affliction
-    name="Ventricular Tachycardia"
+    name=""
     identifier="vt"
-    description="No pulse,"
+    description=""
     limbspecific="false"
     indicatorlimb="Torso"
     showiconthreshold="25"
@@ -51,9 +51,9 @@
   </Affliction>
 
   <Affliction
-    name="Ventricular Fibrillation"
+    name=""
     identifier="vf"
-    description="No pulse."
+    description=""
     limbspecific="false"
     indicatorlimb="Torso"
     showiconthreshold="0"
@@ -138,9 +138,9 @@
   </Affliction>
 
 <Affliction
-    name="Asystole"
+    name=""
     identifier="asys"
-    description="No pulse."
+    description=""
     limbspecific="false"
     indicatorlimb="Torso"
     showiconthreshold="0"
@@ -185,9 +185,9 @@
   </Affliction>
 
   <Affliction
-    name="Hypotension"
+    name=""
     identifier="hypotension"
-    description="The patient is pale and cold."
+    description=""
     limbspecific="false"
     indicatorlimb="Torso"
     activationthreshold="0"
@@ -229,9 +229,9 @@
   </Affliction>
   
    <Affliction
-    name="Cerebral Hypoxia"
+    name=""
     identifier="hypoxia"
-    description="The patient has fainting, memory loss, and seizures."
+    description=""
     causeofdeathdescription="Braindead"
     selfcauseofdeathdescription="You have died of Cerebral Hypoxia."
     limbspecific="false"
@@ -318,9 +318,9 @@
   </Affliction>
 
   <Affliction
-    name="Surgery incision"
+    name=""
     identifier="surgeryincision"
-    description="An incision made by a scalpel."
+    description=""
     limbspecific="True"
     maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
@@ -334,9 +334,9 @@
   </Affliction>
 
   <Affliction
-    name="Clamped bleeding"
+    name=""
     identifier="clampedbleeders"
-    description="Bleeding from the incision was stopped with a hemostat."
+    description=""
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
@@ -349,9 +349,9 @@
   </Affliction>
   
   <Affliction
-    name="Clamped arteries"
+    name=""
     identifier="arteriesclamp"
-    description="Bleeding from artery is temporarily stopped."
+    description=""
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
@@ -359,9 +359,9 @@
   </Affliction>
 
   <Affliction
-    name="Splint"
+    name=""
     identifier="boneclamp"
-    description="Immobilized limb with splint."
+    description=""
     limbspecific="true"
     maxstrength="100"
     type="resistance"
@@ -374,9 +374,9 @@
   </Affliction>
 
   <Affliction
-    name="Drilled bones"
+    name=""
     identifier="drilledbones"
-    description="Carefully drilled holes for implant placement."
+    description=""
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="15">
@@ -389,9 +389,9 @@
   </Affliction>
 
   <Affliction
-    name="Retracted skin"
+    name=""
     identifier="retractedskin"
-    description="The skin is held open by a set of retractors."
+    description=""
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
@@ -404,9 +404,9 @@
   </Affliction>
   
   <Affliction
-    name="Stitched incision"
+    name=""
     identifier="suturedi"
-    description="Sutures are present."
+    description=""
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
@@ -414,9 +414,9 @@
   </Affliction>
 
   <Affliction
-    name="Stitched wound"
+    name=""
     identifier="suturedw"
-    description="Sutures are present."
+    description=""
     limbspecific="true"
     maxstrength="100"
     type="damage"> 
@@ -427,9 +427,9 @@
   </Affliction>
   
   <Affliction
-    name="Bones Sawed"
+    name=""
     identifier="boncut"
-    description="The bones are sliced open."
+    description=""
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
@@ -442,9 +442,9 @@
   </Affliction>
   
   <Affliction
-    name="Fracture"
+    name=""
     identifier="fracture"
-    description="Bone is broken."
+    description=""
     limbspecific="true"
     type="fractures"
     maxstrength="100">
@@ -474,9 +474,9 @@
   </Affliction>
 
   <Affliction
-    name="Arterial bleeding"
+    name=""
     identifier="arterialcut"
-    description="Blood flows out of the artery."
+    description=""
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
@@ -490,9 +490,9 @@
   </Affliction>
   
   <Affliction
-    name="Traumatic shock"
+    name=""
     identifier="traumaticshock"
-    description="The patient experiences severe pain and stress."
+    description=""
     limbspecific="false"
     indicatorlimb="Torso"
     activationthreshold="0"
@@ -840,9 +840,9 @@
   </Override>
 
   <Affliction
-    name="Anesthesia"
+    name=""
     identifier="anesthesia"
-    description="Insensitivity to pain."
+    description=""
     type="resistance"
     isbuff="true"
     limbspecific="false"
