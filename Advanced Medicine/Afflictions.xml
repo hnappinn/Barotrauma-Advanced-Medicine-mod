@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Afflictions>
+
+<Affliction
+    name="Ventricular Tachycardia"
+    identifier="vt"
+    description="No pulse,"
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="25"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="2" strengthchange="0.1">
+    </Effect>
+
+    <Effect minstrength="2" maxstrength="4" strengthchange="10">
+    </Effect>
+
+    <Effect minstrength="5" maxstrength="30" strengthchange="3">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5"/>
+      <StatusEffect target="Character">
+        <Affliction identifier="hypotension" amount="0.5" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="30" maxstrength="98" resistancefor="vt" strengthchange="2">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5"/>
+      <StatusEffect target="Character">
+        <Affliction identifier="hypotension" amount="0.7" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="98" maxstrength="99" strengthchange="3">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5"/>
+      <StatusEffect target="Character">
+      <Affliction identifier="hypotension" amount="0.7" />
+      <Conditional vf="eq 0" />
+        <Affliction identifier="vf" amount="1" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="99" maxstrength="100" strengthchange="3">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5"/>
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="vt" amount="9999" />
+        <Affliction identifier="hypotension" amount="0.7" />
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="0,133,128,128" color="0,255,0,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Ventricular Fibrillation"
+    identifier="vf"
+    description="No pulse."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="0"
+    maxstrength="100">
+    <StatusEffect target="Character">
+    <ReduceAffliction identifier="vt" amount="999" setvalue="true"/>
+    </StatusEffect>
+
+    <Effect minstrength="0" maxstrength="2"
+      minscreendistort="0.8"
+      maxscreendistort="1.0"
+      minscreenblur="0.8"
+      maxscreenblur="1.0"
+      strengthchange="10">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1"/>
+      <StatusEffect target="Character">
+        <Affliction identifier="hypotension" amount="1" />
+        <Affliction identifier="stun" strength="15" probability="0.4" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="2" maxstrength="20"
+      minscreendistort="0.8"
+      maxscreendistort="1.0"
+      minscreenblur="0.8"
+      maxscreenblur="1.0"
+      strengthchange="2.5">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1"/>
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="vt" amount="9999" setvalue="true"/>
+        <Affliction identifier="hypotension" amount="1" />
+        <Affliction identifier="stun" strength="15" probability="0.4" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="20" maxstrength="98"
+      minscreendistort="0.8"
+      maxscreendistort="1.0"
+      minscreenblur="0.8"
+      maxscreenblur="1.0"
+      strengthchange="0.7">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1"/>
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="vt" amount="9999" setvalue="true"/>
+        <Affliction identifier="hypotension" amount="1" />
+        <Affliction identifier="stun" strength="15" probability="0.4" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="98" maxstrength="99"
+    minscreendistort="0.8"
+    maxscreendistort="1.0"
+    minscreenblur="0.8"
+    maxscreenblur="1.0"
+    strengthchange="1">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1"/>
+      <ReduceAffliction identifier="vt" amount="9999" setvalue="true"/>
+      <StatusEffect target="Character" disabledeltatime = "true">
+        <Affliction identifier="hypotension" amount="0.5" />
+        <Affliction identifier="stun" strength="15" probability="0.4" />
+         <Conditional asys="eq 0"/>
+          <Affliction identifier="asys" amount="3" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="99" maxstrength="100"
+    minscreendistort="0.8"
+    maxscreendistort="1.0"
+    minscreenblur="0.8"
+    maxscreenblur="1.0"
+    strengthchange="1">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1"/>
+      <StatusEffect target="Character">
+      <Affliction identifier="hypotension" amount="1" />
+      <Affliction identifier="stun" strength="15" probability="0.4" />
+      <ReduceAffliction identifier="vf" amount="9999" />
+      <ReduceAffliction identifier="vt" amount="9999" setvalue="true"/>
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="0,6,128,128" color="0,255,0,255" origin="0,0"/>
+  </Affliction>
+
+<Affliction
+    name="Asystole"
+    identifier="asys"
+    description="No pulse."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="0"
+    maxstrength="100">
+    <StatusEffect target="Character">
+    <ReduceAffliction identifier="vt" amount="999" setvalue="true"/>
+    </StatusEffect>
+
+    <Effect minstrength="0" maxstrength="1" strengthchange="-0.5">
+      <StatusEffect target="Character"  disabledeltatime="true">
+      <Affliction identifier="hypotension" amount="1" />
+      <Affliction identifier="stun" strength="15" probability="0.4" />
+      <ReduceAffliction identifier="asys" amount="9999"/>
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="1" maxstrength="2" strengthchange="-0.5">
+      <StatusEffect target="Character"  disabledeltatime="true" setvalue="true">
+      <Affliction identifier="hypotension" amount="1" />
+      <Affliction identifier="stun" strength="15" probability="0.4" />
+      <Conditional vf="eq 0" />
+          <Affliction identifier="vf" amount="50" />
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="2" maxstrength="100"
+      strengthchange="0.5"
+      minscreendistort="0.8"
+      maxscreendistort="1.0"
+      minscreenblur="0.8"
+      maxscreenblur="1.0">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1"/>
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="vt" amount="9999" setvalue="true"/>
+        <Affliction identifier="hypotension" amount="1" />
+        <Affliction identifier="stun" strength="15" probability="0.4" />
+      </StatusEffect>
+    </Effect>
+
+  <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="124,6,128,128" color="106,106,198,255" origin="0,0"/>
+    
+  </Affliction>
+
+  <Affliction
+    name="Hypotension"
+    identifier="hypotension"
+    description="The patient is pale and cold."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    activationthreshold="0"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="15" strengthchange="-0.3">
+    </Effect>
+
+    <Effect minstrength="15" maxstrength="30" strengthchange="-0.1">
+      <StatusEffect target="Character">
+        <Affliction identifier="oxygenlow" amount="1"/>
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="30" maxstrength="60" strengthchange="-0.05">
+      <StatusEffect target="Character">
+        <Affliction identifier="oxygenlow" amount="5"/>
+        <Affliction identifier="hypoxia" amount="0.1"/>
+        </StatusEffect>
+        <Conditional vt="eq 0"/>
+        <StatusEffect disabledeltatime="true" target="Character">
+        <Affliction identifier="vt" amount="1" probability="0.05"/>
+      </StatusEffect>
+    </Effect>
+
+     <Effect minstrength="60" maxstrength="100" strengthchange="-0.025">
+      <StatusEffect target="Character">
+        <Affliction identifier="oxygenlow" amount="15"/>
+        <Affliction identifier="hypoxia" amount="0.2"/>
+        </StatusEffect>
+        <StatusEffect disabledeltatime="true" target="Character">
+        <Conditional vt="eq 0"/>
+        <Affliction identifier="vt" amount="1"/>
+      </StatusEffect>
+    </Effect>
+
+
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="124,133,128,128" color="68,157,198,255" origin="0,0"/>
+  </Affliction>
+  
+   <Affliction
+    name="Cerebral Hypoxia"
+    identifier="hypoxia"
+    description="The patient has fainting, memory loss, and seizures."
+    causeofdeathdescription="Braindead"
+    selfcauseofdeathdescription="You have died of Cerebral Hypoxia."
+    limbspecific="false"
+    indicatorlimb="Head"
+    activationthreshold="0"
+    maxstrength="200">
+
+    <Effect minstrength="0" maxstrength="50" strengthchange="-0.1"
+      minscreendistort="0"
+      maxscreendistort="0.1"
+      minscreenblur="0.1"
+      maxscreenblur="0.2">
+    </Effect>
+
+    <Effect minstrength="50" maxstrength="110" strengthchange="-0.05"
+      minscreendistort="0.2"
+      maxscreendistort="1"
+      minscreenblur="0.6"
+      maxscreenblur="1"
+      minradialdistort="0.2"
+      maxradialdistort="1">
+    </Effect>
+
+    <Effect minstrength="110" maxstrength="190" strengthchange="-0.01"
+      minscreendistort="0.8"
+      maxscreendistort="1"
+      minscreenblur="1"
+      maxscreenblur="1"
+      minradialdistort="0.8"
+      maxradialdistort="1">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5"/>
+      <StatusEffect target="Character">
+        <Affliction identifier="oxygenlow" amount="1" />
+      </StatusEffect>
+      <StatusEffect disabledeltatime="true" target="Character">
+        <Affliction identifier="stun" amount="2" probability="0.01"/>
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="190" maxstrength="200"
+      minscreendistort="0.8"
+      maxscreendistort="1"
+      minscreenblur="1"
+      maxscreenblur="1"
+      minradialdistort="0.8"
+      maxradialdistort="1"
+      minvitalitydecrease="30"
+      maxvitalitydecrease="200">
+      <StatusEffect target="Character">
+        <Affliction identifier="stun" amount="15" setvalue="true"/>
+        <Affliction identifier="oxygenlow" amount="15" />
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
+    </Affliction>
+
+    <Affliction
+    name="CPR"
+    identifier="cpr_buff"  
+    isbuff="true"
+    limbspecific="true"
+    indicatorlimb="Torso"
+    activationthreshold="0"
+    showiconthreshold="10"
+    maxstrength="2">
+
+    <Effect minstrength="0" maxstrength="2"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="-0.5"
+      resistancefor="vt, internaldamage"
+      minresistance="1.0"
+      maxresistance="1.0">
+      <StatusEffect tags="medical" target="Character" checkconditionalalways="true">
+        <ReduceAffliction identifier="hypotension"      amount="1.5" />
+        <ReduceAffliction identifier="vf"      amount="1" />
+        <ReduceAffliction identifier="asys"      amount="0.65" />
+        <ReduceAffliction identifier="vt"      amount="2.25" />
+        <ReduceAffliction identifier="oxygenlow"      amount="4.5" />
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Surgery incision"
+    identifier="surgeryincision"
+    description="An incision made by a scalpel."
+    limbspecific="True"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+      <Affliction identifier="bloodloss" strength="0.7" />
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="2"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Clamped bleeding"
+    identifier="clampedbleeders"
+    description="Bleeding from the incision was stopped with a hemostat."
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="0.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Clamped arteries"
+    identifier="arteriesclamp"
+    description="Bleeding from artery is temporarily stopped."
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Splint"
+    identifier="boneclamp"
+    description="Immobilized limb with splint."
+    limbspecific="true"
+    maxstrength="100"
+    type="resistance"
+    isbuff="true"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"
+	  resistancefor="fractures"
+    minresistance="0.9"
+    maxresistance="1"/>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Drilled bones"
+    identifier="drilledbones"
+    description="Carefully drilled holes for implant placement."
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="15">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Retracted skin"
+    identifier="retractedskin"
+    description="The skin is held open by a set of retractors."
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Stitched incision"
+    identifier="suturedi"
+    description="Sutures are present."
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Stitched wound"
+    identifier="suturedw"
+    description="Sutures are present."
+    limbspecific="true"
+    maxstrength="100"
+    type="damage"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.2" multiplybymaxvitality="true"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0.8"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Bones Sawed"
+    identifier="boncut"
+    description="The bones are sliced open."
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Fracture"
+    identifier="fracture"
+    description="Bone is broken."
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/bonebreak4.ogg"  selectionmode="random" range="500"/>
+    <sound file="Mods/Advanced Medicine/bonebreak3.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/bonebreak2.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/bonebreak1.ogg"  range="500"/>
+    <Affliction identifier="stun" amount="2"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5"/>
+    </Effect>
+    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
+    minvitalitydecrease="0"
+    maxvitalitydecrease="0.2"
+    multiplybymaxvitality="true">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4"/>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="limb" amount="0.1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Arterial bleeding"
+    identifier="arterialcut"
+    description="Blood flows out of the artery."
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    <StatusEffect target="limb">
+    <Conditional arteriesclamp="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+      <Affliction identifier="bloodloss" strength="1.5" />
+    </StatusEffect>
+    </Effect>
+ <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Traumatic shock"
+    identifier="traumaticshock"
+    description="The patient experiences severe pain and stress."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    activationthreshold="0"
+    showiconthreshold="30"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="30" strengthchange="-1">
+    </Effect>
+    <Effect minstrength="30" maxstrength="60" strengthchange="-0.5">
+      <StatusEffect target="Character">
+        <Affliction identifier="oxygenlow" amount="3"/>
+        <Affliction identifier="hypotension" amount="0.5"/>
+     </StatusEffect>
+  <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional isfemale="true"/>
+  <sound file="Content/Characters/Human/female_damage1.ogg"  delay="5" range="500"/>
+  <sound file="Content/Characters/Human/female_damage2.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/female_damage3.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/female_damage4.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/female_damage5.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/female_damage6.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/female_damage7.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/female_damage8.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/female_damage9.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/female_damage10.ogg" range="500"/>
+  </StatusEffect>
+  <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional ismale="true"/>
+  <sound file="Content/Characters/Human/male_damage1.ogg"  delay="5" range="500"/>
+  <sound file="Content/Characters/Human/male_damage2.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/male_damage3.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/male_damage4.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/male_damage5.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/male_damage6.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/male_damage7.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/male_damage8.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/male_damage9.ogg"  range="500"/>
+  <sound file="Content/Characters/Human/male_damage10.ogg" range="500"/>
+  <sound file="Content/Characters/Human/male_damage11.ogg" range="500"/>
+  </StatusEffect>
+    </Effect>
+     <Effect minstrength="60" maxstrength="100" strengthchange="-0.5">
+      <StatusEffect target="Character">
+        <Affliction identifier="oxygenlow" amount="10"/>
+        <Affliction identifier="hypotension" amount="3"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+</Affliction>
+<Override>
+<OxygenLow
+    name="Oxygen low"
+    identifier="oxygenlow"
+    description="The skin is pale and clammy, and the lips turning blue."
+    type="oxygenlow"
+    causeofdeathdescription="Suffocated"
+    selfcauseofdeathdescription="You have suffocated."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    activationthreshold="1"
+    karmachangeonapplied="-0.2"
+    maxstrength="200">
+    <Effect minstrength="60" maxstrength="100" multiplybymaxvitality="true"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0.60">
+        <StatusEffect target="Character">
+        <Affliction identifier="hypoxia" amount="0.1"/>
+        </StatusEffect>
+      <StatusEffect disabledeltatime="true" target="Character">
+      <Conditional vt="eq 0"/>
+        <Affliction identifier="vt" amount="1" probability="0.01"/>
+      </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="100" maxstrength="200" multiplybymaxvitality="true"
+      minvitalitydecrease="0.60"
+      maxvitalitydecrease="1.05">
+      <StatusEffect target="Character">
+        <Affliction identifier="hypoxia" amount="0.5"/>
+        <affliction identifier="stun" amount="5"/>
+        </StatusEffect>
+      <StatusEffect disabledeltatime="true" target="Character">
+      <Conditional vt="eq 0"/>
+        <Affliction identifier="vt" amount="1" probability="0.08"/>
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+  </OxygenLow>
+  </Override>
+
+  
+  <Override>
+  <Bloodloss
+    name="Bloodloss"
+    identifier="bloodloss"
+    description="The patient is pale and cold. Their heart beats in an alarmingly rapid fashion."
+    type="bloodloss"
+    causeofdeathdescription="Bled to death"
+    selfcauseofdeathdescription="You have bled to death."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    activationthreshold="0"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="15" multiplybymaxvitality="true"
+      strengthchange="-0.5"
+      dialogflag="Bloodloss"/>
+    <Effect minstrength="15" maxstrength="35" multiplybymaxvitality="true"
+      strengthchange="-0.5"
+      dialogflag="Bloodloss">
+      <StatusEffect target="character">
+      <Affliction identifier="hypotension" amount="0.3"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="35" maxstrength="75" multiplybymaxvitality="true"
+      strengthchange="-0.3"
+      dialogflag="Bloodloss">
+      <StatusEffect target="character">
+      <Affliction identifier="hypotension" amount="0.5"/>
+      <Affliction identifier="hypoxia" amount="0.05"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" multiplybymaxvitality="true"
+      strengthchange="-0.1"
+      dialogflag="Bloodloss">
+      <StatusEffect target="character">
+      <Affliction identifier="hypotension" amount="5"/>
+      <Affliction identifier="hypoxia" amount="0.3"/>
+      </StatusEffect>
+      <StatusEffect target="character" disabledeltatime="true" comparison="And">
+      <Conditional asys="eq 0" vf="eq 0"/>
+      <Affliction identifier="asys" amount="5" probability="0.03"/>
+      </StatusEffect>
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,768,128,128" color="139,60,42,255" origin="0,0"/>
+  </Bloodloss>
+  </Override>
+
+  <Override>
+  <CPRSettings
+    revivechanceperskill="0.02"
+    revivechanceexponent="2"
+    revivechancemin="0"
+    revivechancemax="0"
+    stabilizationperskill="0.15"
+    stabilizationmin="1"
+    stabilizationmax="5"
+    damageskillthreshold="200"
+    damageskillmultiplier="0.1"
+    insufficientskillaffliction="cpr_buff">
+
+  </CPRSettings>
+
+</Override>
+<Override>
+<InternalDamage
+    name="Internal Damage"
+    identifier="internaldamage"
+    description="The area is an ugly shade of purple, and apparently very painful to touch. You suspect a bone might be broken."
+    type="damage"
+    causeofdeathdescription="Died of internal injuries"
+    selfcauseofdeathdescription="You have succumbed to your internal injuries."
+    limbspecific="true"
+    maxstrength="100"
+    damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0.5"/>
+    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+				minvitalitydecrease="0.5"
+				maxvitalitydecrease="1">
+				<StatusEffect target="Limb">
+					<Affliction identifier="fracture" indicatorlimb="limb" amount="1" probability="0.005"/>
+				</StatusEffect>
+			</Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,768,128,128" color="195,136,60,255" origin="0,0"/>
+  </InternalDamage>
+  </Override>
+
+  <!--Blunt force trauma is received from crowbars, wrenches, etc.-->
+  <Override>
+  <InternalDamage
+	  name="Blunt force trauma"
+	  identifier="blunttrauma"
+	  description=""
+	  type="damage"
+	  causeofdeathdescription=""
+	  selfcauseofdeathdescription=""
+	  limbspecific="true"
+	  maxstrength="100"
+	  damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true"
+			minvitalitydecrease="0"
+			maxvitalitydecrease="0.5"/>
+    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+				minvitalitydecrease="0.5"
+				maxvitalitydecrease="1">
+				<StatusEffect target="Limb">
+					<Affliction identifier="fracture" indicatorlimb="limb" amount="1" probability="0.005"/>
+				</StatusEffect>
+			</Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </InternalDamage>
+  </Override>
+
+  <!--Lacerations are received from sharp damage sources-->
+  <Override>
+  <InternalDamage
+	  name="Lacerations"
+	  identifier="lacerations"
+	  description=""
+	  type="damage"
+	  causeofdeathdescription=""
+	  selfcauseofdeathdescription=""
+	  limbspecific="true"
+	  maxstrength="100"
+	  damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="5" multiplybymaxvitality="true" strengthchange="-0.01"
+			minvitalitydecrease="0"
+			maxvitalitydecrease="0.05"/>
+    <Effect minstrength="5" maxstrength="50" multiplybymaxvitality="true"
+			minvitalitydecrease="0.05"
+			maxvitalitydecrease="0.5"/>
+    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+				minvitalitydecrease="0.5"
+				maxvitalitydecrease="1">
+				<StatusEffect target="Limb">
+          <Affliction identifier="arterialcut" indicatorlimb="limb" amount="5" probability="0.005"/>
+				</StatusEffect>
+			</Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </InternalDamage>
+  </Override>
+
+  <!--Bite wounds are monster specific-->
+  <Override>
+  <InternalDamage
+	  name="Bite wounds"
+	  identifier="bitewounds"
+	  description=""
+	  type="damage"
+	  causeofdeathdescription="Mauled to death"
+	  selfcauseofdeathdescription="You have been mauled to death."
+	  limbspecific="true"
+	  maxstrength="100"
+	  damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="5" multiplybymaxvitality="true" strengthchange="-0.01"
+			minvitalitydecrease="0"
+			maxvitalitydecrease="0.05"/>
+    <Effect minstrength="5" maxstrength="50" multiplybymaxvitality="true"
+			minvitalitydecrease="0.05"
+			maxvitalitydecrease="0.5"/>
+    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+				minvitalitydecrease="0.5"
+				maxvitalitydecrease="1">
+				<StatusEffect target="Limb">
+					<Affliction identifier="fracture" indicatorlimb="limb" amount="1" probability="0.001"/>
+          <Affliction identifier="arterialcut" indicatorlimb="limb" amount="5" probability="0.005"/>
+				</StatusEffect>
+			</Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="195,136,60,255" origin="0,0"/>
+  </InternalDamage>
+  </Override>
+  
+  <Override>
+  <InternalDamage
+	  name="Gunshot wound"
+	  identifier="gunshotwound"
+	  description="The entry site is a small, dark, bruised hole oozing a little blood. The exit wound however is a large ragged mess of exposed tissue and pouring blood."
+	  type="damage"
+	  causeofdeathdescription="Shot to death"
+	  selfcauseofdeathdescription="You have died of gunshot wounds."
+	  limbspecific="true"
+	  maxstrength="100"
+	  karmachangeonapplied="-1"
+	  damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true"
+		  minvitalitydecrease="0"
+		  maxvitalitydecrease="0.5"
+		  dialogflag="GunshotWound"/>
+    <Effect minstrength="59" maxstrength="100" multiplybymaxvitality="true"
+		  minvitalitydecrease="0.5"
+		  maxvitalitydecrease="1"
+		  dialogflag="GunshotWound">
+				<StatusEffect target="Limb">
+					<Affliction identifier="fracture" indicatorlimb="limb" amount="1" probability="0.005"/>
+          <Affliction identifier="arterialcut" indicatorlimb="limb" amount="5" probability="0.001"/>
+				</StatusEffect>
+			</Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,768,128,128" color="195,60,60,255" origin="0,0"/>
+  </InternalDamage>
+  </Override>
+
+  <!--Mainly for medical side effects-->
+  <Override>
+  <InternalDamage
+	  name="Organ damage"
+	  identifier="organdamage"
+	  description=""
+	  type="damage"
+	  causeofdeathdescription=""
+	  selfcauseofdeathdescription=""
+	  limbspecific="false"
+    indicatorlimb="Torso"
+	  maxstrength="100"
+	  damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" strengthchange="-0.03"
+			minvitalitydecrease="0"
+			maxvitalitydecrease="1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,384,128,128" color="195,136,60,255" origin="0,0"/>
+  </InternalDamage>
+  </Override>
+
+  <!--For damage inflicted by explosions' blast waves and other sources that aren't quite blunt force trauma-->
+  <Override>
+  <InternalDamage
+    name="Deep tissue injury"
+    identifier="explosiondamage"
+    description=""
+    type="damage"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="true"
+    maxstrength="100"
+    damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="5" multiplybymaxvitality="true" strengthchange="-0.01"
+			minvitalitydecrease="0"
+			maxvitalitydecrease="0.05"/>
+    <Effect minstrength="5" maxstrength="45" multiplybymaxvitality="true"
+			minvitalitydecrease="0.05"
+			maxvitalitydecrease="0.45"/>
+    <Effect minstrength="45" maxstrength="100" multiplybymaxvitality="true"
+				minvitalitydecrease="0.45"
+				maxvitalitydecrease="1">
+				<StatusEffect target="Limb">
+					<Affliction identifier="fracture" indicatorlimb="limb" amount="1" probability="0.001"/>
+          <Affliction identifier="arterialcut" indicatorlimb="limb" amount="5" probability="0.005"/>
+				</StatusEffect>
+			</Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </InternalDamage>
+  </Override>
+
+  <Affliction
+    name="Anesthesia"
+    identifier="anesthesia"
+    description="Insensitivity to pain."
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="200">
+    <Effect minstrength="0" maxstrength="200"
+      strengthchange="-0.3"
+	    resistancefor="damage"
+      minresistance="0"
+      maxresistance="0.5"/>
+    <Effect minstrength="0" maxstrength="200"
+      strengthchange="-0.3"
+	    resistancefor="burn"
+      minresistance="0"
+      maxresistance="0.5"/>
+    <Effect minstrength="0" maxstrength="200"
+      strengthchange="-0.3"
+	    resistancefor="fractures"
+      minresistance="0"
+      maxresistance="0.5"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Table"
+    identifier="table"
+    description=""
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    maxstrength="3"
+    showiconthreshold="10">
+    <Effect minstrength="0" maxstrength="3" strengthchange="-1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+  
+  </Afflictions>

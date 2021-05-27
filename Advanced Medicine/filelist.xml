@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.13.3.11" steamworkshopid="2488816950" installtime="1622116619">
+  <Afflictions file="Mods/Advanced Medicine/Afflictions.xml" />
+  <None file="Mods/Advanced Medicine/Defib.png" />
+  <Item file="Mods/Advanced Medicine/items.xml" />
+  <None file="Mods/Advanced Medicine/drill.ogg" />
+  <None file="Mods/Advanced Medicine/squelch1.ogg" />
+  <None file="Mods/Advanced Medicine/Defib1.ogg" />
+  <None file="Mods/Advanced Medicine/Icons.png" />
+  <None file="Mods/Advanced Medicine/Defib2.ogg" />
+  <None file="Mods/Advanced Medicine/suture.ogg" />
+  <None file="Mods/Advanced Medicine/bonebreak1.ogg" />
+  <None file="Mods/Advanced Medicine/bonebreak2.ogg" />
+  <None file="Mods/Advanced Medicine/bonebreak3.ogg" />
+  <None file="Mods/Advanced Medicine/bonebreak4.ogg" />
+  <None file="Mods/Advanced Medicine/tourniquet.png" />
+  <None file="Mods/Advanced Medicine/scalpel.png" />
+  <None file="Mods/Advanced Medicine/hemostat.png" />
+  <None file="Mods/Advanced Medicine/suture.png" />
+  <None file="Mods/Advanced Medicine/Tweezers.png" />
+  <None file="Mods/Advanced Medicine/drill.png" />
+  <None file="Mods/Advanced Medicine/retractor.png" />
+  <None file="Mods/Advanced Medicine/bonesaw.png" />
+</contentpackage>
