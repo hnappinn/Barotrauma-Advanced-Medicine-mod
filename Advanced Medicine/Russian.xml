@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Russian" nowhitespace="false" translatedname="Русский">
 
-	<entityname.aed>Автоматический внешний дефибриллятор</entityname.aed>
-	<entitydescription.aed>Устройство, производящее управляемый шок для лечения остановки сердца.</entitydescription.aed>
+	<entityname.aed>Автоматический наружный дефибриллятор</entityname.aed>
+	<entitydescription.aed>Устройство, которое производит контролируемый шок для лечения остановки сердца.</entitydescription.aed>
 	
 	<entityname.advscalpel>Скальпель</entityname.advscalpel>
 	<entitydescription.advscalpel>Инструмент, используемый для надрезов во время операции.</entitydescription.advscalpel>
@@ -17,13 +17,13 @@
 	<entitydescription.osteosynthesisimplants>Титановые имплантаты для остеосинтеза.</entitydescription.osteosynthesisimplants>
 	
 	<entityname.advretractors>Расширитель</entityname.advretractors>
-	<entitydescription.advretractors>Инструмент, используемый для втягивания кожи во время операции.</entitydescription.advretractors>
+	<entitydescription.advretractors>Инструмент, используемый для оттягивания кожи во время операции.</entitydescription.advretractors>
 		
 	<entityname.surgerysaw>Хирургическая пила</entityname.surgerysaw>
 	<entitydescription.surgerysaw>Инструмент, используемый для распиливания костей.</entitydescription.surgerysaw>		
 	
-	<entityname.suture>Хирургическая игла</entityname.suture>
-	<entitydescription.suture>Нить с иглой для зашивания рваных ран и надрезов.</entitydescription.suture>
+	<entityname.suture>Хирургические швы</entityname.suture>
+	<entitydescription.suture>Швы со встроенной иглой для зашивания ран и надрезов.</entitydescription.suture>
 	
 	<entityname.tweezers>Пинцет</entityname.tweezers>
 	<entitydescription.tweezers>Используется для удаления инородных тел.</entitydescription.tweezers>
@@ -31,8 +31,8 @@
 	<entityname.tourniquet>Жгут</entityname.tourniquet>
 	<entitydescription.tourniquet>Используется для остановки кровотока по вене или артерии.</entitydescription.tourniquet>
 
-	<entityname.mannitolit>Маннит</entityname.mannitolit>
-	<entitydescription.mannitolit>Лекарство для ускореного ввостановления после гипоксии.</entitydescription.mannitolit>
+	<entityname.mannitolit>Маннитолит</entityname.mannitolit>
+	<entitydescription.mannitolit>Лекарство для ускореного восстановления после гипоксии.</entitydescription.mannitolit>
 	
 	<entityname.operatingtable>Операционный стол</entityname.operatingtable>
 	<entitydescription.operatingtable>Используется для сохранения неподвижности пациентов во время операции. Оснащён ИВЛ.</entitydescription.operatingtable>
@@ -49,7 +49,7 @@
 	
 	<!-- TEMPLATE -->
 	
-	<afflictionname.vt>Вентрикулярная тахикардия.</afflictionname.vt>
+	<afflictionname.vt>Тахикардия желудочков</afflictionname.vt>
 	<afflictiondescription.vt>Нет пульса.</afflictiondescription.vt>
 	
 	<afflictionname.vf>Фибриляция желудочков</afflictionname.vf>
@@ -63,7 +63,7 @@
 	
 	<afflictionname.hypoxia>Церебральная гипоксия</afflictionname.hypoxia>
 	<afflictiondescription.hypoxia>У пациента обмороки, потеря памяти и судороги.</afflictiondescription.hypoxia>
-	<afflictioncauseofdeath.hypoxia>Мозг умер </afflictioncauseofdeath.hypoxia>
+	<afflictioncauseofdeath.hypoxia>Смерть мозга</afflictioncauseofdeath.hypoxia>
 	<afflictioncauseofdeathself.hypoxia>Вы умерли от церебральной гипоксии.</afflictioncauseofdeathself.hypoxia>
 	
 	<afflictionname.surgeryincision>Хирургический надрез</afflictionname.surgeryincision>
@@ -79,16 +79,16 @@
 	<afflictiondescription.boneclamp>Конечность обездвижена с помощью шины.</afflictiondescription.boneclamp>
 	
 	<afflictionname.drilledbones>Просверленные кости</afflictionname.drilledbones>
-	<afflictiondescription.drilledbones>Тщательно просверленные отверстия для установки имплантата.</afflictiondescription.drilledbones>
+	<afflictiondescription.drilledbones>Аккуратно просверленные отверстия для установки имплантата.</afflictiondescription.drilledbones>
 	
-	<afflictionname.retractedskin>Втянутая кожа</afflictionname.retractedskin>
+	<afflictionname.retractedskin>Оттянутая кожа</afflictionname.retractedskin>
 	<afflictiondescription.retractedskin>Кожа открыта с помощью расширителя.</afflictiondescription.retractedskin>
 	
-	<afflictionname.suturedi>Прошитый надрез</afflictionname.suturedi>
-	<afflictiondescription.suturedi>Швы наложены.</afflictiondescription.suturedi>
+	<afflictionname.suturedi>Зашитый надрез</afflictionname.suturedi>
+	<afflictiondescription.suturedi>Присутствуют швы.</afflictiondescription.suturedi>
 	
-	<afflictionname.suturedw>Прошитая рана</afflictionname.suturedw>
-	<afflictiondescription.suturedw>Швы наложены.</afflictiondescription.suturedw>
+	<afflictionname.suturedw>Зашитая рана</afflictionname.suturedw>
+	<afflictiondescription.suturedw>Присутствуют швы.</afflictiondescription.suturedw>
 	
 	<afflictionname.boncut>Кости распилены</afflictionname.boncut>
 	<afflictiondescription.boncut>Кости разрезаны пилой.</afflictiondescription.boncut>
@@ -97,7 +97,7 @@
 	<afflictiondescription.fracture>Кость сломана.</afflictiondescription.fracture>
 	
 	<afflictionname.arterialcut>Артериальное кровотечение</afflictionname.arterialcut>
-	<afflictiondescription.arterialcut>Кровь течет из артерии.</afflictiondescription.arterialcut>
+	<afflictiondescription.arterialcut>Кровь льётся из артерии.</afflictiondescription.arterialcut>
 	
 	<afflictionname.traumaticshock>Травматический шок</afflictionname.traumaticshock>
 	<afflictiondescription.traumaticshock>Пациент испытывает сильную боль и стресс.</afflictiondescription.traumaticshock>
