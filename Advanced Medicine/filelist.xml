@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.13.3.11" steamworkshopid="" installtime="">
+<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.13.3.11" steamworkshopid="2488816950" installtime="1622374284">
   <Afflictions file="Mods/Advanced Medicine/Afflictions.xml" />
   <None file="Mods/Advanced Medicine/Defib.png" />
   <None file="Mods/Advanced Medicine/IconsAtlas.png" />
