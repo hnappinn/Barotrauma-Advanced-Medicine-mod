@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
-	<Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" useinhealthinterface="True" scale="0.185">
+	<Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.185">
 		<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1"/>
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.5"/>
 		<Fabricate suitablefabricators="fabricator" requiredtime="10">
@@ -18,7 +18,7 @@
 			<Price locationtype="military" multiplier="0.9" minavailable="1"/>
 			<Price locationtype="mine" multiplier="1.1" sold="false"/>
 		</Price>
-		<InventoryIcon texture="Mods/Advanced Medicine/Defib.png" sourcerect="0,0,200,269" origin="0.5,0.5"/>
+		<InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5"/>
 		<Sprite texture="Mods/Advanced Medicine/Defib.png" sourcerect="0,0,200,269" origin="0.5,0.5"/>
 		<Body width="90" height="60" density="20"/>
 		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
@@ -101,7 +101,7 @@
 			</Projectile>
 		</Item>
 	</Override>
-	<Item name="" identifier="advscalpel" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.090">
+	<Item name="" identifier="advscalpel" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.070">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -115,10 +115,10 @@
 			<Price locationtype="military" multiplier="1.2" sold="false"/>
 			<Price locationtype="mine" multiplier="1.3" sold="false"/>
 		</Price>
-		<InventoryIcon texture="Mods/Advanced Medicine/scalpel.png" sourcerect="11,103,487,33" origin="0.5,0.5"/>
+		<InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="0,0,64,64" origin="0.5,0.5"/>
 		<Sprite texture="Mods/Advanced Medicine/scalpel.png" sourcerect="11,103,487,33" origin="0.5,0.5"/>
 		<Body width="65" height="15" density="50"/>
-		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0" range="50" combatpriority="8" msg="ItemMsgPickUpSelect">
 			<RequiredSkill identifier="medical" level="40"/>
 			<StatusEffect type="OnUse" target="Limb">
 				<Conditional anesthesia="gte 1"/>
@@ -148,7 +148,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="" identifier="advhemostat" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.125">
+	<Item name="" identifier="advhemostat" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.125">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -162,10 +162,10 @@
 			<Price locationtype="military" multiplier="1.2" sold="false"/>
 			<Price locationtype="mine" multiplier="1.3" sold="false"/>
 		</Price>
-		<InventoryIcon texture="Mods/Advanced Medicine/hemostat.png" sourcerect="53,6,120,198" origin="0.5,0.5"/>
+		<InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="192,0,64,64" origin="0.5,0.5"/>
 		<Sprite texture="Mods/Advanced Medicine/hemostat.png" sourcerect="53,6,120,198" origin="0.5,0.5"/>
 		<Body width="65" height="15" density="50"/>
-		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0">
 			<RequiredSkill identifier="medical" level="30"/>
 			<StatusEffect type="OnUse" target="Limb" comparison="and">
 				<Conditional surgeryincision="gte 99"/>
@@ -181,7 +181,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="" identifier="surgicaldrill" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.085">
+	<Item name="" identifier="surgicaldrill" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.085">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -196,10 +196,10 @@
 			<Price locationtype="military" multiplier="1.2" sold="false"/>
 			<Price locationtype="mine" multiplier="1.3" sold="false"/>
 		</Price>
-		<InventoryIcon texture="Mods/Advanced Medicine/drill.png" sourcerect="0,0,312,255" origin="0.5,0.5"/>
+		<InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="128,0,64,64" origin="0.5,0.5"/>
 		<Sprite texture="Mods/Advanced Medicine/drill.png" sourcerect="0,0,312,255" origin="0.5,0.5"/>
 		<Body width="65" height="15" density="50"/>
-		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-20" reload="1.0">
 			<RequiredSkill identifier="medical" level="45"/>
 			<StatusEffect type="OnUse" target="Limb" comparison="and">
 				<Conditional retractedskin="gte 99"/>
@@ -225,7 +225,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="" identifier="osteosynthesisimplants" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.4">
+	<Item name="" identifier="osteosynthesisimplants" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -265,7 +265,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="" identifier="advretractors" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.08">
+	<Item name="" identifier="advretractors" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.08">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
@@ -279,10 +279,10 @@
 			<Price locationtype="military" multiplier="1.2" sold="false"/>
 			<Price locationtype="mine" multiplier="1.3" sold="false"/>
 		</Price>
-		<InventoryIcon texture="Mods/Advanced Medicine/retractor.png" sourcerect="30,7,240,286" origin="0.5,0.5"/>
+		<InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="256,0,64,64" origin="0.5,0.5"/>
 		<Sprite texture="Mods/Advanced Medicine/retractor.png" sourcerect="30,7,240,286" origin="0.5,0.5"/>
 		<Body width="65" height="15" density="50"/>
-		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0">
 			<RequiredSkill identifier="medical" level="40"/>
 			<StatusEffect type="OnUse" target="Limb" comparison="and">
 				<Conditional anesthesia="gte 1"/>
@@ -299,7 +299,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="" identifier="surgerysaw" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.15">
+	<Item name="" identifier="surgerysaw" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.15">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator" outcondition="100.0">
@@ -312,10 +312,10 @@
 			<Price locationtype="military" multiplier="1.2" sold="false"/>
 			<Price locationtype="mine" multiplier="1.3" sold="false"/>
 		</Price>
-		<InventoryIcon texture="Mods/Advanced Medicine/bonesaw.png" sourcerect="6,105,323,112" origin="0.5,0.5"/>
-		<Sprite texture="Mods/Advanced Medicine/bonesaw.png" sourcerect="6,105,323,112" origin="0.6,0.1"/>
-		<Body width="65" height="15" density="50"/>
-		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="0" reload="1.0">
+		<InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="0,64,64,64" origin="0.5,0.5"/>
+		<Sprite texture="Mods/Advanced Medicine/bonesaw.png" sourcerect="6,105,323,112" origin="0.5,0.5"/>
+		<Body width="65" height="30" density="50"/>
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-18,-7" holdangle="90" reload="1.0">
 			<RequiredSkill identifier="medical" level="50"/>
 			<StatusEffect type="OnUse" target="Limb" comparison="And">
 				<Conditional anesthesia="gte 1"/>
@@ -341,7 +341,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="" identifier="suture" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.075">
+	<Item name="" identifier="suture" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.075">
 		<PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1"/>
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5"/>
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25"/>
@@ -356,7 +356,7 @@
 			<Price locationtype="military" multiplier="1" minavailable="15"/>
 			<Price locationtype="mine" multiplier="0.75" minavailable="7"/>
 		</Price>
-		<InventoryIcon texture="Mods/Advanced Medicine/suture.png" sourcerect="7,32,364,185" origin="0.5,0.5"/>
+		<InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="320,0,64,64" origin="0.5,0.5"/>
 		<Sprite texture="Mods/Advanced Medicine/suture.png" sourcerect="7,32,364,185" origin="0.5,0.5"/>
 		<Body width="65" height="15" density="50"/>
 		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
@@ -364,6 +364,11 @@
 			<StatusEffect type="OnUse" target="This" Condition="-15.0" disabledeltatime="true"/>
 			<StatusEffect type="OnUse" tags="medical" target="This, Limb">
 				<Sound file="Mods/Advanced Medicine/suture.ogg" range="500"/>
+			</StatusEffect>
+			<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
+				<Conditional retractedskin="gte 1"/>
+				<ReduceAffliction identifier="arterialcut" amount="1000"/>
+				<ReduceAffliction identifier="arteriesclamp" amount="1000"/>
 			</StatusEffect>
 			<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
 				<Conditional surgeryincision="gte 1" retractedskin="gte 1" clampedbleeders="gte 1"/>
@@ -373,11 +378,6 @@
 				<ReduceAffliction identifier="drilledbones" amount="1000"/>
 				<ReduceAffliction identifier="retractedskin" amount="1000"/>
 				<Affliction identifier="suturedi" amount="100"/>
-			</StatusEffect>
-			<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-				<Conditional retractedskin="gte 1"/>
-				<ReduceAffliction identifier="arterialcut" amount="1000"/>
-				<ReduceAffliction identifier="arteriesclamp" amount="1000"/>
 			</StatusEffect>
 			<StatusEffect tags="medical" type="OnUse" target="This, Limb" comparison="Or">
 				<conditional Lacerations="gte 1" bitewounds="gte 1" explosiondamage="gte 1"/>
@@ -407,7 +407,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="" identifier="tweezers" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.07">
+	<Item name="" identifier="tweezers" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.07">
 		<PreferredContainer primary="locker"/>
 		<Fabricate suitablefabricators="fabricator">
 			<RequiredItem identifier="steel"/>
@@ -420,10 +420,10 @@
 			<Price locationtype="military" multiplier="1.2" sold="false"/>
 			<Price locationtype="mine" multiplier="1.3" sold="false"/>
 		</Price>
-		<InventoryIcon texture="Mods/Advanced Medicine/Tweezers.png" sourcerect="22,68,234,148" origin="0.5,0.5"/>
+		<InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="448,0,64,64" origin="0.5,0.5"/>
 		<Sprite texture="Mods/Advanced Medicine/Tweezers.png" sourcerect="22,68,234,148" origin="0.5,0.5"/>
 		<Body width="65" height="15" density="50"/>
-		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,-5" holdangle="10" reload="1.0">
 			<RequiredSkill identifier="medical" level="30"/>
 			<StatusEffect type="OnUse" target="limb" comparison="And">
 				<Conditional retractedskin="gte 50"/>
@@ -440,7 +440,7 @@
 			</StatusEffect>
 		</MeleeWeapon>
 	</Item>
-	<Item name="" identifier="tourniquet" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" useinhealthinterface="True" scale="0.1">
+	<Item name="" identifier="tourniquet" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.1">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 		<PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1"/>
 		<Fabricate suitablefabricators="medicalfabricator" outcondition="100.0">
@@ -453,7 +453,7 @@
 			<Price locationtype="military" multiplier="1" minavailable="15"/>
 			<Price locationtype="mine" multiplier="0.75" minavailable="7"/>
 		</Price>
-		<InventoryIcon texture="Mods/Advanced Medicine/tourniquet.png" sourcerect="25,9,206,234" origin="0.5,0.5"/>
+		<InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="384,0,64,64" origin="0.5,0.5"/>
 		<Sprite texture="Mods/Advanced Medicine/tourniquet.png" sourcerect="25,9,206,234" origin="0.5,0.5"/>
 		<Body width="65" height="15" density="50"/>
 		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
@@ -727,7 +727,7 @@
 			</MeleeWeapon>
 		</Item>
 	</Override>
-	<Item name="" identifier="mannitolit" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+	<Item name="" identifier="mannitolit" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
 		<PreferredContainer primary="medcab" spawnprobability="0.05"/>
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.25"/>
 		<PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01"/>
@@ -785,7 +785,7 @@
 			</StatusEffect>
 		</Projectile>
 	</Item>
-	<Item name="" identifier="operatingtable" scale="0.4" Tags="smallitem,medical" maxstacksize="1" category="medical" isshootable="true">
+	<Item name="" identifier="operatingtable" scale="0.4" Tags="smallitem,medical" maxstacksize="1" category="medical" description="" isshootable="true">
 		<Upgrade gameversion="0.12.0.0" noninteractable="false"/>
 		<Body width="416" height="192" density="40"/>
 		<Price baseprice="400" soldeverywhere="false">
