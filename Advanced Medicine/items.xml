@@ -748,15 +748,14 @@
     <Fabricate suitablefabricators="medicalfabricator" requiredtime="60" >
       <RequiredSkill identifier="medical" level="80" />
       <RequiredItem identifier="adrenaline" />
-      <RequiredItem identifier="huskeggs" />
+      <RequiredItem identifier="huskeggs" mincondition="0.25" usecondition="true"/>
       <RequiredItem identifier="liquidoxygenite" />
-      <RequiredItem identifier="deusizine" />
+      <RequiredItem identifier="stabilozine" />
     </Fabricate>
     <Deconstruct time="20">
       <Item identifier="adrenaline" copycondition="true" mincondition="0.1" />
-      <Item identifier="huskeggs" copycondition="true" mincondition="0.1" />
       <Item identifier="liquidoxygenite" copycondition="true" mincondition="0.1" />
-      <Item identifier="deusizine" copycondition="true" mincondition="0.1" />
+      <Item identifier="stabilozine" copycondition="true" mincondition="0.1" />
     </Deconstruct>
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,704,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="226,306,38,72" depth="0.6" origin="0.5,0.5" />
