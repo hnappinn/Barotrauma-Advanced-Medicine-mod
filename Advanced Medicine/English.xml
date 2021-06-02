@@ -33,8 +33,8 @@
 	<entityname.tourniquet>Tourniquet</entityname.tourniquet>
 	<entitydescription.tourniquet>A device to stop blood flow through a vein or artery.</entitydescription.tourniquet>
 
-	<entityname.mannitolit>Mannitol</entityname.mannitolit>
-	<entitydescription.mannitolit>Medicine for brain regeneration.</entitydescription.mannitolit>
+	<entityname.mannitol>Mannitol Plus</entityname.mannitol>
+	<entitydescription.mannitol>Medicine for brain regeneration.</entitydescription.mannitol>
 	
 	<entityname.operatingtable>Operating table</entityname.operatingtable>
 	<entitydescription.operatingtable>Used to keep patients immobile for surgery and equipped with ALV.</entitydescription.operatingtable>

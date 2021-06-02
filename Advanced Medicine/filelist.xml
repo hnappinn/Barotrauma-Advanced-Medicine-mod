@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.13.3.11" steamworkshopid="2488816950" installtime="1622380892">
+<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.13.3.11" steamworkshopid="2488816950" installtime="1622454452">
   <Afflictions file="Mods/Advanced Medicine/Afflictions.xml" />
   <None file="Mods/Advanced Medicine/Defib.png" />
-  <None file="Mods/Advanced Medicine/IconsAtlas.png" />  
+  <None file="Mods/Advanced Medicine/IconsAtlas.png" />
   <None file="Mods/Advanced Medicine/Sprites.png" />
   <Item file="Mods/Advanced Medicine/items.xml" />
   <None file="Mods/Advanced Medicine/drill.ogg" />

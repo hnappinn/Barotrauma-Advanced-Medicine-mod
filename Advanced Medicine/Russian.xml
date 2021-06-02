@@ -31,8 +31,8 @@
 	<entityname.tourniquet>Жгут</entityname.tourniquet>
 	<entitydescription.tourniquet>Используется для остановки кровотока по вене или артерии.</entitydescription.tourniquet>
 
-	<entityname.mannitolit>Маннитолит</entityname.mannitolit>
-	<entitydescription.mannitolit>Лекарство для ускореного восстановления после гипоксии.</entitydescription.mannitolit>
+	<entityname.mannitol>Маннитол Плюс</entityname.mannitol>
+	<entitydescription.mannitol>Лекарство для ускореного восстановления после гипоксии.</entitydescription.mannitol>
 	
 	<entityname.operatingtable>Операционный стол</entityname.operatingtable>
 	<entitydescription.operatingtable>Используется для сохранения неподвижности пациентов во время операции. Оснащён ИВЛ.</entitydescription.operatingtable>
