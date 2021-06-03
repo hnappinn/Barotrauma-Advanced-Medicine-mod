@@ -908,7 +908,7 @@
     </Controller>
   </Item>
 
-  <Item name="Antibiotic ointment" identifier="ointment" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.125" impactsoundtag="impact_soft">
+  <Item name="" identifier="ointment" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="4" maxamount="6" spawnprobability="1" />
     <PreferredContainer primary="supplycab" minamount="1" maxamount="3" spawnprobability="0.5" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.5" />
@@ -930,9 +930,9 @@
     </Deconstruct>
     <SuitableTreatment identifier="infection" suitability="9" />
     <SuitableTreatment identifier="burn" suitability="15" />
-    <InventoryIcon texture="Mods/Advanced Medicine/ointment.png" sourcerect="106,12,58,232" origin="0.5,0.5" />
-    <Sprite texture="Mods/Advanced Medicine/ointment.png" sourcerect="106,12,58,232" depth="0.6" origin="0.5,0.5" />
-    <Body width="25" height="40" density="20" />
+    <InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="64,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Sprites.png" sourcerect="128,256,128,128" depth="0.6" origin="0.5,0.5" />
+    <Body width="60" height="20" density="20" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="10" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
