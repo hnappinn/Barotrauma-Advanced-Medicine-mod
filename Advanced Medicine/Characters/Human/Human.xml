@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Override>
+<Character speciesname="Human" group="human" humanoid="true" hasinfo="true" usehuskappendage="true" needsair="true" genders="true" canspeak="true" blooddecal="blood" noise="150" visibility="150">
+
+  <name firstname="Content/Characters/Human/firstnames_[GENDER].txt" lastname="Content/Characters/Human/lastnames.txt" />
+  <portraitbackground>
+    <sprite name="Human Portrait Background" texture="Content/Characters/Human/mugshotCircle.png" origin="0,0.05"/>
+  </portraitbackground>
+  
+  <ragdolls folder="default"/>
+  <animations folder="default"/>
+
+  <StatusEffect tags="immunity" type="always" target="This" disabledeltatime="true" comparison="And">
+  <Conditional immunity="eq 0"/>
+    <Affliction identifier="immunity" amount="600" />
+  </StatusEffect>
+
+  <damageemitter particle="gib" drawontop="True" particleamount="10" velocitymin="50" velocitymax="300" anglemin="0" anglemax="360" scalemin="0.25" scalemax="0.5" emitinterval="0" particlespersecond="0" highqualitycollisiondetection="False" copyentityangle="False" />
+  <bloodemitter particle="blood" particleamount="10"/>
+  <bloodemitter particle="waterblood" particleamount="1"/>
+  <gibemitter particle="gib" particleamount="20" velocitymin="200" velocitymax="700" anglemin="0" anglemax="360"/>
+  <gibemitter particle="heavygib" particleamount="10" velocitymin="50" velocitymax="500" anglemin="0" anglemax="360"/>
+
+  <sound file="Content/Characters/Human/female_damage1.ogg"  gender="Female" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/female_damage2.ogg"  gender="Female" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/female_damage3.ogg"  gender="Female" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/female_damage4.ogg"  gender="Female" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/female_damage5.ogg"  gender="Female" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/female_damage6.ogg"  gender="Female" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/female_damage7.ogg"  gender="Female" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/female_damage8.ogg"  gender="Female" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/female_damage9.ogg"  gender="Female" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/female_damage10.ogg"  gender="Female" state="Damage" range="500"/>
+
+  <sound file="Content/Characters/Human/male_damage1.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage2.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage3.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage4.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage5.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage6.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage7.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage8.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage9.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage10.ogg"  gender="Male" state="Damage" range="500"/>
+  <sound file="Content/Characters/Human/male_damage11.ogg"  gender="Male" state="Damage" range="500"/>
+  
+  <health
+    usehealthwindow="true"
+    vitality="100"
+    crushdepth="-30000.0"
+    doesbleed="true">
+    <MedUISilhouette texture="Content/UI/Health/MedUI_Silhouette.png" columns="8" rows="2" sourcerect="0,0,1008,748"/>
+    <MedUIExtra texture="Content/UI/Health/MedUIExtra.png" columns="4" rows="4" sourcerect="0,0,1024,1024"/>
+    <Limb name="Head">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,0,126,374" highlightarea="41,0,45,54"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="1,515,126,374"/>
+      <VitalityMultiplier type="damage" multiplier="2.0"/>
+    </Limb>
+    <Limb name="Torso">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,0,126,374" highlightarea="29,56,70,134"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="631,515,126,374"/>
+      <VitalityMultiplier type="bleeding" multiplier="2.0"/>
+    </Limb>
+    <Limb name="LeftArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,515,126,374"/>
+      <VitalityMultiplier type="damage" multiplier="0.5"/>
+    </Limb>
+    <Limb name="RightArm">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,515,126,374"/>
+      <VitalityMultiplier type="damage" multiplier="0.5"/>
+    </Limb>
+    <Limb name="LeftLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,515,126,374"/>
+      <VitalityMultiplier type="damage" multiplier="0.5"/>
+    </Limb>
+    <Limb name="RightLeg">
+      <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194"/>
+      <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,515,126,374"/>
+      <VitalityMultiplier type="damage" multiplier="0.5"/>
+    </Limb>
+  </health>
+
+  <inventory arrowslot="9" slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any"/>
+
+  <Heads>
+    <Head race="asian" gender="female" id="1" sheetindex="0,0"/>
+    <Head race="asian" gender="female" id="2" sheetindex="1,0"/>
+    <Head race="asian" gender="female" id="3" sheetindex="2,0"/>
+    <Head race="asian" gender="female" id="4" sheetindex="0,1"/>
+    <Head race="asian" gender="female" id="5" sheetindex="1,1"/>
+    <Head race="asian" gender="female" id="6" sheetindex="2,1"/>
+    <Head race="black" gender="female" id="1" sheetindex="0,0"/>
+    <Head race="black" gender="female" id="2" sheetindex="1,0"/>
+    <Head race="black" gender="female" id="3" sheetindex="2,0"/>
+    <Head race="black" gender="female" id="4" sheetindex="0,1"/>
+    <Head race="black" gender="female" id="5" sheetindex="1,1"/>
+    <Head race="black" gender="female" id="6" sheetindex="2,1"/>
+    <Head race="brown" gender="female" id="1" sheetindex="0,0"/>
+    <Head race="brown" gender="female" id="2" sheetindex="1,0"/>
+    <Head race="brown" gender="female" id="3" sheetindex="2,0"/>
+    <Head race="brown" gender="female" id="4" sheetindex="0,1"/>
+    <Head race="brown" gender="female" id="5" sheetindex="1,1"/>
+    <Head race="brown" gender="female" id="6" sheetindex="2,1"/>
+    <Head race="white" gender="female" id="1" sheetindex="0,0"/>
+    <Head race="white" gender="female" id="2" sheetindex="1,0"/>
+    <Head race="white" gender="female" id="3" sheetindex="2,0"/>
+    <Head race="white" gender="female" id="4" sheetindex="0,1"/>
+    <Head race="white" gender="female" id="5" sheetindex="1,1"/>
+    <Head race="white" gender="female" id="6" sheetindex="2,1"/>
+    <Head race="white" gender="female" id="7" sheetindex="0,2"/>
+    <Head race="asian" gender="male" id="1" sheetindex="0,0"/>
+    <Head race="asian" gender="male" id="2" sheetindex="1,0"/>
+    <Head race="asian" gender="male" id="3" sheetindex="2,0"/>
+    <Head race="asian" gender="male" id="4" sheetindex="0,1"/>
+    <Head race="asian" gender="male" id="5" sheetindex="1,1"/>
+    <Head race="asian" gender="male" id="6" sheetindex="2,1"/>
+    <Head race="black" gender="male" id="1" sheetindex="0,0"/>
+    <Head race="black" gender="male" id="2" sheetindex="1,0"/>
+    <Head race="black" gender="male" id="3" sheetindex="2,0"/>
+    <Head race="black" gender="male" id="4" sheetindex="0,1"/>
+    <Head race="black" gender="male" id="5" sheetindex="1,1"/>
+    <Head race="black" gender="male" id="6" sheetindex="2,1"/>
+    <Head race="brown" gender="male" id="1" sheetindex="0,0"/>
+    <Head race="brown" gender="male" id="2" sheetindex="1,0"/>
+    <Head race="brown" gender="male" id="3" sheetindex="2,0"/>
+    <Head race="brown" gender="male" id="4" sheetindex="0,1"/>
+    <Head race="brown" gender="male" id="5" sheetindex="1,1"/>
+    <Head race="brown" gender="male" id="6" sheetindex="2,1"/>
+    <Head race="white" gender="male" id="1" sheetindex="0,0"/>
+    <Head race="white" gender="male" id="2" sheetindex="1,0"/>
+    <Head race="white" gender="male" id="3" sheetindex="2,0"/>
+    <Head race="white" gender="male" id="4" sheetindex="0,1"/>
+    <Head race="white" gender="male" id="5" sheetindex="2,1"/>
+    <Head race="white" gender="male" id="6" sheetindex="0,2"/>
+    <Head race="white" gender="male" id="7" sheetindex="1,2"/>
+    <Head race="white" gender="male" id="8" sheetindex="2,2"/>
+  </Heads>
+
+  <HeadAttachments>
+    <!-- Male Asian -->
+    <Wearable type="Hair" gender="male" race="asian">
+      <sprite name="Male Asian Hair 1" texture="Content/Characters/Human/Heads/head_male_asian_hair_1.png" />
+    </Wearable>
+    <Wearable type="Hair" gender="male" race="asian">
+      <sprite name="Male Asian Hair 2" texture="Content/Characters/Human/Heads/head_male_asian_hair_2.png" />
+    </Wearable>
+    <Wearable type="Hair" gender="male" race="asian">
+      <sprite name="Male Asian Hair 3" texture="Content/Characters/Human/Heads/head_male_asian_hair_3.png" />
+    </Wearable>
+    <Wearable type="Beard" gender="male" race="asian">
+      <sprite name="Male Asian Beard 1" texture="Content/Characters/Human/Heads/head_male_asian_beard_1.png" />
+    </Wearable>
+    <Wearable type="Moustache" gender="male" race="asian">
+      <sprite name="Male Asian Moustache 1" texture="Content/Characters/Human/Heads/head_male_asian_moustache_1.png" />
+    </Wearable>
+    <Wearable type="Husk" gender="male" race="asian">
+      <sprite name="Male Asian Husk" texture="Content/Characters/Human/Heads/head_male_asian_husk.png" hidewearablesoftype="Beard"/>
+    </Wearable>
+    <Wearable type="Herpes" gender="male" race="asian">
+      <sprite name="Male White Herpes" texture="Content/Characters/Human/Heads/head_male_asian_herpes.png" />
+    </Wearable>
+    <!-- Male Black -->
+    <Wearable type="Hair" gender="male" race="black">
+      <sprite name="Male Black Hair 1" texture="Content/Characters/Human/Heads/head_male_black_hair_1.png" />
+    </Wearable>
+    <Wearable type="Beard" gender="male" race="black">
+      <sprite name="Male Black Beard 1" texture="Content/Characters/Human/Heads/head_male_black_beard_1.png" />
+    </Wearable>
+    <Wearable type="Moustache" gender="male" race="black">
+      <sprite name="Male Black Moustache 1" texture="Content/Characters/Human/Heads/head_male_black_moustache_1.png" />
+    </Wearable>
+    <Wearable type="Husk"  gender="male" race="black">
+      <sprite name="Male Black Husk" texture="Content/Characters/Human/Heads/head_male_black_husk.png" hidewearablesoftype="Beard" />
+    </Wearable>
+    <Wearable type="Herpes" gender="male" race="black">
+      <sprite name="Male Black Herpes" texture="Content/Characters/Human/Heads/head_male_black_herpes.png" />
+    </Wearable>
+    <!-- Male Brown -->
+    <Wearable type="Hair" gender="male" race="brown">
+      <sprite name="Male Brown Hair 1" texture="Content/Characters/Human/Heads/head_male_brown_hair_1.png" />
+    </Wearable>
+    <Wearable type="Hair" gender="male" race="brown">
+      <sprite name="Male Brown Hair 2" texture="Content/Characters/Human/Heads/head_male_brown_hair_2.png" />
+    </Wearable>
+    <Wearable type="Hair" gender="male" race="brown">
+      <sprite name="Male Brown Hair 3" texture="Content/Characters/Human/Heads/head_male_brown_hair_3.png" />
+    </Wearable>
+    <Wearable type="Beard" gender="male" race="brown">
+      <sprite name="Male Brown Beard 1" texture="Content/Characters/Human/Heads/head_male_brown_beard_1.png" />
+    </Wearable>
+    <Wearable type="Moustache" gender="male" race="brown">
+      <sprite name="Male Brown Moustache 1" texture="Content/Characters/Human/Heads/head_male_brown_moustache_1.png" />
+    </Wearable>
+    <Wearable type="Husk" gender="male" race="brown">
+      <sprite name="Male Brown Husk" texture="Content/Characters/Human/Heads/head_male_brown_husk.png" hidewearablesoftype="Beard" />
+    </Wearable>
+    <Wearable type="Herpes" gender="male" race="brown">
+      <sprite name="Male Brown Herpes" texture="Content/Characters/Human/Heads/head_male_brown_herpes.png" />
+    </Wearable>
+    <!-- Male White -->
+    <Wearable type="Hair" gender="male" race="white" disallow="Moustache2, Beard2">
+      <sprite name="Male White Hair Dark" texture="Content/Characters/Human/Heads/head_male_white_hair_dark.png" />
+    </Wearable>
+    <Wearable type="Hair" gender="male" race="white">
+      <sprite name="Male White Hair Light" texture="Content/Characters/Human/Heads/head_male_white_hair_light.png" />
+    </Wearable>
+    <Wearable type="Beard" gender="male" race="white" disallow="Moustache2">
+      <sprite name="Male White Beard Dark" texture="Content/Characters/Human/Heads/head_male_white_beard_dark.png" />
+    </Wearable>
+    <Wearable type="Moustache" gender="male" race="white" disallow="Beard2">
+      <sprite name="Male White Moustache Dark" texture="Content/Characters/Human/Heads/head_male_white_moustache_dark.png" />
+    </Wearable>
+    <Wearable type="Moustache" gender="male" race="white" disallow="Beard1">
+      <sprite name="Male White Moustache Light" texture="Content/Characters/Human/Heads/head_male_white_moustache_light.png" />
+    </Wearable>
+    <Wearable type="Husk" gender="male" race="white">
+      <sprite name="Male White Husk" texture="Content/Characters/Human/Heads/head_male_white_husk.png" hidewearablesoftype="Beard" />
+    </Wearable>
+    <Wearable type="Herpes" gender="male" race="white">
+      <sprite name="Male White Herpes" texture="Content/Characters/Human/Heads/head_male_white_herpes.png" />
+    </Wearable>
+    <!-- Female Asian -->
+    <Wearable type="Hair" gender="female" race="asian">
+      <sprite name="Female Asian Hair 1" texture="Content/Characters/Human/Heads/head_female_asian_hair_dark_1.png" />
+    </Wearable>
+    <Wearable type="Hair" gender="female" race="asian">
+      <sprite name="Female Asian Hair 2" texture="Content/Characters/Human/Heads/head_female_asian_hair_dark_2.png" />
+    </Wearable>
+    <Wearable type="Husk" gender="female" race="asian">
+      <sprite name="Female Asian Husk" texture="Content/Characters/Human/Heads/head_female_asian_husk.png" hidewearablesoftype="Beard" />
+    </Wearable>
+    <Wearable type="Herpes" gender="female" race="asian">
+      <sprite name="Female Asian Herpes" texture="Content/Characters/Human/Heads/head_female_asian_herpes.png" />
+    </Wearable>
+    <!-- Female Black -->
+    <Wearable type="Hair" gender="female" race="black">
+      <sprite name="Female Black Hair 1" texture="Content/Characters/Human/Heads/head_female_black_hair_1.png" />
+    </Wearable>
+    <Wearable type="Husk" gender="female" race="black">
+      <sprite name="Female Black Husk" texture="Content/Characters/Human/Heads/head_female_black_husk.png" hidewearablesoftype="Beard" />
+    </Wearable>
+    <Wearable type="Herpes" gender="female" race="black">
+      <sprite name="Female Black Herpes" texture="Content/Characters/Human/Heads/head_female_black_herpes.png" />
+    </Wearable>
+    <!-- Female Brown -->
+    <Wearable type="Hair" gender="female" race="brown">
+      <sprite name="Female Brown Hair 1" texture="Content/Characters/Human/Heads/head_female_brown_hair_1.png" />
+    </Wearable>
+    <Wearable type="Husk" gender="female" race="brown">
+      <sprite name="Female Brown Husk" texture="Content/Characters/Human/Heads/head_female_brown_husk.png" hidewearablesoftype="Beard" />
+    </Wearable>
+    <Wearable type="Herpes" gender="female" race="brown">
+      <sprite name="Female Brown Herpes" texture="Content/Characters/Human/Heads/head_female_brown_herpes.png" />
+    </Wearable>
+    <!-- Female White -->
+    <Wearable type="Hair" gender="female" race="white">
+      <sprite name="Female White Hair Dark" texture="Content/Characters/Human/Heads/head_female_white_hair_dark.png" />
+    </Wearable>
+    <Wearable type="Hair" gender="female" race="white">
+      <sprite name="Female White Hair Light" texture="Content/Characters/Human/Heads/head_female_white_hair_light.png" />
+    </Wearable>
+    <Wearable type="Husk" gender="female" race="white">
+      <sprite name="Female White Husk" texture="Content/Characters/Human/Heads/head_female_white_husk.png" hidewearablesoftype="Beard" />
+    </Wearable>
+    <Wearable type="Herpes" gender="female" race="white">
+      <sprite name="Female White Herpes" texture="Content/Characters/Human/Heads/head_female_white_herpes.png" />
+    </Wearable>
+  </HeadAttachments> 
+</Character>
+</Override>
