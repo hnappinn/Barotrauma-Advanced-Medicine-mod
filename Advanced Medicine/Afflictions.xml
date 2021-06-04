@@ -600,6 +600,7 @@
       <StatusEffect target="Character">
         <Affliction identifier="hypoxia" amount="0.5"/>
         <affliction identifier="stun" amount="5"/>
+        <Affliction identifier="oxygenlow" amount="10"/>
         </StatusEffect>
       <StatusEffect disabledeltatime="true" target="Character">
       <Conditional vt="eq 0"/>
@@ -1053,23 +1054,23 @@
     </StatusEffect>
     <Effect minstrength="300" maxstrength="500" strengthchange="0.5"/>
     <StatusEffect target="Character">
-      <ReduceAffliction identifier="infectedwound" amount="1"/>
+      <ReduceAffliction identifier="infectedwound" amount="0.25"/>
       <ReduceAffliction identifier="damage" amount="0.025"/>
       <ReduceAffliction identifier="burn" amount="0.05"/>
     </StatusEffect>
-    <StatusEffect>
+    <StatusEffect target="Character">
     <Conditional infectedwound="gte 1"/>
-      <ReduceAffliction identifier="infectedwound" amount="0.5"/>
+      <ReduceAffliction identifier="infectedwound" amount="1.25"/>
     </StatusEffect>
     <Effect minstrength="500" maxstrength="600" strengthchange="0.5">
     <StatusEffect target="Character">
-      <ReduceAffliction identifier="infectedwound" amount="1"/>
+      <ReduceAffliction identifier="infectedwound" amount="0.5"/>
       <ReduceAffliction identifier="damage" amount="0.05"/>
       <ReduceAffliction identifier="burn" amount="0.1"/>
     </StatusEffect>
-    <StatusEffect>
+    <StatusEffect target="Character">
     <Conditional infectedwound="gte 1"/>
-      <ReduceAffliction identifier="infectedwound" amount="1.5"/>
+      <ReduceAffliction identifier="infectedwound" amount="2"/>
     </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
@@ -1085,7 +1086,12 @@
     limbspecific="true"
     maxstrength="100"
     showiconthreshold="35">
-    <Effect minstrength="0" maxstrength="35" strengthchange="0.5">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0">
+      <StatusEffect target="Character">
+        <ReduceAffliction identifier="immunity" amount="0.55"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="1" maxstrength="35" strengthchange="0.5">
       <StatusEffect target="Character">
         <ReduceAffliction identifier="immunity" amount="0.55"/>
       </StatusEffect>
