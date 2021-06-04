@@ -279,7 +279,7 @@
       minradialdistort="0.8"
       maxradialdistort="1"
       minvitalitydecrease="30"
-      maxvitalitydecrease="200">
+      maxvitalitydecrease="600">
       <StatusEffect target="Character">
         <Affliction identifier="stun" amount="15" setvalue="true"/>
         <Affliction identifier="oxygenlow" amount="15" />
@@ -378,7 +378,7 @@
     maxstrength="100"
     type="resistance"
     isbuff="true"> 
-    <Effect minstrength="0" maxstrength="100" strengthchange="-0.3"/>
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.2"/>
 		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
@@ -390,7 +390,11 @@
     maxstrength="100"
     type="resistance"
     isbuff="true"> 
-    <Effect minstrength="0" maxstrength="100" strengthchange="-0.3"/>
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.3">
+    <StatusEffect target="Limb">
+    <ReduceAffliction identifier="infectedwound" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
 		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
@@ -580,7 +584,7 @@
     maxstrength="200">
     <Effect minstrength="60" maxstrength="100" multiplybymaxvitality="true"
       minvitalitydecrease="0"
-      maxvitalitydecrease="0.60">
+      maxvitalitydecrease="0">
         <StatusEffect target="Character">
         <Affliction identifier="hypoxia" amount="0.1"/>
         </StatusEffect>
@@ -591,8 +595,8 @@
     </Effect>
 
     <Effect minstrength="100" maxstrength="200" multiplybymaxvitality="true"
-      minvitalitydecrease="0.60"
-      maxvitalitydecrease="1.05">
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0">
       <StatusEffect target="Character">
         <Affliction identifier="hypoxia" amount="0.5"/>
         <affliction identifier="stun" amount="5"/>
@@ -601,8 +605,11 @@
       <Conditional vt="eq 0"/>
         <Affliction identifier="vt" amount="1" probability="0.08"/>
       </StatusEffect>
+      <StatusEffect target="Character">
+      <conditional ishuman="false"/>
+      <Affliction identifier="organdamage" amount="200"/>
+      </StatusEffect>
     </Effect>
-
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
   </OxygenLow>
   </Override>
@@ -734,8 +741,16 @@
 	  limbspecific="true"
 	  maxstrength="100"
 	  damageoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true"
+    <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
 			minvitalitydecrease="0"
+			maxvitalitydecrease="0.1">
+    <StatusEffect target="limb" comparison="And">
+    <Conditional bandaged="eq 0" ointmented="eq 0"/>
+    <Affliction identifier="infectedwound" indicatorlimb="limb" amount="0.25"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true"
+			minvitalitydecrease="0.1"
 			maxvitalitydecrease="0.5">
     <StatusEffect target="limb" comparison="And">
     <Conditional bandaged="eq 0" ointmented="eq 0"/>
@@ -769,8 +784,16 @@
 	  limbspecific="true"
 	  maxstrength="100"
 	  damageoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true"
+    <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
 			minvitalitydecrease="0"
+			maxvitalitydecrease="0.1">
+    <StatusEffect target="limb" comparison="And">
+    <Conditional bandaged="eq 0" ointmented="eq 0"/>
+    <Affliction identifier="infectedwound" indicatorlimb="limb" amount="0.25"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true"
+			minvitalitydecrease="0.1"
 			maxvitalitydecrease="0.5">
     <StatusEffect target="limb" comparison="And">
     <Conditional bandaged="eq 0" ointmented="eq 0"/>
@@ -807,13 +830,22 @@
 	  maxstrength="100"
 	  karmachangeonapplied="-1"
 	  damageoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true"
+    <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
 		  minvitalitydecrease="0"
+		  maxvitalitydecrease="0.1"
+		  dialogflag="GunshotWound">
+    <StatusEffect target="limb" comparison="And">
+    <Conditional bandaged="eq 0" ointmented="eq 0"/>
+    <Affliction identifier="infectedwound" indicatorlimb="limb" amount="0.15"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true"
+		  minvitalitydecrease="0.1"
 		  maxvitalitydecrease="0.5"
 		  dialogflag="GunshotWound">
     <StatusEffect target="limb" comparison="And">
     <Conditional bandaged="eq 0" ointmented="eq 0"/>
-    <Affliction identifier="infectedwound" indicatorlimb="limb" amount="0.5"/>
+    <Affliction identifier="infectedwound" indicatorlimb="limb" amount="0.45"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="59" maxstrength="100" multiplybymaxvitality="true"
@@ -867,8 +899,16 @@
     limbspecific="true"
     maxstrength="100"
     damageoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true"
+    <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
 			minvitalitydecrease="0"
+			maxvitalitydecrease="0.1">
+    <StatusEffect target="limb" comparison="And">
+    <Conditional bandaged="eq 0" ointmented="eq 0"/>
+    <Affliction identifier="infectedwound" indicatorlimb="limb" amount="0.25"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="45" multiplybymaxvitality="true"
+			minvitalitydecrease="0.1"
 			maxvitalitydecrease="0.45">
     <StatusEffect target="limb" comparison="And">
     <Conditional bandaged="eq 0" ointmented="eq 0"/>
@@ -904,12 +944,20 @@
     limbspecific="true"
     maxstrength="100"
     burnoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="25" multiplybymaxvitality="true"
+    <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
       minvitalitydecrease="0"
-      maxvitalitydecrease="0.25">
+      maxvitalitydecrease="0.1">
     <StatusEffect target="limb" comparison="And">
     <Conditional immunity="lte 500" bandaged="eq 0" ointmented="eq 0"/>
-    <Affliction identifier="infectedwound" indicatorlimb="limb" amount="0.5"/>
+    <Affliction identifier="infectedwound" indicatorlimb="limb" amount="0.15"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="25" multiplybymaxvitality="true"
+      minvitalitydecrease="0.1"
+      maxvitalitydecrease="0.25">
+    <StatusEffect target="limb" comparison="And">
+    <Conditional bandaged="eq 0" ointmented="eq 0"/>
+    <Affliction identifier="infectedwound" indicatorlimb="limb" amount="0.45"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="25" maxstrength="50" multiplybymaxvitality="true"
@@ -1048,8 +1096,8 @@
         <ReduceAffliction identifier="immunity" amount="1.25"/>
       </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
-      <Conditional immunity="lte 300" septicwound="eq 0" bandaged="eq 0" ointment="eq 0"/>
-        <Affliction identifier="septicwound" indicatorlimb="limb" amount="5" probability="0.05"/>
+      <Conditional immunity="lte 300" septicwound="eq 0"/>
+        <Affliction identifier="septicwound" indicatorlimb="limb" amount="5"/>
       </StatusEffect>
     <StatusEffect disabledeltatime="true" target="Limb">
     <Conditional immunity="gte 450"/>
@@ -1072,7 +1120,12 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="15" strengthchange="0.2"
       minvitalitydecrease="0"
-      maxvitalitydecrease="0" />
+      maxvitalitydecrease="0">
+    <StatusEffect target="Character">
+    <Conditional ishuman="false"/>
+    <ReduceAffliction identifier="septicwound" amount="999"/>
+    </StatusEffect>
+    </Effect>
     <Effect minstrength="15" maxstrength="85" strengthchange="0.5"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
@@ -1098,7 +1151,12 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="15" strengthchange="0.2"
       minvitalitydecrease="0"
-      maxvitalitydecrease="0" />
+      maxvitalitydecrease="0">
+    <StatusEffect target="Character">
+    <Conditional ishuman="false"/>
+    <ReduceAffliction identifier="necrosis" amount="999"/>
+    </StatusEffect>
+    </Effect>
     <Effect minstrength="15" maxstrength="85" strengthchange="0.5"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">

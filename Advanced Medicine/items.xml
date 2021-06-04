@@ -26,8 +26,8 @@
       <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
       <RequiredSkill identifier="medical" level="10" />
         
-      <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-10" />
-      <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-5" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-20" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-10" />
       
       <StatusEffect type="OnUse" target="This" Condition="-100" />
       <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false" />
