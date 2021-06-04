@@ -36,6 +36,9 @@
 	
 	<entityname.operatingtable>Операционный стол</entityname.operatingtable>
 	<entitydescription.operatingtable>Используется для сохранения неподвижности пациентов во время операции. Оснащён ИВЛ.</entitydescription.operatingtable>
+
+	<entityname.ointment>Антибиотическая мазь</entityname.ointment>
+	<entitydescription.ointment>Используется для лечения ожогов и инфекций.</entitydescription.ointment>
 	
 	<!-- AFFLICTIONS -->
 	

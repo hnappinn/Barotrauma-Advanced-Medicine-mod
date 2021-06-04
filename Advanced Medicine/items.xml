@@ -21,36 +21,42 @@
     <InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Sprites.png" sourcerect="128,0,128,128" depth="0.55" origin="0.5,0.5" />
     <Body width="90" height="80" density="20" />
-    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
-    <RequiredSkill identifier="medical" level="10" />
-     <StatusEffect type="OnUse" target="Contained" Condition="-20.0" disabledeltatime="true" comparison="And">
-        <RequiredItem items="batterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
+
+	  <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
+      <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
+      <RequiredSkill identifier="medical" level="10" />
+        
+      <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-10" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-5" />
+      
+      <StatusEffect type="OnUse" target="This" Condition="-100" />
+      <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false" />
+  
+      <StatusEffect type="OnUse" target="Character" setvalue="true" delay="3.2" comparison="Or">
+      <Conditional сondition="gt 99" vf="gte 0.01" vt="gte 0.01"/>
+      <ReduceAffliction identifier="vf" amount="30" />
+      <ReduceAffliction identifier="vt" amount="100" />
+      <Affliction identifier="stun" amount="2" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Contained" Condition="-5.0" disabledeltatime="true" comparison="And">
-        <RequiredItem items="fulguriumbatterycell" type="Contained" msg="ItemMsgBatteryCellRequired" />
+  
+      <StatusEffect type="OnUse" target="Character" setvalue="true" delay="0" comparison="Or">
+      <Conditional vf="gte 0.01" vt="gte 0.01"/>
+      <Sound file="Mods/Advanced Medicine/Defib1.ogg" range="1000" />
       </StatusEffect>
-    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
-      <Containable items="mobilebattery" />
-    </ItemContainer>
-    <StatusEffect type="OnUse" target="Character" setvalue="true" delay="3.2" comparison="Or">
-    <Conditional vf="gte 0.01" vt="gte 0.01"/>
-    <RequiredItem items="batterycell" type="Contained" />
-    <ReduceAffliction identifier="vf" amount="30" />
-    <ReduceAffliction identifier="vt" amount="100" />
-    <Affliction identifier="stun" amount="2" />
-    </StatusEffect>
-    <StatusEffect type="OnUse" target="Character" setvalue="true" delay="0" comparison="Or">
-    <RequiredItem items="batterycell" type="Contained" />
-    <Conditional vf="gte 0.01" vt="gte 0.01"/>
-    <Sound file="Mods/Advanced Medicine/Defib1.ogg" range="1000" />
-    </StatusEffect>
-    <StatusEffect type="OnUse" target="Character" setvalue="true" delay="0" comparison="And">
-    <RequiredItem items="batterycell" type="Contained" />
-    <Conditional vf="eq 0" vt="eq 0"/>
-    <Sound file="Mods/Advanced Medicine/Defib2.ogg" range="500" />
-    </StatusEffect>
-    </MeleeWeapon>
+  
+      <StatusEffect type="OnUse" target="Character" setvalue="true" delay="0" comparison="And">
+      <Conditional vf="eq 0" vt="eq 0"/>
+      <Sound file="Mods/Advanced Medicine/Defib2.ogg" range="500" />
+      </StatusEffect>
+  
+      </MeleeWeapon>
+      <Pickable msg="ItemMsgPickUpSelect"/>
+
+      <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+        <Containable items="mobilebattery" />
+      </ItemContainer>
   </Item>
+
 
   <Override>
   <Item name="" identifier="antibiotics" category="Material" maxstacksize="8" Tags="smallitem,chem,medical,syringe" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true">
@@ -908,7 +914,7 @@
     </Controller>
   </Item>
 
-  <Item name="Antibiotic ointment" identifier="ointment" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.125" impactsoundtag="impact_soft">
+  <Item name="" identifier="ointment" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="4" maxamount="6" spawnprobability="1" />
     <PreferredContainer primary="supplycab" minamount="1" maxamount="3" spawnprobability="0.5" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.5" />
@@ -930,9 +936,9 @@
     </Deconstruct>
     <SuitableTreatment identifier="infection" suitability="9" />
     <SuitableTreatment identifier="burn" suitability="15" />
-    <InventoryIcon texture="Mods/Advanced Medicine/ointment.png" sourcerect="106,12,58,232" origin="0.5,0.5" />
-    <Sprite texture="Mods/Advanced Medicine/ointment.png" sourcerect="106,12,58,232" depth="0.6" origin="0.5,0.5" />
-    <Body width="25" height="40" density="20" />
+    <InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="64,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Sprites.png" sourcerect="128,256,128,128" depth="0.6" origin="0.5,0.5" />
+    <Body width="60" height="20" density="20" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="10" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />

@@ -38,6 +38,10 @@
 	
 	<entityname.operatingtable>Operating table</entityname.operatingtable>
 	<entitydescription.operatingtable>Used to keep patients immobile for surgery and equipped with ALV.</entitydescription.operatingtable>
+
+	<entityname.ointment>Antibiotic ointment</entityname.ointment>
+	<entitydescription.ointment>Used to heal infections and burns.</entitydescription.ointment>
+
 	
 	<!-- AFFLICTIONS -->
 	
