@@ -107,6 +107,23 @@
 		
 	<afflictionname.anesthesia>Анестезия</afflictionname.anesthesia>
 	<afflictiondescription.anesthesia>Пациент не чувствителен к боли.</afflictiondescription.anesthesia>
+	
+	<afflictionname.anesthesia>Анестезия</afflictionname.anesthesia>
+	<afflictiondescription.anesthesia>Пациент не чувствителен к боли.</afflictiondescription.anesthesia>
 
+	<afflictionname.necrosis>Некроз</afflictionname.necrosis>
+	<!-- <afflictiondescription.necrosis></afflictiondescription.necrosis> -->
+	<afflictioncauseofdeath.necrosis>Умер от некроза.</afflictioncauseofdeath.necrosis>
+	<afflictioncauseofdeathself.necrosis>Вы умерли от некроза.</afflictioncauseofdeathself.necrosis>
+
+	<afflictionname.septicwound>Сепсис</afflictionname.septicwound>
+	<afflictiondescription.septicwound>Гнойная рана</afflictiondescription.septicwound>
+	<afflictioncauseofdeath.septicwound>Умер от сепсиса.</afflictioncauseofdeath.septicwound>
+	<afflictioncauseofdeathself.septicwound>Вы умерли от сепсиса.</afflictioncauseofdeathself.septicwound>
+
+	<afflictionname.infectedwound>Зараженная рана </afflictionname.infectedwound>
+	<afflictiondescription.infectedwound>Рана выглядит опухшей и гнойной.</afflictiondescription.infectedwound>
+	<afflictioncauseofdeath.infectedwound>Истек кровью до смерти</afflictioncauseofdeath.infectedwound>
+	<afflictioncauseofdeathself.infectedwound>Вы истекли кровью.</afflictioncauseofdeathself.infectedwound>
 
 </infotexts>

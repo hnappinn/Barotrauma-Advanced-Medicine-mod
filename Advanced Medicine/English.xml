@@ -110,5 +110,20 @@
 		
 	<afflictionname.anesthesia>Anesthesia</afflictionname.anesthesia>
 	<afflictiondescription.anesthesia>Insensitivity to pain.</afflictiondescription.anesthesia>
+
+	<afflictionname.necrosis>Necrosis</afflictionname.necrosis>
+	<!-- <afflictiondescription.necrosis></afflictiondescription.necrosis> -->
+	<afflictioncauseofdeath.necrosis>Died from an necrosis.</afflictioncauseofdeath.necrosis>
+	<afflictioncauseofdeathself.necrosis>You have died from an necrosis.</afflictioncauseofdeathself.necrosis>
+
+	<afflictionname.septicwound>Septic Wound</afflictionname.septicwound>
+	<!-- <afflictiondescription.septicwound></afflictiondescription.septicwound> -->
+	<afflictioncauseofdeath.septicwound>Died from an septic wound.</afflictioncauseofdeath.septicwound>
+	<afflictioncauseofdeathself.septicwound>You have died from an septic wound.</afflictioncauseofdeathself.septicwound>
+
+	<afflictionname.infectedwound>Infected wound</afflictionname.infectedwound>
+	<afflictiondescription.infectedwound>The wound looks swollen and festering.</afflictiondescription.infectedwound>
+	<afflictioncauseofdeath.infectedwound>Bled to death</afflictioncauseofdeath.infectedwound>
+	<afflictioncauseofdeathself.infectedwound>You have bled to death.</afflictioncauseofdeathself.infectedwound>
 	
 </infotexts>

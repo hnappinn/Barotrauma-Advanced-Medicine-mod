@@ -232,8 +232,8 @@
     name=""
     identifier="hypoxia"
     description=""
-    causeofdeathdescription="Braindead"
-    selfcauseofdeathdescription="You have died of Cerebral Hypoxia."
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
     limbspecific="false"
     indicatorlimb="Head"
     activationthreshold="0"
@@ -1077,9 +1077,9 @@
   </Affliction>
 
   <Affliction
-    name="Infected wound"
+    name=""
     identifier="infectedwound"
-    description="The wound looks swollen and festering."
+    description=""
     type="infection"
     causeofdeathdescription="Bled to death"
     selfcauseofdeathdescription="You have bled to death."
@@ -1119,12 +1119,12 @@
   </Affliction>
 
   <Affliction
-    name="Septic Wound"
+    name=""
     identifier="septicwound"
     description=""
     type="infection"
-    causeofdeathdescription="Died from an septic wound."
-    selfcauseofdeathdescription="You have died from an septic wound."
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
     isbuff="False"
     limbspecific="True"
     maxstrength="100"> 
@@ -1150,12 +1150,12 @@
   </Affliction>
 
   <Affliction
-    name="Necrosis"
+    name=""
     identifier="necrosis"
     description=""
     type="necrosis"
-    causeofdeathdescription="Died from an necrosis."
-    selfcauseofdeathdescription="You have died from an necrosis"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
     isbuff="False"
     limbspecific="True"
     maxstrength="100"> 
