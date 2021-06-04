@@ -121,9 +121,14 @@
 	<afflictioncauseofdeath.septicwound>Умер от сепсиса.</afflictioncauseofdeath.septicwound>
 	<afflictioncauseofdeathself.septicwound>Вы умерли от сепсиса.</afflictioncauseofdeathself.septicwound>
 
-	<afflictionname.infectedwound>Зараженная рана </afflictionname.infectedwound>
+	<afflictionname.infectedwound>Зараженная рана</afflictionname.infectedwound>
 	<afflictiondescription.infectedwound>Рана выглядит опухшей и гнойной.</afflictiondescription.infectedwound>
 	<afflictioncauseofdeath.infectedwound>Истек кровью до смерти</afflictioncauseofdeath.infectedwound>
 	<afflictioncauseofdeathself.infectedwound>Вы истекли кровью.</afflictioncauseofdeathself.infectedwound>
+	
+	<afflictionname.boneclamp>Перевязан</afflictionname.boneclamp>
+	
+	<afflictionname.bandaged>Перевязан</afflictionname.bandaged>
 
+	<afflictionname.ointmented>Ointment</afflictionname.ointmented>
 </infotexts>

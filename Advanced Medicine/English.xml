@@ -126,4 +126,9 @@
 	<afflictioncauseofdeath.infectedwound>Bled to death</afflictioncauseofdeath.infectedwound>
 	<afflictioncauseofdeathself.infectedwound>You have bled to death.</afflictioncauseofdeathself.infectedwound>
 	
+	<afflictionname.boneclamp>Bandaged</afflictionname.boneclamp>
+	
+	<afflictionname.bandaged>Bandaged</afflictionname.bandaged>
+
+	<afflictionname.ointmented>Ointment</afflictionname.ointmented>
 </infotexts>

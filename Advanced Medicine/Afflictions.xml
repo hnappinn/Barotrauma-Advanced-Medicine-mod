@@ -359,7 +359,7 @@
   </Affliction>
 
   <Affliction
-    name="Bandaged"
+    name=""
     identifier="boneclamp"
     description=""
     limbspecific="true"
@@ -371,7 +371,7 @@
   </Affliction>
 
   <Affliction
-    name="Bandaged"
+    name=""
     identifier="bandaged"
     description=""
     limbspecific="true"
@@ -383,7 +383,7 @@
   </Affliction>
 
   <Affliction
-    name="Ointment"
+    name=""
     identifier="ointmented"
     description=""
     limbspecific="true"
@@ -1081,8 +1081,8 @@
     identifier="infectedwound"
     description=""
     type="infection"
-    causeofdeathdescription="Bled to death"
-    selfcauseofdeathdescription="You have bled to death."
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
     limbspecific="true"
     maxstrength="100"
     showiconthreshold="35">
@@ -1123,8 +1123,6 @@
     identifier="septicwound"
     description=""
     type="infection"
-    causeofdeathdescription=""
-    selfcauseofdeathdescription=""
     isbuff="False"
     limbspecific="True"
     maxstrength="100"> 
@@ -1154,8 +1152,6 @@
     identifier="necrosis"
     description=""
     type="necrosis"
-    causeofdeathdescription=""
-    selfcauseofdeathdescription=""
     isbuff="False"
     limbspecific="True"
     maxstrength="100"> 
