@@ -1054,23 +1054,23 @@
     </StatusEffect>
     <Effect minstrength="300" maxstrength="500" strengthchange="0.5"/>
     <StatusEffect target="Character">
-      <ReduceAffliction identifier="infectedwound" amount="0.25"/>
+      <ReduceAffliction identifier="infectedwound" amount="0.50"/>
       <ReduceAffliction identifier="damage" amount="0.025"/>
       <ReduceAffliction identifier="burn" amount="0.05"/>
     </StatusEffect>
     <StatusEffect target="Character">
     <Conditional infectedwound="gte 1"/>
-      <ReduceAffliction identifier="infectedwound" amount="1.25"/>
+      <ReduceAffliction identifier="infectedwound" amount="1"/>
     </StatusEffect>
     <Effect minstrength="500" maxstrength="600" strengthchange="0.5">
     <StatusEffect target="Character">
-      <ReduceAffliction identifier="infectedwound" amount="0.5"/>
+      <ReduceAffliction identifier="infectedwound" amount="0.75"/>
       <ReduceAffliction identifier="damage" amount="0.05"/>
       <ReduceAffliction identifier="burn" amount="0.1"/>
     </StatusEffect>
     <StatusEffect target="Character">
     <Conditional infectedwound="gte 1"/>
-      <ReduceAffliction identifier="infectedwound" amount="2"/>
+      <ReduceAffliction identifier="infectedwound" amount="1.75"/>
     </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
@@ -1086,12 +1086,12 @@
     showiconthreshold="35">
     <Effect minstrength="0" maxstrength="1" strengthchange="0">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.55"/>
+        <ReduceAffliction identifier="immunity" amount="0.60"/>
       </StatusEffect>
     </Effect>
     <Effect minstrength="1" maxstrength="35" strengthchange="0.5">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.60"/>
+        <ReduceAffliction identifier="immunity" amount="0.65"/>
       </StatusEffect>
     </Effect>
     <Effect minstrength="35" maxstrength="90" strengthchange="1">
@@ -1104,7 +1104,7 @@
         <ReduceAffliction identifier="immunity" amount="1"/>
       </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
-      <Conditional immunity="lte 300" septicwound="eq 0"/>
+      <Conditional immunity="lte 200" septicwound="eq 0"/>
         <Affliction identifier="septicwound" indicatorlimb="limb" amount="5"/>
       </StatusEffect>
     <StatusEffect disabledeltatime="true" target="Limb">
