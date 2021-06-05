@@ -7,8 +7,8 @@
     <sprite name="Human Portrait Background" texture="Content/Characters/Human/mugshotCircle.png" origin="0,0.05"/>
   </portraitbackground>
   
-  <ragdolls folder="default"/>
-  <animations folder="default"/>
+  <ragdolls folder="Content\Characters\Human\Ragdolls"/>
+  <animations folder="Content\Characters\Human\Animations"/>
 
   <StatusEffect tags="immunity" type="always" target="This" disabledeltatime="true" comparison="And">
   <Conditional immunity="eq 0"/>
