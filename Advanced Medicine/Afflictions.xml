@@ -394,6 +394,10 @@
     <StatusEffect target="Limb">
     <ReduceAffliction identifier="infectedwound" amount="1.5"/>
     </StatusEffect>
+    <StatusEffect target="limb">
+    <Conditional septicwound="lte 15"/>
+    <ReduceAffliction identifier="septicwound" amount="0.5"/>
+    </StatusEffect>
     </Effect>
 		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
@@ -1096,12 +1100,12 @@
     </Effect>
     <Effect minstrength="35" maxstrength="90" strengthchange="1">
     <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.85"/>
+        <ReduceAffliction identifier="immunity" amount="0.70"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="90" maxstrength="100" strengthchange="1.25">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="1"/>
+        <ReduceAffliction identifier="immunity" amount="0.85"/>
       </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
       <Conditional immunity="lte 200" septicwound="eq 0"/>
@@ -1124,7 +1128,7 @@
     isbuff="False"
     limbspecific="True"
     maxstrength="100"> 
-    <Effect minstrength="0" maxstrength="15" strengthchange="0.2"
+    <Effect minstrength="0" maxstrength="15" strengthchange="0.15"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
     <StatusEffect target="Character">
@@ -1132,7 +1136,7 @@
     <ReduceAffliction identifier="septicwound" amount="999"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="15" maxstrength="85" strengthchange="0.5"
+    <Effect minstrength="15" maxstrength="85" strengthchange="0.2"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
       <StatusEffect target="Character" delay="2.5" stackable="false" comparison="and">
