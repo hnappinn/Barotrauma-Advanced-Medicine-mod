@@ -599,7 +599,7 @@
       maxvitalitydecrease="0">
       <StatusEffect target="Character">
         <Affliction identifier="hypoxia" amount="0.5"/>
-        <affliction identifier="stun" amount="5"/>
+        <Affliction identifier="stun" amount="5"/>
         <Affliction identifier="oxygenlow" amount="10"/>
         </StatusEffect>
       <StatusEffect disabledeltatime="true" target="Character">
@@ -1081,8 +1081,6 @@
     identifier="infectedwound"
     description=""
     type="infection"
-    causeofdeathdescription=""
-    selfcauseofdeathdescription=""
     limbspecific="true"
     maxstrength="100"
     showiconthreshold="35">
@@ -1093,17 +1091,17 @@
     </Effect>
     <Effect minstrength="1" maxstrength="35" strengthchange="0.5">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.55"/>
+        <ReduceAffliction identifier="immunity" amount="0.60"/>
       </StatusEffect>
     </Effect>
     <Effect minstrength="35" maxstrength="90" strengthchange="1">
     <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="1"/>
+        <ReduceAffliction identifier="immunity" amount="0.85"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="90" maxstrength="100" strengthchange="1.25">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="1.25"/>
+        <ReduceAffliction identifier="immunity" amount="1"/>
       </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
       <Conditional immunity="lte 300" septicwound="eq 0"/>

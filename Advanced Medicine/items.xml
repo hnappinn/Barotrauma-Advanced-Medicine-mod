@@ -431,12 +431,12 @@
 <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
 <RequiredItem identifier="organicfiber" />
 </Fabricate>
-<Price baseprice="100" soldeverywhere="true">
-    <Price locationtype="outpost" multiplier="1" minavailable="5" />
-    <Price locationtype="city" multiplier="0.9" minavailable="10" />
-    <Price locationtype="research" multiplier="0.9" minavailable="5" />
-    <Price locationtype="military" multiplier="1" minavailable="15" />
-    <Price locationtype="mine" multiplier="0.75" minavailable="7" />
+<Price baseprice="30" >
+      <Price locationtype="outpost" multiplier="1" minavailable="25" />
+      <Price locationtype="city" multiplier="0.9" minavailable="30" />
+      <Price locationtype="research" multiplier="0.9" minavailable="25" />
+      <Price locationtype="military" multiplier="1" minavailable="30" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="20" />
 </Price>
 <InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="320,0,64,64" origin="0.5,0.5"/>
 <Sprite texture="Mods/Advanced Medicine/Sprites.png" sourcerect="256,128,128,128" depth="0.55" origin="0.5,0.5" />
@@ -916,7 +916,7 @@
 
   <Item name="" identifier="ointment" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="4" maxamount="6" spawnprobability="1" />
-    <PreferredContainer primary="supplycab" minamount="1" maxamount="3" spawnprobability="0.5" />
+    <PreferredContainer primary="supplycab" minamount="1" maxamount="3" spawnprobability="0.2" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.5" />
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="3" spawnprobability="0.25" />
     <Price baseprice="40" >
@@ -945,13 +945,13 @@
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect tags="medical" type="OnUse" target="This, Limb" duration="24.0">
         <Sound file="Mods/Advanced Medicine/ointment.ogg" type="OnUse" range="500" />
-        <ReduceAffliction identifier="burn" amount="0.5" />
+        <ReduceAffliction identifier="burn" amount="0.3" />
         <ReduceAffliction identifier="infectedwound" amount="1" />
         <Affliction identifier="ointmented" amount="10" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Limb, This" duration="24.0">
         <Sound file="Mods/Advanced Medicine/ointment.ogg" type="OnUse" range="500" />
-        <ReduceAffliction identifier="burn" amount="0.25" />
+        <ReduceAffliction identifier="burn" amount="0.1" />
         <ReduceAffliction identifier="infectedwound" amount="0.5" />
         <Affliction identifier="ointmented" amount="5" />
       </StatusEffect>
@@ -1005,6 +1005,10 @@
         <ReduceAffliction identifier="bleeding" amount="2" />
         <ReduceAffliction identifier="burn" amount="1" />
         <Affliction identifier="bandaged" amount="5" />
+      </StatusEffect>
+      <StatusEffect target="limb" type="OnUse">
+        <Conditional fracture="gte 1"/>
+        <Affliction identifier="boneclamp" amount="100"/>
       </StatusEffect>
       <!-- Remove the item when fully used -->
       <StatusEffect type="OnBroken" target="This">

@@ -123,10 +123,6 @@
 
 	<afflictionname.infectedwound>Infected wound</afflictionname.infectedwound>
 	<afflictiondescription.infectedwound>The wound looks swollen and festering.</afflictiondescription.infectedwound>
-	<afflictioncauseofdeath.infectedwound>Bled to death</afflictioncauseofdeath.infectedwound>
-	<afflictioncauseofdeathself.infectedwound>You have bled to death.</afflictioncauseofdeathself.infectedwound>
-	
-	<afflictionname.boneclamp>Bandaged</afflictionname.boneclamp>
 	
 	<afflictionname.bandaged>Bandaged</afflictionname.bandaged>
 
