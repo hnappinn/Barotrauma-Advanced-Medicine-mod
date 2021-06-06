@@ -84,8 +84,8 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <Conditional huskinfection="lt 100.0" />
         <ReduceAffliction identifier="huskinfection" amount="0.5" />
-        <ReduceAffliction identifier="septicwound" amount="2" />
-        <ReduceAffliction identifier="infectedwound" amount="6" />
+        <ReduceAffliction identifier="septicwound" amount="4" />
+        <ReduceAffliction identifier="infectedwound" amount="20" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Limb" duration="60.0">
         <Affliction identifier="organdamage" amount="0.55" />
@@ -97,8 +97,8 @@
       <StatusEffect tags="medical" type="OnFailure" target="Character" duration="60.0">
         <Conditional huskinfection="lt 100.0" />
         <ReduceAffliction identifier="huskinfection" amount="0.25" />
-        <ReduceAffliction identifier="septicwound" amount="1" />
-        <ReduceAffliction identifier="infectedwound" amount="3" />
+        <ReduceAffliction identifier="septicwound" amount="2" />
+        <ReduceAffliction identifier="infectedwound" amount="10" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Limb" duration="60.0">
         <Affliction identifier="organdamage" amount="1.0" />
@@ -1017,4 +1017,68 @@
     </MeleeWeapon>
   </Item>
   </Override>
-</Items>
+  <Item name="Antiseptic spray" identifier="antisepticspray" category="Equipment" Tags="smallitem,tool,medical" useinhealthinterface="true" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="1" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
+    <Price baseprice="75">
+      <Price locationtype="outpost" multiplier="1" minavailable="3" />
+      <Price locationtype="city" multiplier="0.9" minavailable="5" />
+      <Price locationtype="research" multiplier="1.25" minavailable="2" />
+      <Price locationtype="military" multiplier="1.25" minavailable="2" />
+      <Price locationtype="mine" multiplier="0.9" minavailable="10" />
+    </Price>
+    <InventoryIcon texture="" sourcerect="64,64,64,64" origin="0.5,0.5" />
+    <Sprite texture="" sourcerect="0,3,152,88" depth="0.55" origin="0.5,0.5" />
+    <Deconstruct time="10">
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+      <RequiredItem identifier="plastic" />
+    </Fabricate>
+    <Body width="35" height="65" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect" />
+    <MeleeWeapon canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItems items="antiseptic" type="Contained" msg="Antiseptic Required" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="antiseptic" Condition="-20.0" />
+      <StatusEffect tags="medical" type="OnUse" target="Character">
+        <Sound file="Mods/Advanced Medicine/spray.ogg" range="500" />
+        <ReduceAffliction identifier="infectedwound" amount="100" />
+      </StatusEffect>
+      <StatusEffect type="OnFailure" targettype="Contained" targets="antiseptic" Condition="-20.0" />
+    </MeleeWeapon>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true">
+      <Containable items="antiseptic" />
+    </ItemContainer>
+  </Item>
+
+  <Item name="Antiseptic" identifier="antiseptic" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" scale="0.5">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="1" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.25" />
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="3" spawnprobability="0.15" />
+    <Price baseprice="60" >
+      <Price locationtype="outpost" multiplier="1" minavailable="25" />
+      <Price locationtype="city" multiplier="0.9" minavailable="30" />
+      <Price locationtype="research" multiplier="0.9" minavailable="25" />
+      <Price locationtype="military" multiplier="1" minavailable="30" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="20" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="15">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="chlorine" />
+      <RequiredItem identifier="ethanol" />
+    </Fabricate>
+    <InventoryIcon texture="" sourcerect="448,771,64,64" origin="0.5,0.5" />
+    <Sprite texture="" sourcerect="1,128,30,58" depth="0.6" origin="0.5,0.5" />
+    <Body width="30" height="55" density="20" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+
+  </Items>

@@ -982,7 +982,7 @@
     </StatusEffect>
     <StatusEffect target="limb" comparison="And">
     <Conditional immunity="lte 350" ointmented="eq 0"/>
-    <Affliction identifier="necrosis" amount="1" probability="0.01"/>
+    <Affliction identifier="necrosis" amount="0.1" probability="0.01"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="75" maxstrength="100" multiplybymaxvitality="true"
@@ -994,7 +994,7 @@
     </StatusEffect>
     <StatusEffect target="limb" comparison="And">
     <Conditional immunity="lte 500" ointmented="eq 0"/>
-    <Affliction identifier="necrosis" amount="1" probability="0.01"/>
+    <Affliction identifier="necrosis" amount="0.1" probability="0.01"/>
     </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128" color="195,104,60,255" origin="0,0"/>
@@ -1090,25 +1090,25 @@
     showiconthreshold="35">
     <Effect minstrength="0" maxstrength="1" strengthchange="0">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.60"/>
+        <ReduceAffliction identifier="immunity" amount="0.55"/>
       </StatusEffect>
     </Effect>
     <Effect minstrength="1" maxstrength="35" strengthchange="0.5">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.65"/>
+        <ReduceAffliction identifier="immunity" amount="0.60"/>
       </StatusEffect>
     </Effect>
     <Effect minstrength="35" maxstrength="90" strengthchange="1">
     <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.70"/>
+        <ReduceAffliction identifier="immunity" amount="0.65"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="90" maxstrength="100" strengthchange="1.25">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.85"/>
+        <ReduceAffliction identifier="immunity" amount="0.75"/>
       </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
-      <Conditional immunity="lte 200" septicwound="eq 0"/>
+      <Conditional immunity="lte 100" septicwound="eq 0"/>
         <Affliction identifier="septicwound" indicatorlimb="limb" amount="5"/>
       </StatusEffect>
     <StatusEffect disabledeltatime="true" target="Limb">
@@ -1128,7 +1128,7 @@
     isbuff="False"
     limbspecific="True"
     maxstrength="100"> 
-    <Effect minstrength="0" maxstrength="15" strengthchange="0.15"
+    <Effect minstrength="0" maxstrength="15" strengthchange="0.1"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
     <StatusEffect target="Character">
@@ -1136,14 +1136,10 @@
     <ReduceAffliction identifier="septicwound" amount="999"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="15" maxstrength="85" strengthchange="0.2"
+    <Effect minstrength="15" maxstrength="95" strengthchange="0.1"
       minvitalitydecrease="0"
-      maxvitalitydecrease="0">
-      <StatusEffect target="Character" delay="2.5" stackable="false" comparison="and">
-        <Affliction identifier="nausea" strength="1.5" />
-      </StatusEffect>
-  </Effect>
-    <Effect minstrength="85" maxstrength="100" strengthchange="1"
+      maxvitalitydecrease="0"/>
+    <Effect minstrength="95" maxstrength="100" strengthchange="1"
       minvitalitydecrease="0"
       maxvitalitydecrease="600"/>
    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
@@ -1157,7 +1153,7 @@
     isbuff="False"
     limbspecific="True"
     maxstrength="100"> 
-    <Effect minstrength="0" maxstrength="15" strengthchange="0.2"
+    <Effect minstrength="0" maxstrength="15" strengthchange="0.1"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
     <StatusEffect target="Character">
@@ -1165,11 +1161,10 @@
     <ReduceAffliction identifier="necrosis" amount="999"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="15" maxstrength="85" strengthchange="0.5"
+    <Effect minstrength="15" maxstrength="95" strengthchange="0.1"
       minvitalitydecrease="0"
-      maxvitalitydecrease="0">
-  </Effect>
-    <Effect minstrength="85" maxstrength="100" strengthchange="1"
+      maxvitalitydecrease="0"/>
+    <Effect minstrength="95" maxstrength="100" strengthchange="1"
       minvitalitydecrease="0"
       maxvitalitydecrease="600"/>
    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
