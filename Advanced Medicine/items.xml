@@ -462,7 +462,7 @@
 <Affliction identifier="suturedi" amount="100" />
 </StatusEffect>
 <StatusEffect tags="medical" type="OnUse" target="This, Limb" comparison="Or">
-<conditional Lacerations="gte 1" bitewounds="gte 1" explosiondamage="gte 1"/>
+<conditional Lacerations="gt 0" bitewounds="gt 0" explosiondamage="gt 0"/>
 <Affliction identifier="suturedw" amount="7" />
 <ReduceAffliction identifier="bitewounds" amount="10" />
 <ReduceAffliction identifier="lacerations" amount="10" />
