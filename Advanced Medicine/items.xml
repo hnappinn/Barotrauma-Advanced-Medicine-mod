@@ -21,6 +21,7 @@
     <InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Sprites.png" sourcerect="128,0,128,128" depth="0.55" origin="0.5,0.5" />
     <Body width="90" height="80" density="20" />
+    <SuitableTreatment identifier="aritmia" suitability="50" />
 
 	  <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="9.0">
       <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
@@ -76,6 +77,8 @@
     <Body width="35" height="70" density="20" />
     <SuitableTreatment identifier="damage" suitability="-33" />
     <SuitableTreatment identifier="huskinfection" suitability="30" />
+    <SuitableTreatment identifier="septicwound" suitability="50" />
+    <SuitableTreatment identifier="infectedwound" suitability="20" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="25" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
@@ -144,6 +147,10 @@
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,768,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="379,452,27,58" depth="0.55" origin="0.5,0.5" />
     <Body width="25" height="55" density="20" />
+    <SuitableTreatment identifier="hypotension" suitability="50" />
+    <SuitableTreatment identifier="asys" suitability="50" />
+    <SuitableTreatment identifier="aritmia" suitability="45" />
+    <SuitableTreatment identifier="hypoxia" suitability="15" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect tags="medical" type="OnUse" target="Character" duration="30">
@@ -441,6 +448,10 @@
 <InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="320,0,64,64" origin="0.5,0.5"/>
 <Sprite texture="Mods/Advanced Medicine/Sprites.png" sourcerect="256,128,128,128" depth="0.55" origin="0.5,0.5" />
 <Body width="65" height="45" density="50" />
+<SuitableTreatment identifier="lacerations" suitability="70" /> 
+<SuitableTreatment identifier="bitewounds" suitability="70" />
+<SuitableTreatment identifier="explosiondamage" suitability="70" />
+<SuitableTreatment identifier="bleeding" suitability="30" />
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
 <RequiredSkill identifier="medical" level="30" />
 <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
@@ -541,6 +552,7 @@
 <InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="384,0,64,64" origin="0.5,0.5"/>
 <Sprite texture="Mods/Advanced Medicine/Sprites.png" sourcerect="384,128,128,128" depth="0.55" origin="0.5,0.5" />
 <Body width="100" height="100" density="50" />
+  <SuitableTreatment identifier="arterialcut" suitability="50" />
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
 <RequiredSkill identifier="medical" level="30" />
 <StatusEffect type="OnUse" target="Limb, this" condition="-100">
@@ -781,7 +793,8 @@
       <Item identifier="organicfiber" mincondition="0.1" outcondition="0.5"/>
     </Deconstruct>
     <SuitableTreatment identifier="bleeding" suitability="9" />
-    <SuitableTreatment identifier="burn" suitability="15" />
+    <SuitableTreatment identifier="bonecut" suitability="50" />
+    <SuitableTreatment identifier="infectedwound" suitability="10" />
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="310,33,26,42" depth="0.6" origin="0.5,0.5" />
     <Body width="25" height="40" density="20" />
@@ -836,6 +849,7 @@
       <Item identifier="liquidoxygenite" copycondition="true" mincondition="0.1" />
       <Item identifier="stabilozine" copycondition="true" mincondition="0.1" />
     </Deconstruct>
+    <SuitableTreatment identifier="hypoxia" suitability="15" />
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,704,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="226,306,38,72" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
@@ -934,7 +948,7 @@
     <Deconstruct time="20">
       <Item identifier="stabilozine" mincondition="0.1" outcondition="0.5"/>
     </Deconstruct>
-    <SuitableTreatment identifier="infection" suitability="9" />
+    <SuitableTreatment identifier="infection" suitability="20" />
     <SuitableTreatment identifier="burn" suitability="15" />
     <InventoryIcon texture="Mods/Advanced Medicine/IconsAtlas.png" sourcerect="64,64,64,64" origin="0.5,0.5" />
     <Sprite texture="Mods/Advanced Medicine/Sprites.png" sourcerect="128,256,128,128" depth="0.6" origin="0.5,0.5" />
@@ -988,6 +1002,8 @@
     <Body width="25" height="40" density="20" />
     <SuitableTreatment identifier="bleeding" suitability="32" />
     <SuitableTreatment identifier="burn" suitability="35" />
+    <SuitableTreatment identifier="bonecut" suitability="50" />
+    <SuitableTreatment identifier="infectedwound" suitability="6" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="22"></RequiredSkill>
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
@@ -1037,6 +1053,7 @@
       <RequiredItem identifier="plastic" />
     </Fabricate>
     <Body width="150" height="60" density="40" />
+    <SuitableTreatment identifier="infectedwound" suitability="45" />
     <Pickable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"/>
     <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="30,0" handle1="0,-7" handle2="95, 10" msg="ItemMsgPickUpSelect"/>
     <RepairTool range="200" barrelpos="15,5" combatpriority="10">
