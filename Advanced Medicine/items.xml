@@ -525,10 +525,10 @@
 	</MeleeWeapon>
 </Item>
 
-<Item name="" identifier="tourniquet" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
+<Item name="" identifier="tourniquet" category="Equipment" maxstacksize="4" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
 <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 <PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1" />
-<Fabricate suitablefabricators="medicalfabricator" outcondition="100.0">
+<Fabricate suitablefabricators="medicalfabricator" outcondition="100.0" amount="2">
 <RequiredItem identifier="organicfiber" />
 </Fabricate>
 <Price baseprice="60" soldeverywhere="true">
@@ -1038,16 +1038,20 @@
     </Fabricate>
     <Body width="150" height="60" density="40" />
     <Pickable slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"/>
-    <MeleeWeapon canBeCombined="false" removeOnCombined="false" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-10" holdangle="-20" reload="1.0">
+    <Holdable slots="Any,RightHand,LeftHand" controlpose="true" aimpos="30,0" handle1="0,-7" handle2="95, 10" msg="ItemMsgPickUpSelect"/>
+    <RepairTool range="200" barrelpos="15,5" combatpriority="10">
+    <ParticleEmitter particle="extinguisher" particlespersecond="15" copyentityangle="true" velocitymin="200.0" velocitymax="250.0" />
       <RequiredSkill identifier="medical" level="40" />
       <RequiredItems items="antiseptic" type="Contained" msg="Antiseptic Required" />
-      <StatusEffect type="OnUse" targettype="Contained" targets="antiseptic" Condition="-20.0" />
-      <StatusEffect tags="medical" type="OnUse" target="Character">
+      <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
+      <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="2" stackable="false" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="antiseptic" disabledeltatime="true" Condition="-20.0" />
+      <StatusEffect tags="medical" type="OnUse" target="Limb" disabledeltatime="true">
         <Sound file="Mods/Advanced Medicine/spray.ogg" range="500" />
         <ReduceAffliction identifier="infectedwound" amount="100" />
+        <Affliction identifier="ointmented" amount="5"/>
       </StatusEffect>
-      <StatusEffect type="OnFailure" targettype="Contained" targets="antiseptic" Condition="-20.0" />
-    </MeleeWeapon>
+    </RepairTool>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-35,3" containedspritedepth="0.56" ItemRotation="-90" containedstateindicatorstyle="tank">
       <Containable items="antiseptic" />
     </ItemContainer>
