@@ -332,7 +332,7 @@
     <Affliction identifier="traumaticshock" amount="2"/>
     </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -347,7 +347,7 @@
     <Affliction identifier="traumaticshock" amount="0.5"/>
     </StatusEffect>
     </Effect>
-		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   
   <Affliction
@@ -357,7 +357,7 @@
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
-		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+		<icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -369,7 +369,7 @@
     type="resistance"
     isbuff="true"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
-		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+		<icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -381,7 +381,7 @@
     type="resistance"
     isbuff="true"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
-		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+		<icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="768,128,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -401,7 +401,7 @@
     <ReduceAffliction identifier="septicwound" amount="0.5"/>
     </StatusEffect>
     </Effect>
-		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+		<icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="512,128,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -416,7 +416,7 @@
     <Affliction identifier="traumaticshock" amount="1.5"/>
     </StatusEffect>
     </Effect>
-		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -431,7 +431,7 @@
     <Affliction identifier="traumaticshock" amount="1"/>
     </StatusEffect>
     </Effect>
-		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   
   <Affliction
@@ -441,7 +441,7 @@
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -454,7 +454,7 @@
     <Effect minstrength="0" maxstrength="100" strengthchange="-0.2" multiplybymaxvitality="true"
       minvitalitydecrease="0"
       maxvitalitydecrease="0.8"/>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="384,256,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
   
   <Affliction
@@ -469,7 +469,7 @@
     <Affliction identifier="traumaticshock" amount="1.5"/>
     </StatusEffect>
     </Effect>
-		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   
   <Affliction
@@ -501,7 +501,7 @@
     <Affliction identifier="internaldamage" indicatorlimb="limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
-		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,896,128,128" color="195,136,60,255" origin="0,0"/>
+		<icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -517,7 +517,7 @@
       <Affliction identifier="bloodloss" strength="1.5" />
     </StatusEffect>
     </Effect>
- <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+ <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
   
   <Affliction
@@ -573,7 +573,7 @@
         <Affliction identifier="hypotension" amount="3"/>
       </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
 </Affliction>
 <Override>
 <OxygenLow
@@ -1027,7 +1027,7 @@
 	    resistancefor="fractures"
       minresistance="0"
       maxresistance="0.5"/>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="384,0,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -1128,7 +1128,7 @@
       <ReduceAffliction identifier="infectedwound" indicatorlimb="limb" amount="100" probability="0.1"/>
     </StatusEffect>
     </Effect>
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="640,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -1153,7 +1153,7 @@
     <Effect minstrength="95" maxstrength="100" strengthchange="1"
       minvitalitydecrease="0"
       maxvitalitydecrease="600"/>
-   <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+   <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="768,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -1178,7 +1178,7 @@
     <Effect minstrength="95" maxstrength="100" strengthchange="1"
       minvitalitydecrease="0"
       maxvitalitydecrease="600"/>
-   <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+   <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="256,128,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
   
   </Afflictions>
