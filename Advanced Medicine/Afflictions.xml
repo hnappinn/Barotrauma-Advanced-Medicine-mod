@@ -1058,8 +1058,8 @@
     <Conditional infectedwound="gte 1"/>
       <ReduceAffliction identifier="infectedwound" amount="0.5"/>
     </StatusEffect>
-    <StatusEffect target="Character">
-    <Condition bandaged="gt 0"/>
+    <StatusEffect target="Character" comparison="And">
+    <Condition bandaged="gt 0" ointmented="gt 0"/>
       <ReduceAffliction identifier="damage" amount="0.05"/>
       <ReduceAffliction identifier="burn" amount="0.1"/>
     </StatusEffect>
@@ -1069,13 +1069,15 @@
       <ReduceAffliction identifier="infectedwound" amount="0.95"/>
       <ReduceAffliction identifier="damage" amount="0.025"/>
       <ReduceAffliction identifier="burn" amount="0.05"/>
-    <Condition bandaged="gt 0"/>
+    </StatusEffect>
+    <StatusEffect target="Character" comparison="Or">
+    <Condition bandaged="gt 0" ointmented="gt 0"/>
       <ReduceAffliction identifier="damage" amount="0.05"/>
       <ReduceAffliction identifier="burn" amount="0.1"/>
     </StatusEffect>
     <StatusEffect target="Character">
     <Conditional infectedwound="gte 1"/>
-      <ReduceAffliction identifier="infectedwound" amount="0.15"/>
+      <ReduceAffliction identifier="infectedwound" amount="0.2"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="500" maxstrength="600" strengthchange="1">
