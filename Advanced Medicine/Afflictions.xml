@@ -1183,4 +1183,27 @@
    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="256,128,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
   
+  <Affliction
+    name="Adrenaline"
+    identifier="afadrenaline"
+    description=""
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    showiconthreshold="200"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-1">
+    <StatusEffect target="Character">
+        <ReduceAffliction identifier="vf" amount="1" />
+        <ReduceAffliction identifier="vt" amount="1" />
+        <ReduceAffliction identifier="asys" amount="1.5" />
+        <ReduceAffliction identifier="oxygenlow" amount="1" />
+        <ReduceAffliction identifier="hypoxia" amount="0.3" />
+        <ReduceAffliction identifier="bleeding" amount="0.3" />
+        <ReduceAffliction identifier="hypotension" amount="1" />
+    </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
   </Afflictions>

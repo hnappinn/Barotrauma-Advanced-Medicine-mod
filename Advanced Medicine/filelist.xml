@@ -26,6 +26,9 @@
   <None file="Mods/Advanced Medicine/retractor.png" />
   <None file="Mods/Advanced Medicine/bonesaw.png" />
   <None file="Mods/Advanced Medicine/spray.ogg" />
+  <None file="Mods/Advanced Medicine/stasisbag.png" />
+  <None file="Mods/Advanced Medicine/bag.png" />
+  <None file="Mods/Advanced Medicine/baghelmets.png" />
   <Text file="Mods/Advanced Medicine/Russian.xml" />
   <Text file="Mods/Advanced Medicine/English.xml" />
   <Character file="Mods/Advanced Medicine/Characters/Human/Human.xml" />

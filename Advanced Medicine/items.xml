@@ -153,15 +153,9 @@
     <SuitableTreatment identifier="hypoxia" suitability="15" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="30">
+      <StatusEffect tags="medical" type="OnUse" target="Character" duration="2">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="vf" amount="1" />
-        <ReduceAffliction identifier="vt" amount="1" />
-        <ReduceAffliction identifier="asys" amount="1" />
-        <ReduceAffliction identifier="oxygenlow" amount="1" />
-        <ReduceAffliction identifier="hypoxia" amount="0.1" />
-        <ReduceAffliction identifier="bleeding" amount="0.3" />
-        <ReduceAffliction identifier="hypotension" amount="1" />
+        <Affliction identifier="afadrenaline" amount="30"/>
       </StatusEffect>
       <!-- TODO: some effect for adrenaline -->
       <!-- Remove the item when fully used -->
@@ -173,14 +167,8 @@
       <StatusEffect type="OnImpact" target="This" duration="60" Condition="-100.0" disabledeltatime="true">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnImpact" target="Character" duration="30">
-        <ReduceAffliction identifier="vf" amount="1" />
-        <ReduceAffliction identifier="vt" amount="1" />
-        <ReduceAffliction identifier="asys" amount="1" />
-        <ReduceAffliction identifier="oxygenlow" amount="1" />
-        <ReduceAffliction identifier="hypoxia" amount="0.1" />
-        <ReduceAffliction identifier="bleeding" amount="0.3" />
-        <ReduceAffliction identifier="hypotension" amount="1" />
+      <StatusEffect tags="medical" type="OnImpact" target="Character" duration="1">
+        <Affliction identifier="afadrenaline" amount="30"/>
       </StatusEffect>
       <!-- TODO: some effect for adrenaline -->
     </Projectile>
@@ -1101,6 +1089,80 @@
         <Remove />
       </StatusEffect>
     </MeleeWeapon>
+  </Item>
+  
+  <Item name="Stasis Bag" identifier="stasisbag" category="Equipment" tags="provocative" scale="0.5" fireproof="true" description="Stops biological processes and protects against cerebral hypoxia" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+    <Price baseprice="1000" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.2" sold="false"/>
+      <Price locationtype="city" multiplier="1.3" sold="false"/>
+      <Price locationtype="research" multiplier="1" sold="true" minavailable="1"/>
+      <Price locationtype="military" multiplier="1.2" sold="false"/>
+      <Price locationtype="mine" multiplier="1.3" sold="false"/>
+    </Price>
+    <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.15" />
+    <!--
+    <Sprite name="Diving Suit" texture="DivingSuit_Item.png" sourcerect="157,0,90,307" depth="0.55" origin="0.4888889,0.5439739" />
+    -->
+    <InventoryIcon texture="Mods/Advanced Medicine/bag.png" sourcerect="0,0,60,67" origin="0.5,0.5" />
+    <Sprite name="Diving Suit Item" texture="Mods/Advanced Medicine/bag.png" sourcerect="0,0,60,67" depth="0.55" origin="0.5,0.5" />
+    <Body radius="45" width="34" density="15" />
+    
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect">
+    <sprite texture="baghelmets.png" limb="Head" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="Torso" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" inheritorigin="true" sourcerect="16,0,128,240"/>
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="Waist" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" origin="0.4397959,0.7111111" sourcerect="16,480,96,112"/> <!--0.4897959,0.6111111-->
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="RightHand" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" origin="0.5576271,0.484375" sourcerect="320,32,64,112"/> <!--0.4576271,0.484375-->
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" origin="0.5576271,0.484375" sourcerect="320,176,64,112"/>
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="RightArm" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" origin="0.4868421,0.3658537" sourcerect="192,16,64,128"/>
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" origin="0.4868421,0.3658537" sourcerect="192,176,64,128"/>
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" origin="0.6,0.5" sourcerect="144,336,96,160"/>
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" origin="0.6,0.5" sourcerect="272,336,96,160"/>
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" inheritorigin="true" sourcerect="160,528,80,112"/>
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" inheritorigin="true" sourcerect="272,528,80,112"/>
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="RightFoot" sound="footstep_metal" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" origin="0.4520548,0.4117647" sourcerect="16,288,80,176"/>
+      <sprite texture="stasisbag.png" hideotherwearables="true" limb="LeftFoot" sound="footstep_metal" inheritlimbdepth="true" hidelimb="true" 
+	  inherittexturescale="true" origin="0.4520548,0.4117647" sourcerect="16,288,80,176"/>
+      <StatusEffect type="OnWearing" target="Character" OxygenAvailable="100.0" UseHullOxygen="false" />
+      <StatusEffect type="OnWearing" target="Character">
+      <Conditional stun="lt 1"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character">
+      <Conditional septicwound="gt 0"/>
+      <Affliction identifier="septicwound" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character">
+      <Conditional necrosis="gt 0"/>
+      <Affliction identifier="necrosis" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Character" HideFace="true" ObstructVision="true" PressureProtection="1000.0" SpeedMultiplier="0" LowPassMultiplier="0.2" setvalue="true" disabledeltatime="true">
+        <Sound file="Content/Items/Diving/DivingSuitLoop1.ogg" range="500" />
+        <Sound file="Content/Items/Diving/DivingSuitLoop2.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="This" Condition="-0.05"/>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="hypoxia" damagemultiplier="0.0" damagesound="LimbArmor"/>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="infectedwound" damagemultiplier="0.0" damagesound="LimbArmor"/>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="septicwound" damagemultiplier="0.0" damagesound="LimbArmor"/>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="necrosis" damagemultiplier="0.0" damagesound="LimbArmor"/>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bloodloss" damagemultiplier="0.0" damagesound="LimbArmor"/>
+    </Wearable>
+    <aitarget maxsightrange="50" />
+  
   </Item>
 
   </Items>
