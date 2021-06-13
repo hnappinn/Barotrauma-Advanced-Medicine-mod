@@ -2,7 +2,7 @@
 <Items>
   <Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
-    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.5" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3" />
     <Fabricate suitablefabricators="fabricator" requiredtime="10">
     <RequiredSkill identifier="electrical" level="40" />
     <RequiredSkill identifier="medical" level="40" />
@@ -60,7 +60,7 @@
   
   <Item name="Ambu bag" identifier="bvm" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="A bag valve mask (BVM), is a hand-held device commonly used to provide positive pressure ventilation to patients who are not breathing or not breathing adequately" useinhealthinterface="True" scale="0.070">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
-    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.5" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3" />
     <Fabricate suitablefabricators="fabricator" requiredtime="10">
     <RequiredSkill identifier="medical" level="30" />
     <RequiredItem identifier="plastic" />
@@ -953,7 +953,7 @@
       <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
       <StatusEffect tags="medical" type="OnActive" target="Character">
         <Affliction identifier="table" amount="2" />
-        <reduceaffliction type="oxygenlow" strength="5" />
+        <Affliction identifier="alv" amount="10" />
       </StatusEffect>
     </Controller>
   </Item>
@@ -1216,6 +1216,66 @@
     </Wearable>
     <aitarget maxsightrange="50" />
   
+  </Item>
+  
+  <Item name="Auto-Compression" identifier="autocpt" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="An automated, portable, battery-powered cardiopulmonary resuscitation" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+    <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.25" />
+    <Price baseprice="300" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1.3" sold="false"/>
+      <Price locationtype="city" multiplier="1.2"  minavailable="1"/>
+      <Price locationtype="research" multiplier="1" sold="false"/>
+      <Price locationtype="military" multiplier="0.9" minavailable="3"/>
+      <Price locationtype="mine" multiplier="1" sold="false"/>
+    </Price>
+    <Deconstruct time="40">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" />
+      <Item identifier="steel" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="30">
+    <RequiredSkill identifier="medical" level="40" />
+    <RequiredItem identifier="plastic" />
+    <RequiredItem identifier="fpgacircuit" />
+    <RequiredItem identifier="steel" />
+    </Fabricate>
+    <InventoryIcon texture="Mods/Advanced Medicine/autocpr.png" sourcerect="14,45,103,158" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/autocpr.png" sourcerect="14,45,103,158" depth="0.6" />
+    <Body radius="45" height="50" density="40" />
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgPickUpSelect">
+    <StatusEffect type="OnWearing" target="This" Condition="-100" disabledeltatime="true" delay="0.3" stackable="false">
+    <Condition Condition="gte 99"/>
+    </StatusEffect>
+    <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="3" stackable="false"/>
+    <StatusEffect type="OnWearing" target="Contained,Character,This" Condition="-0.2" comparison="And">
+        <Conditional IsDead="false"/>
+        <RequiredItem items="batterycell" type="Contained" />
+      </StatusEffect>
+      <StatusEffect type="OnWearing" target="Contained,Character,This" Condition="-0.1" comparison="And">
+        <Conditional IsDead="false"/>
+        <RequiredItem items="fulguriumbatterycell" type="Contained" />
+      </StatusEffect>
+    <StatusEffect type="OnWearing" target="Character,This" comparison="Or">
+    <Conditional IsDead="false"/>
+    <RequiredItem items="mobilebattery" type="Contained" />
+        <ReduceAffliction identifier="hypotension"      amount="1.5" />
+        <ReduceAffliction identifier="vf"      amount="1" />
+        <ReduceAffliction identifier="asys"      amount="0.65" />
+        <ReduceAffliction identifier="vt"      amount="2.25" />
+        <ReduceAffliction identifier="oxygenlow"      amount="2.5" />
+    </StatusEffect>
+    <StatusEffect type="OnWearing" target="Character,This" comparison="And">
+    <Conditional IsDead="false" Condition="gte 99"/>
+    <RequiredItem items="mobilebattery" type="Contained" />
+      <Sound file="Mods/Advanced Medicine/pump.ogg" range="500" />
+    </StatusEffect>
+    <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="cpr_buff" damagemultiplier="0.0" damagesound="LimbArmor"/>
+      <sprite name="Auto-Compression" texture="Mods/Advanced Medicine/autocpr.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+    </Wearable>
+    <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
+      <Containable items="mobilebattery" />
+    </ItemContainer>
   </Item>
 
   </Items>
