@@ -939,7 +939,7 @@
     </Fabricate>
     <InventoryIcon texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" origin="0.5,0.5" />
     <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
-    <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" />
+    <Holdable selectkey="Action" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" />
     <LightComponent range="10.0" lightcolor="255,255,255,0" IsOn="true" castshadows="false" allowingameediting="false">
       <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" depth="0.025" sourcerect="96,304,416,192" origin="0.5,0.5" alpha="1.0" />
     </LightComponent>
@@ -1185,7 +1185,7 @@
       <ReduceAffliction identifier="paralysis" amount="0.4"/>
       <ReduceAffliction identifier="huskinfection" amount="0.3"/>
       </StatusEffect>
-      <StatusEffect type="OnWearing" target="Character">
+      <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
       <Conditional stun="lt 1"/>
       <Affliction identifier="stun" amount="1"/>
       </StatusEffect>
@@ -1277,5 +1277,620 @@
       <Containable items="mobilebattery" />
     </ItemContainer>
   </Item>
+  <Override>
+  <Item name="" identifier="antibloodloss1" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,petfood2,petfood3" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="6" maxamount="8" />
+    <PreferredContainer primary="supplycab" minamount="3" maxamount="4" spawnprobability="0.5" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="4" spawnprobability="0.5" />
+    <Price baseprice="50" >
+      <Price locationtype="outpost" multiplier="1" minavailable="12" />
+      <Price locationtype="city" multiplier="0.9" minavailable="18" />
+      <Price locationtype="research" multiplier="0.9" minavailable="22" />
+      <Price locationtype="military" multiplier="1" minavailable="18" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="12" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="15" >
+      <RequiredSkill identifier="medical" level="5" />
+      <RequiredItem identifier="sodium" />
+      <RequiredItem identifier="chlorine" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="sodium" copycondition="true" mincondition="0.1" />
+      <Item identifier="chlorine" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <SuitableTreatment identifier="bloodloss" suitability="30" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,261,83,46" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="45" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <RequiredSkill identifier="medical" level="10" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="20">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <Affliction identifier="afsaline" amount="25" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="20">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <Affliction identifier="afsaline" amount="17" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <AiTarget sightrange="1000" static="true" />
+  </Item>
+  </Override>
+  <Override>
+  <Item name="Blood Pack O-" identifier="antibloodloss2" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.5"/>
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
+    <Price baseprice="300" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="25" >
+      <RequiredSkill identifier="medical" level="31" />
+      <RequiredItem identifier="alienblood" />
+      <RequiredItem identifier="antibloodloss1" />
+      <RequiredItem identifier="stabilozine" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="alienblood" copycondition="true" mincondition="0.1" />
+      <Item identifier="antibloodloss1" copycondition="true" mincondition="0.1" />
+      <Item identifier="stabilozine" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <SuitableTreatment identifier="bloodloss" suitability="120" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="8" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <AiTarget sightrange="1000" static="true" />
+  </Item>
+  </Override>
 
+  <Item name="Blood Pack O+" identifier="bloodpackoplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.5"/>
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
+    <Price baseprice="250" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="8" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Conditional aminus="gt 0" bminus="gt 0" abminus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Conditional aminus="gt 0" bminus="gt 0" abminus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item name="Blood Pack A+" identifier="bloodpackaplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25"/>
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
+    <Price baseprice="180" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="8" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Conditional aminus="gt 0" bminus="gt 0" bplus="gt 0" abminus="gt 0" oplus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Conditional aminus="gt 0" bminus="gt 0" bplus="gt 0" abminus="gt 0" oplus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item name="Blood Pack B+" identifier="bloodpackbplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25"/>
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
+    <Price baseprice="180" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="8" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Conditional aminus="gt 0" bminus="gt 0" aplus="gt 0" abminus="gt 0" oplus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Conditional aminus="gt 0" bminus="gt 0" aplus="gt 0" abminus="gt 0" oplus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item name="Blood Pack AB+" identifier="bloodpackabplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <Price baseprice="125" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="8" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Conditional aplus="eq 0" bplus="eq 0" aminus="eq 0" bminus="eq 0" abminus="eq 0" ominus="eq 0" oplus="eq 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Conditional aplus="eq 0" bplus="eq 0" aminus="eq 0" bminus="eq 0" abminus="eq 0" ominus="eq 0" oplus="eq 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item name="Blood Pack A-" identifier="bloodpackaminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25"/>
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
+    <Price baseprice="210" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="8" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Conditional bminus="gt 0" bplus="gt 0" oplus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Conditional bminus="gt 0" bplus="gt 0" oplus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item name="Blood Pack B-" identifier="bloodpackbminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25"/>
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
+    <Price baseprice="195" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="8" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Conditional aminus="gt 0" aplus="gt 0" oplus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Conditional aminus="gt 0" aplus="gt 0" oplus="gt 0" ominus="gt 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item name="Blood Pack AB-" identifier="bloodpackabminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <Price baseprice="150" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="8" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Conditional aplus="eq 0" bplus="eq 0" aminus="eq 0" bminus="eq 0" ominus="eq 0" oplus="eq 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="bloodbank" amount="8" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Conditional aplus="eq 0" bplus="eq 0" aminus="eq 0" bminus="eq 0" ominus="eq 0" oplus="eq 0"/>
+        <Affliction identifier="hemotransfusionshock" amount="0.1"/>
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="Filtered Blood Pack" identifier="antibloodloss3" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.5"/>
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
+    <Price baseprice="300" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="bloodpackabminus"/>
+    </Fabricate>
+    <Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="bloodpackabplus" />
+    </Fabricate>
+    <Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="bloodpackaminus" />
+    </Fabricate>
+    <Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="bloodpackaplus" />
+    </Fabricate>
+    <Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="bloodpackbminus" />
+    </Fabricate>
+    <Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="bloodpackbplus" />
+    </Fabricate>
+    <Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="bloodpackoplus" />
+    </Fabricate>
+    <SuitableTreatment identifier="bloodloss" suitability="100" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="4" />
+        <Affliction identifier="bloodbank" amount="4" />
+        <Affliction identifier="psychosis" amount="4" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="2" />
+        <Affliction identifier="bloodbank" amount="2" />
+        <Affliction identifier="psychosis" amount="8" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+    <AiTarget sightrange="1000" static="true" />
+  </Item>
+
+  <Item name="Empty Blood Pack" identifier="emptybloodpack" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <Price baseprice="25" >
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+      <RequiredSkill identifier="medical" level="10" />
+      <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <Body width="80" height="42" density="11" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <RequiredSkill identifier="medical" level="35" />
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional aplus="gt 0"/>
+      <SpawnItem identifier="bloodpackaplus"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional bplus="gt 0"/>
+      <SpawnItem identifier="bloodpackbplus"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional oplus="gt 0"/>
+      <SpawnItem identifier="bloodpackoplus"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional abplus="gt 0"/>
+      <SpawnItem identifier="bloodpackabplus"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional aminus="gt 0"/>
+      <SpawnItem identifier="bloodpackaminus"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional bminus="gt 0"/>
+      <SpawnItem identifier="bloodpackbminus"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional abminus="gt 0"/>
+      <SpawnItem identifier="bloodpackabminus"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional ominus="gt 0"/>
+      <SpawnItem identifier="antibloodloss2"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
+      <StatusEffect tags="medical" type="OnUse" target="Character, This">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
+        <Affliction identifier="bloodloss" amount="20" />
+        <ReduceAffliction identifier="bloodbank" amount="80" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="bloodloss" amount="30" />
+        <Affliction identifier="bloodbank" amount="100" />
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
+  <Item
+    name="Blood Refinery"
+    identifier="bloodrefinery" 
+    tags="bloodrefinery"
+    category="Machine"
+		linkable="true"
+    allowedlinks="deconstructor,medcabinet,locker"
+    scale="0.3"
+    description=""
+    damagedbyexplosions="true"
+    explosiondamagemultiplier="0.2"
+    isshootable="true">
+    
+    <Upgrade gameversion="0.10.4.0">
+      <Repairable Msg="ItemMsgRepairWrench"/>
+    </Upgrade>
+
+    <Price baseprice="1500" >
+      <Price locationtype="outpost" multiplier="1.25" minavailable="1" />
+      <Price locationtype="city" multiplier="1.5" minavailable="1" />
+      <Price locationtype="research" multiplier="0.9" minavailable="1" />
+      <Price locationtype="military" multiplier="1" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.75" minavailable="1" />
+    </Price>
+
+    <Deconstruct time="30">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" />
+      <Item identifier="steel" />
+      <Item identifier="aluminium" />
+      <Item identifier="titaniumaluminiumalloy" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="50">
+      <RequiredSkill identifier="medical" level="50" />
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="steel" />
+      <RequiredItem identifier="aluminium" />
+      <RequiredItem identifier="titaniumaluminiumalloy" />
+    </Fabricate>
+    
+    <Sprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" depth="0.8" sourcerect="0,0,336,288" origin="0.5,0.5"/>
+    <InventoryIcon texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="0,0,336,288" origin="0.5,0.5" />
+    <BrokenSprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="336,0,336,288" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
+    <BrokenSprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="672,0,336,288" origin="0.5,0.5" depth="0.8" maxcondition="0" />
+    <Body radius="45" width="34" density="15" />
+
+    <LightComponent range="10.0" lightcolor="255,255,255,0" powerconsumption="5"  IsOn="true" castshadows="false" allowingameediting="false">
+      <sprite texture="Content/Items/Command/navigatorLights.png" depth="0.025" sourcerect="688,339,336,288" alpha="1.0" />
+    </LightComponent>
+
+    <Fabricator canbeselected = "true" powerconsumption="50.0" msg="ItemMsgInteractSelect">
+      <GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
+      <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" loop="true"/>
+      <poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
+      <StatusEffect type="InWater" target="This" condition="-0.5" />
+    </Fabricator>
+
+    <ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel"/>
+      <RequiredSkill identifier="electrical" level="55" />
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Sounds/Damage/Electrocution1.ogg" range="1000" />
+        <Explosion range="100.0" stun="0" force="5.0" flames="false" shockwave="false" sparks="true" underwaterbubble="false" />
+        <Affliction identifier="stun" strength="5" />
+        <Affliction identifier="burn" strength="5" />
+      </StatusEffect>
+      <RequiredItem items="screwdriver" type="Equipped"/>
+      <input name="power_in" displayname="connection.powerin"/>
+    </ConnectionPanel>
+
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
+      <RequiredSkill identifier="mechanical" level="55" />
+      <RequiredItem items="wrench" type="equipped" />
+      <ParticleEmitter particle="damagebubbles" particleburstamount="2" particleburstinterval="2.0" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemin="0" anglemax="359" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
+      <ParticleEmitter particle="smoke" particleburstamount="3" particleburstinterval="0.5" particlespersecond="2" scalemin="1" scalemax="2.5" anglemin="0" anglemax="359" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
+      <ParticleEmitter particle="heavysmoke" particleburstinterval="0.25" particlespersecond="2" scalemin="2.5" scalemax="5.0" mincondition="0.0" maxcondition="15.0" />   
+      <StatusEffect type="OnFailure" target="Character" targetlimbs="LeftHand,RightHand">
+        <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
+        <Affliction identifier="lacerations" strength="5" />
+        <Affliction identifier="stun" strength="5" />
+      </StatusEffect>
+    </Repairable>
+
+    <Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true" />
+
+    <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true"/>
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true"/>
+  </Item>
   </Items>

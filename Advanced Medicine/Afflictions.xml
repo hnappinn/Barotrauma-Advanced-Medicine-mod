@@ -198,13 +198,13 @@
     <Effect minstrength="0" maxstrength="15" strengthchange="-0.3">
     </Effect>
 
-    <Effect minstrength="15" maxstrength="30" strengthchange="-0.1">
+    <Effect minstrength="15" maxstrength="30" strengthchange="-0.2">
       <StatusEffect target="Character">
         <Affliction identifier="oxygenlow" amount="1"/>
       </StatusEffect>
     </Effect>
 
-    <Effect minstrength="30" maxstrength="60" strengthchange="-0.05">
+    <Effect minstrength="30" maxstrength="60" strengthchange="-0.1">
       <StatusEffect target="Character">
         <Affliction identifier="oxygenlow" amount="5"/>
         <Affliction identifier="hypoxia" amount="0.1"/>
@@ -213,9 +213,13 @@
         <StatusEffect disabledeltatime="true" target="Character">
         <Affliction identifier="vt" amount="1" probability="0.05"/>
       </StatusEffect>
+      <StatusEffect target="character" disabledeltatime="true">
+      <Conditional stun="lt 1"/>
+      <Affliction identifier="stun" amount="2" probability="0.01"/>
+      </StatusEffect>
     </Effect>
 
-     <Effect minstrength="60" maxstrength="100" strengthchange="-0.025">
+     <Effect minstrength="60" maxstrength="100" strengthchange="-0.05">
       <StatusEffect target="Character">
         <Affliction identifier="oxygenlow" amount="15"/>
         <Affliction identifier="hypoxia" amount="0.2"/>
@@ -223,6 +227,9 @@
         <StatusEffect disabledeltatime="true" target="Character">
         <Conditional vt="eq 0"/>
         <Affliction identifier="vt" amount="1"/>
+      </StatusEffect>
+      <StatusEffect target="character" disabledeltatime="true">
+      <Affliction identifier="stun" amount="5"/>
       </StatusEffect>
     </Effect>
 
@@ -636,32 +643,44 @@
     activationthreshold="0"
     maxstrength="100">
     <Effect minstrength="0" maxstrength="15" multiplybymaxvitality="true"
-      strengthchange="-0.5"
       dialogflag="Bloodloss"/>
-    <Effect minstrength="15" maxstrength="35" multiplybymaxvitality="true"
-      strengthchange="-0.5"
+    <Effect minstrength="25" maxstrength="45" multiplybymaxvitality="true"
       dialogflag="Bloodloss">
       <StatusEffect target="character">
+      <Conditional afsaline="eq 0"/>
       <Affliction identifier="hypotension" amount="0.3"/>
       </StatusEffect>
     </Effect>
-    <Effect minstrength="35" maxstrength="75" multiplybymaxvitality="true"
-      strengthchange="-0.3"
+    <Effect minstrength="45" maxstrength="75" multiplybymaxvitality="true"
       dialogflag="Bloodloss">
+      <StatusEffect target="Character" SpeedMultiplier="0.3" setvalue="true"/>
       <StatusEffect target="character">
+      <Affliction identifier="oxygenlow" amount="1"/>
+      </StatusEffect>
+      <StatusEffect target="character" disabledeltatime="true">
+      <Affliction identifier="stun" amount="3" probability="0.01"/>
+      </StatusEffect>
+      <StatusEffect target="character">
+      <Conditional afsaline="eq 0"/>
       <Affliction identifier="hypotension" amount="0.5"/>
       <Affliction identifier="hypoxia" amount="0.05"/>
       </StatusEffect>
     </Effect>
     <Effect minstrength="75" maxstrength="100" multiplybymaxvitality="true"
-      strengthchange="-0.1"
       dialogflag="Bloodloss">
       <StatusEffect target="character">
+      <Affliction identifier="oxygenlow" amount="3"/>
+      </StatusEffect>
+      <StatusEffect target="character">
+      <Affliction identifier="stun" amount="5"/>
+      </StatusEffect>
+      <StatusEffect target="character">
+      <Conditional afsaline="eq 0"/>
       <Affliction identifier="hypotension" amount="5"/>
       <Affliction identifier="hypoxia" amount="0.3"/>
       </StatusEffect>
       <StatusEffect target="character" disabledeltatime="true" comparison="And">
-      <Conditional asys="eq 0" vf="eq 0"/>
+      <Conditional asys="eq 0" vf="eq 0" afsaline="eq 0"/>
       <Affliction identifier="asys" amount="5" probability="0.03"/>
       </StatusEffect>
     </Effect>
@@ -1269,6 +1288,45 @@
   </Affliction>
 
   <Affliction
+    name="Saline"
+    identifier="afsaline"
+    description=""
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    showiconthreshold="200"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.2"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Blood bank"
+    identifier="bloodbank"
+    description=""
+    type="resistance"
+    isbuff="true"
+    limbspecific="false"
+    showiconthreshold="200"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="2" strengthchange="15"/>
+    <Effect minstrength="2" maxstrength="4" strengthchange="0.01"/>
+    <Effect minstrength="4" maxstrength="100" delay="3" strengthchange="0.01">
+    <StatusEffect target="Character">
+    <Conditional bloodloss="gt 0"/>
+    <ReduceAffliction identifier="bloodloss" amount="0.5"/>
+    <ReduceAffliction identifier="bloodbank" amount="0.35"/>
+    </StatusEffect>
+    <StatusEffect target="Character" delay="30">
+    <Conditional bloodloss="gte 15"/>
+    <ReduceAffliction identifier="bloodloss" amount="1"/>
+    <ReduceAffliction identifier="bloodbank" amount="0.75"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
     name="ALV"
     identifier="alv"
     description=""
@@ -1285,4 +1343,127 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
+  <Affliction
+    name="O-"
+    identifier="ominus"
+    description=""
+    type="bloodgroup"
+    limbspecific="false"
+    showiconthreshold="3"
+    maxstrength="1">
+    <Effect minstrength="0" maxstrength="1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="A-"
+    identifier="aminus"
+    description=""
+    type="bloodgroup"
+    limbspecific="false"
+    showiconthreshold="3"
+    maxstrength="1">
+    <Effect minstrength="0" maxstrength="1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="B-"
+    identifier="bminus"
+    description=""
+    type="bloodgroup"
+    limbspecific="false"
+    showiconthreshold="3"
+    maxstrength="1">
+    <Effect minstrength="0" maxstrength="1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="AB-"
+    identifier="abminus"
+    description=""
+    type="bloodgroup"
+    limbspecific="false"
+    showiconthreshold="3"
+    maxstrength="1">
+    <Effect minstrength="0" maxstrength="1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="AB+"
+    identifier="abplus"
+    description=""
+    type="bloodgroup"
+    limbspecific="false"
+    showiconthreshold="3"
+    maxstrength="1">
+    <Effect minstrength="0" maxstrength="1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="A+"
+    identifier="aplus"
+    description=""
+    type="bloodgroup"
+    limbspecific="false"
+    showiconthreshold="3"
+    maxstrength="1">
+    <Effect minstrength="0" maxstrength="1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="O+"
+    identifier="oplus"
+    description=""
+    type="bloodgroup"
+    limbspecific="false"
+    showiconthreshold="3"
+    maxstrength="1">
+    <Effect minstrength="0" maxstrength="1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="B+"
+    identifier="bplus"
+    description=""
+    type="bloodgroup"
+    limbspecific="false"
+    showiconthreshold="3"
+    maxstrength="1">
+    <Effect minstrength="0" maxstrength="1"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Hemotransfusion Shock"
+    identifier="hemotransfusionshock"
+    description="The patient experiences mental agitation, vague anxiety. Constricting breath pains in the chest. shortness of breath, feeling of lack of air"
+    type="poison"
+    limbspecific="false"
+    showiconthreshold="10"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="30" strengthchange="0.5"/>
+    <Effect minstrength="30" maxstrength="85" strengthchange="0.5">
+    <StatusEffect target="Character">
+    <Affliction identifier="oxygenlow" amount="5"/>
+    <Affliction identifier="bloodloss" amount="0.5"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="85" maxstrength="100" strengthchange="0.5">
+    <StatusEffect target="Character">
+    <Affliction identifier="oxygenlow" amount="15"/>
+    <Affliction identifier="bloodloss" amount="1.25"/>
+    </StatusEffect>
+    <StatusEffect target="Character" delay="30">
+    <Conditional bloodloss="gte 30"/>
+    <ReduceAffliction identifier="hemotransfusionshock" amount="100"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Mods/Advanced Medicine/Icons.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+  </Affliction>
   </Afflictions>
