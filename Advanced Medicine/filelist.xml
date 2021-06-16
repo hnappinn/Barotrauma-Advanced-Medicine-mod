@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.13.3.11" steamworkshopid="2488816950" installtime="1623749619">
+<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.13.3.11" steamworkshopid="2488816950" installtime="1623832842">
   <Afflictions file="Mods/Advanced Medicine/Afflictions.xml" />
   <None file="Mods/Advanced Medicine/Defib.png" />
   <None file="Mods/Advanced Medicine/IconsAtlas.png" />
@@ -18,8 +18,6 @@
   <None file="Mods/Advanced Medicine/ointment.ogg" />
   <None file="Mods/Advanced Medicine/ointment.png" />
   <None file="Mods/Advanced Medicine/tourniquet.png" />
-  <None file="Mods/Advanced Medicine/biometric_scanner_fixedlight.png" />
-  <None file="Mods/Advanced Medicine/ekutility_tools.png" />
   <None file="Mods/Advanced Medicine/scalpel.png" />
   <None file="Mods/Advanced Medicine/hemostat.png" />
   <None file="Mods/Advanced Medicine/suture.png" />
@@ -38,6 +36,8 @@
   <None file="Mods/Advanced Medicine/hypospray.ogg" />
   <None file="Mods/Advanced Medicine/injecter.png" />
   <None file="Mods/Advanced Medicine/vialrack.png" />
+  <None file="Mods/Advanced Medicine/ekutility_tools.png" />
+  <None file="Mods/Advanced Medicine/biometric_scanner_fixedlight.png" />
   <Text file="Mods/Advanced Medicine/Russian.xml" />
   <Text file="Mods/Advanced Medicine/English.xml" />
   <Character file="Mods/Advanced Medicine/Characters/Human/Human.xml" />

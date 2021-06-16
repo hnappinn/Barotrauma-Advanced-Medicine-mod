@@ -2241,33 +2241,37 @@
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,256,64,64" origin="0.5,0.5" />-->
       <Sprite texture="Mods/Advanced Medicine/ekutility_tools.png" sourcerect="320,128,112,96" depth="0.6" origin="0.5,0.5" />
       <Body width="112" height="96" density="25" />
-      <Holdable slots="Any,RightHand,LeftHand,Head" holdpos="30,-15" aimpos="100,0" handle1="-13,0" handle2="-13,0" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnActive" targettype="Contained" Condition="-1">
-          <RequiredItem items="batterycell" type="Contained" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" targettype="Contained" Condition="-0.5">
-          <RequiredItem items="fulguriumbatterycell" type="Contained" />
-        </StatusEffect>
-        <StatusEffect type="OnActive" targettype="Contained" Condition="-0.2">
-          <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
-        </StatusEffect>
-        <!-- the child LightComponent is only active when the Holdable is active, i.e. when the item is being held -->
-        <LightComponent LightColor="255,255,255,200" Flicker="0.25" range="45" powerconsumption="10" IsOn="true">
+      <Holdable slots="Any,RightHand,LeftHand,Head" holdpos="30,-15" aimpos="100,0" handle1="-13,0" handle2="-13,0" msg="ItemMsgPickUpSelect"/>
+       <RepairTool firedamage="0.0" structurefixamount="0.0" range="150" repairmultiple="false" repairthroughwalls="false" combatpriority="10" levelwallfixamount="0">
+        <LightComponent LightColor="255,255,255,200" Flicker="0.25" range="45" powerconsumption="1" IsOn="true">
           <LightTexture texture="Mods/Advanced Medicine/biometric_scanner_fixedlight.png" origin="0.5, 0.27" size="0.5,0.5" />
         </LightComponent>
-      </Holdable>
       <StatusHUD range="150">
         <StatusEffect type="Always" target="This,Character" drawhudwhenequipped="true" setvalue="true" comparison="And">
-          <Conditional  condition="gt 0.1" />
+          <Conditional  voltage="gte 0.3"/>
         </StatusEffect>
         <StatusEffect type="Always" target="This,Character" drawhudwhenequipped="false" setvalue="true" comparison="And">
-          <Conditional  Voltage="lte 0" />
+          <Conditional  Voltage="eq 0" />
         </StatusEffect>
       </StatusHUD>
+      <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
+      <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="3" stackable="false" />
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-1" disabledeltatime="true">
+          <RequiredItem items="batterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.5" disabledeltatime="true">
+          <RequiredItem items="fulguriumbatterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" targettype="Contained" Condition="-0.2" disabledeltatime="true">
+          <RequiredItem excludedidentifiers="batterycell,fulguriumbatterycell" type="Contained" />
+        </StatusEffect>
+        <StatusEffect type="OnUse" target="This" voltage="1.0" setvalue="true">
+        <Conditional Condition="gt 0.01"/>
+        </StatusEffect>
+        <StatusEffect type="Always" target="This" voltage="-0.4"/>
+      </RepairTool>
       <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
-        <Containable items="mobilebattery">
-          <StatusEffect type="OnContaining" targettype="This" Voltage="1.0" setvalue="true" />
-        </Containable>
+        <Containable items="mobilebattery"/>
       </ItemContainer>
     </Item>
   </Override>
