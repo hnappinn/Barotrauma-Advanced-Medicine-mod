@@ -14,10 +14,6 @@
   <Conditional immunity="eq 0"/>
     <Affliction identifier="immunity" amount="600" />
   </StatusEffect>
-  <StatusEffect tags="bloodbank" type="always" target="This" disabledeltatime="true" comparison="And">
-  <Conditional bloodbank="eq 0"/>
-    <Affliction identifier="bloodbank" amount="100" />
-  </StatusEffect>
 
   <StatusEffect tags="bloodgroup" type="always" target="This" comparison="And" random="true">
   <Conditional aplus="eq 0" bplus="eq 0" abplus="eq 0" aminus="eq 0" bminus="eq 0" abminus="eq 0" ominus="eq 0" oplus="eq 0"/>
