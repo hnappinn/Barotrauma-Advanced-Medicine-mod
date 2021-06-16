@@ -1086,6 +1086,42 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,640,128,128" color="195,104,60,255" origin="0,0"/>
   </Burn>
   </Override>
+  
+<Override>
+  <Affliction
+    name="Opiate overdose"
+    identifier="opiateoverdose"
+    description="The patient has pinpoint pupils and icy cold skin. They struggle to breathe and swallow."
+    type="poison"
+    causeofdeathdescription="Died of opiate overdose"
+    selfcauseofdeathdescription="You have died of opiate overdose."
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="50"
+    karmachangeonapplied="-1"
+    maxstrength="100">
+    <!-- No effects except slight distortion at this level -->
+    <Effect minstrength="0" maxstrength="50"
+      strengthchange="-0.5"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="1.0">
+    </Effect>
+    <!-- Starts to become lethal when strength is above 50 -->
+    <Effect minstrength="50" maxstrength="100"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="400"
+      minscreendistort="0.0"
+      maxscreendistort="3.0"
+      strengthchange="-0.25"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="10.0"
+      minradialdistort="0.0"
+      maxradialdistort="10.0">
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,768,128,128" color="103,103,103,255" origin="0,0"/>
+  </Affliction>
+</Override>
 
   <Affliction
     name=""
