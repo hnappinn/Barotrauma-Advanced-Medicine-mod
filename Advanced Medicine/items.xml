@@ -86,11 +86,11 @@
       </StatusEffect>
       <StatusEffect type="OnUse" target="This" Condition="-100" />
       <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="1" stackable="false" />
-      <StatusEffect type="OnUse" target="Contained,Character" Condition="-0.5" comparison="Or">
+      <StatusEffect type="OnUse" target="Contained,Character" Condition="-2" comparison="Or">
         <Conditional IsDead="false" />
         <RequiredItem items="oxygentank" type="Contained" />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Contained,Character" Condition="-0.1" comparison="Or">
+      <StatusEffect type="OnUse" target="Contained,Character" Condition="-0.5" comparison="Or">
         <Conditional IsDead="false" />
         <RequiredItem items="oxygenitetank" type="Contained" />
       </StatusEffect>
@@ -1307,13 +1307,13 @@
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <RequiredSkill identifier="medical" level="10" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="20">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <Affliction identifier="afsaline" amount="25" />
+        <Affliction identifier="afsaline" amount="5" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="20">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <Affliction identifier="afsaline" amount="17" />
+        <Affliction identifier="afsaline" amount="3" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
       <StatusEffect type="OnBroken" target="This">
@@ -1354,15 +1354,13 @@
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="8" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="3" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="4" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="2" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
       <StatusEffect type="OnBroken" target="This">
@@ -1391,19 +1389,17 @@
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="8" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="3" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
         <Conditional aminus="gt 0" bminus="gt 0" abminus="gt 0" ominus="gt 0"/>
         <Affliction identifier="hemotransfusionshock" amount="0.1"/>
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="4" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="2" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
         <Conditional aminus="gt 0" bminus="gt 0" abminus="gt 0" ominus="gt 0"/>
@@ -1434,19 +1430,17 @@
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="8" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="3" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
         <Conditional aminus="gt 0" bminus="gt 0" bplus="gt 0" abminus="gt 0" oplus="gt 0" ominus="gt 0"/>
         <Affliction identifier="hemotransfusionshock" amount="0.1"/>
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="4" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="2" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
         <Conditional aminus="gt 0" bminus="gt 0" bplus="gt 0" abminus="gt 0" oplus="gt 0" ominus="gt 0"/>
@@ -1477,19 +1471,17 @@
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="8" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="3" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
         <Conditional aminus="gt 0" bminus="gt 0" aplus="gt 0" abminus="gt 0" oplus="gt 0" ominus="gt 0"/>
         <Affliction identifier="hemotransfusionshock" amount="0.1"/>
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="4" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="2" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
         <Conditional aminus="gt 0" bminus="gt 0" aplus="gt 0" abminus="gt 0" oplus="gt 0" ominus="gt 0"/>
@@ -1518,19 +1510,17 @@
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="8" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="3" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
         <Conditional aplus="eq 0" bplus="eq 0" aminus="eq 0" bminus="eq 0" abminus="eq 0" ominus="eq 0" oplus="eq 0"/>
         <Affliction identifier="hemotransfusionshock" amount="0.1"/>
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="4" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="2" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
         <Conditional aplus="eq 0" bplus="eq 0" aminus="eq 0" bminus="eq 0" abminus="eq 0" ominus="eq 0" oplus="eq 0"/>
@@ -1561,19 +1551,17 @@
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="8" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="3" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
         <Conditional bminus="gt 0" bplus="gt 0" oplus="gt 0" ominus="gt 0"/>
         <Affliction identifier="hemotransfusionshock" amount="0.1"/>
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="4" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="2" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
         <Conditional bminus="gt 0" bplus="gt 0" oplus="gt 0" ominus="gt 0"/>
@@ -1604,19 +1592,17 @@
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="8" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="3" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
         <Conditional aminus="gt 0" aplus="gt 0" oplus="gt 0" ominus="gt 0"/>
         <Affliction identifier="hemotransfusionshock" amount="0.1"/>
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="4" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="2" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
         <Conditional aminus="gt 0" aplus="gt 0" oplus="gt 0" ominus="gt 0"/>
@@ -1645,19 +1631,17 @@
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="8" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="3" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
         <Conditional aplus="eq 0" bplus="eq 0" aminus="eq 0" bminus="eq 0" ominus="eq 0" oplus="eq 0"/>
         <Affliction identifier="hemotransfusionshock" amount="0.1"/>
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="4" />
-        <Affliction identifier="bloodbank" amount="8" />
+        <ReduceAffliction identifier="bloodloss" amount="2" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
         <Conditional aplus="eq 0" bplus="eq 0" aminus="eq 0" bminus="eq 0" ominus="eq 0" oplus="eq 0"/>
@@ -1716,16 +1700,14 @@
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="4" />
-        <Affliction identifier="bloodbank" amount="4" />
+        <ReduceAffliction identifier="bloodloss" amount="3" />
         <Affliction identifier="drunk" amount="6" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="15">
+      <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="bloodloss" amount="2" />
-        <Affliction identifier="bloodbank" amount="2" />
         <Affliction identifier="drunk" amount="8" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
@@ -1755,49 +1737,47 @@
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
       <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional aplus="gt 0" bloodbank="gte 85"/>
+      <Conditional aplus="gt 0" bloodloss="lt 30"/>
       <SpawnItem identifier="bloodpackaplus"/>
       </StatusEffect>
       <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional bplus="gt 0" bloodbank="gte 85"/>
+      <Conditional bplus="gt 0" bloodloss="lt 30"/>
       <SpawnItem identifier="bloodpackbplus"/>
       </StatusEffect>
       <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional oplus="gt 0" bloodbank="gte 85"/>
+      <Conditional oplus="gt 0" bloodloss="lt 30"/>
       <SpawnItem identifier="bloodpackoplus"/>
       </StatusEffect>
       <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional abplus="gt 0" bloodbank="gte 85"/>
+      <Conditional abplus="gt 0" bloodloss="lt 30"/>
       <SpawnItem identifier="bloodpackabplus"/>
       </StatusEffect>
       <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional aminus="gt 0" bloodbank="gte 85"/>
+      <Conditional aminus="gt 0" bloodloss="lt 30"/>
       <SpawnItem identifier="bloodpackaminus"/>
       </StatusEffect>
       <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional bminus="gt 0" bloodbank="gte 85"/>
+      <Conditional bminus="gt 0" bloodloss="lt 30"/>
       <SpawnItem identifier="bloodpackbminus"/>
       </StatusEffect>
       <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional abminus="gt 0" bloodbank="gte 85"/>
+      <Conditional abminus="gt 0" bloodloss="lt 30"/>
       <SpawnItem identifier="bloodpackabminus"/>
       </StatusEffect>
       <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional ominus="gt 0" bloodbank="gte 85"/>
+      <Conditional ominus="gt 0" bloodloss="lt 30"/>
       <SpawnItem identifier="antibloodloss2"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
+      <StatusEffect type="OnUse" target="This" Condition="-100"  disabledeltatime="true"/>
       <StatusEffect tags="medical" type="OnUse" target="Character, This">
-      <Conditional bloodbank="gte 85"/>
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
-        <Affliction identifier="bloodloss" amount="20" />
-        <ReduceAffliction identifier="bloodbank" amount="80" />
+        <Conditional bloodloss="lt 30"/>
+        <Affliction identifier="bloodloss" amount="33" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" target="Character, This">
-      <Conditional bloodbank="gte 85"/>
+      <StatusEffect tags="medical" type="OnFailure" Condition="-50.0" target="Character, This">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <ReduceAffliction identifier="bloodloss" amount="30" />
-        <Affliction identifier="bloodbank" amount="100" />
+        <Conditional bloodloss="lt 30"/>
+        <Affliction identifier="bloodloss" amount="40" />
       </StatusEffect>
       <StatusEffect type="OnBroken" target="This">
         <Remove />
