@@ -2254,6 +2254,7 @@
           <Conditional  Voltage="eq 0" />
         </StatusEffect>
       </StatusHUD>
+      <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
       <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
       <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="3" stackable="false" />
         <StatusEffect type="OnUse" targettype="Contained" Condition="-1" disabledeltatime="true">
@@ -2268,7 +2269,7 @@
         <StatusEffect type="OnUse" target="This" voltage="1.0" setvalue="true">
         <Conditional Condition="gt 0.01"/>
         </StatusEffect>
-        <StatusEffect type="Always" target="This" voltage="-0.4"/>
+        <StatusEffect type="Always" target="This" voltage="-0.35"/>
       </RepairTool>
       <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
         <Containable items="mobilebattery"/>
