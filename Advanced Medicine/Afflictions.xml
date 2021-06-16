@@ -642,7 +642,7 @@
     indicatorlimb="Torso"
     activationthreshold="0"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="25" multiplybymaxvitality="false"
+    <Effect minstrength="0" maxstrength="25" multiplybymaxvitality="false" strengthchange="-0.1"
       dialogflag="Bloodloss"/>
     <Effect minstrength="25" maxstrength="45" multiplybymaxvitality="false"
 	  strengthchange="-0.1"

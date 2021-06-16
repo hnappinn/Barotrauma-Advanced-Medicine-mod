@@ -2200,7 +2200,7 @@
   </Item>
 
   <Override>
-    <Item name="" identifier="healthscanner" scale="0.32" category="Equipment" tags="smallitem,tool,provocative" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
+    <Item name="" identifier="healthscanner" scale="0.32" category="Equipment" tags="smallitem,tool" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
       
       <Price baseprice="150" soldeverywhere="false" minleveldifficulty="15">
         <Price locationtype="outpost" multiplier="1.3" sold="false" />
@@ -2221,7 +2221,7 @@
       <!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,256,64,64" origin="0.5,0.5" />-->
       <Sprite texture="Mods/Advanced Medicine/ekutility_tools.png" sourcerect="320,128,112,96" depth="0.6" origin="0.5,0.5" />
       <Body width="112" height="96" density="25" />
-      <Holdable slots="Any,RightHand,LeftHand,Head" holdpos="30,-15" aimpos="100,0" handle1="-13,0" handle2="-13,0" msg="ItemMsgPickUpSelect"/>
+      <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-15" aimpos="100,0" handle1="-13,0" handle2="-13,0" msg="ItemMsgPickUpSelect"/>
        <RepairTool firedamage="0.0" structurefixamount="0.0" range="150" repairmultiple="false" repairthroughwalls="false" combatpriority="10" levelwallfixamount="0">
         <LightComponent LightColor="255,255,255,200" Flicker="0.25" range="45" powerconsumption="1" IsOn="true">
           <LightTexture texture="Mods/Advanced Medicine/biometric_scanner_fixedlight.png" origin="0.5, 0.27" size="0.5,0.5" />
