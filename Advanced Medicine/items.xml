@@ -1146,7 +1146,7 @@
     <!--
     <Sprite name="Diving Suit" texture="DivingSuit_Item.png" sourcerect="157,0,90,307" depth="0.55" origin="0.4888889,0.5439739" />
     -->
-    <InventoryIcon texture="Mods/Advanced Medicine/bag.png" sourcerect="0,0,60,67" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/bag.png" sourcerect="0,0,45,67" origin="0.5,0.5" />
     <Sprite name="Diving Suit Item" texture="Mods/Advanced Medicine/bag.png" sourcerect="0,0,60,67" depth="0.55" origin="0.5,0.5" />
     <Body radius="45" width="34" density="15" />
     
