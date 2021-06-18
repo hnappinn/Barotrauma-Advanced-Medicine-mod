@@ -1,44 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.13.3.11" steamworkshopid="2488816950" installtime="1623924439">
-  <Afflictions file="Mods/Advanced Medicine/Afflictions.xml" />
-  <None file="Mods/Advanced Medicine/Defib.png" />
-  <None file="Mods/Advanced Medicine/IconsAtlas.png" />
-  <None file="Mods/Advanced Medicine/Sprites.png" />
-  <Item file="Mods/Advanced Medicine/items.xml" />
-  <None file="Mods/Advanced Medicine/drill.ogg" />
-  <None file="Mods/Advanced Medicine/squelch1.ogg" />
-  <None file="Mods/Advanced Medicine/Defib1.ogg" />
-  <None file="Mods/Advanced Medicine/Icons.png" />
-  <None file="Mods/Advanced Medicine/Defib2.ogg" />
-  <None file="Mods/Advanced Medicine/suture.ogg" />
-  <None file="Mods/Advanced Medicine/bonebreak1.ogg" />
-  <None file="Mods/Advanced Medicine/bonebreak2.ogg" />
-  <None file="Mods/Advanced Medicine/bonebreak3.ogg" />
-  <None file="Mods/Advanced Medicine/bonebreak4.ogg" />
-  <None file="Mods/Advanced Medicine/ointment.ogg" />
-  <None file="Mods/Advanced Medicine/ointment.png" />
-  <None file="Mods/Advanced Medicine/tourniquet.png" />
-  <None file="Mods/Advanced Medicine/scalpel.png" />
-  <None file="Mods/Advanced Medicine/hemostat.png" />
-  <None file="Mods/Advanced Medicine/suture.png" />
-  <None file="Mods/Advanced Medicine/Tweezers.png" />
-  <None file="Mods/Advanced Medicine/drill.png" />
-  <None file="Mods/Advanced Medicine/retractor.png" />
-  <None file="Mods/Advanced Medicine/bonesaw.png" />
-  <None file="Mods/Advanced Medicine/spray.ogg" />
-  <None file="Mods/Advanced Medicine/stasisbag.png" />
-  <None file="Mods/Advanced Medicine/bag.png" />
-  <None file="Mods/Advanced Medicine/baghelmets.png" />
-  <None file="Mods/Advanced Medicine/ambu.png" />
-  <None file="Mods/Advanced Medicine/ambubag.png" />
-  <None file="Mods/Advanced Medicine/autocpr.png" />
-  <None file="Mods/Advanced Medicine/pump.ogg" />
-  <None file="Mods/Advanced Medicine/hypospray.ogg" />
-  <None file="Mods/Advanced Medicine/injecter.png" />
-  <None file="Mods/Advanced Medicine/vialrack.png" />
-  <None file="Mods/Advanced Medicine/ekutility_tools.png" />
-  <None file="Mods/Advanced Medicine/biometric_scanner_fixedlight.png" />
-  <Text file="Mods/Advanced Medicine/Russian.xml" />
-  <Text file="Mods/Advanced Medicine/English.xml" />
+<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.14.6.0" steamworkshopid="2488816950" installtime="1623924439">
+  <None file="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" />
+  <None file="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" />
+  <None file="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" />
+
+  <None file="Mods/Advanced Medicine/Images/Lights/scanner_Light.png" />
+
+  <None file="Mods/Advanced Medicine/Images/Suits/stasisbag.png" />
+  <None file="Mods/Advanced Medicine/Images/Suits/baghelmets.png" />
+  <None file="Mods/Advanced Medicine/Images/Suits/bag.png" />
+
+  <Afflictions file="Mods/Advanced Medicine/Xml/Afflictions.xml" />
+  <Item file="Mods/Advanced Medicine/Xml/items.xml" />
+
+  <Text file="Mods/Advanced Medicine/Localization/Russian.xml" />
+  <Text file="Mods/Advanced Medicine/Localization/English.xml" />
+
+  <None file="Mods/Advanced Medicine/Sound/drill.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/squelch1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Defib1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Defib2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/suture.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/bonebreak1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/bonebreak2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/bonebreak3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/bonebreak4.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/ointment.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/spray.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/pump.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/hypospray.ogg" />
+
   <Character file="Mods/Advanced Medicine/Characters/Human/Human.xml" />
 </contentpackage>
