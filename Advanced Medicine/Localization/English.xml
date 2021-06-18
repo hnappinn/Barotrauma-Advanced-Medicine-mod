@@ -4,19 +4,19 @@
 <!-- ITEMS -->
 
 	<entityname.aed>Automated External Defibrillator</entityname.aed>
-	<entitydescription.aed>A device that produces a controlled shock to treat cardiac arrest.</entitydescription.aed>
+	<entitydescription.aed>A medical device delivering an electric shock to the heart to stabilize cardiac arythmias. Use on a patient with ventricular tachycardia or fibrillation.</entitydescription.aed>
 	
 	<entityname.advscalpel>Scalpel</entityname.advscalpel>
 	<entitydescription.advscalpel>A tool used to make incisions during surgery.</entitydescription.advscalpel>
 	
 	<entityname.advhemostat>Hemostat</entityname.advhemostat>
-	<entitydescription.advhemostat>A tool used to clamp bleeding during surgery.</entitydescription.advhemostat>
+	<entitydescription.advhemostat>A tool used to clamp bleeders during surgery.</entitydescription.advhemostat>
 	
 	<entityname.surgicaldrill>Surgical drill</entityname.surgicaldrill>
-	<entitydescription.surgicaldrill>A tool used to drill bones</entitydescription.surgicaldrill>
+	<entitydescription.surgicaldrill>A tool used to drill bones.</entitydescription.surgicaldrill>
 	
 	<entityname.osteosynthesisimplants>Osteosynthesis Implants</entityname.osteosynthesisimplants>
-	<entitydescription.osteosynthesisimplants>Titanium implants for osteosynthesis.</entitydescription.osteosynthesisimplants>
+	<entitydescription.osteosynthesisimplants>Titanium implants used in an open reduction surgery to repair fractures.</entitydescription.osteosynthesisimplants>
 	
 	<entityname.advretractors>Retractors</entityname.advretractors>
 	<entitydescription.advretractors>A tool used to retract skin during surgery.</entitydescription.advretractors>
@@ -25,22 +25,22 @@
 	<entitydescription.surgerysaw>A tool used to saw through bones.</entitydescription.surgerysaw>		
 	
 	<entityname.suture>Suture</entityname.suture>
-	<entitydescription.suture>Suture for suturing wounds and incisions.</entitydescription.suture>
+	<entitydescription.suture>Biodegradeable sutures for stitching up lacerations and surgical incisions alike.</entitydescription.suture>
 	
 	<entityname.tweezers>Tweezers</entityname.tweezers>
-	<entitydescription.tweezers>Used to remove foreign bodies.</entitydescription.tweezers>
+	<entitydescription.tweezers>A small tool that allows the removal of bullets as well as damaged and necrotic tissue.</entitydescription.tweezers>
 
 	<entityname.tourniquet>Tourniquet</entityname.tourniquet>
-	<entitydescription.tourniquet>A device to stop blood flow through a vein or artery.</entitydescription.tourniquet>
+	<entitydescription.tourniquet>A device that applies pressure to a limb and thus reduces bloodflow. It is usually used in case of major bleeders on extremities.</entitydescription.tourniquet>
 
 	<entityname.mannitol>Mannitol Plus</entityname.mannitol>
-	<entitydescription.mannitol>Medicine for brain regeneration.</entitydescription.mannitol>
+	<entitydescription.mannitol>A highly complicated and expensive medicinal compound which stimulates the regeneration of neurological tissue. </entitydescription.mannitol>
 	
 	<entityname.operatingtable>Operating table</entityname.operatingtable>
-	<entitydescription.operatingtable>Used to keep patients immobile for surgery and equipped with ALV.</entitydescription.operatingtable>
+	<entitydescription.operatingtable>An operation table which has basic artificial ventilation built in.</entitydescription.operatingtable>
 
 	<entityname.ointment>Antibiotic ointment</entityname.ointment>
-	<entitydescription.ointment>Used to heal infections and burns.</entitydescription.ointment>
+	<entitydescription.ointment>A highly antiseptic gel that promotes the recovery from burns as well as from minor infections.</entitydescription.ointment>
 
 	
 	<!-- AFFLICTIONS -->
@@ -56,19 +56,19 @@
 	<!-- TEMPLATE -->
 	
 	<afflictionname.vt>Ventricular Tachycardia</afflictionname.vt>
-	<afflictiondescription.vt>No pulse.</afflictiondescription.vt>
+	<afflictiondescription.vt>Very high pulse due to low oxygen or blood pressure detected.</afflictiondescription.vt>
 	
 	<afflictionname.vf>Ventricular Fibrillation</afflictionname.vf>
-	<afflictiondescription.vf>No pulse.</afflictiondescription.vf>
+	<afflictiondescription.vf>Irregular electrical activity in the cardiac muscle detected.</afflictiondescription.vf>
 	
 	<afflictionname.asys>Asystole</afflictionname.asys>
-	<afflictiondescription.asys>No pulse.</afflictiondescription.asys>
+	<afflictiondescription.asys>No electrical activity in the cardiac muscle detected.</afflictiondescription.asys>
 	
 	<afflictionname.hypotension>Hypotension</afflictionname.hypotension>
-	<afflictiondescription.hypotension>The patient is pale and cold.</afflictiondescription.hypotension>
+	<afflictiondescription.hypotension>Pulse strength has become weaker.</afflictiondescription.hypotension>
 	
 	<afflictionname.hypoxia>Cerebral Hypoxia</afflictionname.hypoxia>
-	<afflictiondescription.hypoxia>The patient has fainting, memory loss, and seizures.</afflictiondescription.hypoxia>
+	<afflictiondescription.hypoxia>Patient is showing signs of nerve and braindamage.</afflictiondescription.hypoxia>
 	<afflictioncauseofdeath.hypoxia>Braindead</afflictioncauseofdeath.hypoxia>
 	<afflictioncauseofdeathself.hypoxia>You have died of Cerebral Hypoxia.</afflictioncauseofdeathself.hypoxia>
 	
@@ -76,34 +76,34 @@
 	<afflictiondescription.surgeryincision>An incision made by a scalpel.</afflictiondescription.surgeryincision>
 		
 	<afflictionname.clampedbleeders>Clamped bleeding</afflictionname.clampedbleeders>
-	<afflictiondescription.clampedbleeders>Bleeding from the incision was stopped with a hemostat.</afflictiondescription.clampedbleeders>
+	<afflictiondescription.clampedbleeders>Surgical bleeders have been staunched.</afflictiondescription.clampedbleeders>
 	
 	<afflictionname.arteriesclamp>Clamped arteries</afflictionname.arteriesclamp>
-	<afflictiondescription.arteriesclamp>Bleeding from artery is temporarily stopped.</afflictiondescription.arteriesclamp>
+	<afflictiondescription.arteriesclamp>Bleeding from artery has been stopped temporarily.</afflictiondescription.arteriesclamp>
 	
 	<afflictionname.boneclamp>Splint</afflictionname.boneclamp>
-	<afflictiondescription.boneclamp>Immobilized limb with splint.</afflictiondescription.boneclamp>
+	<afflictiondescription.boneclamp>Fracture has been splinted.</afflictiondescription.boneclamp>
 	
 	<afflictionname.drilledbones>Drilled bones</afflictionname.drilledbones>
-	<afflictiondescription.drilledbones>Carefully drilled holes for implant placement.</afflictiondescription.drilledbones>
+	<afflictiondescription.drilledbones>The bones have been prepared for orthopedic procedures.</afflictiondescription.drilledbones>
 	
 	<afflictionname.retractedskin>Retracted skin</afflictionname.retractedskin>
-	<afflictiondescription.retractedskin>The skin is held open by a set of retractors.</afflictiondescription.retractedskin>
+	<afflictiondescription.retractedskin>The skin is being held open by a set of retractors.</afflictiondescription.retractedskin>
 	
 	<afflictionname.suturedi>Stitched incision</afflictionname.suturedi>
-	<afflictiondescription.suturedi>Sutures are present.</afflictiondescription.suturedi>
+	<afflictiondescription.suturedi>An incision has been closed via sutures.</afflictiondescription.suturedi>
 	
 	<afflictionname.suturedw>Stitched wound</afflictionname.suturedw>
-	<afflictiondescription.suturedw>Sutures are present.</afflictiondescription.suturedw>
+	<afflictiondescription.suturedw>Wounds have been sutured shut.</afflictiondescription.suturedw>
 	
 	<afflictionname.boncut>Bones Sawed</afflictionname.boncut>
 	<afflictiondescription.boncut>The bones are sliced open.</afflictiondescription.boncut>
 	
 	<afflictionname.fracture>Fracture</afflictionname.fracture>
-	<afflictiondescription.fracture>Bone is broken.</afflictiondescription.fracture>
+	<afflictiondescription.fracture>One or more bones are broken and cause severe pain and locomotive issues.</afflictiondescription.fracture>
 	
 	<afflictionname.arterialcut>Arterial bleeding</afflictionname.arterialcut>
-	<afflictiondescription.arterialcut>Blood flows out of the artery.</afflictiondescription.arterialcut>
+	<afflictiondescription.arterialcut>An artery has been damaged and is causing severe loss of blood.</afflictiondescription.arterialcut>
 	
 	<afflictionname.traumaticshock>Traumatic shock</afflictionname.traumaticshock>
 	<afflictiondescription.traumaticshock>The patient experiences severe pain and stress.</afflictiondescription.traumaticshock>
@@ -112,19 +112,21 @@
 	<afflictiondescription.anesthesia>Insensitivity to pain.</afflictiondescription.anesthesia>
 
 	<afflictionname.necrosis>Necrosis</afflictionname.necrosis>
-	<!-- <afflictiondescription.necrosis></afflictiondescription.necrosis> -->
-	<afflictioncauseofdeath.necrosis>Died from an necrosis.</afflictioncauseofdeath.necrosis>
-	<afflictioncauseofdeathself.necrosis>You have died from an necrosis.</afflictioncauseofdeathself.necrosis>
+	<!-- <afflictiondescription.necrosis>Dead tissue is slowly building up and is causing life-threatening complications.</afflictiondescription.necrosis> -->
+	<afflictioncauseofdeath.necrosis>Died from a necrotic wound.</afflictioncauseofdeath.necrosis>
+	<afflictioncauseofdeathself.necrosis>You have died from necrosis.</afflictioncauseofdeathself.necrosis>
 
 	<afflictionname.septicwound>Septic Wound</afflictionname.septicwound>
 	<!-- <afflictiondescription.septicwound></afflictiondescription.septicwound> -->
-	<afflictioncauseofdeath.septicwound>Died from an septic wound.</afflictioncauseofdeath.septicwound>
-	<afflictioncauseofdeathself.septicwound>You have died from an septic wound.</afflictioncauseofdeathself.septicwound>
+	<afflictioncauseofdeath.septicwound>Died from sepsis.</afflictioncauseofdeath.septicwound>
+	<afflictioncauseofdeathself.septicwound>You have died from sepsis.</afflictioncauseofdeathself.septicwound>
 
 	<afflictionname.infectedwound>Infected wound</afflictionname.infectedwound>
-	<afflictiondescription.infectedwound>The wound looks swollen and festering.</afflictiondescription.infectedwound>
+	<afflictiondescription.infectedwound>The injury is looking red and swollen.</afflictiondescription.infectedwound>
 	
 	<afflictionname.bandaged>Bandaged</afflictionname.bandaged>
+	<afflictiondescription.bandaged>Protective layers of bandaging material prevent the wound from getting infected.</afflictiondescription.bandaged>
 
 	<afflictionname.ointmented>Ointment</afflictionname.ointmented>
+	<afflictiondescription.ointmented>A layer of antibiotic gel protects and cleans the wound from any germs.</afflictiondescription.ointmented>
 </infotexts>
