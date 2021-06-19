@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.14.6.0" steamworkshopid="2488816950" installtime="1624024370">
+<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.14.6.0" steamworkshopid="2488816950" installtime="1624105177">
   <None file="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" />
   <None file="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" />
   <None file="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" />
+  <None file="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" />
   <None file="Mods/Advanced Medicine/Images/Lights/scanner_Light.png" />
   <None file="Mods/Advanced Medicine/Images/Suits/stasisbag.png" />
   <None file="Mods/Advanced Medicine/Images/Suits/baghelmets.png" />

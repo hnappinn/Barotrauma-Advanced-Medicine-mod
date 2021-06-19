@@ -53,19 +53,19 @@
 	<!-- TEMPLATE -->
 	
 	<afflictionname.vt>Тахикардия желудочков</afflictionname.vt>
-	<afflictiondescription.vt>Нет пульса.</afflictiondescription.vt>
+	<afflictiondescription.vt>Обнаружен очень высокий пульс из-за низкого уровня кислорода или слабого артериального давления.</afflictiondescription.vt>
 	
 	<afflictionname.vf>Фибриляция желудочков</afflictionname.vf>
-	<afflictiondescription.vf>Нет пульса.</afflictiondescription.vf>
+	<afflictiondescription.vf>Обнаружена нерегулярная электрическая активность в сердечных мышцах.</afflictiondescription.vf>
 	
 	<afflictionname.asys>Асистолия</afflictionname.asys>
-	<afflictiondescription.asys>Нет пульса.</afflictiondescription.asys>
+	<afflictiondescription.asys>Отсутствует электрическая активность в сердечных мышцах.</afflictiondescription.asys>
 	
 	<afflictionname.hypotension>Гипотония</afflictionname.hypotension>
-	<afflictiondescription.hypotension>Пациент бледный и холодный.</afflictiondescription.hypotension>
+	<afflictiondescription.hypotension>Сила пульса стала слабее.</afflictiondescription.hypotension>
 	
 	<afflictionname.hypoxia>Церебральная гипоксия</afflictionname.hypoxia>
-	<afflictiondescription.hypoxia>У пациента обмороки, потеря памяти и судороги.</afflictiondescription.hypoxia>
+	<afflictiondescription.hypoxia>У пациента наблюдаются признаки повреждения нервов и головного мозга.</afflictiondescription.hypoxia>
 	<afflictioncauseofdeath.hypoxia>Смерть мозга</afflictioncauseofdeath.hypoxia>
 	<afflictioncauseofdeathself.hypoxia>Вы умерли от церебральной гипоксии.</afflictioncauseofdeathself.hypoxia>
 	
@@ -97,7 +97,7 @@
 	<afflictiondescription.boncut>Кости разрезаны пилой.</afflictiondescription.boncut>
 	
 	<afflictionname.fracture>Перелом</afflictionname.fracture>
-	<afflictiondescription.fracture>Кость сломана.</afflictiondescription.fracture>
+	<afflictiondescription.fracture>Одна или несколько костей сломаны и вызывают сильную боль и проблемы с опорно-двигательным аппаратом.</afflictiondescription.fracture>
 	
 	<afflictionname.arterialcut>Артериальное кровотечение</afflictionname.arterialcut>
 	<afflictiondescription.arterialcut>Кровь льётся из артерии.</afflictiondescription.arterialcut>
@@ -125,6 +125,8 @@
 	<afflictiondescription.infectedwound>Рана выглядит опухшей и гнойной.</afflictiondescription.infectedwound>
 	
 	<afflictionname.bandaged>Перевязан</afflictionname.bandaged>
+	<afflictiondescription.bandaged>Защитные слои перевязочного материала предотвращают инфицирование раны</afflictiondescription.bandaged>
 
 	<afflictionname.ointmented>Мазь</afflictionname.ointmented>
+	<afflictiondescription.ointmented>Слой антибиотического геля защищает и очищает рану от любых микробов.</afflictiondescription.ointmented>
 </infotexts>
