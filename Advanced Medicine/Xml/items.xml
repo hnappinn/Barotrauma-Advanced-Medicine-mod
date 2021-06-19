@@ -1349,8 +1349,8 @@
       <Item identifier="stabilozine" copycondition="true" mincondition="0.1" />
     </Deconstruct>
     <SuitableTreatment identifier="bloodloss" suitability="120" />
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="128,85,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="128,85,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
@@ -1384,8 +1384,8 @@
       <Price locationtype="military" multiplier="1" minavailable="10" />
       <Price locationtype="mine" multiplier="0.75" minavailable="2" />
     </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="128,171,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="128,171,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
@@ -1425,8 +1425,8 @@
       <Price locationtype="military" multiplier="1" minavailable="10" />
       <Price locationtype="mine" multiplier="0.75" minavailable="2" />
     </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="64,0,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="64,0,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
@@ -1466,8 +1466,8 @@
       <Price locationtype="military" multiplier="1" minavailable="10" />
       <Price locationtype="mine" multiplier="0.75" minavailable="2" />
     </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="64,171,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="64,171,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
@@ -1505,8 +1505,8 @@
       <Price locationtype="military" multiplier="1" minavailable="10" />
       <Price locationtype="mine" multiplier="0.75" minavailable="2" />
     </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="0,0,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="0,0,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
@@ -1546,8 +1546,8 @@
       <Price locationtype="military" multiplier="1" minavailable="10" />
       <Price locationtype="mine" multiplier="0.75" minavailable="2" />
     </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="192,171,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="192,171,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
@@ -1587,8 +1587,8 @@
       <Price locationtype="military" multiplier="1" minavailable="10" />
       <Price locationtype="mine" multiplier="0.75" minavailable="2" />
     </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="128,0,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="128,0,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
@@ -1626,8 +1626,8 @@
       <Price locationtype="military" multiplier="1" minavailable="10" />
       <Price locationtype="mine" multiplier="0.75" minavailable="2" />
     </Price>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="64,85,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="64,85,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
@@ -1695,8 +1695,8 @@
       <RequiredItem identifier="bloodpackoplus" />
     </Fabricate>
     <SuitableTreatment identifier="bloodloss" suitability="100" />
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="192,85,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
@@ -1733,8 +1733,8 @@
       <RequiredSkill identifier="medical" level="10" />
       <RequiredItem identifier="plastic" mincondition="0.5" usecondition="true"/>
     </Fabricate>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,640,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="1,217,82,44" depth="0.6" origin="0.5,0.5" />
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="192,0,64,85" origin="0.5,0.5" />
+    <Sprite texture="Mods/Advanced Medicine/Images/BloodPacksAtlas.png" sourcerect="192,0,64,85" depth="0.6" origin="0.5,0.5" />
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
