@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Russian" nowhitespace="false" translatedname="Русский">
 
+	<!-- MESSAGES -->
+	<stasisbugequipconfirmation>Вы уверены что хотите надеть на себя стазисную сумку?</stasisbugequipconfirmation>
+	
+	<!-- ITEMS -->
 	<entityname.aed>Автоматический наружный дефибриллятор</entityname.aed>
 	<entitydescription.aed>Устройство, которое производит контролируемый шок для лечения остановки сердца.</entitydescription.aed>
 	
@@ -62,7 +66,7 @@
 	<afflictiondescription.asys>Отсутствует электрическая активность в сердечных мышцах.</afflictiondescription.asys>
 	
 	<afflictionname.hypotension>Гипотония</afflictionname.hypotension>
-	<afflictiondescription.hypotension>Сила пульса стала слабее.</afflictiondescription.hypotension>
+	<afflictiondescription.hypotension>Пульс стал слабее.</afflictiondescription.hypotension>
 	
 	<afflictionname.hypoxia>Церебральная гипоксия</afflictionname.hypoxia>
 	<afflictiondescription.hypoxia>У пациента наблюдаются признаки повреждения нервов и головного мозга.</afflictiondescription.hypoxia>
@@ -97,7 +101,7 @@
 	<afflictiondescription.boncut>Кости разрезаны пилой.</afflictiondescription.boncut>
 	
 	<afflictionname.fracture>Перелом</afflictionname.fracture>
-	<afflictiondescription.fracture>Одна или несколько костей сломаны и вызывают сильную боль и проблемы с опорно-двигательным аппаратом.</afflictiondescription.fracture>
+	<afflictiondescription.fracture>Одна или несколько костей сломаны и вызывают сильную боль также наблюдаются проблемы с опорно-двигательным аппаратом.</afflictiondescription.fracture>
 	
 	<afflictionname.arterialcut>Артериальное кровотечение</afflictionname.arterialcut>
 	<afflictiondescription.arterialcut>Кровь льётся из артерии.</afflictiondescription.arterialcut>

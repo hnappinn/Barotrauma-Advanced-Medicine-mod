@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
 
+<!-- MESSAGES -->
+	<stasisbugequipconfirmation>Are you sure you want put stasis bag on yourself?</stasisbugequipconfirmation>
 <!-- ITEMS -->
 
 	<entityname.aed>Automated External Defibrillator</entityname.aed>
