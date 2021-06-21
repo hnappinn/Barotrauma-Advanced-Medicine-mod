@@ -116,10 +116,10 @@
 	<afflictioncauseofdeath.necrosis>Died from a necrotic wound.</afflictioncauseofdeath.necrosis>
 	<afflictioncauseofdeathself.necrosis>You have died from necrosis.</afflictioncauseofdeathself.necrosis>
 
-	<afflictionname.septicwound>Septic Wound</afflictionname.septicwound>
-	<!-- <afflictiondescription.septicwound></afflictiondescription.septicwound> -->
-	<afflictioncauseofdeath.septicwound>Died from sepsis.</afflictioncauseofdeath.septicwound>
-	<afflictioncauseofdeathself.septicwound>You have died from sepsis.</afflictioncauseofdeathself.septicwound>
+	<afflictionname.sepsis>Sepsis</afflictionname.sepsis>
+	<!-- <afflictiondescription.sepsis></afflictiondescription.sepsis> -->
+	<afflictioncauseofdeath.sepsis>Died from sepsis.</afflictioncauseofdeath.sepsis>
+	<afflictioncauseofdeathself.sepsis>You have died from sepsis.</afflictioncauseofdeathself.sepsis>
 
 	<afflictionname.infectedwound>Infected wound</afflictionname.infectedwound>
 	<afflictiondescription.infectedwound>The injury is looking red and swollen.</afflictiondescription.infectedwound>

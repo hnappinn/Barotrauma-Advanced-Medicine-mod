@@ -120,7 +120,7 @@
     <Body width="35" height="70" density="20" />
     <SuitableTreatment identifier="damage" suitability="-33" />
     <SuitableTreatment identifier="huskinfection" suitability="30" />
-    <SuitableTreatment identifier="septicwound" suitability="50" />
+    <SuitableTreatment identifier="sepsis" suitability="50" />
     <SuitableTreatment identifier="infectedwound" suitability="20" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="25" />
@@ -130,7 +130,7 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <Conditional huskinfection="lt 100.0" />
         <ReduceAffliction identifier="huskinfection" amount="0.5" />
-        <ReduceAffliction identifier="septicwound" amount="4" />
+        <ReduceAffliction identifier="sepsis" amount="4" />
         <ReduceAffliction identifier="infectedwound" amount="20" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnUse" target="Limb" duration="60.0">
@@ -143,7 +143,7 @@
       <StatusEffect tags="medical" type="OnFailure" target="Character" duration="60.0">
         <Conditional huskinfection="lt 100.0" />
         <ReduceAffliction identifier="huskinfection" amount="0.25" />
-        <ReduceAffliction identifier="septicwound" amount="2" />
+        <ReduceAffliction identifier="sepsis" amount="2" />
         <ReduceAffliction identifier="infectedwound" amount="10" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Limb" duration="60.0">
@@ -164,7 +164,7 @@
       </StatusEffect>
       <StatusEffect tags="medical" type="OnImpact" target="Limb" duration="60">
         <ReduceAffliction identifier="huskinfection" amount="0.25" />
-        <ReduceAffliction identifier="septicwound" amount="1" />
+        <ReduceAffliction identifier="sepsis" amount="1" />
         <ReduceAffliction identifier="infectedwound" amount="3" />
         <Affliction identifier="organdamage" amount="0.252" />
       </StatusEffect>
@@ -837,14 +837,14 @@
         <Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
         <Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
         <ReduceAffliction identifier="bleeding" amount="2" />
-        <Affliction identifier="bandaged" amount="10" />
+        <Affliction identifier="bandaged" amount="4" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Limb, This" duration="12.0">
         <Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
         <Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
         <ReduceAffliction identifier="bleeding" amount="1.5" />
         <ReduceAffliction identifier="burn" amount="1" />
-        <Affliction identifier="bandaged" amount="5" />
+        <Affliction identifier="bandaged" amount="3" />
       </StatusEffect>
       <StatusEffect target="limb" type="OnUse">
         <Conditional fracture="gte 1"/>
@@ -1192,8 +1192,8 @@
       <Affliction identifier="stun" amount="1"/>
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character">
-      <Conditional septicwound="gt 0"/>
-      <Affliction identifier="septicwound" amount="0.1"/>
+      <Conditional sepsis="gt 0"/>
+      <Affliction identifier="sepsis" amount="0.1"/>
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character">
       <Conditional necrosis="gt 0"/>
@@ -1209,7 +1209,7 @@
       </StatusEffect>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="hypoxia" damagemultiplier="0.0" damagesound="LimbArmor"/>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="infectedwound" damagemultiplier="0.0" damagesound="LimbArmor"/>
-      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="septicwound" damagemultiplier="0.0" damagesound="LimbArmor"/>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="sepsis" damagemultiplier="0.0" damagesound="LimbArmor"/>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="necrosis" damagemultiplier="0.0" damagesound="LimbArmor"/>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bloodloss" damagemultiplier="0.0" damagesound="LimbArmor"/>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="cpr_buff" damagemultiplier="0.0" damagesound="LimbArmor"/>
