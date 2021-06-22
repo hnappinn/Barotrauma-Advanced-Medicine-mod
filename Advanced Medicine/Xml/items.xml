@@ -58,7 +58,7 @@
       </ItemContainer>
   </Item>
   
-  <Item name="Ambu bag" identifier="bvm" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="A bag valve mask (BVM), is a hand-held device commonly used to provide positive pressure ventilation to patients who are not breathing or not breathing adequately" useinhealthinterface="True" scale="0.070">
+  <Item name="Ambu bag" identifier="bvm" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="A bag valve mask (BVM), is a hand-held device commonly used to provide positive pressure ventilation to patients who are not breathing or not breathing adequately" useinhealthinterface="True" scale="0.370">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3" />
     <Fabricate suitablefabricators="fabricator" requiredtime="10">
@@ -2072,10 +2072,10 @@
     </ItemContainer>
   </Item>
 
-  <Item name="Blood analyzer" description="Blood typing device" identifier="bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5" hideconditionbar="true">
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="227,163,48,24" depth="0.55" origin="0.5,0.5" />
-    <Body width="40" height="22" density="40" />
+  <Item name="Blood analyzer" description="Blood typing device" identifier="bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.4" hideconditionbar="true">
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
+    <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="512,128,128,128" depth="0.6" origin="0.5,0.5" />
+    <Body width="50" height="50" density="40" />
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.25" />
     <Price baseprice="250" >
@@ -2204,7 +2204,7 @@
     <ItemContainer capacity="2" maxstacksize="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true">
       <StatusEffect type="Always" target="This" condition="1" setvalue="true" />
     </ItemContainer>
-    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"/>
+    <Holdable handle1="-20,-20" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"/>
   </Item>
 
   <Override>
