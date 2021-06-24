@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <infotexts language="English" nowhitespace="false" translatedname="English">
 
+<!-- MESSAGES -->
+	<stasisbugequipconfirmation>Are you sure you want put stasis bag on yourself?</stasisbugequipconfirmation>
 <!-- ITEMS -->
 
 	<entityname.aed>Automated External Defibrillator</entityname.aed>
@@ -10,31 +12,34 @@
 	<entitydescription.advscalpel>A tool used to make incisions during surgery.</entitydescription.advscalpel>
 	
 	<entityname.advhemostat>Hemostat</entityname.advhemostat>
-	<entitydescription.advhemostat>A tool used to clamp bleeders during surgery.</entitydescription.advhemostat>
-	
-	<entityname.surgicaldrill>Surgical drill</entityname.surgicaldrill>
-	<entitydescription.surgicaldrill>A tool used to drill bones.</entitydescription.surgicaldrill>
-	
-	<entityname.osteosynthesisimplants>Osteosynthesis Implants</entityname.osteosynthesisimplants>
-	<entitydescription.osteosynthesisimplants>Titanium implants used in an open reduction surgery to repair fractures.</entitydescription.osteosynthesisimplants>
-	
+	<entitydescription.advhemostat>A tool used to clamp blood vessels during surgery.</entitydescription.advhemostat>
+
 	<entityname.advretractors>Retractors</entityname.advretractors>
 	<entitydescription.advretractors>A tool used to retract skin during surgery.</entitydescription.advretractors>
-		
+
+	<entityname.autocpr>AutoPulse</entityname.autocpr>
+	<entitydescription.autocpr>An automated, portable, battery-powered cardiopulmonary resuscitation device.</entitydescription.autocpr>
+	
+	<entityname.bvm>Ambu bag</entityname.bvm>
+	<entitydescription.bvm>A bag valve mask (BVM), is a hand-held device commonly used to provide positive pressure ventilation to patients who are not breathing or not breathing adequately.</entitydescription.bvm>
+
+	<entityname.stasisbag>Stasis bag</entityname.stasisbag>
+	<entitydescription.stasisbag>Stops biological processes and protects against cerebral hypoxia.</entitydescription.stasisbag>
+
 	<entityname.surgerysaw>Surgical Saw</entityname.surgerysaw>
 	<entitydescription.surgerysaw>A tool used to saw through bones.</entitydescription.surgerysaw>		
 	
 	<entityname.suture>Suture</entityname.suture>
 	<entitydescription.suture>Biodegradeable sutures for stitching up lacerations and surgical incisions alike.</entitydescription.suture>
-	
-	<entityname.tweezers>Tweezers</entityname.tweezers>
-	<entitydescription.tweezers>A small tool that allows the removal of bullets as well as damaged and necrotic tissue.</entitydescription.tweezers>
 
-	<entityname.tourniquet>Tourniquet</entityname.tourniquet>
-	<entitydescription.tourniquet>A device that applies pressure to a limb and thus reduces bloodflow. It is usually used in case of major bleeders on extremities.</entitydescription.tourniquet>
+	<entityname.surgicaldrill>Surgical drill</entityname.surgicaldrill>
+	<entitydescription.surgicaldrill>A tool used to drill bones.</entitydescription.surgicaldrill>
 
 	<entityname.mannitol>Mannitol Plus</entityname.mannitol>
-	<entitydescription.mannitol>A highly complicated and expensive medicinal compound which stimulates the regeneration of neurological tissue. </entitydescription.mannitol>
+	<entitydescription.mannitol>A highly complicated and expensive medicinal compound which stimulates the regeneration of neurological tissue.</entitydescription.mannitol>
+	
+	<entityname.osteosynthesisimplants>Osteosynthesis Implants</entityname.osteosynthesisimplants>
+	<entitydescription.osteosynthesisimplants>Titanium implants used in an open reduction surgery to repair fractures.</entitydescription.osteosynthesisimplants>
 	
 	<entityname.operatingtable>Operating table</entityname.operatingtable>
 	<entitydescription.operatingtable>An operation table which has basic artificial ventilation built in.</entitydescription.operatingtable>
@@ -42,7 +47,17 @@
 	<entityname.ointment>Antibiotic ointment</entityname.ointment>
 	<entitydescription.ointment>A highly antiseptic gel that promotes the recovery from burns as well as from minor infections.</entitydescription.ointment>
 
+	<entityname.tweezers>Tweezers</entityname.tweezers>
+	<entitydescription.tweezers>A small tool that allows the removal of bullets as well as damaged and necrotic tissue.</entitydescription.tweezers>
+
+	<entityname.tourniquet>Tourniquet</entityname.tourniquet>
+	<entitydescription.tourniquet>A device that applies pressure to a limb and thus reduces bloodflow. It is usually used in case of major bleeders on extremities.</entitydescription.tourniquet>
 	
+	<entityname.vialrack>Test tube rack</entityname.vialrack>
+	<entitydescription.vialrack>Rack for storing test tubes and vials.</entitydescription.vialrack>
+
+	<entityname.bloodanalyzer>Hematology analyzer</entityname.bloodanalyzer>
+	<entityname.bloodanalyzer>Blood typing device. Fully automated.</entityname.bloodanalyzer>
 	<!-- AFFLICTIONS -->
 	
 	
@@ -68,8 +83,8 @@
 	<afflictiondescription.hypotension>Pulse strength has become weaker.</afflictiondescription.hypotension>
 	
 	<afflictionname.hypoxia>Cerebral Hypoxia</afflictionname.hypoxia>
-	<afflictiondescription.hypoxia>Patient is showing signs of nerve and braindamage.</afflictiondescription.hypoxia>
-	<afflictioncauseofdeath.hypoxia>Braindead</afflictioncauseofdeath.hypoxia>
+	<afflictiondescription.hypoxia>Patient is showing signs of nerve and brain damage.</afflictiondescription.hypoxia>
+	<afflictioncauseofdeath.hypoxia>Brain dead</afflictioncauseofdeath.hypoxia>
 	<afflictioncauseofdeathself.hypoxia>You have died of Cerebral Hypoxia.</afflictioncauseofdeathself.hypoxia>
 	
 	<afflictionname.surgeryincision>Surgery incision</afflictionname.surgeryincision>
