@@ -2032,7 +2032,7 @@
   <Item name="Blood analyzer" description="Blood typing device" identifier="bloodanalyzer" category="Equipment" useinhealthinterface="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5" hideconditionbar="true">
 =======
 
-  <Item name="" identifier="vialrack" scale="0.2" category="Equipment" description="Rack for storing blood collectors and vials" cargocontaineridentifier="metalcrate">
+  <Item name="" identifier="vialrack" scale="0.2" category="Equipment" description="" cargocontaineridentifier="metalcrate">
     <Price baseprice="10">
       <Price locationtype="outpost" multiplier="1" minavailable="2" />
       <Price locationtype="city" multiplier="0.9" minavailable="6" />
