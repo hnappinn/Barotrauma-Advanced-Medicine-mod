@@ -440,7 +440,7 @@
     <Effect minstrength="50" maxstrength="100" strengthchange="-0.1">
 		<StatusEffect target="limb">
 			<Conditional infectedwound="lte 60"/>
-			<ReduceAffliction identifier="infectedwound" amount="0.85"/>+
+			<ReduceAffliction identifier="infectedwound" amount="0.85"/>
 		</StatusEffect>
     </Effect>
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="768,128,128,128" color="10,193,114,255" origin="0,0"/>
@@ -1385,7 +1385,8 @@
     description=""
     type="infection"
     isbuff="False"
-    limbspecific="True"
+    limbspecific="false"
+    indicatorlimb="Torso"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="15" strengthchange="0.1"
       minvitalitydecrease="0"
@@ -1400,7 +1401,7 @@
       maxvitalitydecrease="40"/>
     <Effect minstrength="65" maxstrength="100" strengthchange="0.1"
       minvitalitydecrease="0"
-      maxvitalitydecrease="40">
+      maxvitalitydecrease="60">
       <StatusEffect target="Character">
         <Affliction identifier="organdamage" indicatorlimb="limb" amount="0.5" />
       </StatusEffect>
@@ -1429,7 +1430,7 @@
       maxvitalitydecrease="50"/>
     <Effect minstrength="50" maxstrength="100" strengthchange="0.01"
       minvitalitydecrease="0"
-      maxvitalitydecrease="50">
+      maxvitalitydecrease="25">
 	  <StatusEffect target="Character">
         <Affliction identifier="sepsis" amount="0.5" />
       </StatusEffect>
