@@ -1275,7 +1275,8 @@
     limbspecific="false"
     maxstrength="600"
     showiconthreshold="700">
-    <Effect minstrength="1" maxstrength="100" strengthchange="0.5"/>
+    <Effect minstrength="1" maxstrength="3" strengthchange="7"/>
+    <Effect minstrength="3" maxstrength="100" strengthchange="0.5"/>
     <Effect minstrength="100" maxstrength="300" strengthchange="0.8">
     <StatusEffect target="Character">
     <Conditional infectedwound="gte 1"/>
@@ -1357,9 +1358,9 @@
     <StatusEffect target="Character">
         <ReduceAffliction identifier="immunity" amount="0.65"/>
     </StatusEffect>
-      <StatusEffect target="Limb" comparison="And">
-      <Conditional immunity="lte 200" necrosis="gte 0"/>
-        <Affliction identifier="necrosis" indicatorlimb="limb" amount="0.1" probability="0.2" />
+      <StatusEffect target="Limb" comparison="And" delay="10">
+      <Conditional immunity="lte 150" necrosis="eq 0"/>
+        <Affliction identifier="necrosis" indicatorlimb="limb" amount="0.1" probability="0.02" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="80" maxstrength="100" strengthchange="0.5">
@@ -1367,9 +1368,12 @@
         <ReduceAffliction identifier="immunity" amount="0.75"/>
       </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
-      <Conditional immunity="lte 200" necrosis="gte 0" sepsis="gte 0"/>
-        <Affliction identifier="necrosis" indicatorlimb="limb" amount="0.3" probability="0.5"/>
-        <Affliction identifier="sepsis" amount="0.01" probability="0.6"/>
+      <Conditional immunity="lte 100" sepsis="eq 0" delay="30"/>
+        <Affliction identifier="sepsis" amount="0.01" probability="0.005"/>
+      </StatusEffect>
+      <StatusEffect target="Limb" comparison="And">
+      <Conditional immunity="lte 200" necrosis="lte 10" delay="15"/>
+        <Affliction identifier="necrosis" indicatorlimb="limb" amount="0.3" probability="0.05"/>
       </StatusEffect>
     <StatusEffect target="Limb" delay="2">
     <Conditional immunity="gte 450"/>
@@ -1419,7 +1423,7 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="15" strengthchange="0.1"
       minvitalitydecrease="0"
-      maxvitalitydecrease="10">
+      maxvitalitydecrease="3">
     <StatusEffect target="Character">
     <Conditional ishuman="false"/>
     <ReduceAffliction identifier="necrosis" amount="999"/>
@@ -1427,7 +1431,7 @@
     </Effect>
     <Effect minstrength="15" maxstrength="50" strengthchange="0.01"
       minvitalitydecrease="0"
-      maxvitalitydecrease="50"/>
+      maxvitalitydecrease="15"/>
     <Effect minstrength="50" maxstrength="100" strengthchange="0.01"
       minvitalitydecrease="0"
       maxvitalitydecrease="25">
