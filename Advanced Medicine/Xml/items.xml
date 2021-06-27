@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+
   <Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3" />
@@ -58,7 +59,7 @@
       </ItemContainer>
   </Item>
   
-  <Item name="Ambu bag" identifier="bvm" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="A bag valve mask (BVM), is a hand-held device commonly used to provide positive pressure ventilation to patients who are not breathing or not breathing adequately" useinhealthinterface="True" scale="0.070">
+  <Item name="" identifier="bvm" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.070">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3" />
     <Fabricate suitablefabricators="fabricator" requiredtime="10">
@@ -597,6 +598,7 @@
 </StatusEffect>
 </MeleeWeapon>
 </Item>
+
 <Override>
 <Item name="" identifier="antidama1" aliases="Corrigodone" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -675,6 +677,7 @@
     </Projectile>
   </Item>
 </Override>
+
 <Override>
 <Item name="" identifier="antidama2" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -754,6 +757,7 @@
     </Projectile>
   </Item>
 </Override>
+
 <Override>
 <Item name="" identifier="opium" category="Material" maxstacksize="8" Tags="smallitem,chem" description="" cargocontaineridentifier="mediccrate" scale="0.5" useinhealthinterface="true">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -802,6 +806,7 @@
     </MeleeWeapon>
   </Item>
 </Override>
+
 <Override>
 <Item name="" identifier="antibleeding1" aliases="Bandage" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -857,6 +862,7 @@
     </MeleeWeapon>
   </Item>
 </Override>
+
 <Item name="" identifier="mannitol" category="Material" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" maxstacksize="8" >
     <PreferredContainer primary="medcab" spawnprobability="0.05" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.25" />
@@ -915,6 +921,7 @@
       </StatusEffect>
     </Projectile>
   </Item>
+
 <Item name="" identifier="operatingtable" scale="0.4" Tags="medical" maxstacksize="1" category="medical" description="" isshootable="true">
     <Upgrade gameversion="0.12.0.0" noninteractable="false" />
     <Body width="416" height="192" density="40" />
@@ -1006,6 +1013,7 @@
       </StatusEffect>
     </MeleeWeapon>
   </Item>
+
   <Override>
   <Item name="" identifier="antibleeding2" category="Equipment" Tags="smallitem,medical" maxstacksize="8" cargocontaineridentifier="mediccrate" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -1103,7 +1111,6 @@
     <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-35,3" containedspritedepth="0.56" ItemRotation="-90" containedstateindicatorstyle="tank">
       <Containable items="antiseptic" />
     </ItemContainer>
-
   </Item>
 
   <Item name="Antiseptic" identifier="antiseptic" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" scale="0.3">
@@ -1134,7 +1141,7 @@
     </MeleeWeapon>
   </Item>
   
-  <Item name="Stasis Bag" identifier="stasisbag" category="Equipment" tags="provocative" scale="0.5" fireproof="true" description="Stops biological processes and protects against cerebral hypoxia" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft">
+  <Item name="" identifier="stasisbag" category="Equipment" tags="provocative" scale="0.5" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" equipconfirmationtext="stasisbugequipconfirmation">
     <Price baseprice="2500" soldeverywhere="false">
       <Price locationtype="outpost" multiplier="1.2" sold="false"/>
       <Price locationtype="city" multiplier="1.3" sold="false"/>
@@ -1217,11 +1224,10 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="psychosis" damagemultiplier="0.0" damagesound="LimbArmor"/>
     </Wearable>
     <aitarget maxsightrange="50" />
-  
   </Item>
   
-  <Item name="Auto-Compression" identifier="autocpt" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="An automated, portable, battery-powered cardiopulmonary resuscitation" impactsoundtag="impact_soft">
-    <Upgrade gameversion="0.9.3.0" scale="0.35" />
+  <Item name="" identifier="autocpr" category="Equipment" tags="smallitem,clothing" scale="0.40" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+    <Upgrade gameversion="0.9.3.0" scale="0.40" />
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.25" />
     <Price baseprice="300" soldeverywhere="false">
@@ -1273,12 +1279,13 @@
       <Sound file="Mods/Advanced Medicine/Sound/pump.ogg" range="500" />
     </StatusEffect>
     <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="cpr_buff" damagemultiplier="0.0" damagesound="LimbArmor"/>
-      <sprite name="Auto-Compression" texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" limb="Torso" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="AutoPulse" texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" limb="Torso" hidelimb="true" inherittexturescale="true" sourcerect="640,0,128,128" origin="0.5,0.6" />
     </Wearable>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
       <Containable items="mobilebattery" />
     </ItemContainer>
   </Item>
+
   <Override>
   <Item name="" identifier="antibloodloss1" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,petfood2,petfood3" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -1325,6 +1332,7 @@
     <AiTarget sightrange="1000" static="true" />
   </Item>
   </Override>
+
   <Override>
   <Item name="Blood Pack O-" identifier="antibloodloss2" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -1705,12 +1713,12 @@
       <StatusEffect tags="medical" type="OnUse" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="bloodloss" amount="3" />
-        <Affliction identifier="drunk" amount="6" />
+        <Affliction identifier="nausea" amount="6" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character, This" duration="11">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <ReduceAffliction identifier="bloodloss" amount="2" />
-        <Affliction identifier="drunk" amount="8" />
+        <Affliction identifier="nausea" amount="8" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
       <StatusEffect type="OnBroken" target="This">
@@ -1877,6 +1885,7 @@
     <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true"/>
     <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true"/>
   </Item> 
+
   <Override>
   <Item name="" identifier="idcard" category="Equipment" Tags="smallitem,idcard" cargocontaineridentifier="metalcrate">
     <Price baseprice="10" soldeverywhere="false" />
@@ -1889,6 +1898,7 @@
     </ItemContainer>
   </Item>
   </Override>
+
   <Item name="Doner card" identifier="ominuscard" category="Equipment" description="Blood group O-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
@@ -1938,7 +1948,7 @@
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
 
-  <Item name="Blood collector" identifier="bloodcollector" category="Material,Equipment" description="Empty blood collector" cargocontaineridentifier="mediccrate" Tags="smallitem,Material,vial" useinhealthinterface="true" scale="0.07" impactsoundtag="impact_metal_light" maxstacksize="8" >
+  <Item name="cartridge" identifier="bloodcollector" category="Material,Equipment" description="Empty blood collection cartridge" cargocontaineridentifier="mediccrate" Tags="smallitem,Material,vial,collector" useinhealthinterface="true" scale="0.07" impactsoundtag="impact_metal_light" maxstacksize="8" >
     <PreferredContainer primary="medcab" minamount="1" maxamount="8" spawnprobability="1" />
     <Price baseprice="5">
       <Price locationtype="outpost" multiplier="1" minavailable="2" />
@@ -1955,98 +1965,58 @@
     <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,0" reload="1.0" msg="ItemMsgPickUpSelect">
-      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
-      <StatusEffect tags="medical" type="OnUse" target="Character" duration="5">
-        <Sound file="Mods/Advanced Medicine/Sound/hypospray.ogg"/>
-        <Affliction identifier="bloodloss" amount="2" />
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character">
-      <Conditional aplus="gt 0"/>
-      <SpawnItem identifier="aplusvial"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character">
-      <Conditional bplus="gt 0"/>
-      <SpawnItem identifier="bplusvial"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character">
-      <Conditional oplus="gt 0"/>
-      <SpawnItem identifier="oplusvial"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character">
-      <Conditional abplus="gt 0"/>
-      <SpawnItem identifier="abplusvial"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character">
-      <Conditional aminus="gt 0"/>
-      <SpawnItem identifier="aminusvial"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character">
-      <Conditional bminus="gt 0"/>
-      <SpawnItem identifier="bminusvial"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character">
-      <Conditional abminus="gt 0"/>
-      <SpawnItem identifier="abminusvial"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character">
-      <Conditional ominus="gt 0"/>
-      <SpawnItem identifier="ominusvial"/>
-      </StatusEffect>
-      <StatusEffect type="OnBroken" target="This">
-        <Remove />
-      </StatusEffect>
-    </MeleeWeapon>
+    <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
-  <Item name="Blood collector" identifier="ominusvial" scale="0.07" category="Material" description="Blood Collector of blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
+  <Item name="Filled cartridge" identifier="ominusvial" scale="0.07" category="Material" description="Cartridge filled with blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
-  <Item name="Blood collector" identifier="oplusvial" scale="0.07" category="Material" description="Blood Collector of blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
+  <Item name="Filled cartridge" identifier="oplusvial" scale="0.07" category="Material" description="Cartridge filled with blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
-  <Item name="Blood collector" identifier="aminusvial" scale="0.07" category="Material" description="Blood Collector of blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
+  <Item name="Filled cartridge" identifier="aminusvial" scale="0.07" category="Material" description="Cartridge filled with blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
-  <Item name="Blood collector" identifier="aplusvial" scale="0.07" category="Material" description="Blood Collector of blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
+  <Item name="Filled cartridge" identifier="aplusvial" scale="0.07" category="Material" description="Cartridge filled with blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
-  <Item name="Blood collector" identifier="bminusvial" scale="0.07" category="Material" description="Blood Collector of blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
+  <Item name="Filled cartridge" identifier="bminusvial" scale="0.07" category="Material" description="Cartridge filled with blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
-  <Item name="Blood collector" identifier="bplusvial" scale="0.07" category="Material" description="Blood Collector of blood" Tags="smallitem,Material,viall" cargocontaineridentifier="metalcrate">
+  <Item name="Filled cartridge" identifier="bplusvial" scale="0.07" category="Material" description="Cartridge filled with blood" Tags="smallitem,Material,viall" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
-  <Item name="Blood collector" identifier="abminusvial" scale="0.07" category="Material" description="Blood Collector of blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
+  <Item name="Filled cartridge" identifier="abminusvial" scale="0.07" category="Material" description="Cartridge filled with blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
-  <Item name="Blood collector" identifier="abplusvial" scale="0.07" category="Material" description="Blood Collector of blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
+  <Item name="Filled cartridge" identifier="abplusvial" scale="0.07" category="Material" description="Cartridge filled with blood" Tags="smallitem,Material,vial" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="0,128,64,64" origin="0.5,0.5"/>
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="35" height="70" density="20" />
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
-  <Item name="Vial Rack" identifier="vialrack" scale="0.2" category="Equipment" description="Rack for storing blood collectors and vials" cargocontaineridentifier="metalcrate">
+
+  <Item name="" identifier="vialrack" scale="0.2" category="Equipment" description="" cargocontaineridentifier="metalcrate">
     <Price baseprice="10">
       <Price locationtype="outpost" multiplier="1" minavailable="2" />
       <Price locationtype="city" multiplier="0.9" minavailable="6" />
@@ -2069,7 +2039,7 @@
     </ItemContainer>
   </Item>
 
-  <Item name="Blood analyzer" description="Blood typing device" identifier="bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5" hideconditionbar="true">
+  <Item name="" identifier="bloodanalyzer" description="" useinhealthinterface="true" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_soft" scale="0.5" hideconditionbar="true">
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="64,0,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Tools/tools.png" sourcerect="227,163,48,24" depth="0.55" origin="0.5,0.5" />
     <Body width="40" height="22" density="40" />
@@ -2098,98 +2068,125 @@
     <CustomInterface canbeselected="false" drawhudwhenequipped="true">
       <GuiFrame relativesize="0.3,0.2" anchor="BottomCenter" absoluteoffset="0,-30" style="ItemUI" />
       <Button text="Analyze blood">
+      <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="batterycell" Condition="-10" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="fulguriumbatterycell" Condition="-5" />
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <SpawnItem spawnposition="ThisInventory" identifier="apluscard" />
           <RequiredItem items="aplusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <RequiredItem items="aplusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Contained" targets="aplusvial" IsOn="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Remove />
           <RequiredItem items="aplusvial" type="Contained" />
         </StatusEffect>
         <!---->
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <SpawnItem spawnposition="ThisInventory" identifier="aminuscard" />
           <RequiredItem items="aminusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <RequiredItem items="aminusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Contained" targets="aminusvial" IsOn="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Remove />
           <RequiredItem items="aminusvial" type="Contained" />
         </StatusEffect>
         <!---->
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <SpawnItem spawnposition="ThisInventory" identifier="bpluscard" />
           <RequiredItem items="bplusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <RequiredItem items="bplusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Contained" targets="bplusvial" IsOn="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Remove />
           <RequiredItem items="bplusvial" type="Contained" />
         </StatusEffect>
         <!---->
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <SpawnItem spawnposition="ThisInventory" identifier="bminuscard" />
           <RequiredItem items="bminusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <RequiredItem items="bminusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Contained" targets="bminusvial" IsOn="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Remove />
           <RequiredItem items="bminusvial" type="Contained" />
         </StatusEffect>
         <!---->
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <SpawnItem spawnposition="ThisInventory" identifier="abpluscard" />
           <RequiredItem items="abplusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <RequiredItem items="abplusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Contained" targets="abplusvial" IsOn="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Remove />
           <RequiredItem items="abplusvial" type="Contained" />
         </StatusEffect>
         <!---->
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <SpawnItem spawnposition="ThisInventory" identifier="abminuscard" />
           <RequiredItem items="abminusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <RequiredItem items="abminusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Contained" targets="abminusvial" IsOn="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Remove />
           <RequiredItem items="abminusvial" type="Contained" />
         </StatusEffect>
         <!---->
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <SpawnItem spawnposition="ThisInventory" identifier="opluscard" />
           <RequiredItem items="oplusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <RequiredItem items="oplusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Contained" targets="oplusvial" IsOn="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Remove />
           <RequiredItem items="oplusvial" type="Contained" />
         </StatusEffect>
         <!---->
         <StatusEffect type="OnUse" targettype="This" delay="30" IsOn="false" drawhudwhenequipped="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <SpawnItem spawnposition="ThisInventory" identifier="ominuscard" />
           <RequiredItem items="ominusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" target="This" IsOn="true" drawhudwhenequipped="false">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <RequiredItem items="ominusvial" type="Contained" />
         </StatusEffect>
         <StatusEffect type="OnUse" targettype="Contained" targets="ominusvial" IsOn="true">
+        <RequiredItems identifier="mobilebattery" type="Contained" msg="ItemMsgBatteryCellRequired" />
           <Remove />
           <RequiredItem items="ominusvial" type="Contained" />
         </StatusEffect>
@@ -2198,10 +2195,58 @@
     <LightComponent range="250" lightcolor="180,255,255,200" IsOn="false" powerconsumption="0" allowingameediting="false">
       <sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="800.0" loop="true" />
     </LightComponent>
-    <ItemContainer capacity="2" maxstacksize="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true">
+    <ItemContainer capacity="3" maxstacksize="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true">
       <StatusEffect type="Always" target="This" condition="1" setvalue="true" />
     </ItemContainer>
-    <Holdable handle1="0,0" slots="Any,RightHand,LeftHand" msg="ItemMsgPickUpSelect"/>
+    <MeleeWeapon handle1="0,0" slots="Any,RightHand,LeftHand" reload="2" msg="ItemMsgPickUpSelect">
+    <RequiredItems identifier="collector" type="Contained" msg="Requires a cartridge" />
+      <StatusEffect type="OnUse" targettype="Contained" targets="collector" IsOn="true">
+          <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="Character" setvalue="true" comparison="Or">
+      <Sound file="Mods/Advanced Medicine/Sound/hypospray.ogg"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional aplus="gt 0"/>
+      <RequiredItems item="collector" type="Contained"/>
+      <SpawnItem spawnposition="ThisInventory" identifier="aplusvial"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional bplus="gt 0"/>
+      <RequiredItems item="collector" type="Contained"/>
+      <SpawnItem spawnposition="ThisInventory" identifier="bplusvial"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional oplus="gt 0"/>
+      <RequiredItems item="collector" type="Contained"/>
+      <SpawnItem spawnposition="ThisInventory" identifier="oplusvial"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional abplus="gt 0"/>
+      <RequiredItems item="collector" type="Contained"/>
+      <SpawnItem spawnposition="ThisInventory" identifier="abplusvial"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional aminus="gt 0"/>
+      <RequiredItems item="collector" type="Contained"/>
+      <SpawnItem spawnposition="ThisInventory" identifier="aminusvial"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional bminus="gt 0"/>
+      <RequiredItems item="collector" type="Contained"/>
+      <SpawnItem spawnposition="ThisInventory" identifier="bminusvial"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional abminus="gt 0"/>
+      <RequiredItems item="collector" type="Contained"/>
+      <SpawnItem spawnposition="ThisInventory" identifier="abminusvial"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character">
+      <Conditional ominus="gt 0"/>
+      <RequiredItems item="collector" type="Contained"/>
+      <SpawnItem spawnposition="ThisInventory" identifier="ominusvial"/>
+      </StatusEffect>
+      </MeleeWeapon>
   </Item>
 
   <Override>
