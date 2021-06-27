@@ -1100,7 +1100,7 @@
 			maxvitalitydecrease="0.45">
     <StatusEffect target="Limb" comparison="And">
     <Conditional ointmented="eq 0"/>
-    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.5"/>
+    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="45" maxstrength="100" multiplybymaxvitality="true"
@@ -1114,7 +1114,7 @@
 				</StatusEffect>
         <StatusEffect target="Limb" comparison="And">
         <Conditional ointmented="eq 0"/>
-        <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1"/>
+        <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.15"/>
         </StatusEffect>
 			</Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,0,128,128" color="195,136,60,255" origin="0,0"/>
