@@ -1941,6 +1941,30 @@
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
 
+  <Item name="Blood collection cartridge" identifier="bloodcollector" category="Material,Equipment" description="Empty blood collection cartridge, insert it inside «Blood Analyser»" cargocontaineridentifier="mediccrate" Tags="smallitem,Material,vial" useinhealthinterface="true" scale="0.170" impactsoundtag="impact_metal_light" maxstacksize="8" >
+    <PreferredContainer primary="medcab" minamount="1" maxamount="8" spawnprobability="1" />
+    <Price baseprice="5">
+      <Price locationtype="outpost" multiplier="1" minavailable="2" />
+      <Price locationtype="city" multiplier="0.9" minavailable="6" />
+      <Price locationtype="research" multiplier="0.9" minavailable="10" />
+      <Price locationtype="military" multiplier="1" minavailable="10" />
+      <Price locationtype="mine" multiplier="0.75" minavailable="2" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="5" >
+      <RequiredSkill identifier="medical" level="30" />
+      <RequiredItem identifier="plastic" mincondition="0.25" usecondition="true"/>
+    </Fabricate>
+    
+    <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="64,128,64,64" origin="0.5,0.5"/>
+    <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="896,0,128,128" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="70" density="20" />
+    <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-5,0" reload="1.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+
   <Item name="Blood analyzer" description="Blood typing device" identifier="bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
     
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
@@ -1969,7 +1993,8 @@
     <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="512,128,128,128" depth="0.6" origin="0.5,0.5" />
     <Body width="50" height="50" density="40" />
 
-    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-10,-10" reload="1.0" msg="ItemMsgPickUpSelect">
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-10,-10" reload="1.0">
+      <RequiredItems identifier="bloodcollector" type="Contained" msg="Need «Blood collection cartridge»" />
 
       <StatusEffect type="OnUse" target="This, Character" comparison="And">
         <Conditional condition="gt 90"/>
@@ -1977,35 +2002,37 @@
         <Sound file="Mods/Advanced Medicine/Sound/hypospray.ogg"/>
       </StatusEffect>
 
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <StatusEffect type="OnUse" targettype="Contained" targets="bloodcollector" Condition="-100"/>
+
+      <StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
       <Conditional condition="gt 99" aplus="gt 0"/>
       <SpawnItem spawnposition="ThisInventory" identifier="apluscard"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
       <Conditional condition="gt 99" bplus="gt 0"/>
       <SpawnItem spawnposition="ThisInventory" identifier="bpluscard"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
       <Conditional condition="gt 99" oplus="gt 0"/>
       <SpawnItem spawnposition="ThisInventory" identifier="opluscard"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
       <Conditional condition="gt 99" abplus="gt 0"/>
       <SpawnItem spawnposition="ThisInventory" identifier="abpluscard"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
       <Conditional condition="gt 99" aminus="gt 0"/>
       <SpawnItem spawnposition="ThisInventory" identifier="aminuscard"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
       <Conditional condition="gt 99" bminus="gt 0"/>
       <SpawnItem spawnposition="ThisInventory" identifier="bminuscard"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
       <Conditional condition="gt 99" abminus="gt 0"/>
       <SpawnItem spawnposition="ThisInventory" identifier="abminuscard"/>
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
       <Conditional condition="gt 99" ominus="gt 0"/>
       <SpawnItem spawnposition="ThisInventory" identifier="ominuscard"/>
       </StatusEffect>
@@ -2013,9 +2040,11 @@
       <StatusEffect type="OnUse" target="This" Condition="-100" />
       <StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false" />
     </MeleeWeapon>
-    
-    <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" slotsperrow="5" drawinventory="true">
-      <StatusEffect type="Always" target="This" setvalue="true" />
+
+    <Pickable msg="ItemMsgPickUpSelect"/>
+
+    <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" drawinventory="true">
+      <Containable items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard"/>
     </ItemContainer>
   </Item>
 
