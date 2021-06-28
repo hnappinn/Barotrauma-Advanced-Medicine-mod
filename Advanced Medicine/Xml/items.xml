@@ -1155,11 +1155,14 @@
     <Sprite name="Diving Suit" texture="DivingSuit_Item.png" sourcerect="157,0,90,307" depth="0.55" origin="0.4888889,0.5439739" />
     -->
 
+    <!-- "../" added because i'm always got that error: -->
+    <!-- Sprite "Mods/Advanced Medicine/Xml/Mods/Advanced Medicine/Images/Suits/bag.png" not found! -->
+
     <InventoryIcon texture="..\..\..\Mods\Advanced Medicine\Images\Suits\bag.png" sourcerect="0,0,45,67" origin="0.5,0.5" />
     <Sprite texture="..\..\..\Mods\Advanced Medicine\Images\Suits\bag.png" sourcerect="0,0,60,67" depth="0.55" origin="0.5,0.5" />
     <Body radius="45" width="34" density="15" />
     
-    <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect">
+    <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="false">
     <sprite texture="Mods\Advanced Medicine\Images/Suits/baghelmets.png" limb="Head" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
       <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="Torso" inheritlimbdepth="true" hidelimb="true" 
 	  inherittexturescale="true" inheritorigin="true" sourcerect="16,0,128,240"/>
@@ -1885,7 +1888,6 @@
     <ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true"/>
     <ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true"/>
   </Item> 
-
   <Override>
   <Item name="" identifier="idcard" category="Equipment" Tags="smallitem,idcard" cargocontaineridentifier="metalcrate">
     <Price baseprice="10" soldeverywhere="false" />
@@ -1898,7 +1900,6 @@
     </ItemContainer>
   </Item>
   </Override>
-
   <Item name="Doner card" identifier="ominuscard" category="Equipment" description="Blood group O-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
