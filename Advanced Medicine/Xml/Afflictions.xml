@@ -1339,7 +1339,7 @@
     <ReduceAffliction identifier="infection" amount="999"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="1" maxstrength="35" strengthchange="0.2">
+    <Effect minstrength="1" maxstrength="55" strengthchange="0.2">
       <StatusEffect target="Character">
         <ReduceAffliction identifier="immunity" amount="0.60"/>
       </StatusEffect>
@@ -1358,7 +1358,7 @@
         <ReduceAffliction identifier="immunity" amount="0.65"/>
     </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
-      <Conditional immunity="lte 200" necrosis="gte 0"/>
+      <Conditional immunity="lte 200" necrosis="gte 0" delay="20"/>
       <Affliction identifier="necrosis" indicatorlimb="Limb" amount="0.1" probability="0.01" />
       </StatusEffect>
     </Effect>
@@ -1367,7 +1367,7 @@
         <ReduceAffliction identifier="immunity" amount="0.75"/>
       </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
-		<Conditional immunity="lte 200" necrosis="gte 0" sepsis="gte 0"/>
+		<Conditional immunity="lte 200" necrosis="gte 0" sepsis="gte 0" delay="10"/>
         <Affliction identifier="necrosis" indicatorlimb="Limb" amount="0.3" probability="0.05"/>
         <Affliction identifier="sepsis" amount="0.01" probability="0.25"/>
       </StatusEffect>
