@@ -1275,7 +1275,8 @@
     limbspecific="false"
     maxstrength="600"
     showiconthreshold="700">
-    <Effect minstrength="1" maxstrength="100" strengthchange="0.5"/>
+    <Effect minstrength="1" maxstrength="3" strengthchange="7"/>
+    <Effect minstrength="3" maxstrength="100" strengthchange="0.5"/>
     <Effect minstrength="100" maxstrength="300" strengthchange="0.8">
     <StatusEffect target="Character">
     <Conditional infectedwound="gte 1"/>
@@ -1326,9 +1327,6 @@
     maxstrength="100"
     showiconthreshold="35">
     <Effect minstrength="0" maxstrength="1" strengthchange="0">
-      <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.55"/>
-      </StatusEffect>
     <StatusEffect target="Character" conditional="or">
     <Conditional speciesname="Husk" />
     <Conditional speciesname="Humanhusk" />
@@ -1353,18 +1351,18 @@
     <ReduceAffliction identifier="infection" amount="999"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="55" maxstrength="80" strengthchange="0.3">
+    <Effect minstrength="55" maxstrength="80" strengthchange="0.25">
     <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.65"/>
+        <ReduceAffliction identifier="immunity" amount="0.1"/>
     </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
       <Conditional immunity="lte 200" necrosis="gte 0"/>
       <Affliction identifier="necrosis" indicatorlimb="Limb" amount="0.1" probability="0.00005"/>
       </StatusEffect>
     </Effect>
-    <Effect minstrength="80" maxstrength="100" strengthchange="0.5">
+    <Effect minstrength="80" maxstrength="100" strengthchange="0.3">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.75"/>
+        <ReduceAffliction identifier="immunity" amount="0.3"/>
       </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
 		<Conditional immunity="lte 200" necrosis="gte 0" sepsis="gte 0"/>
@@ -1419,7 +1417,7 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="15" strengthchange="0.1"
       minvitalitydecrease="0"
-      maxvitalitydecrease="10">
+      maxvitalitydecrease="3">
     <StatusEffect target="Character">
     <Conditional ishuman="false"/>
     <ReduceAffliction identifier="necrosis" amount="999"/>
@@ -1427,7 +1425,7 @@
     </Effect>
     <Effect minstrength="15" maxstrength="50" strengthchange="0.01"
       minvitalitydecrease="0"
-      maxvitalitydecrease="50"/>
+      maxvitalitydecrease="15"/>
     <Effect minstrength="50" maxstrength="100" strengthchange="0.01"
       minvitalitydecrease="0"
       maxvitalitydecrease="25">

@@ -12,7 +12,7 @@
 
   <StatusEffect tags="immunity" type="always" target="This" disabledeltatime="true" comparison="And">
   <Conditional immunity="eq 0"/>
-    <Affliction identifier="immunity" amount="5" />
+    <Affliction identifier="immunity" amount="600" />
   </StatusEffect>
 
   <StatusEffect tags="bloodgroup" type="always" target="This" comparison="And" random="true">
