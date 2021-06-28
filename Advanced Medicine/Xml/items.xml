@@ -1746,45 +1746,50 @@
     <Body width="80" height="42" density="11" />
     <Holdable canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="35" />
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional aplus="gt 0" bloodloss="lt 30"/>
-      <SpawnItem identifier="bloodpackaplus"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional bplus="gt 0" bloodloss="lt 30"/>
-      <SpawnItem identifier="bloodpackbplus"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional oplus="gt 0" bloodloss="lt 30"/>
-      <SpawnItem identifier="bloodpackoplus"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional abplus="gt 0" bloodloss="lt 30"/>
-      <SpawnItem identifier="bloodpackabplus"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional aminus="gt 0" bloodloss="lt 30"/>
-      <SpawnItem identifier="bloodpackaminus"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional bminus="gt 0" bloodloss="lt 30"/>
-      <SpawnItem identifier="bloodpackbminus"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional abminus="gt 0" bloodloss="lt 30"/>
-      <SpawnItem identifier="bloodpackabminus"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This, Character" comparison="And">
-      <Conditional ominus="gt 0" bloodloss="lt 30"/>
-      <SpawnItem identifier="antibloodloss2"/>
-      </StatusEffect>
-      <StatusEffect type="OnUse" target="This" Condition="-100"  disabledeltatime="true"/>
       <StatusEffect tags="medical" type="OnUse" target="Character, This">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
-        <Conditional bloodloss="lt 30"/>
+        <Conditional bloodloss="gte 30"/>
+		<SpawnItem identifier="emptybloodpack"/>
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <Conditional aplus="gt 0" bloodloss="lte 29"/>
+      <SpawnItem identifier="bloodpackaplus" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <Conditional bplus="gt 0" bloodloss="lte 29"/>
+      <SpawnItem identifier="bloodpackbplus" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <Conditional oplus="gt 0" bloodloss="lte 29"/>
+      <SpawnItem identifier="bloodpackoplus" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <Conditional abplus="gt 0" bloodloss="lte 29"/>
+      <SpawnItem identifier="bloodpackabplus" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <Conditional aminus="gt 0" bloodloss="lte 29"/>
+      <SpawnItem identifier="bloodpackaminus" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <Conditional bminus="gt 0" bloodloss="lte 29"/>
+      <SpawnItem identifier="bloodpackbminus" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <Conditional abminus="gt 0" bloodloss="lte 29"/>
+      <SpawnItem identifier="bloodpackabminus" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This, Character" comparison="And">
+      <Conditional ominus="gt 0" bloodloss="lte 29"/>
+      <SpawnItem identifier="antibloodloss2"  />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" Condition="-100"  disabledeltatime="false" />
+      <StatusEffect tags="medical" type="OnUse" target="Character, This">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500"/>
+        <Conditional bloodloss="lte 30"/>
         <Affliction identifier="bloodloss" amount="33" />
       </StatusEffect>
-      <StatusEffect tags="medical" type="OnFailure" Condition="-50.0" target="Character, This">
+      <StatusEffect tags="medical" target="This" type="OnFailure" Condition="-50.0">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <Conditional bloodloss="lt 30"/>
         <Affliction identifier="bloodloss" amount="40" />
