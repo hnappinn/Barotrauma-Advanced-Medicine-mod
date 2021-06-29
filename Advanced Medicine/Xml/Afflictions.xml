@@ -1339,7 +1339,7 @@
     </Effect>
     <Effect minstrength="1" maxstrength="55" strengthchange="0.2">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.60"/>
+        <ReduceAffliction identifier="immunity" amount="0.05"/>
       </StatusEffect>
     <StatusEffect target="Character" conditional="or">
     <Conditional speciesname="Husk" />
@@ -1362,7 +1362,7 @@
     </Effect>
     <Effect minstrength="80" maxstrength="100" strengthchange="0.3">
       <StatusEffect target="Character">
-        <ReduceAffliction identifier="immunity" amount="0.3"/>
+        <ReduceAffliction identifier="immunity" amount="0.15"/>
       </StatusEffect>
       <StatusEffect target="Limb" comparison="And">
 		<Conditional immunity="lte 200" necrosis="gte 0" sepsis="gte 0"/>
