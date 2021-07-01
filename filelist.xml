@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.14.6.0" steamworkshopid="2488816950" installtime="1624973575">
+  <None file="Mods/Advanced Medicine/Content/Sprites/am_afflictions_icons.png" />
+  <None file="Mods/Advanced Medicine/Content/Sprites/am_ingame_icons.png" />
+  <None file="Mods/Advanced Medicine/Content/Sprites/am_inventory_icons.png" />
+  <None file="Mods/Advanced Medicine/Content/Sprites/am_bloodpacks.png" />
+  <None file="Mods/Advanced Medicine/Content/Sprites/Lights/scanner_Light.png" />
+  <None file="Mods/Advanced Medicine/Content/Sprites/Suits/stasisbag.png" />
+  <None file="Mods/Advanced Medicine/Content/Sprites/Suits/baghelmets.png" />
+  <None file="Mods/Advanced Medicine/Content/Sprites/Suits/bag.png" />
+  <Afflictions file="Mods/Advanced Medicine/Content/am_afflictions.xml" />
+  <Item file="Mods/Advanced Medicine/Content/am_items.xml" />
+  <Text file="Mods/Advanced Medicine/Content/Text/am_Russian.xml" />
+  <Text file="Mods/Advanced Medicine/Content/Text/am_English.xml" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_drill.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_squelch1.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_Defib1.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_Defib2.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_suture.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_bonebreak1.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_bonebreak2.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_bonebreak3.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_bonebreak4.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_ointment.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_spray.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_pump.ogg" />
+  <None file="Mods/Advanced Medicine/Content/Sounds/am_hypospray.ogg" />
+  <Character file="Mods/Advanced Medicine/Content/Characters/Human/Human.xml" />
+</contentpackage>
