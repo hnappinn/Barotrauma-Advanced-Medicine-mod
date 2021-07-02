@@ -953,11 +953,11 @@
 			<sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" depth="0.025" sourcerect="96,304,416,192" origin="0.5,0.5" alpha="1.0" />
 		</LightComponent>
 		<Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
-      <limbposition limb="Head" position="-6,-10" allowusinglimb="true" />
-      <limbposition limb="Torso" position="104,0" allowusinglimb="true" />
-      <limbposition limb="Waist" position="244,-80" allowusinglimb="true" />
-      <limbposition limb="RightFoot" position="380,-20" allowusinglimb="true" />
-      <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true" />
+			<limbposition limb="Head" position="-6,-10" allowusinglimb="true" />
+			<limbposition limb="Torso" position="104,0" allowusinglimb="true" />
+			<limbposition limb="Waist" position="244,-80" allowusinglimb="true" />
+			<limbposition limb="RightFoot" position="380,-20" allowusinglimb="true" />
+			<limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true" />
 			<limbposition limb="RightHand" position="234,-10" allowusinglimb="false" />
 			<limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
 			<StatusEffect tags="medical" type="OnActive" target="Character">
@@ -968,91 +968,91 @@
 	</Item>
 
 	<Override>
-    <Item name="" identifier="opdeco_hospitalbed" width="416" height="192" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Decorative">
-      <Upgrade gameversion="0.12.0.0" noninteractable="false" />
-      <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
-      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
-        <limbposition limb="Head" position="-6,-10" allowusinglimb="true" />
-        <limbposition limb="Torso" position="104,0" allowusinglimb="true" />
-        <limbposition limb="Waist" position="244,-80" allowusinglimb="true" />
-        <limbposition limb="RightFoot" position="380,-20" allowusinglimb="true" />
-        <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true" />
-        <limbposition limb="RightHand" position="234,-10" allowusinglimb="false" />
-        <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
-        <StatusEffect type="OnActive" target="Character">
-          <reduceaffliction identifier="nausea" strength="0.05" />
-          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
-          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
-          <reduceaffliction identifier="drunk" strength="0.05" />
-          <Affliction identifier="table" amount="2" />
-          <Affliction identifier="alv" amount="10" />
-        </StatusEffect>
-      </Controller>
-    </Item>
-  </Override>
-  <Override>
-    <Item name="" identifier="opdeco_bunkbeds" width="356" height="264" texturescale="1.0,1.0" scale="0.5" category="Decorative" spritecolor="255,255,255,255">
-      <Upgrade gameversion="0.12.0.0" noninteractable="false" />
-      <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1600,1760,384,264" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" />
-      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" drawuserbehind="true">
-        <limbposition limb="Head" position="-26,-170" />
-        <limbposition limb="Torso" position="84,-140" />
-        <limbposition limb="Waist" position="224,-160" />
-        <limbposition limb="RightFoot" position="444,-160" />
-        <limbposition limb="LeftFoot" position="444,-160" />
-        <limbposition limb="RightHand" position="224,-160" allowusinglimb="false" />
-        <limbposition limb="LeftHand" position="224,-160" allowusinglimb="false" />
-        <StatusEffect type="OnActive" target="Character">
-          <reduceaffliction identifier="nausea" strength="0.05" />
-          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
-          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
-          <reduceaffliction identifier="drunk" strength="0.05" />
-        </StatusEffect>
-      </Controller>
-    </Item>
-  </Override>
-  <Override>
-    <Item name="" identifier="opdeco_bunks1" nameidentifier="opdeco_bunks1" allowattachitems="false" width="463" height="398" texturescale="1.0,1.0" scale="0.5" category="Decorative">
-      <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1296,1289,463,387" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" />
-      <DecorativeSprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1390,1126,320,160" depth="0.86" origin="0.5,0.5" offset="40,-95" />
-      <DecorativeSprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1390,1126,320,160" depth="0.86" origin="0.5,0.5" offset="40,105" />
-      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" drawuserbehind="true">
-        <limbposition limb="Head" position="14,-300" />
-        <limbposition limb="Torso" position="124,-270" />
-        <limbposition limb="Waist" position="264,-290" />
-        <limbposition limb="RightFoot" position="484,-290" />
-        <limbposition limb="LeftFoot" position="484,-290" />
-        <limbposition limb="RightHand" position="264,-290" allowusinglimb="false" />
-        <limbposition limb="LeftHand" position="264,-290" allowusinglimb="false" />
-        <StatusEffect type="OnActive" target="Character">
-          <reduceaffliction identifier="nausea" strength="0.05" />
-          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
-          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
-          <reduceaffliction identifier="drunk" strength="0.05" />
-        </StatusEffect>
-      </Controller>
-    </Item>
-  </Override>
-  <Override>
-    <Item name="" identifier="opdeco_prisonbed" allowattachitems="true" width="384" height="96" texturescale="1.0,1.0" scale="0.5" category="Decorative">
-      <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="864,1888,384,96" depth="0.98" premultiplyalpha="false" origin="0.5,0.5" />
-      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
-        <limbposition limb="Head" position="-6,-10" />
-        <limbposition limb="Torso" position="104,20" />
-        <limbposition limb="Waist" position="244,-60" />
-        <limbposition limb="RightFoot" position="380,0" />
-        <limbposition limb="LeftFoot" position="380,0" />
-        <limbposition limb="RightHand" position="234,10" allowusinglimb="false" />
-        <limbposition limb="LeftHand" position="234,10" allowusinglimb="false" />
-        <StatusEffect type="OnActive" target="Character">
-          <reduceaffliction identifier="nausea" strength="0.05" />
-          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
-          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
-          <reduceaffliction identifier="drunk" strength="0.05" />
-        </StatusEffect>
-      </Controller>
-    </Item>
-  </Override>
+		<Item name="" identifier="opdeco_hospitalbed" width="416" height="192" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Decorative">
+			<Upgrade gameversion="0.12.0.0" noninteractable="false" />
+			<sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+			<Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
+				<limbposition limb="Head" position="-6,-10" allowusinglimb="true" />
+				<limbposition limb="Torso" position="104,0" allowusinglimb="true" />
+				<limbposition limb="Waist" position="244,-80" allowusinglimb="true" />
+				<limbposition limb="RightFoot" position="380,-20" allowusinglimb="true" />
+				<limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true" />
+				<limbposition limb="RightHand" position="234,-10" allowusinglimb="false" />
+				<limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
+				<StatusEffect type="OnActive" target="Character">
+					<reduceaffliction identifier="nausea" strength="0.05" />
+					<reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+					<reduceaffliction identifier="opiateaddiction" strength="0.05" />
+					<reduceaffliction identifier="drunk" strength="0.05" />
+					<Affliction identifier="table" amount="2" />
+					<Affliction identifier="alv" amount="10" />
+				</StatusEffect>
+			</Controller>
+		</Item>
+	</Override>
+	<Override>
+		<Item name="" identifier="opdeco_bunkbeds" width="356" height="264" texturescale="1.0,1.0" scale="0.5" category="Decorative" spritecolor="255,255,255,255">
+			<Upgrade gameversion="0.12.0.0" noninteractable="false" />
+			<sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1600,1760,384,264" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" />
+			<Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" drawuserbehind="true">
+				<limbposition limb="Head" position="-26,-170" />
+				<limbposition limb="Torso" position="84,-140" />
+				<limbposition limb="Waist" position="224,-160" />
+				<limbposition limb="RightFoot" position="444,-160" />
+				<limbposition limb="LeftFoot" position="444,-160" />
+				<limbposition limb="RightHand" position="224,-160" allowusinglimb="false" />
+				<limbposition limb="LeftHand" position="224,-160" allowusinglimb="false" />
+				<StatusEffect type="OnActive" target="Character">
+					<reduceaffliction identifier="nausea" strength="0.05" />
+					<reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+					<reduceaffliction identifier="opiateaddiction" strength="0.05" />
+					<reduceaffliction identifier="drunk" strength="0.05" />
+				</StatusEffect>
+			</Controller>
+		</Item>
+	</Override>
+	<Override>
+		<Item name="" identifier="opdeco_bunks1" nameidentifier="opdeco_bunks1" allowattachitems="false" width="463" height="398" texturescale="1.0,1.0" scale="0.5" category="Decorative">
+			<sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1296,1289,463,387" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" />
+			<DecorativeSprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1390,1126,320,160" depth="0.86" origin="0.5,0.5" offset="40,-95" />
+			<DecorativeSprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1390,1126,320,160" depth="0.86" origin="0.5,0.5" offset="40,105" />
+			<Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" drawuserbehind="true">
+				<limbposition limb="Head" position="14,-300" />
+				<limbposition limb="Torso" position="124,-270" />
+				<limbposition limb="Waist" position="264,-290" />
+				<limbposition limb="RightFoot" position="484,-290" />
+				<limbposition limb="LeftFoot" position="484,-290" />
+				<limbposition limb="RightHand" position="264,-290" allowusinglimb="false" />
+				<limbposition limb="LeftHand" position="264,-290" allowusinglimb="false" />
+				<StatusEffect type="OnActive" target="Character">
+					<reduceaffliction identifier="nausea" strength="0.05" />
+					<reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+					<reduceaffliction identifier="opiateaddiction" strength="0.05" />
+					<reduceaffliction identifier="drunk" strength="0.05" />
+				</StatusEffect>
+			</Controller>
+		</Item>
+	</Override>
+	<Override>
+		<Item name="" identifier="opdeco_prisonbed" allowattachitems="true" width="384" height="96" texturescale="1.0,1.0" scale="0.5" category="Decorative">
+			<sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="864,1888,384,96" depth="0.98" premultiplyalpha="false" origin="0.5,0.5" />
+			<Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
+				<limbposition limb="Head" position="-6,-10" />
+				<limbposition limb="Torso" position="104,20" />
+				<limbposition limb="Waist" position="244,-60" />
+				<limbposition limb="RightFoot" position="380,0" />
+				<limbposition limb="LeftFoot" position="380,0" />
+				<limbposition limb="RightHand" position="234,10" allowusinglimb="false" />
+				<limbposition limb="LeftHand" position="234,10" allowusinglimb="false" />
+				<StatusEffect type="OnActive" target="Character">
+					<reduceaffliction identifier="nausea" strength="0.05" />
+					<reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+					<reduceaffliction identifier="opiateaddiction" strength="0.05" />
+					<reduceaffliction identifier="drunk" strength="0.05" />
+				</StatusEffect>
+			</Controller>
+		</Item>
+	</Override>
 
 	<Item name="" identifier="am_ointment" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
 		<PreferredContainer primary="medcab" minamount="4" maxamount="6" spawnprobability="1" />
