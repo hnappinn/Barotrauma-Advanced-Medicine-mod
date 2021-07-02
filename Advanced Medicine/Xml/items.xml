@@ -1278,13 +1278,14 @@
       <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftFoot" sound="footstep_metal" inheritlimbdepth="true" hidelimb="true" 
 	  inherittexturescale="true" origin="0.4520548,0.4117647" sourcerect="16,288,80,176"/>
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="100.0" UseHullOxygen="false" />
+      <StatusEffect tags="stasis" type="OnWearing" target="Character" duration="0.1" stackable="false" />
       <StatusEffect type="OnWearing" target="Character">
       <ReduceAffliction identifier="morbusinepoisoning" amount="1"/>
       <ReduceAffliction identifier="sufforinpoisoning" amount="1"/> 
       <ReduceAffliction identifier="deliriuminepoisoning" amount="1"/>
       <ReduceAffliction identifier="cyanidepoisoning" amount="1"/> 
-      <ReduceAffliction identifier="paralysis" amount="0.4"/>
       <ReduceAffliction identifier="huskinfection" amount="0.3"/>
+      <Affliction identifier="givein" amount="10"/>
       </StatusEffect>
       <StatusEffect type="OnWearing" target="Character" disabledeltatime="true">
       <Conditional stun="lt 1"/>
