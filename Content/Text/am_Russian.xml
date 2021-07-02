@@ -5,62 +5,66 @@
 	<stasisbugequipconfirmation>Вы уверены что хотите надеть на себя стазис-мешок?</stasisbugequipconfirmation>
 
 	<!-- ITEMS -->
-	<entityname.aed>Автоматический наружный дефибриллятор</entityname.aed>
-	<entitydescription.aed>Устройство, которое стабилизирует сердце электрическим ударом. Использовать на пациентах с тахикардией желудочков или фибрилляцией.</entitydescription.aed>
+	<entityname.am_aed>Автоматический наружный дефибриллятор</entityname.am_aed>
+	<entitydescription.am_aed>Устройство, которое стабилизирует сердце электрическим ударом. Использовать на пациентах с тахикардией желудочков или фибрилляцией.</entitydescription.am_aed>
 
-	<entityname.advscalpel>Скальпель</entityname.advscalpel>
-	<entitydescription.advscalpel>Инструмент, используемый для надрезов во время операции.</entitydescription.advscalpel>
+	<entityname.am_scalpel>Скальпель</entityname.am_scalpel>
+	<entitydescription.am_scalpel>Инструмент, используемый для надрезов во время операции.</entitydescription.am_scalpel>
 
-	<entityname.advhemostat>Зажим</entityname.advhemostat>
-	<entitydescription.advhemostat>Инструмент, используемый для остановки кровотечения во время операции.</entitydescription.advhemostat>
+	<entityname.am_hemostat>Зажим</entityname.am_hemostat>
+	<entitydescription.am_hemostat>Инструмент, используемый для остановки кровотечения во время операции.</entitydescription.am_hemostat>
 
-	<entityname.advretractors>Расширитель</entityname.advretractors>
-	<entitydescription.advretractors>Инструмент, используемый для оттягивания кожи во время операции.</entitydescription.advretractors>
+	<!-- identifier="am_antisepticspray"
 
-	<entityname.autocpr>АвтоПульс</entityname.autocpr>
-	<entitydescription.autocpr>Портативное устройство на батарейках, производящее автоматический непрямой массаж сердца.</entitydescription.autocpr>
+	identifier="antiseptic" -->
 
-	<entityname.bloodcollector>Картридж для анализатора</entityname.bloodcollector>
-	<entitydescription.bloodcollector>Пустой картридж, вставьте внутрь Анализатора крови.</entitydescription.bloodcollector>
+	<entityname.am_retractors>Расширитель</entityname.am_retractors>
+	<entitydescription.am_retractors>Инструмент, используемый для оттягивания кожи во время операции.</entitydescription.am_retractors>
 
-	<entityname.bvm>Мешок Амбу</entityname.bvm>
-	<entitydescription.bvm>Портативная маска для проведения искусственной вентиляции легких с помощью позитивного давления.</entitydescription.bvm>
+	<entityname.am_autocpr>АвтоПульс</entityname.am_autocpr>
+	<entitydescription.am_autocpr>Портативное устройство на батарейках, производящее автоматический непрямой массаж сердца.</entitydescription.am_autocpr>
 
-	<entityname.stasisbag>Стазис-мешок</entityname.stasisbag>
-	<entitydescription.stasisbag>Останавливает биологические процессы и защищает от церебральной гипоксии.</entitydescription.stasisbag>
+	<entityname.am_bloodcollector>Картридж для анализатора</entityname.am_bloodcollector>
+	<entitydescription.am_bloodcollector>Пустой картридж, вставьте внутрь Анализатора крови.</entitydescription.am_bloodcollector>
 
-	<entityname.surgicaldrill>Хирургическая дрель</entityname.surgicaldrill>
-	<entitydescription.surgicaldrill>Инструмент, используемый для сверления костей.</entitydescription.surgicaldrill>
+	<entityname.am_bvm>Мешок Амбу</entityname.am_bvm>
+	<entitydescription.am_bvm>Портативная маска для проведения искусственной вентиляции легких с помощью позитивного давления.</entitydescription.am_bvm>
 
-	<entityname.osteosynthesisimplants>Имплантаты для остеосинтеза</entityname.osteosynthesisimplants>
-	<entitydescription.osteosynthesisimplants>Титановые имплантаты для остеосинтеза.</entitydescription.osteosynthesisimplants>
+	<entityname.am_stasisbag>Стазис-мешок</entityname.am_stasisbag>
+	<entitydescription.am_stasisbag>Останавливает биологические процессы и защищает от церебральной гипоксии.</entitydescription.am_stasisbag>
 
-	<entityname.surgicalsaw>Хирургическая пила</entityname.surgicalsaw>
-	<entitydescription.surgicalsaw>Инструмент, используемый для распиливания костей.</entitydescription.surgicalsaw>
+	<entityname.am_surgicaldrill>Хирургическая дрель</entityname.am_surgicaldrill>
+	<entitydescription.am_surgicaldrill>Инструмент, используемый для сверления костей.</entitydescription.am_surgicaldrill>
 
-	<entityname.suture>Хирургические швы</entityname.suture>
-	<entitydescription.suture>Швы со встроенной иглой для зашивания ран и надрезов.</entitydescription.suture>
+	<entityname.am_osteosynthesisimplants>Имплантаты для остеосинтеза</entityname.am_osteosynthesisimplants>
+	<entitydescription.am_osteosynthesisimplants>Титановые имплантаты для остеосинтеза.</entitydescription.am_osteosynthesisimplants>
 
-	<entityname.tweezers>Пинцет</entityname.tweezers>
-	<entitydescription.tweezers>Используется для удаления инородных тел.</entitydescription.tweezers>
+	<entityname.am_surgicalsaw>Хирургическая пила</entityname.am_surgicalsaw>
+	<entitydescription.am_surgicalsaw>Инструмент, используемый для распиливания костей.</entitydescription.am_surgicalsaw>
 
-	<entityname.tourniquet>Жгут</entityname.tourniquet>
-	<entitydescription.tourniquet>Используется для остановки кровотока по вене или артерии.</entitydescription.tourniquet>
+	<entityname.am_suture>Хирургические швы</entityname.am_suture>
+	<entitydescription.am_suture>Швы со встроенной иглой для зашивания ран и надрезов.</entitydescription.am_suture>
 
-	<entityname.mannitol>Маннитол Плюс</entityname.mannitol>
-	<entitydescription.mannitol>Лекарство для ускореного восстановления после гипоксии.</entitydescription.mannitol>
+	<entityname.am_tweezers>Пинцет</entityname.am_tweezers>
+	<entitydescription.am_tweezers>Используется для удаления инородных тел.</entitydescription.am_tweezers>
 
-	<entityname.operatingtable>Операционный стол</entityname.operatingtable>
-	<entitydescription.operatingtable>Используется для сохранения неподвижности пациентов во время операции. Оснащён ИВЛ.</entitydescription.operatingtable>
+	<entityname.am_tourniquet>Жгут</entityname.am_tourniquet>
+	<entitydescription.am_tourniquet>Используется для остановки кровотока по вене или артерии.</entitydescription.am_tourniquet>
 
-	<entityname.ointment>Антибиотическая мазь</entityname.ointment>
-	<entitydescription.ointment>Используется для лечения ожогов и инфекций.</entitydescription.ointment>
+	<entityname.am_mannitol>Маннитол Плюс</entityname.am_mannitol>
+	<entitydescription.am_mannitol>Лекарство для ускореного восстановления после гипоксии.</entitydescription.am_mannitol>
 
-	<entityname.vialrack>Стойка для пробирок</entityname.vialrack>
-	<entitydescription.vialrack>Стойка для хранения пробирок и образцов крови.</entitydescription.vialrack>
+	<entityname.am_operatingtable>Операционный стол</entityname.am_operatingtable>
+	<entitydescription.am_operatingtable>Используется для сохранения неподвижности пациентов во время операции. Оснащён ИВЛ.</entitydescription.am_operatingtable>
 
-	<entityname.bloodanalyzer>Анализатор крови</entityname.bloodanalyzer>
-	<entitydescription.bloodanalyzer>Прибор для определения группы крови. Вставьте картридж и возьмите анализ у пациента для получения карты донора с группой крови.</entitydescription.bloodanalyzer>
+	<entityname.am_ointment>Антибиотическая мазь</entityname.am_ointment>
+	<entitydescription.am_ointment>Используется для лечения ожогов и инфекций.</entitydescription.am_ointment>
+
+	<entityname.am_vialrack>Стойка для пробирок</entityname.am_vialrack>
+	<entitydescription.am_vialrack>Стойка для хранения пробирок и образцов крови.</entitydescription.am_vialrack>
+
+	<entityname.am_bloodanalyzer>Анализатор крови</entityname.am_bloodanalyzer>
+	<entitydescription.am_bloodanalyzer>Прибор для определения группы крови. Вставьте картридж и возьмите анализ у пациента для получения карты донора с группой крови.</entitydescription.am_bloodanalyzer>
 
 
 
@@ -111,11 +115,11 @@
 	<afflictionname.retractedskin>Оттянутая кожа</afflictionname.retractedskin>
 	<afflictiondescription.retractedskin>Кожа открыта с помощью расширителя.</afflictiondescription.retractedskin>
 
-	<afflictionname.suturedi>Зашитый надрез</afflictionname.suturedi>
-	<afflictiondescription.suturedi>Присутствуют швы.</afflictiondescription.suturedi>
+	<afflictionname.am_suturedi>Зашитый надрез</afflictionname.am_suturedi>
+	<afflictiondescription.am_suturedi>Присутствуют швы.</afflictiondescription.am_suturedi>
 
-	<afflictionname.suturedw>Зашитая рана</afflictionname.suturedw>
-	<afflictiondescription.suturedw>Присутствуют швы.</afflictiondescription.suturedw>
+	<afflictionname.am_suturedw>Зашитая рана</afflictionname.am_suturedw>
+	<afflictiondescription.am_suturedw>Присутствуют швы.</afflictiondescription.am_suturedw>
 
 	<afflictionname.boncut>Кости распилены</afflictionname.boncut>
 	<afflictiondescription.boncut>Кости разрезаны пилой.</afflictiondescription.boncut>
@@ -148,6 +152,6 @@
 	<afflictionname.bandaged>Перевязан</afflictionname.bandaged>
 	<afflictiondescription.bandaged>Защитные слои перевязочного материала предотвращают инфицирование раны</afflictiondescription.bandaged>
 
-	<afflictionname.ointmented>Мазь</afflictionname.ointmented>
-	<afflictiondescription.ointmented>Слой антибиотического геля защищает и очищает рану от любых микробов.</afflictiondescription.ointmented>
+	<afflictionname.am_ointmented>Мазь</afflictionname.am_ointmented>
+	<afflictiondescription.am_ointmented>Слой антибиотического геля защищает и очищает рану от любых микробов.</afflictiondescription.am_ointmented>
 </infotexts>

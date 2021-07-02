@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
 
-	<Item name="" identifier="aed" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
+	<Item name="" identifier="am_aed" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.3">
 		<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3" />
 		<Fabricate suitablefabricators="fabricator" requiredtime="10">
@@ -59,7 +59,7 @@
 		</ItemContainer>
 	</Item>
 
-	<Item name="" identifier="bvm" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.070">
+	<Item name="" identifier="am_bvm" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical" description="" useinhealthinterface="True" scale="0.370">
 		<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.3" />
 		<Fabricate suitablefabricators="fabricator" requiredtime="10">
@@ -220,7 +220,7 @@
 		</Item>
 	</Override>
 
-	<Item name="" identifier="advscalpel" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
+	<Item name="" identifier="am_scalpel" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
 		<PreferredContainer primary="locker" />
 		<Fabricate suitablefabricators="fabricator">
@@ -264,7 +264,7 @@
 		</MeleeWeapon>
 	</Item>
 
-	<Item name="" identifier="advhemostat" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
+	<Item name="" identifier="am_hemostat" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
 		<PreferredContainer primary="locker" />
 		<Fabricate suitablefabricators="fabricator">
@@ -298,7 +298,7 @@
 		</MeleeWeapon>
 	</Item>
 
-	<Item name="" identifier="surgicaldrill" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
+	<Item name="" identifier="am_surgicaldrill" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
 		<PreferredContainer primary="locker" />
 		<Fabricate suitablefabricators="fabricator">
@@ -343,7 +343,7 @@
 		</MeleeWeapon>
 	</Item>
 
-	<Item name="" identifier="osteosynthesisimplants" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+	<Item name="" identifier="am_osteosynthesisimplants" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
 		<PreferredContainer primary="locker" />
 		<Fabricate suitablefabricators="fabricator">
@@ -384,7 +384,7 @@
 		</MeleeWeapon>
 	</Item>
 
-	<Item name="" identifier="advretractors" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.2">
+	<Item name="" identifier="am_retractors" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.2">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
 		<PreferredContainer primary="locker" />
 		<Fabricate suitablefabricators="fabricator">
@@ -419,7 +419,7 @@
 		</MeleeWeapon>
 	</Item>
 
-	<Item name="" identifier="surgicalsaw" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
+	<Item name="" identifier="am_surgicalsaw" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.4">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
 		<PreferredContainer primary="locker" />
 		<Fabricate suitablefabricators="fabricator" outcondition="100.0">
@@ -462,7 +462,7 @@
 		</MeleeWeapon>
 	</Item>
 
-	<Item name="" identifier="suture" category="Equipment" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
+	<Item name="" identifier="am_suture" category="Equipment" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
 		<PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1" />
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
@@ -534,7 +534,7 @@
 		</MeleeWeapon>
 	</Item>
 
-	<Item name="" identifier="tweezers" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.150">
+	<Item name="" identifier="am_tweezers" category="Equipment" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.150">
 		<PreferredContainer primary="locker" />
 		<Fabricate suitablefabricators="fabricator">
 			<RequiredItem identifier="steel" />
@@ -569,7 +569,7 @@
 		</MeleeWeapon>
 	</Item>
 
-	<Item name="" identifier="tourniquet" category="Equipment" maxstacksize="4" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
+	<Item name="" identifier="am_tourniquet" category="Equipment" maxstacksize="4" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery" description="" useinhealthinterface="True" scale="0.250">
 		<PreferredContainer primary="toxcontainer" spawnprobability="0.2" />
 		<PreferredContainer primary="medcab" minamount="1" maxamount="2" spawnprobability="1" />
 		<Fabricate suitablefabricators="medicalfabricator" outcondition="100.0" amount="2">
@@ -864,7 +864,7 @@
 		</Item>
 	</Override>
 
-	<Item name="" identifier="mannitol" category="Material" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light" maxstacksize="8">
+	<Item name="" identifier="am_mannitol" category="Material" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.275" impactsoundtag="impact_metal_light" maxstacksize="8">
 		<PreferredContainer primary="medcab" spawnprobability="0.05" />
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.25" />
 		<PreferredContainer primary="outposttrashcan" minamount="0" maxamount="2" spawnprobability="0.01" />
@@ -888,8 +888,8 @@
 			<Item identifier="stabilozine" copycondition="true" mincondition="0.1" />
 		</Deconstruct>
 		<SuitableTreatment identifier="hypoxia" suitability="15" />
-		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="384,704,64,64" origin="0.5,0.5" />
-		<Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="226,306,38,72" depth="0.6" origin="0.5,0.5" />
+		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,128,64,64" origin="0.5,0.5" />
+		<Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="640,128,128,128" depth="0.6" origin="0.5,0.5" />
 		<Body width="35" height="70" density="20" />
 		<MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
 			<StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
@@ -923,7 +923,7 @@
 		</Projectile>
 	</Item>
 
-	<Item name="" identifier="operatingtable" scale="0.4" Tags="medical" maxstacksize="1" category="medical" description="" isshootable="true">
+	<Item name="" identifier="am_operatingtable" scale="0.4" Tags="medical" maxstacksize="1" category="medical" description="" isshootable="true">
 		<Upgrade gameversion="0.12.0.0" noninteractable="false" />
 		<Body width="416" height="192" density="40" />
 		<Price baseprice="400" soldeverywhere="false">
@@ -953,11 +953,11 @@
 			<sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" depth="0.025" sourcerect="96,304,416,192" origin="0.5,0.5" alpha="1.0" />
 		</LightComponent>
 		<Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
-			<limbposition limb="Head" position="-6,-10" />
-			<limbposition limb="Torso" position="104,0" />
-			<limbposition limb="Waist" position="244,-80" />
-			<limbposition limb="RightFoot" position="380,-20" />
-			<limbposition limb="LeftFoot" position="380,-20" />
+      <limbposition limb="Head" position="-6,-10" allowusinglimb="true" />
+      <limbposition limb="Torso" position="104,0" allowusinglimb="true" />
+      <limbposition limb="Waist" position="244,-80" allowusinglimb="true" />
+      <limbposition limb="RightFoot" position="380,-20" allowusinglimb="true" />
+      <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true" />
 			<limbposition limb="RightHand" position="234,-10" allowusinglimb="false" />
 			<limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
 			<StatusEffect tags="medical" type="OnActive" target="Character">
@@ -967,7 +967,94 @@
 		</Controller>
 	</Item>
 
-	<Item name="" identifier="ointment" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
+	<Override>
+    <Item name="" identifier="opdeco_hospitalbed" width="416" height="192" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Decorative">
+      <Upgrade gameversion="0.12.0.0" noninteractable="false" />
+      <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
+        <limbposition limb="Head" position="-6,-10" allowusinglimb="true" />
+        <limbposition limb="Torso" position="104,0" allowusinglimb="true" />
+        <limbposition limb="Waist" position="244,-80" allowusinglimb="true" />
+        <limbposition limb="RightFoot" position="380,-20" allowusinglimb="true" />
+        <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true" />
+        <limbposition limb="RightHand" position="234,-10" allowusinglimb="false" />
+        <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
+        <StatusEffect type="OnActive" target="Character">
+          <reduceaffliction identifier="nausea" strength="0.05" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
+          <reduceaffliction identifier="drunk" strength="0.05" />
+          <Affliction identifier="table" amount="2" />
+          <Affliction identifier="alv" amount="10" />
+        </StatusEffect>
+      </Controller>
+    </Item>
+  </Override>
+  <Override>
+    <Item name="" identifier="opdeco_bunkbeds" width="356" height="264" texturescale="1.0,1.0" scale="0.5" category="Decorative" spritecolor="255,255,255,255">
+      <Upgrade gameversion="0.12.0.0" noninteractable="false" />
+      <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1600,1760,384,264" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" />
+      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" drawuserbehind="true">
+        <limbposition limb="Head" position="-26,-170" />
+        <limbposition limb="Torso" position="84,-140" />
+        <limbposition limb="Waist" position="224,-160" />
+        <limbposition limb="RightFoot" position="444,-160" />
+        <limbposition limb="LeftFoot" position="444,-160" />
+        <limbposition limb="RightHand" position="224,-160" allowusinglimb="false" />
+        <limbposition limb="LeftHand" position="224,-160" allowusinglimb="false" />
+        <StatusEffect type="OnActive" target="Character">
+          <reduceaffliction identifier="nausea" strength="0.05" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
+          <reduceaffliction identifier="drunk" strength="0.05" />
+        </StatusEffect>
+      </Controller>
+    </Item>
+  </Override>
+  <Override>
+    <Item name="" identifier="opdeco_bunks1" nameidentifier="opdeco_bunks1" allowattachitems="false" width="463" height="398" texturescale="1.0,1.0" scale="0.5" category="Decorative">
+      <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1296,1289,463,387" depth="0.85" premultiplyalpha="false" origin="0.5,0.5" />
+      <DecorativeSprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1390,1126,320,160" depth="0.86" origin="0.5,0.5" offset="40,-95" />
+      <DecorativeSprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="1390,1126,320,160" depth="0.86" origin="0.5,0.5" offset="40,105" />
+      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true" drawuserbehind="true">
+        <limbposition limb="Head" position="14,-300" />
+        <limbposition limb="Torso" position="124,-270" />
+        <limbposition limb="Waist" position="264,-290" />
+        <limbposition limb="RightFoot" position="484,-290" />
+        <limbposition limb="LeftFoot" position="484,-290" />
+        <limbposition limb="RightHand" position="264,-290" allowusinglimb="false" />
+        <limbposition limb="LeftHand" position="264,-290" allowusinglimb="false" />
+        <StatusEffect type="OnActive" target="Character">
+          <reduceaffliction identifier="nausea" strength="0.05" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
+          <reduceaffliction identifier="drunk" strength="0.05" />
+        </StatusEffect>
+      </Controller>
+    </Item>
+  </Override>
+  <Override>
+    <Item name="" identifier="opdeco_prisonbed" allowattachitems="true" width="384" height="96" texturescale="1.0,1.0" scale="0.5" category="Decorative">
+      <sprite texture="Content/Map/Outposts/Art/Storage.png" sourcerect="864,1888,384,96" depth="0.98" premultiplyalpha="false" origin="0.5,0.5" />
+      <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
+        <limbposition limb="Head" position="-6,-10" />
+        <limbposition limb="Torso" position="104,20" />
+        <limbposition limb="Waist" position="244,-60" />
+        <limbposition limb="RightFoot" position="380,0" />
+        <limbposition limb="LeftFoot" position="380,0" />
+        <limbposition limb="RightHand" position="234,10" allowusinglimb="false" />
+        <limbposition limb="LeftHand" position="234,10" allowusinglimb="false" />
+        <StatusEffect type="OnActive" target="Character">
+          <reduceaffliction identifier="nausea" strength="0.05" />
+          <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
+          <reduceaffliction identifier="opiateaddiction" strength="0.05" />
+          <reduceaffliction identifier="drunk" strength="0.05" />
+        </StatusEffect>
+      </Controller>
+    </Item>
+  </Override>
+
+	<Item name="" identifier="am_ointment" category="Equipment" Tags="smallitem,medical" maxstacksize="8" useinhealthinterface="true" cargocontaineridentifier="mediccrate" scale="0.265" impactsoundtag="impact_soft">
 		<PreferredContainer primary="medcab" minamount="4" maxamount="6" spawnprobability="1" />
 		<PreferredContainer primary="supplycab" minamount="1" maxamount="3" spawnprobability="0.2" />
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.5" />
@@ -1074,7 +1161,7 @@
 		</Item>
 	</Override>
 
-	<Item name="Antiseptic spray" identifier="antisepticspray" category="Equipment" Tags="smallitem,tool,medical" useinhealthinterface="true" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_soft">
+	<Item name="" identifier="am_antisepticspray" category="Equipment" Tags="smallitem,tool,medical" useinhealthinterface="true" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_soft">
 		<PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="1" />
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
@@ -1115,7 +1202,7 @@
 		</ItemContainer>
 	</Item>
 
-	<Item name="Antiseptic" identifier="antiseptic" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" scale="0.3">
+	<Item name="" identifier="am_antiseptic" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" scale="0.3">
 		<Upgrade gameversion="0.10.0.0" scale="0.3" />
 		<PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="1" />
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.25" />
@@ -1143,7 +1230,7 @@
 		</MeleeWeapon>
 	</Item>
 
-	<Item name="" identifier="stasisbag" category="Equipment" tags="provocative" scale="0.5" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" equipconfirmationtext="stasisbugequipconfirmation">
+	<Item name="" identifier="am_stasisbag" category="Equipment" tags="provocative" scale="0.5" fireproof="true" description="" cargocontaineridentifier="metalcrate" impactsoundtag="impact_soft" equipconfirmationtext="stasisbugequipconfirmation">
 		<Price baseprice="2500" soldeverywhere="false">
 			<Price locationtype="outpost" multiplier="1.2" sold="false" />
 			<Price locationtype="city" multiplier="1.3" sold="false" />
@@ -1222,7 +1309,7 @@
 		<aitarget maxsightrange="50" />
 	</Item>
 
-	<Item name="" identifier="autocpr" category="Equipment" tags="smallitem,clothing" scale="0.40" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
+	<Item name="" identifier="am_autocpr" category="Equipment" tags="smallitem,clothing" scale="0.40" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.9.3.0" scale="0.40" />
 		<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="1" maxamount="1" spawnprobability="0.25" />
@@ -1377,7 +1464,7 @@
 		</Item>
 	</Override>
 
-	<Item name="Blood Pack O+" identifier="bloodpackoplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+	<Item name="Blood Pack O+" identifier="am_bloodpackoplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.5" />
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15" />
@@ -1418,7 +1505,7 @@
 		</Holdable>
 	</Item>
 
-	<Item name="Blood Pack A+" identifier="bloodpackaplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+	<Item name="Blood Pack A+" identifier="am_bloodpackaplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25" />
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15" />
@@ -1459,7 +1546,7 @@
 		</Holdable>
 	</Item>
 
-	<Item name="Blood Pack B+" identifier="bloodpackbplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+	<Item name="Blood Pack B+" identifier="am_bloodpackbplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25" />
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15" />
@@ -1500,7 +1587,7 @@
 		</Holdable>
 	</Item>
 
-	<Item name="Blood Pack AB+" identifier="bloodpackabplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+	<Item name="Blood Pack AB+" identifier="am_bloodpackabplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<Price baseprice="125">
 			<Price locationtype="outpost" multiplier="1" minavailable="2" />
@@ -1539,7 +1626,7 @@
 		</Holdable>
 	</Item>
 
-	<Item name="Blood Pack A-" identifier="bloodpackaminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+	<Item name="Blood Pack A-" identifier="am_bloodpackaminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25" />
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15" />
@@ -1580,7 +1667,7 @@
 		</Holdable>
 	</Item>
 
-	<Item name="Blood Pack B-" identifier="bloodpackbminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+	<Item name="Blood Pack B-" identifier="am_bloodpackbminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25" />
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15" />
@@ -1621,7 +1708,7 @@
 		</Holdable>
 	</Item>
 
-	<Item name="Blood Pack AB-" identifier="bloodpackabminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+	<Item name="Blood Pack AB-" identifier="am_bloodpackabminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<Price baseprice="150">
 			<Price locationtype="outpost" multiplier="1" minavailable="2" />
@@ -1659,7 +1746,8 @@
 			</StatusEffect>
 		</Holdable>
 	</Item>
-	<Item name="Filtered Blood Pack" identifier="antibloodloss3" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+
+	<Item name="Filtered Blood Pack" identifier="am_antibloodloss3" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.5" />
 		<PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15" />
@@ -1724,7 +1812,7 @@
 		<AiTarget sightrange="1000" static="true" />
 	</Item>
 
-	<Item name="Empty Blood Pack" identifier="emptybloodpack" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+	<Item name="Empty Blood Pack" identifier="am_emptybloodpack" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
 		<Upgrade gameversion="0.10.0.0" scale="0.5" />
 		<Price baseprice="25">
 			<Price locationtype="outpost" multiplier="1" minavailable="2" />
@@ -1796,8 +1884,7 @@
 		</Holdable>
 	</Item>
 
-	<Item name="Blood Refinery" identifier="bloodrefinery" tags="bloodrefinery" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker" scale="0.3" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2" isshootable="true">
-
+	<Item name="Blood Refinery" identifier="am_bloodrefinery" tags="bloodrefinery" category="Machine" linkable="true" allowedlinks="deconstructor,medcabinet,locker" scale="0.3" description="" damagedbyexplosions="true" explosiondamagemultiplier="0.2" isshootable="true">
 		<Upgrade gameversion="0.10.4.0">
 			<Repairable Msg="ItemMsgRepairWrench" />
 		</Upgrade>
@@ -1809,7 +1896,6 @@
 			<Price locationtype="military" multiplier="1" minavailable="1" />
 			<Price locationtype="mine" multiplier="1.75" minavailable="1" />
 		</Price>
-
 		<Deconstruct time="30">
 			<Item identifier="fpgacircuit" />
 			<Item identifier="plastic" />
@@ -1825,24 +1911,20 @@
 			<RequiredItem identifier="aluminium" />
 			<RequiredItem identifier="titaniumaluminiumalloy" />
 		</Fabricate>
-
 		<Sprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" depth="0.8" sourcerect="0,0,336,288" origin="0.5,0.5" />
 		<InventoryIcon texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="0,0,336,288" origin="0.5,0.5" />
 		<BrokenSprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="336,0,336,288" origin="0.5,0.5" depth="0.8" maxcondition="80" fadein="true" />
 		<BrokenSprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" sourcerect="672,0,336,288" origin="0.5,0.5" depth="0.8" maxcondition="0" />
 		<Body radius="45" width="34" density="15" />
-
 		<LightComponent range="10.0" lightcolor="255,255,255,0" powerconsumption="5" IsOn="true" castshadows="false" allowingameediting="false">
 			<sprite texture="Content/Items/Command/navigatorLights.png" depth="0.025" sourcerect="688,339,336,288" alpha="1.0" />
 		</LightComponent>
-
 		<Fabricator canbeselected = "true" powerconsumption="50.0" msg="ItemMsgInteractSelect">
 			<GuiFrame relativesize="0.4,0.45" style="ItemUI" anchor="Center" />
 			<sound file="Content/Items/Fabricators/Fabricator.ogg" type="OnActive" range="1000.0" loop="true" />
 			<poweronsound file="Content/Items/PowerOnLight2.ogg" range="600" loop="false" />
 			<StatusEffect type="InWater" target="This" condition="-0.5" />
 		</Fabricator>
-
 		<ConnectionPanel selectkey="Action" canbeselected="true" hudpriority="10" msg="ItemMsgRewireScrewdriver">
 			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
 			<RequiredSkill identifier="electrical" level="55" />
@@ -1855,7 +1937,6 @@
 			<RequiredItem items="screwdriver" type="Equipped" />
 			<input name="power_in" displayname="connection.powerin" />
 		</ConnectionPanel>
-
 		<Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
 			<GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,216" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
 			<RequiredSkill identifier="mechanical" level="55" />
@@ -1869,9 +1950,7 @@
 				<Affliction identifier="stun" strength="5" />
 			</StatusEffect>
 		</Repairable>
-
 		<Holdable selectkey="Select" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="8.0" aimpos="40,-5" handle1="0,0" attachable="true" aimable="true" />
-
 		<ItemContainer capacity="5" canbeselected="true" hideitems="true" slotsperrow="5" uilabel="" allowuioverlap="true" />
 		<ItemContainer capacity="1" canbeselected="true" hideitems="true" slotsperrow="1" uilabel="" allowuioverlap="true" />
 	</Item>
@@ -1889,56 +1968,56 @@
 		</Item>
 	</Override>
 
-	<Item name="Doner card" identifier="ominuscard" category="Equipment" description="Blood group O-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Doner card" identifier="am_ominuscard" category="Equipment" description="Blood group O-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="opluscard" category="Equipment" description="Blood group O+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Doner card" identifier="am_opluscard" category="Equipment" description="Blood group O+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="aminuscard" category="Equipment" description="Blood group A-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Doner card" identifier="am_aminuscard" category="Equipment" description="Blood group A-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="apluscard" category="Equipment" description="Blood group A+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Doner card" identifier="am_apluscard" category="Equipment" description="Blood group A+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="bminuscard" category="Equipment" description="Blood group B-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Doner card" identifier="am_bminuscard" category="Equipment" description="Blood group B-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="bpluscard" category="Equipment" description="Blood group B+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Doner card" identifier="am_bpluscard" category="Equipment" description="Blood group B+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="abminuscard" category="Equipment" description="Blood group AB-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Doner card" identifier="am_abminuscard" category="Equipment" description="Blood group AB-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="abpluscard" category="Equipment" description="Blood group AB+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Doner card" identifier="am_abpluscard" category="Equipment" description="Blood group AB+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
 
-	<Item name="" identifier="bloodcollector" category="Material,Equipment" description="" cargocontaineridentifier="mediccrate" Tags="smallitem,Material,vial" useinhealthinterface="true" scale="0.170" impactsoundtag="impact_metal_light" maxstacksize="8">
+	<Item name="" identifier="am_bloodcollector" category="Material,Equipment" description="" cargocontaineridentifier="mediccrate" Tags="smallitem,Material,vial" useinhealthinterface="true" scale="0.170" impactsoundtag="impact_metal_light" maxstacksize="8">
 		<PreferredContainer primary="medcab" minamount="1" maxamount="8" spawnprobability="1" />
 		<Price baseprice="5">
 			<Price locationtype="outpost" multiplier="1" minavailable="2" />
@@ -1962,8 +2041,7 @@
 		</Holdable>
 	</Item>
 
-	<Item name="" description="" identifier="bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
-
+	<Item name="" description="" identifier="am_bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
 		<PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
 		<PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.25" />
 		<Price baseprice="250">
@@ -1973,7 +2051,6 @@
 			<Price locationtype="military" multiplier="1" minavailable="1" />
 			<Price locationtype="mine" multiplier="1.75" minavailable="1" />
 		</Price>
-
 		<Deconstruct time="10">
 			<Item identifier="fpgacircuit" />
 			<Item identifier="plastic" />
@@ -1985,22 +2062,17 @@
 			<RequiredItem identifier="plastic" />
 			<RequiredItem identifier="silicon" />
 		</Fabricate>
-
 		<InventoryIcon texture="Mods/Advanced Medicine/Content/Sprites/am_inventory_icons.png" sourcerect="0,128,64,64" origin="0.5,0.5" />
 		<Sprite texture="Mods/Advanced Medicine/Content/Sprites/am_ingame_icons.png" sourcerect="512,128,128,128" depth="0.6" origin="0.5,0.5" />
 		<Body width="50" height="50" density="40" />
-
 		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-10,-10" reload="1.0">
 			<RequiredItems identifier="bloodcollector" type="Contained" msg="Need «Blood analysis cartridge»" />
-
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional condition="gt 90" />
 				<Affliction identifier="bloodloss" amount="2" />
 				<Sound file="Mods/Advanced Medicine/Content/Sounds/am_hypospray.ogg" />
 			</StatusEffect>
-
 			<StatusEffect type="OnUse" targettype="Contained" targets="bloodcollector" Condition="-100" />
-
 			<StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
 				<Conditional condition="gt 99" aplus="gt 0" />
 				<SpawnItem spawnposition="ThisInventory" identifier="apluscard" />
@@ -2033,13 +2105,10 @@
 				<Conditional condition="gt 99" ominus="gt 0" />
 				<SpawnItem spawnposition="ThisInventory" identifier="ominuscard" />
 			</StatusEffect>
-
 			<StatusEffect type="OnUse" target="This" Condition="-100" />
 			<StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false" />
 		</MeleeWeapon>
-
 		<Pickable msg="ItemMsgPickUpSelect" />
-
 		<ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" drawinventory="true">
 			<Containable items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard" />
 		</ItemContainer>
@@ -2047,7 +2116,6 @@
 
 	<Override>
 		<Item name="" identifier="healthscanner" scale="0.27" category="Equipment" tags="smallitem,tool" cargocontaineridentifier="metalcrate" impactsoundtag="impact_metal_light">
-
 			<Price baseprice="150" soldeverywhere="false" minleveldifficulty="15">
 				<Price locationtype="outpost" multiplier="1.3" sold="false" />
 				<Price locationtype="city" multiplier="1.2" minavailable="1" />
@@ -2064,6 +2132,7 @@
 				<RequiredItem identifier="fpgacircuit" />
 				<RequiredItem identifier="aluminium" />
 			</Fabricate>
+
 			<!--<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,256,64,64" origin="0.5,0.5" />-->
 			<InventoryIcon texture="Mods/Advanced Medicine/Content/Sprites/am_inventory_icons.png" sourcerect="448,64,64,64" origin="0.5,0.5" />
 			<Sprite texture="Mods/Advanced Medicine/Content/Sprites/am_ingame_icons.png" sourcerect="768,0,128,128" depth="0.6" origin="0.5,0.5" />

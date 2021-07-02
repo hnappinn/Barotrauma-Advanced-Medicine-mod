@@ -2,7 +2,6 @@
 <Afflictions>
 
   <Affliction name="" identifier="vt" description="" type="aritmia" limbspecific="false" indicatorlimb="Torso" showiconthreshold="25" maxstrength="100">
-
     <Effect minstrength="0" maxstrength="2" strengthchange="0.1">
       <StatusEffect target="Character" conditional="or">
         <Conditional speciesname="Husk" />
@@ -459,6 +458,7 @@
       <Effect minstrength="60" maxstrength="100" multiplybymaxvitality="true" minvitalitydecrease="0" maxvitalitydecrease="0">
         <StatusEffect target="Character">
           <Affliction identifier="hypoxia" amount="0.1" />
+          <Affliction identifier="givein" amount="10" />
         </StatusEffect>
         <StatusEffect disabledeltatime="true" target="Character">
           <Conditional vt="eq 0" />
@@ -470,6 +470,7 @@
         <StatusEffect target="Character">
           <Affliction identifier="hypoxia" amount="0.5" />
           <Affliction identifier="stun" amount="5" />
+          <Affliction identifier="givein" amount="10" />
           <Conditional Health="gt 0" />
           <Affliction identifier="oxygenlow" amount="10" />
         </StatusEffect>
@@ -1039,5 +1040,16 @@
       </StatusEffect>
     </Effect>
     <icon texture="Mods/Advanced Medicine/Content/Sprites/am_afflictions_icons.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0" />
+  </Affliction>
+
+  <Affliction name="Give In Affliction" identifier="givein" type="paralysis" limbspecific="false" showinhealthscannerthreshold="3" showiconthreshold="3" maxstrength="1">
+    <Effect minstrength="0" maxstrength="1" strengthchange="0">
+      <StatusEffect target="Character" conditional="and">
+        <Conditional oxygenlow="lt 20" />
+        <Conditional stun="lt 2" />
+        <ReduceAffliction identifier="givein" amount="10" />
+      </StatusEffect>
+    </Effect>
+
   </Affliction>
 </Afflictions>

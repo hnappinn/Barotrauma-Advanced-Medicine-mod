@@ -5,62 +5,66 @@
 	<stasisbugequipconfirmation>Are you sure you want put stasis bag on yourself?</stasisbugequipconfirmation>
 	<!-- ITEMS -->
 
-	<entityname.aed>Automated External Defibrillator</entityname.aed>
-	<entitydescription.aed>A medical device delivering an electric shock to the heart to stabilize cardiac arythmias. Use on a patient with ventricular tachycardia or fibrillation.</entitydescription.aed>
+	<entityname.am_aed>Automated External Defibrillator</entityname.am_aed>
+	<entitydescription.am_aed>A medical device delivering an electric shock to the heart to stabilize cardiac arythmias. Use on a patient with ventricular tachycardia or fibrillation.</entitydescription.am_aed>
 
-	<entityname.advscalpel>Scalpel</entityname.advscalpel>
-	<entitydescription.advscalpel>A tool used to make incisions during surgery.</entitydescription.advscalpel>
+	<entityname.am_scalpel>Scalpel</entityname.am_advscalpel>
+	<entitydescription.am_advscalpel>A tool used to make incisions during surgery.</entitydescription.am_advscalpel>
 
-	<entityname.advhemostat>Hemostat</entityname.advhemostat>
-	<entitydescription.advhemostat>A tool used to clamp blood vessels during surgery.</entitydescription.advhemostat>
+	<entityname.am_hemostat>Hemostat</entityname.am_advhemostat>
+	<entitydescription.am_advhemostat>A tool used to clamp blood vessels during surgery.</entitydescription.am_advhemostat>
 
-	<entityname.advretractors>Retractors</entityname.advretractors>
-	<entitydescription.advretractors>A tool used to retract skin during surgery.</entitydescription.advretractors>
+	<entityname.am_hemostat>Retractors</entityname.am_hemostat>
+	<entitydescription.am_hemostat>A tool used to retract skin during surgery.</entitydescription.am_hemostat>
 
-	<entityname.autocpr>AutoPulse</entityname.autocpr>
-	<entitydescription.autocpr>An automated, portable, battery-powered cardiopulmonary resuscitation device.</entitydescription.autocpr>
+	<!-- identifier="am_antisepticspray"
 
-	<entityname.bloodcollector>Blood analysis cartridge</entityname.bloodcollector>
-	<entitydescription.bloodcollector>Empty cartridge, insert it inside Blood analyser.</entitydescription.bloodcollector>
+	identifier="antiseptic" -->
 
-	<entityname.bvm>Ambu bag</entityname.bvm>
-	<entitydescription.bvm>A bag valve mask (BVM), is a hand-held device commonly used to provide positive pressure ventilation to patients who are not breathing or not breathing adequately.</entitydescription.bvm>
+	<entityname.am_autocpr>AutoPulse</entityname.am_autocpr>
+	<entitydescription.am_autocpr>An automated, portable, battery-powered cardiopulmonary resuscitation device.</entitydescription.am_autocpr>
 
-	<entityname.stasisbag>Stasis bag</entityname.stasisbag>
-	<entitydescription.stasisbag>Stops biological processes and protects against cerebral hypoxia.</entitydescription.stasisbag>
+	<entityname.am_bloodcollector>Blood analysis cartridge</entityname.am_bloodcollector>
+	<entitydescription.am_bloodcollector>Empty cartridge, insert it inside Blood analyser.</entitydescription.am_bloodcollector>
 
-	<entityname.surgicalsaw>Surgical saw</entityname.surgicalsaw>
-	<entitydescription.surgicalsaw>A tool used to saw through bones.</entitydescription.surgicalsaw>
+	<entityname.am_bvm>Ambu bag</entityname.am_bvm>
+	<entitydescription.am_bvm>A bag valve mask (am_bvm), is a hand-held device commonly used to provide positive pressure ventilation to patients who are not breathing or not breathing adequately.</entitydescription.am_bvm>
 
-	<entityname.suture>Suture</entityname.suture>
-	<entitydescription.suture>Biodegradeable sutures for stitching up lacerations and surgical incisions alike.</entitydescription.suture>
+	<entityname.am_stasisbag>Stasis bag</entityname.am_stasisbag>
+	<entitydescription.am_stasisbag>Stops biological processes and protects against cerebral hypoxia.</entitydescription.am_stasisbag>
 
-	<entityname.surgicaldrill>Surgical drill</entityname.surgicaldrill>
-	<entitydescription.surgicaldrill>A tool used to drill bones.</entitydescription.surgicaldrill>
+	<entityname.am_surgicalsaw>Surgical saw</entityname.am_surgicalsaw>
+	<entitydescription.am_surgicalsaw>A tool used to saw through bones.</entitydescription.am_surgicalsaw>
 
-	<entityname.mannitol>Mannitol Plus</entityname.mannitol>
-	<entitydescription.mannitol>A highly complicated and expensive medicinal compound which stimulates the regeneration of neurological tissue.</entitydescription.mannitol>
+	<entityname.am_suture>Suture</entityname.am_suture>
+	<entitydescription.am_suture>Biodegradeable sutures for stitching up lacerations and surgical incisions alike.</entitydescription.am_suture>
 
-	<entityname.osteosynthesisimplants>Osteosynthesis Implants</entityname.osteosynthesisimplants>
-	<entitydescription.osteosynthesisimplants>Titanium implants used in an open reduction surgery to repair fractures.</entitydescription.osteosynthesisimplants>
+	<entityname.am_surgicaldrill>Surgical drill</entityname.am_surgicaldrill>
+	<entitydescription.am_surgicaldrill>A tool used to drill bones.</entitydescription.am_surgicaldrill>
 
-	<entityname.operatingtable>Operating table</entityname.operatingtable>
-	<entitydescription.operatingtable>An operation table which has basic artificial ventilation built in.</entitydescription.operatingtable>
+	<entityname.am_mannitol>Mannitol Plus</entityname.am_mannitol>
+	<entitydescription.am_mannitol>A highly complicated and expensive medicinal compound which stimulates the regeneration of neurological tissue.</entitydescription.am_mannitol>
 
-	<entityname.ointment>Antibiotic ointment</entityname.ointment>
-	<entitydescription.ointment>A highly antiseptic gel that promotes the recovery from burns as well as from minor infections.</entitydescription.ointment>
+	<entityname.am_osteosynthesisimplants>Osteosynthesis Implants</entityname.am_osteosynthesisimplants>
+	<entitydescription.am_osteosynthesisimplants>Titanium implants used in an open reduction surgery to repair fractures.</entitydescription.am_osteosynthesisimplants>
 
-	<entityname.tweezers>Tweezers</entityname.tweezers>
-	<entitydescription.tweezers>A small tool that allows the removal of bullets as well as damaged and necrotic tissue.</entitydescription.tweezers>
+	<entityname.am_operatingtable>Operating table</entityname.am_operatingtable>
+	<entitydescription.am_operatingtable>An operation table which has basic artificial ventilation built in.</entitydescription.am_operatingtable>
 
-	<entityname.tourniquet>Tourniquet</entityname.tourniquet>
-	<entitydescription.tourniquet>A device that applies pressure to a limb and thus reduces bloodflow. It is usually used in case of major bleeders on extremities.</entitydescription.tourniquet>
+	<entityname.am_ointment>Antibiotic ointment</entityname.am_ointment>
+	<entitydescription.am_ointment>A highly antiseptic gel that promotes the recovery from burns as well as from minor infections.</entitydescription.am_ointment>
 
-	<entityname.vialrack>Test tube rack</entityname.vialrack>
-	<entitydescription.vialrack>Rack for storing test tubes and vials.</entitydescription.vialrack>
+	<entityname.am_tweezers>Tweezers</entityname.am_tweezers>
+	<entitydescription.am_tweezers>A small tool that allows the removal of bullets as well as damaged and necrotic tissue.</entitydescription.am_tweezers>
 
-	<entityname.bloodanalyzer>Blood analyzer</entityname.bloodanalyzer>
-	<entitydescription.bloodanalyzer>Blood analysis device that outputs a donor card with patient's blood type via sample collection. Insert a cartridge to use.</entitydescription.bloodanalyzer>
+	<entityname.am_tourniquet>Tourniquet</entityname.am_tourniquet>
+	<entitydescription.am_tourniquet>A device that applies pressure to a limb and thus reduces bloodflow. It is usually used in case of major bleeders on extremities.</entitydescription.am_tourniquet>
+
+	<entityname.am_vialrack>Test tube rack</entityname.am_vialrack>
+	<entitydescription.am_vialrack>Rack for storing test tubes and vials.</entitydescription.am_vialrack>
+
+	<entityname.am_bloodanalyzer>Blood analyzer</entityname.am_bloodanalyzer>
+	<entitydescription.am_bloodanalyzer>Blood analysis device that outputs a donor card with patient's blood type via sample collection. Insert a cartridge to use.</entitydescription.am_bloodanalyzer>
 
 	<!-- AFFLICTIONS -->
 
@@ -146,6 +150,6 @@
 	<afflictionname.bandaged>Bandaged</afflictionname.bandaged>
 	<afflictiondescription.bandaged>Protective layers of bandaging material prevent the wound from getting infected.</afflictiondescription.bandaged>
 
-	<afflictionname.ointmented>Ointment</afflictionname.ointmented>
-	<afflictiondescription.ointmented>A layer of antibiotic gel protects and cleans the wound from any germs.</afflictiondescription.ointmented>
+	<afflictionname.am_ointmented>Ointment</afflictionname.am_ointmented>
+	<afflictiondescription.am_ointmented>A layer of antibiotic gel protects and cleans the wound from any germs.</afflictiondescription.am_ointmented>
 </infotexts>
