@@ -1636,7 +1636,6 @@
 	<StatusEffect target="Character" conditional="and">
 		<Conditional oxygenlow="lt 20"/>
 		<Conditional stun="lt 2"/>
-    <Conditional HasStatusTag="!equals stasis"/>
 		<ReduceAffliction identifier="givein" amount="10"/>
     </StatusEffect>
 	</Effect>
