@@ -8,18 +8,20 @@
 	<entityname.am_aed>Automated External Defibrillator</entityname.am_aed>
 	<entitydescription.am_aed>A medical device delivering an electric shock to the heart to stabilize cardiac arythmias. Use on a patient with ventricular tachycardia or fibrillation.</entitydescription.am_aed>
 
-	<entityname.am_scalpel>Scalpel</entityname.am_advscalpel>
-	<entitydescription.am_advscalpel>A tool used to make incisions during surgery.</entitydescription.am_advscalpel>
+	<entityname.am_scalpel>Scalpel</entityname.am_scalpel>
+	<entitydescription.am_scalpel>A tool used to make incisions during surgery.</entitydescription.am_scalpel>
 
-	<entityname.am_hemostat>Hemostat</entityname.am_advhemostat>
-	<entitydescription.am_advhemostat>A tool used to clamp blood vessels during surgery.</entitydescription.am_advhemostat>
+	<entityname.am_hemostat>Hemostat</entityname.am_hemostat>
+	<entitydescription.am_hemostat>A tool used to clamp blood vessels during surgery.</entitydescription.am_hemostat>
 
-	<entityname.am_hemostat>Retractors</entityname.am_hemostat>
-	<entitydescription.am_hemostat>A tool used to retract skin during surgery.</entitydescription.am_hemostat>
+	<entityname.am_retractors>Retractors</entityname.am_retractors>
+	<entitydescription.am_retractors>A tool used to retract skin during surgery.</entitydescription.am_retractors>
 
-	<!-- identifier="am_antisepticspray"
+	<entityname.am_antisepticspray>Antiseptic spray</entityname.am_antisepticspray>
+	<entitydescription.am_antisepticspray>Uses antiseptic as 'ammo'. Decreases infection.</entitydescription.am_antisepticspray>
 
-	identifier="antiseptic" -->
+	<entityname.am_antiseptic>Antiseptic</entityname.am_antiseptic>
+	<entitydescription.am_antiseptic>Main 'ammo' type for antiseptic spray.</entitydescription.am_antiseptic>
 
 	<entityname.am_autocpr>AutoPulse</entityname.am_autocpr>
 	<entitydescription.am_autocpr>An automated, portable, battery-powered cardiopulmonary resuscitation device.</entitydescription.am_autocpr>

@@ -14,9 +14,11 @@
 	<entityname.am_hemostat>Зажим</entityname.am_hemostat>
 	<entitydescription.am_hemostat>Инструмент, используемый для остановки кровотечения во время операции.</entitydescription.am_hemostat>
 
-	<!-- identifier="am_antisepticspray"
+	<entityname.am_antisepticspray>Antiseptic spray</entityname.am_antisepticspray>
+	<entitydescription.am_antisepticspray>Uses antiseptic as 'ammo'. Decreases infection.</entitydescription.am_antisepticspray>
 
-	identifier="antiseptic" -->
+	<entityname.am_antiseptic>Antiseptic</entityname.am_antiseptic>
+	<entitydescription.am_antiseptic>Main 'ammo' type for antiseptic spray.</entitydescription.am_antiseptic>
 
 	<entityname.am_retractors>Расширитель</entityname.am_retractors>
 	<entitydescription.am_retractors>Инструмент, используемый для оттягивания кожи во время операции.</entitydescription.am_retractors>
