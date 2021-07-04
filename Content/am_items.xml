@@ -1187,10 +1187,10 @@
 		<RepairTool range="200" barrelpos="15,5" combatpriority="10">
 			<ParticleEmitter particle="extinguisher" particlespersecond="15" copyentityangle="true" velocitymin="200.0" velocitymax="250.0" />
 			<RequiredSkill identifier="medical" level="40" />
-			<RequiredItems items="antiseptic" type="Contained" msg="Antiseptic Required" />
+			<RequiredItems items="am_antiseptic" type="Contained" msg="Antiseptic Required" />
 			<StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true" />
 			<StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="2" stackable="false" />
-			<StatusEffect type="OnUse" targettype="Contained" targets="antiseptic" disabledeltatime="true" Condition="-20.0" />
+			<StatusEffect type="OnUse" targettype="Contained" targets="am_antiseptic" disabledeltatime="true" Condition="-20.0" />
 			<StatusEffect tags="medical" type="OnUse" target="Limb" disabledeltatime="true">
 				<Sound file="Mods/Advanced Medicine/Content/Sounds/am_spray.ogg" range="500" />
 				<ReduceAffliction identifier="infectedwound" amount="100" />
@@ -1198,7 +1198,7 @@
 			</StatusEffect>
 		</RepairTool>
 		<ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-35,3" containedspritedepth="0.56" ItemRotation="-90" containedstateindicatorstyle="tank">
-			<Containable items="antiseptic" />
+			<Containable items="am_antiseptic" />
 		</ItemContainer>
 	</Item>
 
@@ -1223,6 +1223,7 @@
 		<Sprite texture="Mods/Advanced Medicine/Content/Sprites/am_ingame_icons.png" sourcerect="256,256,128,128" depth="0.6" origin="0.5,0.5" />
 		<Body width="30" height="55" density="20" />
 		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="5,3" holdangle="10" reload="1.0">
+
 			<!-- Remove the item when fully used -->
 			<StatusEffect type="OnBroken" target="This">
 				<Remove />
@@ -1761,31 +1762,31 @@
 		</Price>
 		<Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
 			<RequiredSkill identifier="medical" level="40" />
-			<RequiredItem identifier="bloodpackabminus" />
+			<RequiredItem identifier="am_bloodpackabminus" />
 		</Fabricate>
 		<Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
 			<RequiredSkill identifier="medical" level="40" />
-			<RequiredItem identifier="bloodpackabplus" />
+			<RequiredItem identifier="am_bloodpackabplus" />
 		</Fabricate>
 		<Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
 			<RequiredSkill identifier="medical" level="40" />
-			<RequiredItem identifier="bloodpackaminus" />
+			<RequiredItem identifier="am_bloodpackaminus" />
 		</Fabricate>
 		<Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
 			<RequiredSkill identifier="medical" level="40" />
-			<RequiredItem identifier="bloodpackaplus" />
+			<RequiredItem identifier="am_bloodpackaplus" />
 		</Fabricate>
 		<Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
 			<RequiredSkill identifier="medical" level="40" />
-			<RequiredItem identifier="bloodpackbminus" />
+			<RequiredItem identifier="am_bloodpackbminus" />
 		</Fabricate>
 		<Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
 			<RequiredSkill identifier="medical" level="40" />
-			<RequiredItem identifier="bloodpackbplus" />
+			<RequiredItem identifier="am_bloodpackbplus" />
 		</Fabricate>
 		<Fabricate suitablefabricators="bloodrefinery" requiredtime="40">
 			<RequiredSkill identifier="medical" level="40" />
-			<RequiredItem identifier="bloodpackoplus" />
+			<RequiredItem identifier="am_bloodpackoplus" />
 		</Fabricate>
 		<SuitableTreatment identifier="bloodloss" suitability="100" />
 		<InventoryIcon texture="Mods/Advanced Medicine/Content/Sprites/am_bloodpacks.png" sourcerect="192,85,64,85" origin="0.5,0.5" />
@@ -1834,35 +1835,35 @@
 			<StatusEffect tags="medical" type="OnUse" target="Character, This">
 				<Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
 				<Conditional bloodloss="gte 30" />
-				<SpawnItem identifier="emptybloodpack" />
+				<SpawnItem identifier="am_emptybloodpack" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional aplus="gt 0" bloodloss="lte 29" />
-				<SpawnItem identifier="bloodpackaplus" />
+				<SpawnItem identifier="am_bloodpackaplus" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional bplus="gt 0" bloodloss="lte 29" />
-				<SpawnItem identifier="bloodpackbplus" />
+				<SpawnItem identifier="am_bloodpackbplus" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional oplus="gt 0" bloodloss="lte 29" />
-				<SpawnItem identifier="bloodpackoplus" />
+				<SpawnItem identifier="am_bloodpackoplus" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional abplus="gt 0" bloodloss="lte 29" />
-				<SpawnItem identifier="bloodpackabplus" />
+				<SpawnItem identifier="am_bloodpackabplus" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional aminus="gt 0" bloodloss="lte 29" />
-				<SpawnItem identifier="bloodpackaminus" />
+				<SpawnItem identifier="am_bloodpackaminus" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional bminus="gt 0" bloodloss="lte 29" />
-				<SpawnItem identifier="bloodpackbminus" />
+				<SpawnItem identifier="am_bloodpackbminus" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional abminus="gt 0" bloodloss="lte 29" />
-				<SpawnItem identifier="bloodpackabminus" />
+				<SpawnItem identifier="am_bloodpackabminus" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional ominus="gt 0" bloodloss="lte 29" />
@@ -1969,49 +1970,49 @@
 		</Item>
 	</Override>
 
-	<Item name="Doner card" identifier="am_ominuscard" category="Equipment" description="Blood group O-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Donor card" identifier="am_ominuscard" category="Equipment" description="Blood group O-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="am_opluscard" category="Equipment" description="Blood group O+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Donor card" identifier="am_opluscard" category="Equipment" description="Blood group O+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="am_aminuscard" category="Equipment" description="Blood group A-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Donor card" identifier="am_aminuscard" category="Equipment" description="Blood group A-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="am_apluscard" category="Equipment" description="Blood group A+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Donor card" identifier="am_apluscard" category="Equipment" description="Blood group A+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="am_bminuscard" category="Equipment" description="Blood group B-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Donor card" identifier="am_bminuscard" category="Equipment" description="Blood group B-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="am_bpluscard" category="Equipment" description="Blood group B+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Donor card" identifier="am_bpluscard" category="Equipment" description="Blood group B+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="am_abminuscard" category="Equipment" description="Blood group AB-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Donor card" identifier="am_abminuscard" category="Equipment" description="Blood group AB-" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
 		<Holdable slots="Any" msg="ItemMsgPickUpSelect" />
 	</Item>
-	<Item name="Doner card" identifier="am_abpluscard" category="Equipment" description="Blood group AB+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
+	<Item name="Donor card" identifier="am_abpluscard" category="Equipment" description="Blood group AB+" Tags="smallitem,donorCard" cargocontaineridentifier="metalcrate">
 		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="192,64,64,64" origin="0.5,0.5" />
 		<Sprite texture="Content/Items/idcard.png" depth="0.8" sourcerect="0,0,16,16" />
 		<Body width="16" height="12" density="20" />
@@ -2067,51 +2068,51 @@
 		<Sprite texture="Mods/Advanced Medicine/Content/Sprites/am_ingame_icons.png" sourcerect="512,128,128,128" depth="0.6" origin="0.5,0.5" />
 		<Body width="50" height="50" density="40" />
 		<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-10,-10" reload="1.0">
-			<RequiredItems identifier="bloodcollector" type="Contained" msg="Need «Blood analysis cartridge»" />
+			<RequiredItems identifier="am_bloodcollector" type="Contained" msg="Need «Blood analysis cartridge»" />
 			<StatusEffect type="OnUse" target="This, Character" comparison="And">
 				<Conditional condition="gt 90" />
 				<Affliction identifier="bloodloss" amount="2" />
 				<Sound file="Mods/Advanced Medicine/Content/Sounds/am_hypospray.ogg" />
 			</StatusEffect>
-			<StatusEffect type="OnUse" targettype="Contained" targets="bloodcollector" Condition="-100" />
+			<StatusEffect type="OnUse" targettype="Contained" targets="am_bloodcollector" Condition="-100" />
 			<StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
 				<Conditional condition="gt 99" aplus="gt 0" />
-				<SpawnItem spawnposition="ThisInventory" identifier="apluscard" />
+				<SpawnItem spawnposition="ThisInventory" identifier="am_apluscard" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
 				<Conditional condition="gt 99" bplus="gt 0" />
-				<SpawnItem spawnposition="ThisInventory" identifier="bpluscard" />
+				<SpawnItem spawnposition="ThisInventory" identifier="am_bpluscard" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
 				<Conditional condition="gt 99" oplus="gt 0" />
-				<SpawnItem spawnposition="ThisInventory" identifier="opluscard" />
+				<SpawnItem spawnposition="ThisInventory" identifier="am_opluscard" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
 				<Conditional condition="gt 99" abplus="gt 0" />
-				<SpawnItem spawnposition="ThisInventory" identifier="abpluscard" />
+				<SpawnItem spawnposition="ThisInventory" identifier="am_abpluscard" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
 				<Conditional condition="gt 99" aminus="gt 0" />
-				<SpawnItem spawnposition="ThisInventory" identifier="aminuscard" />
+				<SpawnItem spawnposition="ThisInventory" identifier="am_aminuscard" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
 				<Conditional condition="gt 99" bminus="gt 0" />
-				<SpawnItem spawnposition="ThisInventory" identifier="bminuscard" />
+				<SpawnItem spawnposition="ThisInventory" identifier="am_bminuscard" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
 				<Conditional condition="gt 99" abminus="gt 0" />
-				<SpawnItem spawnposition="ThisInventory" identifier="abminuscard" />
+				<SpawnItem spawnposition="ThisInventory" identifier="am_abminuscard" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This, Character" comparison="And" delay="0.5">
 				<Conditional condition="gt 99" ominus="gt 0" />
-				<SpawnItem spawnposition="ThisInventory" identifier="ominuscard" />
+				<SpawnItem spawnposition="ThisInventory" identifier="am_ominuscard" />
 			</StatusEffect>
 			<StatusEffect type="OnUse" target="This" Condition="-100" />
 			<StatusEffect type="OnBroken" target="This" Condition="100" disabledeltatime="true" delay="5" stackable="false" />
 		</MeleeWeapon>
 		<Pickable msg="ItemMsgPickUpSelect" />
 		<ItemContainer capacity="1" maxstacksize="1" canbeselected="false" hideitems="true" drawinventory="true">
-			<Containable items="bloodcollector, ominuscard, opluscard, aminuscard ,apluscard ,bminuscard ,bpluscard ,abminuscard , abpluscard" />
+			<Containable items="am_bloodcollector, am_ominuscard, am_opluscard, am_aminuscard, am_apluscard, am_bminuscard, am_bpluscard, am_abminuscard, am_abpluscard" />
 		</ItemContainer>
 	</Item>
 
