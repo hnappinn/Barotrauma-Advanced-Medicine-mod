@@ -949,7 +949,12 @@
     </Fabricate>
     <InventoryIcon texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" origin="0.5,0.5" />
     <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.75" premultiplyalpha="false" origin="0.5,0.5" />
-    <Holdable selectkey="Action" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" />
+    <Holdable selectkey="Action" pickkey="Use" slots="RightHand+LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" >
+      <StatusEffect type="OnNotContained" target="NearbyCharacters" range="100" stackable="true">
+        <Affliction identifier="table" amount="2" />
+        <Affliction identifier="alv" amount="10" />
+      </StatusEffect>  
+    </Holdable>
     <LightComponent range="10.0" lightcolor="255,255,255,0" IsOn="true" castshadows="false" allowingameediting="false">
       <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" depth="0.025" sourcerect="96,304,416,192" origin="0.5,0.5" alpha="1.0" />
     </LightComponent>
@@ -961,10 +966,6 @@
       <limbposition limb="LeftFoot" position="380,-20" allowusinglimb="true"/>
       <limbposition limb="RightHand" position="234,-10" allowusinglimb="false" />
       <limbposition limb="LeftHand" position="234,-10" allowusinglimb="false" />
-      <StatusEffect tags="medical" type="OnActive" target="Character">
-        <Affliction identifier="table" amount="2" />
-        <Affliction identifier="alv" amount="10" />
-      </StatusEffect>
     </Controller>
   </Item>
 
@@ -972,6 +973,12 @@
   <Item name="" identifier="opdeco_hospitalbed" width="416" height="192" texturescale="1.0,1.0" scale="0.5" noninteractable="false" category="Decorative">
       <Upgrade gameversion="0.12.0.0" noninteractable="false" />
       <sprite texture="Content/Map/Outposts/Art/MedBayAssets.png" sourcerect="96,304,416,192" depth="0.97" premultiplyalpha="false" origin="0.5,0.5" />
+      <ItemComponent>
+          <StatusEffect type="OnNotContained" target="NearbyCharacters" range="100" stackable="true">
+            <Affliction identifier="table" amount="2" />
+            <Affliction identifier="alv" amount="10" />
+          </StatusEffect>
+      </ItemComponent>
       <Controller UserPos="0,-300" direction="Right" hidehud="false" canbeselected="true">
         <limbposition limb="Head" position="-6,-10" allowusinglimb="true"/>
         <limbposition limb="Torso" position="104,0" allowusinglimb="true"/>
@@ -985,8 +992,6 @@
           <reduceaffliction identifier="opiatewithdrawal" strength="0.05" />
           <reduceaffliction identifier="opiateaddiction" strength="0.05" />
           <reduceaffliction identifier="drunk" strength="0.05" />
-          <Affliction identifier="table" amount="2" />
-          <Affliction identifier="alv" amount="10" />
         </StatusEffect>
       </Controller>
     </Item>
