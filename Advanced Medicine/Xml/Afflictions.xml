@@ -676,11 +676,11 @@
     <Effect minstrength="100" maxstrength="200" multiplybymaxvitality="true"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
-      <StatusEffect target="Character">
+      <StatusEffect target="Character" comparison="and">
         <Affliction identifier="hypoxia" amount="0.5"/>
         <Affliction identifier="stun" amount="5"/>
 		<Affliction identifier="givein" amount="10"/>
-      <Conditional Health="gt 0"/>
+      <Conditional Health="gt 0" coma="eq 0"/>
         <Affliction identifier="oxygenlow" amount="10"/>
         </StatusEffect>
       <StatusEffect disabledeltatime="true" target="Character">
@@ -809,9 +809,6 @@
       minchromaticaberration="0.0"
       maxchromaticaberration="0.4">
       <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true"/>
-      <StatusEffect target="Character">
-        <Affliction identifier="oxygenlow" amount="7" setvalue="true" />
-      </StatusEffect>
     </Effect>
     <Effect minstrength="20" maxstrength="80"
       minvitalitydecrease="0"
@@ -825,7 +822,7 @@
       maxchromaticaberration="1.6">
       <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true"/>
       <StatusEffect target="Character">
-        <Affliction identifier="oxygenlow" amount="10" setvalue="true" />
+        <Affliction identifier="coma" amount="0.4" setvalue="true" />
       </StatusEffect>
     </Effect>
     <Effect minstrength="80" maxstrength="100"
@@ -840,8 +837,85 @@
       maxchromaticaberration="2.0">
       <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true"/>
       <StatusEffect target="Character">
-        <Affliction identifier="oxygenlow" amount="15" />
+        <Affliction identifier="coma" amount="0.4" />
       </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
+  </Affliction>
+  </Override>
+  <Override>
+  <Affliction
+    name="Cyanide poisoning"
+    identifier="cyanidepoisoning"
+    description="The patient is confused and has trouble breathing. Their skin is red and they have occasional muscle spasms."
+    type="poison"
+    causeofdeathdescription="Died of cyanide poisoning."
+    selfcauseofdeathdescription="You have died of cyanide poisoning."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="40"
+    treatmentthreshold="40"
+    karmachangeonapplied="-50"
+    maxstrength="100">
+    <!-- Starts out fairly undetectable, only slows down player and blurs the screen gradually. -->
+    <!-- At 40 strength, starts quickly affecting vitality, at 70 stuns the player. Lethal at 100. -->
+    <Effect minstrength="0" maxstrength="20"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="1"
+      minscreendistort="0.0"
+      maxscreendistort="0.20"
+      minscreenblur="0.0"
+      maxscreenblur="0.20">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.8"/>
+      <StatusEffect target="Character">
+      <Affliction identifier="oxygenlow" amount="2"/>
+    </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="20" maxstrength="40"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="1"
+      minscreendistort="0.2"
+      maxscreendistort="0.4"
+      minscreenblur="0.2"
+      maxscreenblur="0.4">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.6"/>
+      <StatusEffect target="Character">
+      <Affliction identifier="oxygenlow" amount="5"/>
+    </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="40" maxstrength="70" multiplybymaxvitality="true"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0.7"
+      strengthchange="0.75"
+      minscreendistort="0.4"
+      maxscreendistort="0.6"
+      minscreenblur="0.4"
+      maxscreenblur="0.6">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.3"/>
+      <StatusEffect target="Character">
+      <Affliction identifier="oxygenlow" amount="10"/>
+    </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="70" maxstrength="100" multiplybymaxvitality="true"
+      minvitalitydecrease="0.7"
+      maxvitalitydecrease="1"
+      strengthchange="0.5"
+      minscreendistort="0.8"
+      maxscreendistort="1.0"
+      minscreenblur="0.8"
+      maxscreenblur="1.0">
+      <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1"/>
+      <StatusEffect target="Character">
+      <Affliction identifier="oxygenlow" amount="10"/>
+      <Affliction identifier="hypoxia" amount="0.2"/>
+      <Conditional ishuman="true"/>
+      <Affliction identifier="stun" amount="5"/>
+    </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
   </Affliction>
@@ -1278,7 +1352,13 @@
     maxstrength="600"
     showiconthreshold="700">
     <Effect minstrength="1" maxstrength="3" strengthchange="7"/>
-    <Effect minstrength="3" maxstrength="100" strengthchange="0.5"/>
+    <Effect minstrength="3" maxstrength="100" strengthchange="0.5">
+    <StatusEffect target="Character" comparison="And">
+    <Condition bandaged="gt 0" ointmented="gt 0"/>
+      <ReduceAffliction identifier="damage" amount="0.025"/>
+      <ReduceAffliction identifier="burn" amount="0.05"/>
+    </StatusEffect>
+    </Effect>
     <Effect minstrength="100" maxstrength="300" strengthchange="0.8">
     <StatusEffect target="Character">
     <Conditional infectedwound="gte 1"/>
@@ -1286,8 +1366,8 @@
     </StatusEffect>
     <StatusEffect target="Character" comparison="And">
     <Condition bandaged="gt 0" ointmented="gt 0"/>
-      <ReduceAffliction identifier="damage" amount="0.05"/>
-      <ReduceAffliction identifier="burn" amount="0.01"/>
+      <ReduceAffliction identifier="damage" amount="0.03"/>
+      <ReduceAffliction identifier="burn" amount="0.075"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="300" maxstrength="500" strengthchange="1">
@@ -1640,4 +1720,48 @@
     </StatusEffect>
 	</Effect>
 	</Affliction>
+
+  <Affliction
+    name="Coma"
+    identifier="coma"
+    description="The patient is in a coma"
+    limbspecific="false"
+    indicatorlimb="Head"
+    activationthreshold="0"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="25" strengthchange="-0.1">
+    <StatusEffect target="Character" SpeedMultiplier="0.3" setvalue="true"/>
+    <StatusEffect target="Character">
+    <Conditional anesthesia="lte 100"/>
+    <Affliction identifier="anesthesia" amount="5"/>
+    </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="25" maxstrength="75" strengthchange="-0.1">
+    <StatusEffect target="Character">
+    <Affliction identifier="anesthesia" amount="5"/>
+    </StatusEffect>
+    <StatusEffect target="Character">
+    <Affliction identifier="stun" amount="5"/>
+    <Affliction identifier="givein" amount="5"/>
+    <Affliction identifier="oxygenlow" amount="10"/>
+    </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="90" maxstrength="100" strengthchange="-0.1">
+    <StatusEffect target="Character">
+    <Affliction identifier="anesthesia" amount="5"/>
+    <Affliction identifier="stun" amount="5"/>
+    <Affliction identifier="givein" amount="5"/>
+    <Affliction identifier="oxygenlow" amount="10"/>
+    </StatusEffect>
+    <StatusEffect target="Character" disabledeltatime="true">
+    <Conditional asys="lte 30"/>
+    <Affliction identifier="asys" amount="3"/>
+    </StatusEffect>
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
+    </Affliction>
   </Afflictions>
