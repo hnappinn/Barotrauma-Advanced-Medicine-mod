@@ -1091,13 +1091,13 @@
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect tags="medical" type="OnUse" target="This, Limb" duration="24.0">
         <Sound file="Mods/Advanced Medicine/Sound/ointment.ogg" type="OnUse" range="500" />
-        <ReduceAffliction identifier="burn" amount="0.3" />
+        <ReduceAffliction identifier="burn" amount="0.5" />
         <ReduceAffliction identifier="infectedwound" amount="3" />
         <Affliction identifier="ointmented" amount="10" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Limb, This" duration="24.0">
         <Sound file="Mods/Advanced Medicine/Sound/ointment.ogg" type="OnUse" range="500" />
-        <ReduceAffliction identifier="burn" amount="0.1" />
+        <ReduceAffliction identifier="burn" amount="0.3" />
         <ReduceAffliction identifier="infectedwound" amount="1" />
         <Affliction identifier="ointmented" amount="5" />
       </StatusEffect>
