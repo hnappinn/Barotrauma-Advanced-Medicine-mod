@@ -667,7 +667,7 @@
         <Affliction identifier="hypoxia" amount="0.1"/>
 		<Affliction identifier="givein" amount="10"/>
         </StatusEffect>
-      <StatusEffect disabledeltatime="true" target="Character">
+      <StatusEffect disabledeltatime="true" target="Character" delay="20">
       <Conditional vt="eq 0"/>
         <Affliction identifier="vt" amount="1" probability="0.01"/>
       </StatusEffect>
@@ -683,7 +683,7 @@
       <Conditional Health="gt 0" coma="eq 0"/>
         <Affliction identifier="oxygenlow" amount="10"/>
         </StatusEffect>
-      <StatusEffect disabledeltatime="true" target="Character">
+      <StatusEffect disabledeltatime="true" target="Character" delay="15">
       <Conditional vt="eq 0"/>
         <Affliction identifier="vt" amount="1" probability="0.08"/>
       </StatusEffect>
@@ -889,7 +889,7 @@
 
     <Effect minstrength="40" maxstrength="70" multiplybymaxvitality="true"
       minvitalitydecrease="0"
-      maxvitalitydecrease="0.7"
+      maxvitalitydecrease="0.3"
       strengthchange="0.75"
       minscreendistort="0.4"
       maxscreendistort="0.6"
@@ -902,8 +902,8 @@
     </Effect>
 
     <Effect minstrength="70" maxstrength="100" multiplybymaxvitality="true"
-      minvitalitydecrease="0.7"
-      maxvitalitydecrease="1"
+      minvitalitydecrease="0.3"
+      maxvitalitydecrease="0.5"
       strengthchange="0.5"
       minscreendistort="0.8"
       maxscreendistort="1.0"
@@ -920,6 +920,68 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
   </Affliction>
   </Override>
+  <Override>
+  <Affliction
+    name="Sufforin Poisoning"
+    identifier="sufforinpoisoning"
+    description="Without prompt treatment, sufforine poisoning leads to delusions and rapid death."
+    type="poison"
+    causeofdeathdescription="Died of sufforin poisoning."
+    selfcauseofdeathdescription="You have died of sufforin poisoning."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="50"
+    karmachangeonapplied="-50"
+    maxstrength="100">
+    <!-- At first undetectable and shows no symptoms, then starts affecting character's vision. Quickly becomes lethal if left untreated. -->
+    <Effect minstrength="0" maxstrength="30"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="2"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minscreenblur="0.0"
+      maxscreenblur="0.0"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="0.0">
+    </Effect>
+    <Effect minstrength="30" maxstrength="90"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="1"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minscreenblur="0.0"
+      maxscreenblur="1.0"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="0.0">
+      <StatusEffect target="Character" comparison="And">
+      <Conditional ishuman="true"/>
+      <Affliction identifier="invertcontrols" amount="5"/>
+      <Affliction identifier="drunk" amount="0.5"/>
+      <Affliction identifier="bloodloss" amount="0.3"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="90" maxstrength="100" multiplybymaxvitality="true"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="0.5"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minscreenblur="1.1"
+      maxscreenblur="1.2"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="0.0">
+      <StatusEffect target="Character" comparison="And">
+      <Conditional ishuman="true"/>
+      <Affliction identifier="invertcontrols" amount="5"/>
+      <Affliction identifier="drunk" amount="1"/>
+      <Affliction identifier="bloodloss" amount="0.6"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
+  </Affliction>
+</Override>
 <Override>
 <InternalDamage
     name="Internal Damage"
