@@ -681,7 +681,7 @@
         <Affliction identifier="stun" amount="5"/>
 		<Affliction identifier="givein" amount="10"/>
       <Conditional Health="gt 0" coma="eq 0"/>
-        <Affliction identifier="oxygenlow" amount="10"/>
+        <Affliction identifier="oxygenlow" amount="11"/>
         </StatusEffect>
       <StatusEffect disabledeltatime="true" target="Character" delay="15">
       <Conditional vt="eq 0"/>
@@ -1807,7 +1807,8 @@
     <StatusEffect target="Character">
     <Affliction identifier="stun" amount="5"/>
     <Affliction identifier="givein" amount="5"/>
-    <Affliction identifier="oxygenlow" amount="10"/>
+    <Conditional Health="gt 0"/>
+    <Affliction identifier="oxygenlow" amount="11"/>
     </StatusEffect>
     </Effect>
 
@@ -1816,7 +1817,8 @@
     <Affliction identifier="anesthesia" amount="5"/>
     <Affliction identifier="stun" amount="5"/>
     <Affliction identifier="givein" amount="5"/>
-    <Affliction identifier="oxygenlow" amount="10"/>
+    <Conditional Health="gt 0"/>
+    <Affliction identifier="oxygenlow" amount="11"/>
     </StatusEffect>
     <StatusEffect target="Character" disabledeltatime="true">
     <Conditional asys="lte 30"/>
