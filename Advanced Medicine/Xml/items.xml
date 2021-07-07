@@ -1369,7 +1369,7 @@
         <ReduceAffliction identifier="vf"      amount="1" />
         <ReduceAffliction identifier="asys"      amount="0.65" />
         <ReduceAffliction identifier="vt"      amount="2.25" />
-        <ReduceAffliction identifier="oxygenlow"      amount="2.5" />
+        <ReduceAffliction identifier="oxygenlow"      amount="3" />
     </StatusEffect>
     <StatusEffect type="OnWearing" target="Character,This" comparison="And">
     <Conditional IsDead="false" Condition="gte 99"/>
