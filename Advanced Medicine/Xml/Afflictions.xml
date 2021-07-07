@@ -364,7 +364,7 @@
         <ReduceAffliction identifier="vf"      amount="1" />
         <ReduceAffliction identifier="asys"      amount="0.65" />
         <ReduceAffliction identifier="vt"      amount="2.25" />
-        <ReduceAffliction identifier="oxygenlow"      amount="4.5" />
+        <ReduceAffliction identifier="oxygenlow"      amount="5" />
       </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
@@ -664,11 +664,11 @@
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
         <StatusEffect target="Character">
-        <Affliction identifier="hypoxia" amount="0.1"/>
+        <Affliction identifier="hypoxia" amount="0.2"/>
 		<Affliction identifier="givein" amount="10"/>
         </StatusEffect>
-      <StatusEffect disabledeltatime="true" target="Character" delay="20">
-      <Conditional vt="eq 0"/>
+      <StatusEffect disabledeltatime="true" target="Character" comparison="and">
+      <Conditional vt="eq 0" hypoxia="gt 10"/>
         <Affliction identifier="vt" amount="1" probability="0.01"/>
       </StatusEffect>
     </Effect>
@@ -676,15 +676,17 @@
     <Effect minstrength="100" maxstrength="200" multiplybymaxvitality="true"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
-      <StatusEffect target="Character" comparison="and">
+      <StatusEffect target="Character">
         <Affliction identifier="hypoxia" amount="0.5"/>
         <Affliction identifier="stun" amount="5"/>
 		<Affliction identifier="givein" amount="10"/>
-      <Conditional Health="gt 0" coma="eq 0"/>
-        <Affliction identifier="oxygenlow" amount="11"/>
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+      <Conditional Health="gt 0" coma="eq 0" hypoxia="gt 7.5"/>
+        <Affliction identifier="oxygenlow" amount="10.5"/>
         </StatusEffect>
-      <StatusEffect disabledeltatime="true" target="Character" delay="15">
-      <Conditional vt="eq 0"/>
+      <StatusEffect disabledeltatime="true" target="Character" comparison="and">
+      <Conditional vt="eq 0" hypoxia="gt 10"/>
         <Affliction identifier="vt" amount="1" probability="0.08"/>
       </StatusEffect>
       <StatusEffect target="Character">
