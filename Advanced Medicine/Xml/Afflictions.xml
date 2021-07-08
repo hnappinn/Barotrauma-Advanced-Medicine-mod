@@ -913,7 +913,7 @@
       maxscreenblur="1.0">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1"/>
       <StatusEffect target="Character">
-      <Affliction identifier="oxygenlow" amount="10"/>
+      <Affliction identifier="oxygenlow" amount="15"/>
       <Affliction identifier="hypoxia" amount="0.2"/>
       <Conditional ishuman="true"/>
       <Affliction identifier="stun" amount="5"/>
@@ -1794,7 +1794,7 @@
     activationthreshold="0"
     maxstrength="100">
 
-    <Effect minstrength="0" maxstrength="25" strengthchange="-0.1">
+    <Effect minstrength="0" maxstrength="20" strengthchange="-0.1">
     <StatusEffect target="Character" SpeedMultiplier="0.3" setvalue="true"/>
     <StatusEffect target="Character">
     <Conditional anesthesia="lte 100"/>
@@ -1802,7 +1802,7 @@
     </StatusEffect>
     </Effect>
 
-    <Effect minstrength="25" maxstrength="75" strengthchange="-0.1">
+    <Effect minstrength="20" maxstrength="75" strengthchange="-0.1">
     <StatusEffect target="Character">
     <Affliction identifier="anesthesia" amount="5"/>
     </StatusEffect>
