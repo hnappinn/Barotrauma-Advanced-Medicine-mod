@@ -1320,6 +1320,8 @@
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="cpr_buff" damagemultiplier="0.0" damagesound="LimbArmor"/>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="nausea" damagemultiplier="0.0" damagesound="LimbArmor"/>
       <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="psychosis" damagemultiplier="0.0" damagesound="LimbArmor"/>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="drunk" damagemultiplier="0.0" damagesound="LimbArmor"/>
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="coma" damagemultiplier="0.0" damagesound="LimbArmor"/>
     </Wearable>
     <aitarget maxsightrange="50" />
   </Item>

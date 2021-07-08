@@ -840,6 +840,8 @@
       <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true"/>
       <StatusEffect target="Character">
         <Affliction identifier="coma" amount="0.4" />
+      <Conditional coma="lte 20"/>
+      <Affliction identifier="coma" amount="0.5"/>
       </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
