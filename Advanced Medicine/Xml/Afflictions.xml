@@ -795,7 +795,8 @@
     selfcauseofdeathdescription="You have died of morbusine poisoning."
     limbspecific="false"
     indicatorlimb="Torso"
-    showiconthreshold="20"
+    showinhealthscannerthreshold="90"
+    showiconthreshold="110"
     karmachangeonapplied="-100"
     maxstrength="100">
     <!-- Reduce oxygen intake for the victim, cause suffocation -->
@@ -1793,7 +1794,7 @@
     description="The patient is in a coma"
     limbspecific="false"
     indicatorlimb="Head"
-    activationthreshold="0"
+    showiconthreshold="20"
     maxstrength="100">
 
     <Effect minstrength="0" maxstrength="20" strengthchange="-0.1">
@@ -1827,6 +1828,7 @@
     <StatusEffect target="Character" disabledeltatime="true">
     <Conditional asys="lte 30"/>
     <Affliction identifier="asys" amount="3"/>
+    <ReduceAffliction identifier="vf" amount="100"/>
     </StatusEffect>
     </Effect>
 
