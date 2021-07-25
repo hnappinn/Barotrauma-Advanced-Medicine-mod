@@ -126,8 +126,8 @@
 	<afflictionname.traumaticshock>Травматический шок</afflictionname.traumaticshock>
 	<afflictiondescription.traumaticshock>Пациент испытывает сильную боль и стресс.</afflictiondescription.traumaticshock>
 		
-	<afflictionname.anesthesia>Анестезия</afflictionname.anesthesia>
-	<afflictiondescription.anesthesia>Пациент не чувствителен к боли.</afflictiondescription.anesthesia>
+	<afflictionname.analgesic>Анестезия</afflictionname.analgesic>
+	<afflictiondescription.analgesic>Пациент не чувствителен к боли.</afflictiondescription.analgesic>
 
 	<afflictionname.necrosis>Некроз</afflictionname.necrosis>
 	<!-- <afflictiondescription.necrosis>Мёртвые ткани медленно накапливаются и приводят к опасным для жизни последствиям.</afflictiondescription.necrosis> -->
