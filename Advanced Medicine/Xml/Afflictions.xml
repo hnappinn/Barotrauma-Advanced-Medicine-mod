@@ -1378,6 +1378,16 @@
     isbuff="true"
     limbspecific="false"
     maxstrength="200">
+	<Effect minstrength="0" maxstrength="200"
+      minscreendistort="0.0" 
+      maxscreendistort="0.0"
+      minscreenblur="0.0"
+      maxscreenblur="0.1"
+      minradialdistort="0.0"
+      maxradialdistort="1.0"
+      minchromaticaberration="0"
+      maxchromaticaberration="400"
+      strengthchange="-0.3"/>
     <Effect minstrength="0" maxstrength="200"
       strengthchange="-0.3"
 	    resistancefor="damage"
