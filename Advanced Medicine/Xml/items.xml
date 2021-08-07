@@ -496,7 +496,7 @@
 <ReduceAffliction identifier="arteriesclamp" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
-<Conditional surgeryincision="gte 1" retractedskin="gte 1" clampedbleeders="gte 1"/>
+<Conditional surgeryincision="gte 1" retractedskin="gte 1" clampedbleeders="gte 1" drilledbones="gte 1" boncut="gte 1"/>
 <ReduceAffliction identifier="surgeryincision" amount="1000" />
 <ReduceAffliction identifier="boncut" amount="1000" />
 <ReduceAffliction identifier="clampedbleeders" amount="1000"  />
