@@ -364,7 +364,7 @@
         <ReduceAffliction identifier="vf"      amount="1" />
         <ReduceAffliction identifier="asys"      amount="0.65" />
         <ReduceAffliction identifier="vt"      amount="2.25" />
-        <ReduceAffliction identifier="oxygenlow"      amount="4.5" />
+        <ReduceAffliction identifier="oxygenlow"      amount="5" />
       </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
@@ -664,11 +664,11 @@
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
         <StatusEffect target="Character">
-        <Affliction identifier="hypoxia" amount="0.1"/>
+        <Affliction identifier="hypoxia" amount="0.2"/>
 		<Affliction identifier="givein" amount="10"/>
         </StatusEffect>
-      <StatusEffect disabledeltatime="true" target="Character">
-      <Conditional vt="eq 0"/>
+      <StatusEffect disabledeltatime="true" target="Character" comparison="and">
+      <Conditional vt="eq 0" hypoxia="gt 10"/>
         <Affliction identifier="vt" amount="1" probability="0.01"/>
       </StatusEffect>
     </Effect>
@@ -676,15 +676,17 @@
     <Effect minstrength="100" maxstrength="200" multiplybymaxvitality="true"
       minvitalitydecrease="0"
       maxvitalitydecrease="0">
-      <StatusEffect target="Character" comparison="and">
+      <StatusEffect target="Character">
         <Affliction identifier="hypoxia" amount="0.5"/>
         <Affliction identifier="stun" amount="5"/>
 		<Affliction identifier="givein" amount="10"/>
-      <Conditional Health="gt 0" coma="eq 0"/>
-        <Affliction identifier="oxygenlow" amount="10"/>
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+      <Conditional Health="gt 0" coma="eq 0" hypoxia="gt 7.5"/>
+        <Affliction identifier="oxygenlow" amount="10.5"/>
         </StatusEffect>
-      <StatusEffect disabledeltatime="true" target="Character">
-      <Conditional vt="eq 0"/>
+      <StatusEffect disabledeltatime="true" target="Character" comparison="and">
+      <Conditional vt="eq 0" hypoxia="gt 10"/>
         <Affliction identifier="vt" amount="1" probability="0.08"/>
       </StatusEffect>
       <StatusEffect target="Character">
@@ -793,7 +795,8 @@
     selfcauseofdeathdescription="You have died of morbusine poisoning."
     limbspecific="false"
     indicatorlimb="Torso"
-    showiconthreshold="20"
+    showinhealthscannerthreshold="90"
+    showiconthreshold="110"
     karmachangeonapplied="-100"
     maxstrength="100">
     <!-- Reduce oxygen intake for the victim, cause suffocation -->
@@ -838,6 +841,8 @@
       <StatusEffect target="Character" SpeedMultiplier="0.8" setvalue="true"/>
       <StatusEffect target="Character">
         <Affliction identifier="coma" amount="0.4" />
+      <Conditional coma="lte 20"/>
+      <Affliction identifier="coma" amount="0.5"/>
       </StatusEffect>
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
@@ -889,7 +894,7 @@
 
     <Effect minstrength="40" maxstrength="70" multiplybymaxvitality="true"
       minvitalitydecrease="0"
-      maxvitalitydecrease="0.7"
+      maxvitalitydecrease="0.3"
       strengthchange="0.75"
       minscreendistort="0.4"
       maxscreendistort="0.6"
@@ -902,8 +907,8 @@
     </Effect>
 
     <Effect minstrength="70" maxstrength="100" multiplybymaxvitality="true"
-      minvitalitydecrease="0.7"
-      maxvitalitydecrease="1"
+      minvitalitydecrease="0.3"
+      maxvitalitydecrease="0.5"
       strengthchange="0.5"
       minscreendistort="0.8"
       maxscreendistort="1.0"
@@ -911,7 +916,7 @@
       maxscreenblur="1.0">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.1"/>
       <StatusEffect target="Character">
-      <Affliction identifier="oxygenlow" amount="10"/>
+      <Affliction identifier="oxygenlow" amount="15"/>
       <Affliction identifier="hypoxia" amount="0.2"/>
       <Conditional ishuman="true"/>
       <Affliction identifier="stun" amount="5"/>
@@ -920,6 +925,68 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
   </Affliction>
   </Override>
+  <Override>
+  <Affliction
+    name="Sufforin Poisoning"
+    identifier="sufforinpoisoning"
+    description="Without prompt treatment, sufforine poisoning leads to delusions and rapid death."
+    type="poison"
+    causeofdeathdescription="Died of sufforin poisoning."
+    selfcauseofdeathdescription="You have died of sufforin poisoning."
+    limbspecific="false"
+    indicatorlimb="Torso"
+    showiconthreshold="50"
+    karmachangeonapplied="-50"
+    maxstrength="100">
+    <!-- At first undetectable and shows no symptoms, then starts affecting character's vision. Quickly becomes lethal if left untreated. -->
+    <Effect minstrength="0" maxstrength="30"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="2"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minscreenblur="0.0"
+      maxscreenblur="0.0"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="0.0">
+    </Effect>
+    <Effect minstrength="30" maxstrength="90"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="1"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minscreenblur="0.0"
+      maxscreenblur="1.0"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="0.0">
+      <StatusEffect target="Character" comparison="And">
+      <Conditional ishuman="true"/>
+      <Affliction identifier="invertcontrols" amount="5"/>
+      <Affliction identifier="drunk" amount="0.5"/>
+      <Affliction identifier="bloodloss" amount="0.3"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="90" maxstrength="100" multiplybymaxvitality="true"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="0"
+      strengthchange="0.5"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minscreenblur="1.1"
+      maxscreenblur="1.2"
+      minchromaticaberration="0.0"
+      maxchromaticaberration="0.0">
+      <StatusEffect target="Character" comparison="And">
+      <Conditional ishuman="true"/>
+      <Affliction identifier="invertcontrols" amount="5"/>
+      <Affliction identifier="drunk" amount="1"/>
+      <Affliction identifier="bloodloss" amount="0.6"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="640,640,128,128" color="106,106,106,255" origin="0,0"/>
+  </Affliction>
+</Override>
 <Override>
 <InternalDamage
     name="Internal Damage"
@@ -1727,10 +1794,10 @@
     description="The patient is in a coma"
     limbspecific="false"
     indicatorlimb="Head"
-    activationthreshold="0"
+    showiconthreshold="20"
     maxstrength="100">
 
-    <Effect minstrength="0" maxstrength="25" strengthchange="-0.1">
+    <Effect minstrength="0" maxstrength="20" strengthchange="-0.1">
     <StatusEffect target="Character" SpeedMultiplier="0.3" setvalue="true"/>
     <StatusEffect target="Character">
     <Conditional anesthesia="lte 100"/>
@@ -1738,14 +1805,15 @@
     </StatusEffect>
     </Effect>
 
-    <Effect minstrength="25" maxstrength="75" strengthchange="-0.1">
+    <Effect minstrength="20" maxstrength="75" strengthchange="-0.1">
     <StatusEffect target="Character">
     <Affliction identifier="anesthesia" amount="5"/>
     </StatusEffect>
     <StatusEffect target="Character">
     <Affliction identifier="stun" amount="5"/>
     <Affliction identifier="givein" amount="5"/>
-    <Affliction identifier="oxygenlow" amount="10"/>
+    <Conditional Health="gt 0"/>
+    <Affliction identifier="oxygenlow" amount="11"/>
     </StatusEffect>
     </Effect>
 
@@ -1754,11 +1822,13 @@
     <Affliction identifier="anesthesia" amount="5"/>
     <Affliction identifier="stun" amount="5"/>
     <Affliction identifier="givein" amount="5"/>
-    <Affliction identifier="oxygenlow" amount="10"/>
+    <Conditional Health="gt 0"/>
+    <Affliction identifier="oxygenlow" amount="11"/>
     </StatusEffect>
     <StatusEffect target="Character" disabledeltatime="true">
     <Conditional asys="lte 30"/>
     <Affliction identifier="asys" amount="3"/>
+    <ReduceAffliction identifier="vf" amount="100"/>
     </StatusEffect>
     </Effect>
 
