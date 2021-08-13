@@ -587,6 +587,7 @@
     name=""
     identifier="traumaticshock"
     description=""
+	type="poison"
     limbspecific="false"
     indicatorlimb="Torso"
     activationthreshold="0"
