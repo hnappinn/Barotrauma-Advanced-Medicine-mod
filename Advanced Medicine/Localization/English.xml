@@ -58,6 +58,10 @@
 
 	<entityname.bloodanalyzer>Hematology analyzer</entityname.bloodanalyzer>
 	<entitydescription.bloodanalyzer>Blood typing device. Fully automated.</entitydescription.bloodanalyzer>
+
+	<entityname.propofol>Propofol</entityname.propofol>
+	<entitydescription.propofol>Propofol, is a short-acting medication that results in a decreased level of consciousness and a lack of memory for events. Its uses include the starting and maintenance of general anesthesia.</entitydescription.propofol>
+
 	<!-- AFFLICTIONS -->
 	
 	
@@ -123,8 +127,11 @@
 	<afflictionname.traumaticshock>Traumatic shock</afflictionname.traumaticshock>
 	<afflictiondescription.traumaticshock>The patient experiences severe pain and stress.</afflictiondescription.traumaticshock>
 		
+	<afflictionname.analgesia>Analgesia</afflictionname.analgesia>
+	<afflictiondescription.analgesia>Insensitivity to pain.</afflictiondescription.analgesia>
+
 	<afflictionname.anesthesia>Anesthesia</afflictionname.anesthesia>
-	<afflictiondescription.anesthesia>Insensitivity to pain.</afflictiondescription.anesthesia>
+	<afflictiondescription.anesthesia>The patient has drug-induced amnesia and sedation.</afflictiondescription.anesthesia>
 
 	<afflictionname.necrosis>Necrosis</afflictionname.necrosis>
 	<!-- <afflictiondescription.necrosis>Dead tissue is slowly building up and is causing life-threatening complications.</afflictiondescription.necrosis> -->

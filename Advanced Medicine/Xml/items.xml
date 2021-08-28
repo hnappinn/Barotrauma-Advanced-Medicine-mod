@@ -239,7 +239,7 @@
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-7,-5" holdangle="60" reload="1.0">
 <RequiredSkill identifier="medical" level="40" />
 <StatusEffect type="OnUse" target="Limb" comparison="and">
-<Conditional anesthesia="gte 1" />
+<Conditional analgesia="gte 1" />
 <Affliction identifier="surgeryincision" amount="1" />
 <ReduceAffliction identifier="suturedi" amount="9999" />
 <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
@@ -284,7 +284,7 @@
 <RequiredSkill identifier="medical" level="30" />
 <StatusEffect type="OnUse" target="Limb" comparison="and">
 <Conditional surgeryincision="gte 99" />
-<Conditional anesthesia="gte 1" />
+<Conditional analgesia="gte 1" />
 <Affliction identifier="clampedbleeders" amount="1" />
 <ReduceAffliction identifier="surgeryincision" amount="9999" />
 </StatusEffect>
@@ -319,13 +319,13 @@
 <RequiredSkill identifier="medical" level="45" />
 <StatusEffect type="OnUse" target="Limb" comparison="and">
 <Conditional retractedskin="gte 99" />
-<Conditional anesthesia="gte 1" />
+<Conditional analgesia="gte 1" />
 <Affliction identifier="drilledbones" amount="1" />
 <Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
 </StatusEffect>
 <StatusEffect tags="medical" type="OnFailure" target="Limb">
 <Conditional surgeryincision="lt 1" />
-<Conditional anesthesia="gte 1" /> 
+<Conditional analgesia="gte 1" /> 
 <Affliction identifier="bleeding" amount="15" />
 <Affliction identifier="internaldamage" amount="10" />
 <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
@@ -362,14 +362,14 @@
 <RequiredSkill identifier="medical" level="45" />
 <StatusEffect type="OnUse" target="Limb, this" comparison="and" Condition="-25.0">
 <Conditional drilledbones="gte 99" />
-<Conditional anesthesia="gte 1" />
+<Conditional analgesia="gte 1" />
 <ReduceAffliction identifier="fracture" amount="9999" />
 <ReduceAffliction identifier="boneclamp" amount="9999" />
 <Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
 </StatusEffect>
 <StatusEffect tags="medical" type="OnFailure" target="Limb">
 <Conditional surgeryincision="lt 1" />
-<Conditional anesthesia="gte 1" /> 
+<Conditional analgesia="gte 1" /> 
 <Affliction identifier="bleeding" amount="5" />
 <Affliction identifier="internaldamage" amount="5" />
 <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
@@ -403,7 +403,7 @@
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0">
 <RequiredSkill identifier="medical" level="40" />
 <StatusEffect type="OnUse" target="Limb" comparison="and">
-<Conditional anesthesia="gte 1" />
+<Conditional analgesia="gte 1" />
 <Conditional clampedbleeders="gte 99" />
 <Affliction identifier="retractedskin" amount="1" />
 </StatusEffect>
@@ -437,7 +437,7 @@
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-18,-7" holdangle="90" reload="1.0">
 <RequiredSkill identifier="medical" level="50" />
 <StatusEffect type="OnUse" target="Limb" comparison="And">
-<Conditional anesthesia="gte 1"/>
+<Conditional analgesia="gte 1"/>
 <Conditional retractedskin="gte 99"/>
 <Affliction identifier="boncut" amount="1" />
     <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
@@ -647,12 +647,12 @@
         <Affliction identifier="oxygenlow" amount="2" />
         <Affliction identifier="opiateaddiction" amount="0.5" />
         <Affliction identifier="opiateoverdose" amount="1.0" />
-        <Affliction identifier="anesthesia" amount="5" />
+        <Affliction identifier="analgesia" amount="5" />
         <ReduceAffliction identifier="opiatewithdrawal" amount="3.0" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character" duration="10">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <Affliction identifier="anesthesia" amount="3" />
+        <Affliction identifier="analgesia" amount="3" />
         <Affliction identifier="oxygenlow" amount="3" />
         <Affliction identifier="opiateaddiction" amount="2.5" />
         <Affliction identifier="opiateoverdose" amount="2.0" />
@@ -668,7 +668,7 @@
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnImpact" target="Character" duration="10">
-        <Affliction identifier="anesthesia" amount="2" />
+        <Affliction identifier="analgesia" amount="2" />
         <Affliction identifier="oxygenlow" amount="3" />
         <Affliction identifier="opiateaddiction" amount="2.5" />
         <Affliction identifier="opiateoverdose" amount="2.0" />
@@ -725,7 +725,7 @@
       <RequiredSkill identifier="medical" level="72" />
       <StatusEffect tags="medical" type="OnUse" target="Character" duration="5">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <Affliction identifier="anesthesia" amount="15" />
+        <Affliction identifier="analgesia" amount="15" />
         <Affliction identifier="oxygenlow" amount="6" />
         <Affliction identifier="opiateaddiction" amount="1.5" />
         <Affliction identifier="opiateoverdose" amount="4.5" />
@@ -733,7 +733,7 @@
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="Character" duration="5">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <Affliction identifier="anesthesia" amount="10" />
+        <Affliction identifier="analgesia" amount="10" />
         <Affliction identifier="oxygenlow" amount="8" />
         <Affliction identifier="opiateaddiction" amount="6" />
         <Affliction identifier="opiateoverdose" amount="6" />
@@ -748,7 +748,7 @@
       <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect tags="medical" type="OnImpact" target="Character" duration="5">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <Affliction identifier="anesthesia" amount="5.75" />
+        <Affliction identifier="analgesia" amount="5.75" />
         <Affliction identifier="oxygenlow" amount="8" />
         <Affliction identifier="opiateaddiction" amount="6" />
         <Affliction identifier="opiateoverdose" amount="6" />
@@ -785,7 +785,7 @@
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
       <StatusEffect tags="medical" type="OnUse" target="Character" duration="5">
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
-        <Affliction identifier="anesthesia" amount="4" />
+        <Affliction identifier="analgesia" amount="4" />
         <Affliction identifier="opiateaddiction" amount="1" />
         <Affliction identifier="opiateoverdose" amount="1.75" />
         <Affliction identifier="oxygenlow" amount="3.5" />
@@ -797,7 +797,7 @@
         <Affliction identifier="oxygenlow" amount="6" />
         <Affliction identifier="opiateoverdose" amount="3" />
         <Affliction identifier="opiateaddiction" amount="3" />
-        <Affliction identifier="anesthesia" amount="2" />
+        <Affliction identifier="analgesia" amount="2" />
       </StatusEffect>
       <!-- Remove the item when fully used -->
       <StatusEffect type="OnBroken" target="This">
@@ -2252,5 +2252,58 @@
 	</MeleeWeapon>
 	</Item>
 	</Override>
+  <Item name="" identifier="propofol" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" Tags="smallitem,chem,medical,syringe" description="" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="toxcab,abandonedtoxcab" secondary="toxcontainer" mincount="1" maxcount="1" spawnprobability="0.05" />
+    <Price baseprice="500" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1" sold="false"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1" />
+      <Price locationtype="research" multiplier="0.9" minavailable="1" />
+      <Price locationtype="military" multiplier="1.1" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.1" sold="false"/>
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="90">
+      <RequiredSkill identifier="medical" level="40" />
+      <RequiredItem identifier="carbon" />
+      <RequiredItem identifier="paralyzant" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="carbon" copycondition="true" mincondition="0.1" />
+      <Item identifier="paralyxis" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,704,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="188,210,37,69" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="65" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect tags="poison" type="OnUse" target="Character">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" comparison="And"/>
+        <Conditional mass="lt 100" anesthesia="lt 15"/>
+        <Affliction identifier="anesthesia" amount="1" />
+      </StatusEffect>
+      <StatusEffect tags="poison" type="OnUse" target="Character" comparison="And">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <Conditional mass="lt 100" anesthesia="gt 15"/>
+        <ReduceAffliction identifier="anesthesia" amount="100"/>
+        <Affliction identifier="stun" amount="5"/>
+      </StatusEffect>
+      <StatusEffect tags="poison" type="OnUse" target="Character" disabledeltatime="true" comparison="And" delay="0.1">
+        <Conditional mass="lt 100" anesthesia="eq 0"/>
+        <Affliction identifier="anesthesia" amount="15"/>
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect tags="poison" type="OnImpact" target="Character">
+        <Conditional mass="lt 100"/>
+        <Affliction identifier="anesthesia" amount="1" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
 
   </Items>
