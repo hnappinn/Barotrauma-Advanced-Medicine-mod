@@ -496,7 +496,7 @@
 <ReduceAffliction identifier="arteriesclamp" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
-<Conditional surgeryincision="gte 1" retractedskin="gte 1" clampedbleeders="gte 1"/>
+<Conditional surgeryincision="gte 1" retractedskin="gte 1" clampedbleeders="gte 1" drilledbones="gte 1" boncut="gte 1"/>
 <ReduceAffliction identifier="surgeryincision" amount="1000" />
 <ReduceAffliction identifier="boncut" amount="1000" />
 <ReduceAffliction identifier="clampedbleeders" amount="1000"  />
@@ -2216,5 +2216,41 @@
       </ItemContainer>
     </Item>
   </Override>
+  
+	<Override>
+	<Item name="" identifier="alienblood" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" useinhealthinterface="true" scale="0.5">
+	<Upgrade gameversion="0.10.0.0" scale="0.5" />    
+	<PreferredContainer primary="storageorgan" minamount="1" maxamount="2" spawnprobability="1"/>
+	<PreferredContainer primary="toxcontainer,medcontainer,locker"/>
+	<Price baseprice="120" soldeverywhere="false">
+	  <Price locationtype="outpost" multiplier="0.85" sold="false"/>
+	  <Price locationtype="city" multiplier="0.85" sold="false"/>
+	  <Price locationtype="research" multiplier="1.2" sold="true" minavailable="2"/>
+	  <Price locationtype="military" multiplier="0.9" sold="false"/>
+	  <Price locationtype="mine" multiplier="0.85" sold="false"/>
+	</Price>
+	<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="448,771,64,64" origin="0.5,0.5" />
+	<Sprite texture="Content/Items/CreatureLoot/CreatureLoot.png" sourcerect="1,128,30,58" depth="0.6" origin="0.5,0.5" />
+	<Body width="30" height="55" density="20" />
+	<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+	  <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+	  <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+	  <RequiredSkill identifier="medical" level="40" />
+	  <StatusEffect tags="medical" type="OnUse" target="Character" duration="30.0">
+		<Affliction identifier="organdamage" amount="0.25" />
+		<Affliction identifier="hemotransfusionshock" amount="0.0125"/>
+		<ReduceAffliction identifier="bloodloss" amount="0.5" />
+	  </StatusEffect>
+	  <StatusEffect tags="medical" type="OnFailure" target="Character" duration="30.0">
+		<Affliction identifier="organdamage" amount="0.5" />
+		<Affliction identifier="hemotransfusionshock" amount="0.025"/>
+		<ReduceAffliction identifier="bloodloss" amount="0.5" />
+	  </StatusEffect>
+	  <StatusEffect type="OnBroken" target="This">
+		<Remove />
+	  </StatusEffect>
+	</MeleeWeapon>
+	</Item>
+	</Override>
 
   </Items>
