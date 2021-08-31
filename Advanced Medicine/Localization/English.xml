@@ -134,7 +134,7 @@
 	<afflictiondescription.anesthesia>The patient has drug-induced amnesia and sedation.</afflictiondescription.anesthesia>
 
 	<afflictionname.necrosis>Necrosis</afflictionname.necrosis>
-	<!-- <afflictiondescription.necrosis>Dead tissue is slowly building up and is causing life-threatening complications.</afflictiondescription.necrosis> -->
+	<afflictiondescription.necrosis>Dead tissue is slowly building up and is causing life-threatening complications.</afflictiondescription.necrosis>
 	<afflictioncauseofdeath.necrosis>Died from a necrotic wound.</afflictioncauseofdeath.necrosis>
 	<afflictioncauseofdeathself.necrosis>You have died from necrosis.</afflictioncauseofdeathself.necrosis>
 

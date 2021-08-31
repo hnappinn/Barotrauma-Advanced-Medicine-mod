@@ -646,7 +646,7 @@
     </Effect>
      <Effect minstrength="60" maxstrength="100" strengthchange="-0.5">
       <StatusEffect target="Character">
-        <Affliction identifier="respiratoryarrest" amount="3"/>
+        <Affliction identifier="oxygenlow" amount="10"/>
         <Affliction identifier="hypotension" amount="3"/>
       </StatusEffect>
     </Effect>
@@ -1112,10 +1112,10 @@
 			maxvitalitydecrease="0.1">
     <StatusEffect target="Limb" comparison="And">
     <Conditional ointmented="eq 0" immunity="lte 500"/>
-    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1.0"/>
+    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.3"/>
     </StatusEffect>
     <StatusEffect target="Limb" comparison="And">
-		<Affliction identifier="immunity" amount="-0.1"/>
+		<Affliction identifier="immunity" amount="-0.15"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true"
@@ -1123,10 +1123,10 @@
 			maxvitalitydecrease="0.5">
     <StatusEffect target="Limb" comparison="And">
     <Conditional ointmented="eq 0" immunity="lte 500"/>
-    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1.5"/>
+    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.5"/>
     </StatusEffect>
     <StatusEffect target="Limb" comparison="And">
-		<Affliction identifier="immunity" amount="-0.5"/>
+		<Affliction identifier="immunity" amount="-0.3"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
@@ -1136,14 +1136,14 @@
 					<Affliction identifier="fracture" indicatorlimb="Limb" amount="1"/>
         </StatusEffect>
     <StatusEffect target="Limb" comparison="And">
-		<Affliction identifier="immunity" amount="-0.9"/>
+		<Affliction identifier="immunity" amount="-0.6"/>
     </StatusEffect>
         <StatusEffect target="Limb">
           <Affliction identifier="arterialcut" indicatorlimb="Limb" amount="5"/>
 				</StatusEffect>
         <StatusEffect target="Limb" comparison="And">
         <Conditional immunity="lte 500" ointmented="eq 0"/>
-        <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="2"/>
+        <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1"/>
         </StatusEffect>
 			</Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="195,136,60,255" origin="0,0"/>
@@ -1415,7 +1415,15 @@
     <StatusEffect target="Character">
 		<Affliction identifier="stun" amount="2"/>
     <Affliction identifier="table" amount="3"/>
-    <Affliction identifier="respiratoryarrest" amount="2" probability="0.15"/>
+    </StatusEffect>
+    <StatusEffect target="Character" comparison="And">
+    <Conditional weirdthing="eq 0" respiratoryarrest="eq 0"/>
+    <Affliction identifier="weirdthing" amount="2" probability="0.15"/>
+    <Affliction identifier="respiratoryarrest" amount="2" probability="0.05"/>
+    </StatusEffect>
+    <StatusEffect target="Character">
+    <Conditional respiratoryarrest="gt 0"/>
+    <Affliction identifier="respiratoryarrest" amount="1"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="99" maxstrength="100"
@@ -1423,6 +1431,7 @@
     <StatusEffect target="Character" disabledeltatime="true">
     <ReduceAffliction identifier="anesthesia" amount="100"/>
     <ReduceAffliction identifier="respiratoryarrest" amount="3"/>
+    <ReduceAffliction identifier="weirdthing" amount="3"/>
     </StatusEffect>
     </Effect>
     <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="384,0,128,128" color="10,193,114,255" origin="0,0"/>
@@ -1818,6 +1827,17 @@
 		<ReduceAffliction identifier="givein" amount="10"/>
     </StatusEffect>
 	</Effect>
+	</Affliction>
+  
+  <Affliction
+	  name="What?"
+    identifier="weirdthing"
+    limbspecific="false"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+  	</Effect>
 	</Affliction>
 
   <Affliction

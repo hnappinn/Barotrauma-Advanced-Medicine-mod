@@ -134,7 +134,7 @@
 	<afflictiondescription.anesthesia>У пациента медикаментозная амнезия и седация.</afflictiondescription.anesthesia>
 
 	<afflictionname.necrosis>Некроз</afflictionname.necrosis>
-	<!-- <afflictiondescription.necrosis>Мёртвые ткани медленно накапливаются и приводят к опасным для жизни последствиям.</afflictiondescription.necrosis> -->
+	<afflictiondescription.necrosis>Мёртвые ткани медленно накапливаются и приводят к опасным для жизни последствиям.</afflictiondescription.necrosis>
 	<afflictioncauseofdeath.necrosis>Умер от некроза.</afflictioncauseofdeath.necrosis>
 	<afflictioncauseofdeathself.necrosis>Вы умерли от некроза.</afflictioncauseofdeathself.necrosis>
 
