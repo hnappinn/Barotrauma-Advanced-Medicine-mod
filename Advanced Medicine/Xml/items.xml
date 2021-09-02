@@ -1166,7 +1166,7 @@
     </MeleeWeapon>
   </Item>
   </Override>
-  <Item name="Antiseptic spray" identifier="antisepticspray" category="Equipment" Tags="smallitem,tool,medical" useinhealthinterface="true" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="antisepticspray" category="Equipment" Tags="smallitem,tool,medical" useinhealthinterface="true" cargocontaineridentifier="metalcrate" description="" Scale="0.5" impactsoundtag="impact_soft">
     <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="3" spawnprobability="0.5" />
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
@@ -1207,7 +1207,7 @@
     </ItemContainer>
   </Item>
 
-  <Item name="Antiseptic" identifier="antiseptic" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" scale="0.3">
+  <Item name="" identifier="antiseptic" category="Material" maxstacksize="8" cargocontaineridentifier="chemicalcrate" description="" Tags="smallitem,chem,medical" scale="0.3">
     <Upgrade gameversion="0.10.0.0" scale="0.3"/>
     <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="6" spawnprobability="0.25" />
@@ -1434,7 +1434,7 @@
   </Override>
 
   <Override>
-  <Item name="Blood Pack O-" identifier="antibloodloss2" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="antibloodloss2" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.5"/>
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
@@ -1481,7 +1481,7 @@
   </Item>
   </Override>
 
-  <Item name="Blood Pack O+" identifier="bloodpackoplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="bloodpackoplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.5"/>
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
@@ -1522,7 +1522,7 @@
     </Holdable>
   </Item>
 
-  <Item name="Blood Pack A+" identifier="bloodpackaplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="bloodpackaplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25"/>
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
@@ -1563,7 +1563,7 @@
     </Holdable>
   </Item>
 
-  <Item name="Blood Pack B+" identifier="bloodpackbplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="bloodpackbplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25"/>
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
@@ -1604,7 +1604,7 @@
     </Holdable>
   </Item>
 
-  <Item name="Blood Pack AB+" identifier="bloodpackabplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="bloodpackabplus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <Price baseprice="125" >
       <Price locationtype="outpost" multiplier="1" minavailable="2" />
@@ -1643,7 +1643,7 @@
     </Holdable>
   </Item>
 
-  <Item name="Blood Pack A-" identifier="bloodpackaminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="bloodpackaminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25"/>
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
@@ -1684,7 +1684,7 @@
     </Holdable>
   </Item>
 
-  <Item name="Blood Pack B-" identifier="bloodpackbminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="bloodpackbminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.25"/>
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
@@ -1725,7 +1725,7 @@
     </Holdable>
   </Item>
 
-  <Item name="Blood Pack AB-" identifier="bloodpackabminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="bloodpackabminus" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <Price baseprice="150" >
       <Price locationtype="outpost" multiplier="1" minavailable="2" />
@@ -1763,7 +1763,7 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  <Item name="Filtered Blood Pack" identifier="antibloodloss3" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="antibloodloss3" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" minamount="2" maxamount="3" spawnprobability="0.5"/>
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.15"/>
@@ -1828,7 +1828,7 @@
     <AiTarget sightrange="1000" static="true" />
   </Item>
 
-  <Item name="Empty Blood Pack" identifier="emptybloodpack" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
+  <Item name="" identifier="emptybloodpack" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <Price baseprice="25" >
       <Price locationtype="outpost" multiplier="1" minavailable="2" />
@@ -1901,7 +1901,7 @@
   </Item>
 
   <Item
-    name="Blood Refinery"
+    name=""
     identifier="bloodrefinery" 
     tags="bloodrefinery"
     category="Machine"
@@ -2051,7 +2051,7 @@
     <Holdable slots="Any" msg="ItemMsgPickUpSelect" />
   </Item>
 
-  <Item name="Blood collection cartridge" identifier="bloodcollector" category="Material,Equipment" description="Empty blood collection cartridge, insert it inside «Blood Analyser»" cargocontaineridentifier="mediccrate" Tags="smallitem,Material,vial" useinhealthinterface="true" scale="0.170" impactsoundtag="impact_metal_light" maxstacksize="8" >
+  <Item name="" identifier="bloodcollector" category="Material,Equipment" description="" cargocontaineridentifier="mediccrate" Tags="smallitem,Material,vial" useinhealthinterface="true" scale="0.170" impactsoundtag="impact_metal_light" maxstacksize="8" >
     <PreferredContainer primary="medcab" minamount="1" maxamount="8" spawnprobability="1" />
     <Price baseprice="5">
       <Price locationtype="outpost" multiplier="1" minavailable="2" />
@@ -2075,7 +2075,7 @@
     </Holdable>
   </Item>
 
-  <Item name="Blood analyzer" description="Blood typing device" identifier="bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
+  <Item name="" description="" identifier="bloodanalyzer" category="Equipment" cargocontaineridentifier="metalcrate" tags="smallitem" useinhealthinterface="true" impactsoundtag="impact_metal_light" scale="0.4">
     
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.25" />
