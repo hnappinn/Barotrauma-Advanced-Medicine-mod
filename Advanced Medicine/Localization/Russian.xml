@@ -59,7 +59,8 @@
 	<entityname.bloodanalyzer>Гематологический анализатор</entityname.bloodanalyzer>
 	<entitydescription.bloodanalyzer>Прибор для определения группы крови. Полностью автоматический.</entitydescription.bloodanalyzer>
 
-
+    <entityname.propofol>Пропофол</entityname.propofol>
+	<entitydescription.propofol>Пропофол - это лекарство короткого действия, которое приводит к снижению уровня сознания и отсутствию памяти о событиях. Его применение включает в себя начало и поддержание общей анестезии.</entitydescription.propofol>
 	
 	<!-- AFFLICTIONS -->
 	
@@ -130,7 +131,7 @@
 	<afflictiondescription.analgesic>Пациент не чувствителен к боли.</afflictiondescription.analgesic>
 
 	<afflictionname.necrosis>Некроз</afflictionname.necrosis>
-	<!-- <afflictiondescription.necrosis>Мёртвые ткани медленно накапливаются и приводят к опасным для жизни последствиям.</afflictiondescription.necrosis> -->
+	<afflictiondescription.necrosis>Мёртвые ткани медленно накапливаются и приводят к опасным для жизни последствиям.</afflictiondescription.necrosis>
 	<afflictioncauseofdeath.necrosis>Умер от некроза.</afflictioncauseofdeath.necrosis>
 	<afflictioncauseofdeathself.necrosis>Вы умерли от некроза.</afflictioncauseofdeathself.necrosis>
 

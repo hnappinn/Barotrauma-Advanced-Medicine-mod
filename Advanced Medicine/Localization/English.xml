@@ -58,6 +58,52 @@
 
 	<entityname.bloodanalyzer>Hematology analyzer</entityname.bloodanalyzer>
 	<entitydescription.bloodanalyzer>Blood typing device. Fully automated.</entitydescription.bloodanalyzer>
+
+	<entityname.bloodcollector>Blood collection cartridge</entityname.bloodcollector>
+	<entitydescription.bloodcollector>Empty blood collection cartridge, insert it inside «Blood Analyser»</entitydescription.bloodcollector>
+
+	<entityname.emptybloodpack>Empty Blood Pack</entityname.emptybloodpack>
+	<entitydescription.emptybloodpack>Just an empty blood pack. What did you expect?</entitydescription.emptybloodpack>
+
+	<entityname.bloodrefinery>Blood Refinery</entityname.bloodrefinery>
+	<!-- <entitydescription.bloodrefinery></entitydescription.bloodrefinery> -->
+
+	<entityname.bloodpackoplus>Blood Pack O+</entityname.bloodpackoplus>
+	<!-- <entitydescription.bloodpackoplus></entitydescription.bloodpackoplus> -->
+
+	<entityname.antibloodloss2>Blood Pack O-</entityname.antibloodloss2>
+	<!-- <entitydescription.antibloodloss2></entitydescription.antibloodloss2> -->
+
+	<entityname.bloodpackaplus>Blood Pack A+</entityname.bloodpackaplus>
+	<!-- <entitydescription.bloodpackaplus></entitydescription.bloodpackaplus> -->
+
+	<entityname.bloodpackbplus>Blood Pack B+</entityname.bloodpackbplus>
+	<!-- <entitydescription.bloodpackbplus></entitydescription.bloodpackbplus> -->
+
+	<entityname.bloodpackabplus>Blood Pack AB+</entityname.bloodpackabplus>
+	<!-- <entitydescription.bloodpackabplus></entitydescription.bloodpackabplus> -->
+
+	<entityname.bloodpackaminus>Blood Pack A-</entityname.bloodpackaminus>
+	<!-- <entitydescription.bloodpackaminus></entitydescription.bloodpackaminus> -->
+
+	<entityname.bloodpackbminus>Blood Pack B-</entityname.bloodpackbminus>
+	<!-- <entitydescription.bloodpackbminus></entitydescription.bloodpackbminus> -->
+
+	<entityname.bloodpackabminus>Blood Pack AB-</entityname.bloodpackabminus>
+	<!-- <entitydescription.bloodpackabminus></entitydescription.bloodpackabminus> -->
+
+	<entityname.antibloodloss3>Filtered Blood Pack</entityname.antibloodloss3>
+	<!-- <entitydescription.antibloodloss3></entitydescription.antibloodloss3> -->
+
+	<entityname.antiseptic>Antiseptic</entityname.antiseptic>
+	<!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
+
+	<entityname.antisepticspray>Antiseptic spray</entityname.antisepticspray>
+	<!-- <entitydescription.antisepticspray></entitydescription.antisepticspray> -->
+	
+	<entityname.propofol>Propofol</entityname.propofol>
+	<entitydescription.propofol>Propofol, is a short-acting medication that results in a decreased level of consciousness and a lack of memory for events. Its uses include the starting and maintenance of general anesthesia.</entitydescription.propofol>
+
 	<!-- AFFLICTIONS -->
 	
 	
@@ -127,7 +173,7 @@
 	<afflictiondescription.analgesic>Insensitivity to pain.</afflictiondescription.analgesic>
 
 	<afflictionname.necrosis>Necrosis</afflictionname.necrosis>
-	<!-- <afflictiondescription.necrosis>Dead tissue is slowly building up and is causing life-threatening complications.</afflictiondescription.necrosis> -->
+	<afflictiondescription.necrosis>Dead tissue is slowly building up and is causing life-threatening complications.</afflictiondescription.necrosis>
 	<afflictioncauseofdeath.necrosis>Died from a necrotic wound.</afflictioncauseofdeath.necrosis>
 	<afflictioncauseofdeathself.necrosis>You have died from necrosis.</afflictioncauseofdeathself.necrosis>
 

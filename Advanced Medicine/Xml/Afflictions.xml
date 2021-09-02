@@ -308,7 +308,7 @@
       maxradialdistort="1">
     </Effect>
 
-    <Effect minstrength="110" maxstrength="190" strengthchange="-0.01"
+    <Effect minstrength="110" maxstrength="185" strengthchange="-0.01"
       minscreendistort="0.8"
       maxscreendistort="1"
       minscreenblur="1"
@@ -317,14 +317,14 @@
       maxradialdistort="1">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5"/>
       <StatusEffect target="Character">
-        <Affliction identifier="oxygenlow" amount="1" />
+        <Affliction identifier="respiratoryarrest" amount="3" probability="0.01"/>
       </StatusEffect>
       <StatusEffect disabledeltatime="true" target="Character">
-        <Affliction identifier="stun" amount="2" probability="0.01"/>
+        <Affliction identifier="stun" amount="3" probability="0.01" setvalue="true"/>
       </StatusEffect>
     </Effect>
 
-    <Effect minstrength="190" maxstrength="200"
+    <Effect minstrength="185" maxstrength="200"
       minscreendistort="0.8"
       maxscreendistort="1"
       minscreenblur="1"
@@ -335,7 +335,7 @@
       maxvitalitydecrease="600">
       <StatusEffect target="Character">
         <Affliction identifier="stun" amount="15" setvalue="true"/>
-        <Affliction identifier="oxygenlow" amount="15" />
+        <Affliction identifier="respiratoryarrest" amount="3" />
       </StatusEffect>
     </Effect>
 
@@ -530,7 +530,9 @@
     </StatusEffect>
     </Effect>
     <Effect minstrength="2" maxstrength="10"  strengthchange="1">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5"/>
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
+    <Conditional fractures="gt 0"/>
+    </StatusEffect>
     </Effect>
 	<Effect minstrength="10" maxstrength="100"  strengthchange="0.1"
 		minvitalitydecrease="0"
@@ -600,8 +602,8 @@
 		<Affliction identifier="givein" amount="10"/>
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
-      <Conditional Health="gt 0" coma="eq 0" hypoxia="gt 7.5"/>
-        <Affliction identifier="oxygenlow" amount="10.5"/>
+      <Conditional Health="gt 0" hypoxia="gt 7.5"/>
+        <Affliction identifier="respiratoryarrest" amount="1"/>
         </StatusEffect>
       <StatusEffect disabledeltatime="true" target="Character" comparison="and">
       <Conditional vt="eq 0" hypoxia="gt 10"/>
@@ -1025,10 +1027,10 @@
 			maxvitalitydecrease="0.1">
     <StatusEffect target="Limb" comparison="And">
     <Conditional ointmented="eq 0" immunity="lte 500"/>
-    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1.0"/>
+    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.3"/>
     </StatusEffect>
     <StatusEffect target="Limb" comparison="And">
-		<Affliction identifier="immunity" amount="-0.1"/>
+		<Affliction identifier="immunity" amount="-0.15"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true"
@@ -1036,10 +1038,10 @@
 			maxvitalitydecrease="0.5">
     <StatusEffect target="Limb" comparison="And">
     <Conditional ointmented="eq 0" immunity="lte 500"/>
-    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1.5"/>
+    <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.5"/>
     </StatusEffect>
     <StatusEffect target="Limb" comparison="And">
-		<Affliction identifier="immunity" amount="-0.5"/>
+		<Affliction identifier="immunity" amount="-0.3"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
@@ -1049,14 +1051,14 @@
 					<Affliction identifier="fracture" indicatorlimb="Limb" amount="1"/>
         </StatusEffect>
     <StatusEffect target="Limb" comparison="And">
-		<Affliction identifier="immunity" amount="-0.9"/>
+		<Affliction identifier="immunity" amount="-0.6"/>
     </StatusEffect>
         <StatusEffect target="Limb">
           <Affliction identifier="arterialcut" indicatorlimb="Limb" amount="5"/>
 				</StatusEffect>
         <StatusEffect target="Limb" comparison="And">
         <Conditional immunity="lte 500" ointmented="eq 0"/>
-        <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="2"/>
+        <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1"/>
         </StatusEffect>
 			</Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="195,136,60,255" origin="0,0"/>
@@ -1290,11 +1292,13 @@
   
   <Affliction
     name=""
+
     identifier="analgesic"
     description=""
     type="resistance"
     isbuff="true"
     limbspecific="false"
+
     maxstrength="100">
     <Effect minstrength="0" maxstrength="100"
       strengthchange="-0.5"
@@ -1693,6 +1697,17 @@
     </StatusEffect>
 	</Effect>
 	</Affliction>
+  
+  <Affliction
+	  name="What?"
+    identifier="weirdthing"
+    limbspecific="false"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+  	</Effect>
+	</Affliction>
 
   <Affliction
     name="Coma"
@@ -1718,8 +1733,7 @@
     <StatusEffect target="Character">
     <Affliction identifier="stun" amount="5"/>
     <Affliction identifier="givein" amount="5"/>
-    <Conditional Health="gt 0"/>
-    <Affliction identifier="oxygenlow" amount="11"/>
+    <Affliction identifier="respiratoryarrest" amount="1"/>
     </StatusEffect>
     </Effect>
 
@@ -1728,8 +1742,7 @@
     <Affliction identifier="analgesic" amount="5"/>
     <Affliction identifier="stun" amount="5"/>
     <Affliction identifier="givein" amount="5"/>
-    <Conditional Health="gt 0"/>
-    <Affliction identifier="oxygenlow" amount="11"/>
+    <Affliction identifier="respiratoryarrest" amount="1"/>
     </StatusEffect>
     <StatusEffect target="Character" disabledeltatime="true">
     <Conditional asys="lte 30"/>
@@ -1740,4 +1753,72 @@
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,640,128,128" color="195,177,60,255" origin="0,0"/>
     </Affliction>
+
+    <Affliction
+    name="Ruptured face"
+    identifier="rupturedface"
+    description="The patient has problems with eating and speaking"
+    type="spaceherpes"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="30"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+    <Effect minstrength="30" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0"
+      strengthchange="-1">
+    </Effect>
+
+    <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,768,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+  <Override>
+  <Affliction
+    name="Disoriented"
+    identifier="invertcontrols"
+    description=""
+    type="invertcontrols"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="false"
+    showiconthreshold="100"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.5"
+      minradialdistort="0.0"
+      maxradialdistort="0.5"
+      strengthchange="-1.0">
+      <StatusEffect target="Character" SpeedMultiplier="0.7" setvalue="true"/>
+    </Effect>
+  </Affliction>
+  </Override>
+
+  <Affliction
+    name="Respiratory arrest"
+    identifier="respiratoryarrest"
+    description="The patient is not breathing"
+    limbspecific="false"
+    indicatorlimb="Head"
+    showiconthreshold="0"
+    maxstrength="3">
+    <Effect minstrength="0" maxstrength="3" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Conditional Health="gt 0"/>
+    <Affliction identifier="oxygenlow" amount="10.5"/>
+    </StatusEffect>
+    </Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+  </Affliction>
   </Afflictions>
