@@ -1,5 +1,5 @@
 [h3]What is this mod?[/h3]
-This is a mod that adds more realistic medicine into [url=https://barotraumagame.com]Barotrauma[/url].
+This is a mod that adds more realistic medicine.
 [h3]What does this mod add to the game?[/h3]
 Surgery, override vanilla medicine, arrhythmias, fractures, arterial bleeding and more.
 [h3]We have a discord server:[/h3]
