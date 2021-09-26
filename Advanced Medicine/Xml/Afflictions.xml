@@ -2253,13 +2253,13 @@
   <Affliction
 	  name="Head"
     identifier="weirdthing2"
-    limbspecific="false"
-    indicatorlimb="Head"
+    limbspecific="True"
     type="codemagic"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+    <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
     <StatusEffect target="Character" disabledeltatime="true">
     <Affliction identifier="rupturedface" amount="100" indicatorlimb="Limb"/>
     <Affliction identifier="th_amputation" amount="100" indicatorlimb="Limb"/>
@@ -2272,8 +2272,7 @@
   <Affliction
 	  name="LArm"
     identifier="weirdthing3"
-    limbspecific="false"
-    indicatorlimb="LeftArm"
+    limbspecific="True"
     type="codemagic"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
@@ -2289,8 +2288,7 @@
   <Affliction
 	  name="RArm"
     identifier="weirdthing4"
-    limbspecific="false"
-    indicatorlimb="RightArm"
+    limbspecific="True"
     type="codemagic"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
@@ -2306,8 +2304,7 @@
   <Affliction
 	  name="LLeg"
     identifier="weirdthing5"
-    limbspecific="false"
-    indicatorlimb="LeftLeg"
+    limbspecific="True"
     type="codemagic"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
@@ -2323,8 +2320,7 @@
   <Affliction
 	  name="RLeg"
     identifier="weirdthing6"
-    limbspecific="false"
-    indicatorlimb="RightLeg"
+    limbspecific="True"
     type="codemagic"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
@@ -2340,8 +2336,7 @@
   <Affliction
 	  name="Torso"
     identifier="weirdthing7"
-    limbspecific="false"
-    indicatorlimb="Torso"
+    limbspecific="True"
     type="codemagic"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"

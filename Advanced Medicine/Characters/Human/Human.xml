@@ -7,7 +7,7 @@
     <sprite name="Human Portrait Background" texture="Content/Characters/Human/mugshotCircle.png" origin="0,0.05"/>
   </portraitbackground>
   
-  <ragdolls folder="Content\Characters\Human\Ragdolls"/>
+  <ragdolls folder="Mods\Advanced Medicine\Characters\Human\Ragdolls"/>
   <animations folder="Content\Characters\Human\Animations"/>
 
   <StatusEffect tags="immunity" type="always" target="This" disabledeltatime="true" comparison="And">
