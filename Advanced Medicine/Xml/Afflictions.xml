@@ -1892,7 +1892,7 @@
     type="spaceherpes"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="false"
+    limbspecific="False"
     indicatorlimb="Head"
     showiconthreshold="20"
     maxstrength="100">
@@ -1912,6 +1912,303 @@
     </Effect>
 
     <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,768,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <!-- I hate this long code (hnappinn)-->
+    <Affliction
+    name="Traumatic amputation"
+    identifier="tra_amputation"
+    description="Most of the tissue of the right arm was torn off"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="RightArm"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Traumatic amputation"
+    identifier="tla_amputation"
+    description="Most of the tissue of the left arm was torn off"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="LeftArm"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Traumatic amputation"
+    identifier="trl_amputation"
+    description="Most of the tissue of the right leg was torn off"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="RightLeg"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Traumatic amputation"
+    identifier="tll_amputation"
+    description="Most of the tissue of the left leg was torn off"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="LeftLeg"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Traumatic amputation"
+    identifier="th_amputation"
+    description="Most of the tissue of the head was torn off"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="Head"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+
+    <Affliction
+    name="Amputation"
+    identifier="sra_amputation"
+    description="The right arm was surgically amputated"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="RightArm"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Amputation"
+    identifier="sla_amputation"
+    description="The left arm was surgically amputated"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="LeftArm"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Amputation"
+    identifier="srl_amputation"
+    description="The right leg was surgically amputated"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="RightLeg"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Amputation"
+    identifier="sll_amputation"
+    description="The left leg was surgically amputated"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="LeftLeg"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Amputation"
+    identifier="sh_amputation"
+    description="The head was surgically amputated"
+    type="amputation"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="Head"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+    <Affliction
+    name="Spinal cord injury"
+    identifier="t_paralysis"
+    description="The patient is paralyzed, and does not feel the body"
+    type="amputation"
+    causeofdeathdescription="Сouldn't stand the hardships of life"
+    selfcauseofdeathdescription="You сouldn't withstand the hardships of life"
+    limbspecific="False"
+    indicatorlimb="Head"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    
+    <Effect minstrength="0" maxstrength="3">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0"/>
+    <StatusEffect target="Character">
+    <Affliction identifier="analgesia" amount="10"/>
+    </StatusEffect>
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Cardiac tamponade"
+    identifier="tamponade"
+    description="As a result of a heart wound, blood accumulates in the pericardium and squeezes the heart"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="Torso"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Pneumothorax"
+    identifier="pneumothorax"
+    description="It is difficult for the patient to breathe, the sound of snow is heard when touching the chest"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="Torso"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Eventration"
+    identifier="eventration"
+    description="The content of abdomen comes out of the wound, it seems that the patient is not very pleased"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="False"
+    indicatorlimb="Torso"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   <Override>
   <Affliction
@@ -1952,4 +2249,120 @@
  
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
   </Affliction>
+
+  <Affliction
+	  name="Head"
+    identifier="weirdthing2"
+    limbspecific="false"
+    indicatorlimb="Head"
+    type="codemagic"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+    <StatusEffect target="Character" disabledeltatime="true">
+    <Affliction identifier="rupturedface" amount="100" indicatorlimb="Limb"/>
+    <Affliction identifier="th_amputation" amount="100" indicatorlimb="Limb"/>
+    <Affliction identifier="sh_amputation" amount="100" indicatorlimb="Limb"/>
+    <Affliction identifier="t_paralysis" amount="100" indicatorlimb="Limb"/>
+    </StatusEffect>
+  	</Effect>
+	</Affliction>
+
+  <Affliction
+	  name="LArm"
+    identifier="weirdthing3"
+    limbspecific="false"
+    indicatorlimb="LeftArm"
+    type="codemagic"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+    <StatusEffect target="Character" disabledeltatime="true">
+    <Affliction identifier="tla_amputation" amount="100" indicatorlimb="Limb"/>
+    <Affliction identifier="sla_amputation" amount="100" indicatorlimb="Limb"/>
+    </StatusEffect>
+  	</Effect>
+	</Affliction>
+
+  <Affliction
+	  name="RArm"
+    identifier="weirdthing4"
+    limbspecific="false"
+    indicatorlimb="RightArm"
+    type="codemagic"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+    <StatusEffect target="Character" disabledeltatime="true">
+    <Affliction identifier="tra_amputation" amount="100" indicatorlimb="Limb"/>
+    <Affliction identifier="sla_amputation" amount="100" indicatorlimb="Limb"/>
+    </StatusEffect>
+  	</Effect>
+	</Affliction>
+
+  <Affliction
+	  name="LLeg"
+    identifier="weirdthing5"
+    limbspecific="false"
+    indicatorlimb="LeftLeg"
+    type="codemagic"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+    <StatusEffect target="Character" disabledeltatime="true">
+    <Affliction identifier="tll_amputation" amount="100" indicatorlimb="Limb"/>
+    <Affliction identifier="sll_amputation" amount="100" indicatorlimb="Limb"/>
+    </StatusEffect>
+  	</Effect>
+	</Affliction>
+
+  <Affliction
+	  name="RLeg"
+    identifier="weirdthing6"
+    limbspecific="false"
+    indicatorlimb="RightLeg"
+    type="codemagic"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+    <StatusEffect target="Character" disabledeltatime="true">
+    <Affliction identifier="trl_amputation" amount="100" indicatorlimb="Limb"/>
+    <Affliction identifier="srl_amputation" amount="100" indicatorlimb="Limb"/>
+    </StatusEffect>
+  	</Effect>
+	</Affliction>
+
+  <Affliction
+	  name="Torso"
+    identifier="weirdthing7"
+    limbspecific="false"
+    indicatorlimb="Torso"
+    type="codemagic"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+    <StatusEffect target="Character" disabledeltatime="true">
+    <Affliction identifier="tamponade" amount="100" indicatorlimb="Limb"/>
+    <Affliction identifier="pneumothorax" amount="100" indicatorlimb="Limb"/>
+    <Affliction identifier="eventration" amount="100" indicatorlimb="Limb"/>
+    </StatusEffect>
+  	</Effect>
+	</Affliction>
+  
+  <Affliction
+	  name="What?!?"
+    identifier="weirdthing8"
+    limbspecific="false"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
+  	</Effect>
+	</Affliction>
   </Afflictions>
