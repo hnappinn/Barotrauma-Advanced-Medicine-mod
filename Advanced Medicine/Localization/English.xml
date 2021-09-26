@@ -169,11 +169,8 @@
 	<afflictionname.traumaticshock>Traumatic shock</afflictionname.traumaticshock>
 	<afflictiondescription.traumaticshock>The patient experiences severe pain and stress.</afflictiondescription.traumaticshock>
 		
-	<afflictionname.analgesia>Analgesia</afflictionname.analgesia>
-	<afflictiondescription.analgesia>Insensitivity to pain.</afflictiondescription.analgesia>
-
-	<afflictionname.anesthesia>Anesthesia</afflictionname.anesthesia>
-	<afflictiondescription.anesthesia>The patient has drug-induced amnesia and sedation.</afflictiondescription.anesthesia>
+	<afflictionname.analgesic>Analgesic</afflictionname.analgesic>
+	<afflictiondescription.analgesic>Insensitivity to pain.</afflictiondescription.analgesic>
 
 	<afflictionname.necrosis>Necrosis</afflictionname.necrosis>
 	<afflictiondescription.necrosis>Dead tissue is slowly building up and is causing life-threatening complications.</afflictiondescription.necrosis>
