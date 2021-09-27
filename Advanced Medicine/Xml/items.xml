@@ -46,9 +46,10 @@
       <Sound file="Mods/Advanced Medicine/Sound/Defib1.ogg" range="1000" />
       </StatusEffect>
   
-      <StatusEffect type="OnUse" target="Character" setvalue="true" delay="0" comparison="And">
+      <StatusEffect type="OnUse" target="Limb" setvalue="true" delay="0" comparison="And">
       <Conditional vf="eq 0" vt="eq 0"/>
       <Sound file="Mods/Advanced Medicine/Sound/Defib2.ogg" range="500" />
+      <Affliction identifier="t_paralysis" amount="100"/>
       </StatusEffect>
   
       </MeleeWeapon>

@@ -1076,8 +1076,12 @@
     <StatusEffect target="Limb" comparison="And">
 		<Affliction identifier="immunity" amount="-0.3"/>
     </StatusEffect>
+		<StatusEffect target="Limb" comparison="And">
+    <Conditional lacerations="gt 25" pneumothorax="eq 0"/>
+					<Affliction identifier="pneumothorax" indicatorlimb="Limb" amount="100"/>
+		</StatusEffect>
     </Effect>
-    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="50" maxstrength="70" multiplybymaxvitality="true"
 				minvitalitydecrease="0.5"
 				maxvitalitydecrease="1">
 				<StatusEffect target="Limb">
@@ -1090,6 +1094,24 @@
     <StatusEffect target="Limb" comparison="And">
 		<Affliction identifier="immunity" amount="-0.5"/>
     </StatusEffect>
+		</Effect>
+    <Effect minstrength="70" maxstrength="100" multiplybymaxvitality="true"
+				minvitalitydecrease="0.5"
+				maxvitalitydecrease="1">
+		<StatusEffect target="Limb" comparison="And">
+			<Conditional ointmented="eq 0" immunity="lte 500"/>
+			<Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1"/>
+        </StatusEffect>
+    <StatusEffect target="Limb" comparison="And">
+		<Affliction identifier="immunity" amount="-0.5"/>
+    </StatusEffect>
+    <StatusEffect target="Limb">
+					<Affliction identifier="th_amputation" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="tra_amputation" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="tla_amputation" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="trl_amputation" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="tll_amputation" indicatorlimb="Limb" amount="1"/>
+		</StatusEffect>
 			</Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
   </InternalDamage>
@@ -1892,8 +1914,7 @@
     type="spaceherpes"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="Head"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -1919,11 +1940,10 @@
     name="Traumatic amputation"
     identifier="tra_amputation"
     description="Most of the tissue of the right arm was torn off"
-    type="amputation"
+    type="t_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="RightArm"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -1940,11 +1960,10 @@
     name="Traumatic amputation"
     identifier="tla_amputation"
     description="Most of the tissue of the left arm was torn off"
-    type="amputation"
+    type="t_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="LeftArm"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -1961,11 +1980,10 @@
     name="Traumatic amputation"
     identifier="trl_amputation"
     description="Most of the tissue of the right leg was torn off"
-    type="amputation"
+    type="t_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="RightLeg"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -1982,11 +2000,10 @@
     name="Traumatic amputation"
     identifier="tll_amputation"
     description="Most of the tissue of the left leg was torn off"
-    type="amputation"
+    type="t_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="LeftLeg"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2003,11 +2020,10 @@
     name="Traumatic amputation"
     identifier="th_amputation"
     description="Most of the tissue of the head was torn off"
-    type="amputation"
+    type="t_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="Head"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2026,11 +2042,10 @@
     name="Amputation"
     identifier="sra_amputation"
     description="The right arm was surgically amputated"
-    type="amputation"
+    type="t_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="RightArm"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2047,11 +2062,10 @@
     name="Amputation"
     identifier="sla_amputation"
     description="The left arm was surgically amputated"
-    type="amputation"
+    type="s_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="LeftArm"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2068,11 +2082,10 @@
     name="Amputation"
     identifier="srl_amputation"
     description="The right leg was surgically amputated"
-    type="amputation"
+    type="s_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="RightLeg"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2089,11 +2102,10 @@
     name="Amputation"
     identifier="sll_amputation"
     description="The left leg was surgically amputated"
-    type="amputation"
+    type="s_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="LeftLeg"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2110,11 +2122,10 @@
     name="Amputation"
     identifier="sh_amputation"
     description="The head was surgically amputated"
-    type="amputation"
+    type="s_amputation"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="Head"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2135,8 +2146,7 @@
     type="amputation"
     causeofdeathdescription="Сouldn't stand the hardships of life"
     selfcauseofdeathdescription="You сouldn't withstand the hardships of life"
-    limbspecific="False"
-    indicatorlimb="Head"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2156,8 +2166,7 @@
     description="As a result of a heart wound, blood accumulates in the pericardium and squeezes the heart"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="Torso"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2176,8 +2185,7 @@
     description="It is difficult for the patient to breathe, the sound of snow is heard when touching the chest"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="Torso"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2196,8 +2204,7 @@
     description="The content of abdomen comes out of the wound, it seems that the patient is not very pleased"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
-    limbspecific="False"
-    indicatorlimb="Torso"
+    limbspecific="True"
     showiconthreshold="20"
     maxstrength="100">
 
@@ -2249,107 +2256,6 @@
  
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
   </Affliction>
-
-  <Affliction
-	  name="Head"
-    identifier="weirdthing2"
-    limbspecific="True"
-    type="codemagic"
-    showinhealthscannerthreshold="3"
-    showiconthreshold="3"
-    maxstrength="1">
-	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
-    <damagemodifier afflictionidentifiers="blunttrauma,lacerations,gunshotwound,bitewounds" armorsector="0.0,360.0" damagemultiplier="0.8" />
-    <StatusEffect target="Character" disabledeltatime="true">
-    <Affliction identifier="rupturedface" amount="100" indicatorlimb="Limb"/>
-    <Affliction identifier="th_amputation" amount="100" indicatorlimb="Limb"/>
-    <Affliction identifier="sh_amputation" amount="100" indicatorlimb="Limb"/>
-    <Affliction identifier="t_paralysis" amount="100" indicatorlimb="Limb"/>
-    </StatusEffect>
-  	</Effect>
-	</Affliction>
-
-  <Affliction
-	  name="LArm"
-    identifier="weirdthing3"
-    limbspecific="True"
-    type="codemagic"
-    showinhealthscannerthreshold="3"
-    showiconthreshold="3"
-    maxstrength="1">
-	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
-    <StatusEffect target="Character" disabledeltatime="true">
-    <Affliction identifier="tla_amputation" amount="100" indicatorlimb="Limb"/>
-    <Affliction identifier="sla_amputation" amount="100" indicatorlimb="Limb"/>
-    </StatusEffect>
-  	</Effect>
-	</Affliction>
-
-  <Affliction
-	  name="RArm"
-    identifier="weirdthing4"
-    limbspecific="True"
-    type="codemagic"
-    showinhealthscannerthreshold="3"
-    showiconthreshold="3"
-    maxstrength="1">
-	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
-    <StatusEffect target="Character" disabledeltatime="true">
-    <Affliction identifier="tra_amputation" amount="100" indicatorlimb="Limb"/>
-    <Affliction identifier="sla_amputation" amount="100" indicatorlimb="Limb"/>
-    </StatusEffect>
-  	</Effect>
-	</Affliction>
-
-  <Affliction
-	  name="LLeg"
-    identifier="weirdthing5"
-    limbspecific="True"
-    type="codemagic"
-    showinhealthscannerthreshold="3"
-    showiconthreshold="3"
-    maxstrength="1">
-	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
-    <StatusEffect target="Character" disabledeltatime="true">
-    <Affliction identifier="tll_amputation" amount="100" indicatorlimb="Limb"/>
-    <Affliction identifier="sll_amputation" amount="100" indicatorlimb="Limb"/>
-    </StatusEffect>
-  	</Effect>
-	</Affliction>
-
-  <Affliction
-	  name="RLeg"
-    identifier="weirdthing6"
-    limbspecific="True"
-    type="codemagic"
-    showinhealthscannerthreshold="3"
-    showiconthreshold="3"
-    maxstrength="1">
-	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
-    <StatusEffect target="Character" disabledeltatime="true">
-    <Affliction identifier="trl_amputation" amount="100" indicatorlimb="Limb"/>
-    <Affliction identifier="srl_amputation" amount="100" indicatorlimb="Limb"/>
-    </StatusEffect>
-  	</Effect>
-	</Affliction>
-
-  <Affliction
-	  name="Torso"
-    identifier="weirdthing7"
-    limbspecific="True"
-    type="codemagic"
-    showinhealthscannerthreshold="3"
-    showiconthreshold="3"
-    maxstrength="1">
-	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
-    <StatusEffect target="Character" disabledeltatime="true">
-    <Affliction identifier="tamponade" amount="100" indicatorlimb="Limb"/>
-    <Affliction identifier="pneumothorax" amount="100" indicatorlimb="Limb"/>
-    <Affliction identifier="eventration" amount="100" indicatorlimb="Limb"/>
-    </StatusEffect>
-  	</Effect>
-	</Affliction>
-  
   <Affliction
 	  name="What?!?"
     identifier="weirdthing8"
