@@ -1065,10 +1065,50 @@
     <StatusEffect target="Limb" comparison="And">
 		<Affliction identifier="immunity" amount="-0.15"/>
     </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional th_amputation="eq 0"/>
+					<Affliction identifier="th_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
+		<StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional tra_amputation="eq 0"/>
+					<Affliction identifier="tra_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional tla_amputation="eq 0"/>
+					<Affliction identifier="tla_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional trl_amputation="eq 0"/>
+					<Affliction identifier="trl_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional tll_amputation="eq 0"/>
+					<Affliction identifier="tll_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
     </Effect>
     <Effect minstrength="10" maxstrength="50" multiplybymaxvitality="true"
 			minvitalitydecrease="0.1"
 			maxvitalitydecrease="0.5">
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional th_amputation="eq 0"/>
+					<Affliction identifier="th_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
+		<StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional tra_amputation="eq 0"/>
+					<Affliction identifier="tra_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional tla_amputation="eq 0"/>
+					<Affliction identifier="tla_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional trl_amputation="eq 0"/>
+					<Affliction identifier="trl_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Conditional tll_amputation="eq 0"/>
+					<Affliction identifier="tll_amputation" indicatorlimb="Limb" amount="100"/>
+    </StatusEffect>
     <StatusEffect target="Limb" comparison="And">
 		<Conditional ointmented="eq 0" immunity="lte 500"/>
 		<Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.5"/>
@@ -1081,7 +1121,7 @@
 					<Affliction identifier="pneumothorax" indicatorlimb="Limb" amount="100"/>
 		</StatusEffect>
     </Effect>
-    <Effect minstrength="50" maxstrength="70" multiplybymaxvitality="true"
+    <Effect minstrength="50" maxstrength="65" multiplybymaxvitality="true"
 				minvitalitydecrease="0.5"
 				maxvitalitydecrease="1">
 				<StatusEffect target="Limb">
@@ -1095,7 +1135,7 @@
 		<Affliction identifier="immunity" amount="-0.5"/>
     </StatusEffect>
 		</Effect>
-    <Effect minstrength="70" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="65" maxstrength="100" multiplybymaxvitality="true"
 				minvitalitydecrease="0.5"
 				maxvitalitydecrease="1">
 		<StatusEffect target="Limb" comparison="And">
@@ -1105,13 +1145,6 @@
     <StatusEffect target="Limb" comparison="And">
 		<Affliction identifier="immunity" amount="-0.5"/>
     </StatusEffect>
-    <StatusEffect target="Limb">
-					<Affliction identifier="th_amputation" indicatorlimb="Limb" amount="1"/>
-					<Affliction identifier="tra_amputation" indicatorlimb="Limb" amount="1"/>
-					<Affliction identifier="tla_amputation" indicatorlimb="Limb" amount="1"/>
-					<Affliction identifier="trl_amputation" indicatorlimb="Limb" amount="1"/>
-					<Affliction identifier="tll_amputation" indicatorlimb="Limb" amount="1"/>
-		</StatusEffect>
 			</Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
   </InternalDamage>
