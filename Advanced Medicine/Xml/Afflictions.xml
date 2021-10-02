@@ -531,8 +531,8 @@
   </Affliction>
   
   <Affliction
-    name=""
-    identifier="fracture"
+    name="Humerus facture"
+    identifier="a_fracture"
     description=""
     limbspecific="true"
     type="fractures"
@@ -548,7 +548,7 @@
     </Effect>
     <Effect minstrength="2" maxstrength="10"  strengthchange="1">
     <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
-    <Conditional fractures="gt 0"/>
+    <Conditional afractures="gt 0"/>
     </StatusEffect>
     </Effect>
     <Effect minstrength="10" maxstrength="100"  strengthchange="1"
@@ -556,7 +556,186 @@
     maxvitalitydecrease="0.1"
     multiplybymaxvitality="true">
     <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
-    <Conditional fractures="gt 0"/>
+    <Conditional afractures="gt 0"/>
+    </StatusEffect>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Femoral fracture"
+    identifier="l_fracture"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <Affliction identifier="stun" amount="3"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
+    <Conditional lfractures="gt 0"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
+    minvitalitydecrease="0"
+    maxvitalitydecrease="0.1"
+    multiplybymaxvitality="true">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
+    <Conditional lfractures="gt 0"/>
+    </StatusEffect>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Ribs fracture"
+    identifier="t_fracture"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <Affliction identifier="stun" amount="3"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
+    <Conditional rfractures="gt 0"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
+    minvitalitydecrease="0"
+    maxvitalitydecrease="0.1"
+    multiplybymaxvitality="true">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
+    <Conditional rfractures="gt 0"/>
+    </StatusEffect>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Neck fracture"
+    identifier="n_fracture"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <Affliction identifier="stun" amount="3"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
+    <Conditional nfractures="gt 0"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
+    minvitalitydecrease="0"
+    maxvitalitydecrease="0.1"
+    multiplybymaxvitality="true">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
+    <Conditional nfractures="gt 0"/>
+    </StatusEffect>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Skull fracture"
+    identifier="h_fracture"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <Affliction identifier="stun" amount="3"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
+    <Conditional sfractures="gt 0"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
+    minvitalitydecrease="0"
+    maxvitalitydecrease="0.1"
+    multiplybymaxvitality="true">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
+    <Conditional sfractures="gt 0"/>
+    </StatusEffect>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  <Affliction
+    name="Dislocation"
+    identifier="dislocation"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <Affliction identifier="stun" amount="3"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
+    <Conditional dislocation="gt 0"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
+    minvitalitydecrease="0"
+    maxvitalitydecrease="0.1"
+    multiplybymaxvitality="true">
+    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
+    <Conditional dislocation="gt 0"/>
     </StatusEffect>
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
@@ -567,8 +746,8 @@
   </Affliction>
 
   <Affliction
-    name=""
-    identifier="arterialcut"
+    name="Femoral artery bleeding"
+    identifier="l_arterialcut"
     description=""
     limbspecific="true"
     maxstrength="100"> 
@@ -585,6 +764,91 @@
     </StatusEffect>
     </Effect>
  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Brachial artery bleeding"
+    identifier="a_arterialcut"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    <StatusEffect target="Limb">
+    <Conditional arteriesclamp="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+      <Affliction identifier="bloodloss" strength="1.5" />
+    </StatusEffect>
+    <StatusEffect target="Character" conditional="or">
+    <Conditional speciesname="Husk" />
+    <Conditional speciesname="Humanhusk" />
+    <ReduceAffliction identifier="arterialcut" amount="999"/>
+    </StatusEffect>
+    </Effect>
+ <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Aortic rupture"
+    identifier="t_arterialcut"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    <StatusEffect target="Limb">
+    <Conditional arteriesclamp="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+      <Affliction identifier="bloodloss" strength="1.5" />
+    </StatusEffect>
+    <StatusEffect target="Character" conditional="or">
+    <Conditional speciesname="Husk" />
+    <Conditional speciesname="Humanhusk" />
+    <ReduceAffliction identifier="arterialcut" amount="999"/>
+    </StatusEffect>
+    </Effect>
+ <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Carotid artery bleeding"
+    identifier="h_arterialcut"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    <StatusEffect target="Limb">
+    <Conditional arteriesclamp="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+      <Affliction identifier="bloodloss" strength="1.5" />
+    </StatusEffect>
+    <StatusEffect target="Character" conditional="or">
+    <Conditional speciesname="Husk" />
+    <Conditional speciesname="Humanhusk" />
+    <ReduceAffliction identifier="arterialcut" amount="999"/>
+    </StatusEffect>
+    </Effect>
+ <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Nerve injury"
+    identifier="nervecut"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    </Effect>
+ <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Ligament and tendon injury"
+    identifier="clampcut"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    </Effect>
+ <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   
   <Affliction
