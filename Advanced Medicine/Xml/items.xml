@@ -364,7 +364,7 @@
 <StatusEffect type="OnUse" target="Limb, this" comparison="and" Condition="-25.0">
 <Conditional drilledbones="gte 99" />
 <Conditional analgesia="gte 1" />
-<ReduceAffliction identifier="fracture" amount="9999" />
+<ReduceAffliction identifier="fractures" amount="9999" />
 <ReduceAffliction identifier="boneclamp" amount="9999" />
 <Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
 </StatusEffect>
