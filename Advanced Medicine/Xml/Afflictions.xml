@@ -749,6 +749,7 @@
     name="Femoral artery bleeding"
     identifier="l_arterialcut"
     description=""
+    type="arterialcut"
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
@@ -770,6 +771,7 @@
     name="Brachial artery bleeding"
     identifier="a_arterialcut"
     description=""
+    type="arterialcut"
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
@@ -791,6 +793,7 @@
     name="Aortic rupture"
     identifier="t_arterialcut"
     description=""
+    type="arterialcut"
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
@@ -812,6 +815,7 @@
     name="Carotid artery bleeding"
     identifier="h_arterialcut"
     description=""
+    type="arterialcut"
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
@@ -1257,6 +1261,67 @@
   </Affliction>
 </Override>
 <Override>
+  <Bleeding
+    name="Bleeding"
+    identifier="bleeding"
+    description="Blood pours freely from this ragged and particularly nasty open wound"
+    type="bleeding"
+    causeofdeathdescription="Bled to death"
+    selfcauseofdeathdescription="You have bled to death."
+    limbspecific="true"
+    maxstrength="100"
+    karmachangeonapplied="-1"
+    damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="85"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="10"
+      strengthchange="-0.1"/>
+    <Effect minstrength="85" maxstrength="100"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="10"
+      strengthchange="0">
+				<StatusEffect target="Limb">
+					<Affliction identifier="a_arterialcut" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="l_arterialcut" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="h_arterialcut" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="t_arterialcut" indicatorlimb="Limb" amount="1"/>
+        </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Bleeding>
+
+  <Bleeding
+    name="Bleeding"
+    identifier="bleedingnonstop"
+    translationoverride="bleeding"
+    description="Blood pours freely from this ragged and particularly nasty open wound"
+    type="bleeding"
+    causeofdeathdescription="Bled to death"
+    selfcauseofdeathdescription="You have bled to death."
+    limbspecific="true"
+    maxstrength="100"
+    karmachangeonapplied="-1"
+    damageoverlayalpha="1">
+    <Effect minstrength="0" maxstrength="85"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="10"
+      strengthchange="0">
+    </Effect>
+    <Effect minstrength="85" maxstrength="100"
+      minvitalitydecrease="0"
+      maxvitalitydecrease="10"
+      strengthchange="0">
+				<StatusEffect target="Limb">
+					<Affliction identifier="a_arterialcut" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="l_arterialcut" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="h_arterialcut" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="t_arterialcut" indicatorlimb="Limb" amount="1"/>
+        </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,640,128,128" color="139,60,42,255" origin="0,0"/>
+  </Bleeding>
+</Override>
+<Override>
 <InternalDamage
     name="Internal Damage"
     identifier="internaldamage"
@@ -1274,7 +1339,10 @@
 				minvitalitydecrease="0.5"
 				maxvitalitydecrease="1">
 				<StatusEffect target="Limb">
-					<Affliction identifier="fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="a_fracture" indicatorlimb="Limb" amount="1"/> 
+					<Affliction identifier="h_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="t_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="l_fracture" indicatorlimb="Limb" amount="1"/>
         </StatusEffect>
 			</Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,768,128,128" color="195,136,60,255" origin="0,0"/>
@@ -1300,7 +1368,10 @@
 				minvitalitydecrease="0.5"
 				maxvitalitydecrease="1">
         <StatusEffect target="Limb">
-					<Affliction identifier="fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="a_fracture" indicatorlimb="Limb" amount="1"/> 
+					<Affliction identifier="h_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="t_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="l_fracture" indicatorlimb="Limb" amount="1"/>
         </StatusEffect>
       </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -1389,7 +1460,10 @@
 				minvitalitydecrease="0.5"
 				maxvitalitydecrease="1">
 				<StatusEffect target="Limb">
-					<Affliction identifier="arterialcut" indicatorlimb="Limb" amount="5" probability="0.1"/>
+					<Affliction identifier="a_fracture" indicatorlimb="Limb" amount="1"/> 
+					<Affliction identifier="h_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="t_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="l_fracture" indicatorlimb="Limb" amount="1"/>
 		</StatusEffect>
 		<StatusEffect target="Limb" comparison="And">
 			<Conditional ointmented="eq 0" immunity="lte 500"/>
@@ -1452,14 +1526,14 @@
 				minvitalitydecrease="0.5"
 				maxvitalitydecrease="1">
 				<StatusEffect target="Limb">
-					<Affliction identifier="fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="a_fracture" indicatorlimb="Limb" amount="1"/> 
+					<Affliction identifier="h_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="t_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="l_fracture" indicatorlimb="Limb" amount="1"/>
         </StatusEffect>
     <StatusEffect target="Limb" comparison="And">
 		<Affliction identifier="immunity" amount="-0.6"/>
     </StatusEffect>
-        <StatusEffect target="Limb">
-          <Affliction identifier="arterialcut" indicatorlimb="Limb" amount="5"/>
-				</StatusEffect>
         <StatusEffect target="Limb" comparison="And">
         <Conditional immunity="lte 500" ointmented="eq 0"/>
         <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1"/>
@@ -1505,16 +1579,16 @@
 		<Affliction identifier="immunity" amount="-0.5"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="59" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
 		  minvitalitydecrease="0.5"
 		  maxvitalitydecrease="1"
 		  dialogflag="GunshotWound">
 				<StatusEffect target="Limb">
-					<Affliction identifier="fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="a_fracture" indicatorlimb="Limb" amount="1"/> 
+					<Affliction identifier="h_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="t_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="l_fracture" indicatorlimb="Limb" amount="1"/>
         </StatusEffect>
-        <StatusEffect target="Limb">
-          <Affliction identifier="arterialcut" indicatorlimb="Limb" amount="5"/>
-				</StatusEffect>
         <StatusEffect target="Limb" comparison="And">
         <Conditional ointmented="eq 0"/>
         <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1"/>
@@ -1574,11 +1648,11 @@
 				minvitalitydecrease="0.45"
 				maxvitalitydecrease="1">
 				<StatusEffect target="Limb">
-					<Affliction identifier="fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="a_fracture" indicatorlimb="Limb" amount="1"/> 
+					<Affliction identifier="h_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="t_fracture" indicatorlimb="Limb" amount="1"/>
+					<Affliction identifier="l_fracture" indicatorlimb="Limb" amount="1"/>
         </StatusEffect>
-        <StatusEffect target="Limb">
-          <Affliction identifier="arterialcut" indicatorlimb="Limb" amount="5"/>
-				</StatusEffect>
         <StatusEffect target="Limb" comparison="And">
         <Conditional ointmented="eq 0"/>
         <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.15"/>
