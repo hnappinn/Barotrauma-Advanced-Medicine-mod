@@ -2317,6 +2317,44 @@
     <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,768,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
+    <Affliction
+    name="Foreign body"
+    identifier="foreignbody"
+    description="Foreign bodies are stuck in the body"
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="True"
+    showiconthreshold="10"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="15"
+      strengthchange="-0.01">
+    </Effect>
+    <Effect minstrength="15" maxstrength="50">
+      <StatusEffect target="Limb">
+      <Affliction identifier="internaldamage" amount="0.03"/>
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="100">
+      <StatusEffect target="Limb">
+      <Affliction identifier="internaldamage" amount="0.1"/>
+      </StatusEffect>
+    </Effect>
+
+    <PeriodicEffect mininterval="16" maxinterval="100">
+      <StatusEffect target="Limb">
+      <Conditional foreignbody="gt 50"/>
+        <Affliction identifier="stun" strength="0.3"/>
+        <Affliction identifier="a_arterialcut" amount="100" probability="0.2"/>
+        <Affliction identifier="l_arterialcut" amount="100" probability="0.2"/>
+        <Affliction identifier="h_arterialcut" amount="100" probability="0.2"/>
+        <Affliction identifier="t_arterialcut" amount="100" probability="0.2"/>
+      </StatusEffect>
+    </PeriodicEffect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,768,128,128" color="195,60,60,255" origin="0,0"/>
+  </Affliction>
+
   <!-- I hate this long code (hnappinn)-->
     <Affliction
     name="Traumatic amputation"
@@ -2665,7 +2703,6 @@
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
-  </Affliction>
   </Affliction>
     <Affliction
     name="Internal bleeding"

@@ -484,6 +484,7 @@
 <SuitableTreatment identifier="lacerations" suitability="70" /> 
 <SuitableTreatment identifier="bitewounds" suitability="70" />
 <SuitableTreatment identifier="explosiondamage" suitability="70" />
+<SuitableTreatment identifier="gunshotwound" suitability="70" />
 <SuitableTreatment identifier="bleeding" suitability="30" />
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
 <RequiredSkill identifier="medical" level="30" />
@@ -506,18 +507,20 @@
 <Affliction identifier="suturedi" amount="100" />
 </StatusEffect>
 <StatusEffect tags="medical" type="OnUse" target="This, Limb" comparison="Or">
-<conditional Lacerations="gt 0" bitewounds="gt 0" explosiondamage="gt 0"/>
+<conditional Lacerations="gt 0" bitewounds="gt 0" explosiondamage="gt 0" gunshotwound="gt 0"/>
 <Affliction identifier="suturedw" amount="7" />
 <ReduceAffliction identifier="bitewounds" amount="10" />
 <ReduceAffliction identifier="lacerations" amount="10" />
 <ReduceAffliction identifier="explosiondamage" amount="10" />
+<ReduceAffliction identifier="gunshotwound" amount="10" />
 </StatusEffect>
 <StatusEffect tags="medical" type="OnUse" target="This, Limb" comparison="Or">
-<conditional Lacerations="gte 11" bitewounds="gte 11" explosiondamage="11"/>
+<conditional Lacerations="gte 11" bitewounds="gte 11" explosiondamage="11" gunshotwound="11"/>
 <Affliction identifier="suturedw" amount="15" />
 <ReduceAffliction identifier="bitewounds" amount="20" />
 <ReduceAffliction identifier="lacerations" amount="20" />
 <ReduceAffliction identifier="explosiondamage" amount="20" />
+<ReduceAffliction identifier="gunshotwound" amount="20" />
 </StatusEffect>
 <StatusEffect tags="medical" type="OnUse" target="This, Limb">
 <conditional Bleeding="gte 1"/>
@@ -555,7 +558,7 @@
 		<StatusEffect type="OnUse" target="limb" comparison="And">
 			<Conditional retractedskin="gte 50"/>
 			<Affliction identifier="lacerations" amount="5" />
-			<ReduceAffliction identifier="gunshotwound" amount="5" />
+			<ReduceAffliction identifier="foreignbody" amount="5" />
       <ReduceAffliction identifier="internaldamage" amount="5" />
       <ReduceAffliction identifier="blunttrauma" amount="5" />
       <ReduceAffliction identifier="necrosis" amount="5" />
