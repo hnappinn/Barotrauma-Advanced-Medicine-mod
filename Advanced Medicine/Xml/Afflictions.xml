@@ -1283,11 +1283,11 @@
     maxstrength="100"
     karmachangeonapplied="-1"
     damageoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="85"
+    <Effect minstrength="0" maxstrength="95"
       minvitalitydecrease="0"
       maxvitalitydecrease="10"
       strengthchange="-0.1"/>
-    <Effect minstrength="85" maxstrength="100"
+    <Effect minstrength="95" maxstrength="100"
       minvitalitydecrease="0"
       maxvitalitydecrease="10"
       strengthchange="0">
@@ -1313,12 +1313,12 @@
     maxstrength="100"
     karmachangeonapplied="-1"
     damageoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="85"
+    <Effect minstrength="0" maxstrength="95"
       minvitalitydecrease="0"
       maxvitalitydecrease="10"
       strengthchange="0">
     </Effect>
-    <Effect minstrength="85" maxstrength="100"
+    <Effect minstrength="95" maxstrength="100"
       minvitalitydecrease="0"
       maxvitalitydecrease="10"
       strengthchange="0">
@@ -1450,10 +1450,6 @@
     <StatusEffect target="Limb" comparison="And">
 		<Affliction identifier="immunity" amount="-0.3"/>
     </StatusEffect>
-		<StatusEffect target="Limb" comparison="And">
-    <Conditional lacerations="gt 25" pneumothorax="eq 0"/>
-					<Affliction identifier="pneumothorax" indicatorlimb="Limb" amount="100"/>
-		</StatusEffect>
     </Effect>
     <Effect minstrength="50" maxstrength="65" multiplybymaxvitality="true"
 				minvitalitydecrease="0.5"
@@ -2726,6 +2722,7 @@
  
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
   </Affliction>
+
   <Affliction
 	  name="What?!?"
     identifier="weirdthing8"

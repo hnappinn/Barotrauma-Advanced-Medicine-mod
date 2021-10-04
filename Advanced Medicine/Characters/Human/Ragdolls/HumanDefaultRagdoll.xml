@@ -11,12 +11,20 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="t_fracture" strength="5" probability="0.4"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
+      <Affliction identifier="t_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="t_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="t_fracture" strength="5" probability="0.3"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="pneumothorax" strength="5" probability="0.3"/>
+      <Affliction identifier="pneumothorax" strength="5" probability="0.25"/>
     </StatusEffect>
   </limb>
   <limb id="1" name="Head (1)" type="Head" height="0" width="0" notes="" scale="0.5" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="0" steerforce="0" radius="45" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="0" friction="0.3" restitution="0.05">
@@ -33,12 +41,20 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="h_fracture" strength="5" probability="0.35"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
+      <Affliction identifier="h_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="h_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="h_fracture" strength="5" probability="0.3"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="5"/>
-      <Affliction identifier="n_fracture" strength="5" probability="0.1"/>
+      <Affliction identifier="n_fracture" strength="5" probability="0.25"/>
     </StatusEffect>
     <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="dislocation,t_arterialcut,t_fracture,l_arterialcut,l_fracture,a_arterialcut,a_fracture,n_fracture,pneumothorax,tamponade,eventration,tra_amputation,tla_amputation,trl_amputation,tll_amputation,sra_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
   </limb>
@@ -52,12 +68,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="a_fracture" strength="5" probability="0.5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="3" name="RightHand (3)" type="RightHand" height="20" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="13" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="3" friction="0.3" restitution="0.05">
@@ -74,12 +102,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="a_fracture" strength="5" probability="0.5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="4" name="LeftArm (4)" type="LeftArm" height="50" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="15" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="2" friction="0.3" restitution="0.05">
@@ -92,12 +132,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="a_fracture" strength="5" probability="0.5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="5" name="LeftHand (5)" type="LeftHand" height="20" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="13" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="2" friction="0.3" restitution="0.05">
@@ -114,12 +166,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="a_fracture" strength="5" probability="0.5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="6" name="LeftThigh (6)" type="LeftThigh" height="65" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="20" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="4" friction="0.3" restitution="0.05">
@@ -132,12 +196,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
       <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="7" name="LeftLeg (7)" type="LeftLeg" height="50" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="15" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="4" friction="0.3" restitution="0.05">
@@ -154,12 +230,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
       <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="8" name="LeftFoot (8)" type="LeftFoot" height="0" width="32" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="90" steerforce="0" radius="12" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="-2.8043144,-11.4667225" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="4" friction="0.3" restitution="0.05">
@@ -177,12 +265,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
       <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="9" name="RightThigh (9)" type="RightThigh" height="65" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="20" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="5" friction="0.3" restitution="0.05">
@@ -195,12 +295,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
       <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="10" name="RightLeg (10)" type="RightLeg" height="50" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="15" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="5" friction="0.3" restitution="0.05">
@@ -217,12 +329,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
       <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="11" name="RightFoot (11)" type="RightFoot" height="0" width="32" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="90" steerforce="0" radius="12" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="-7.0750213,-11.173927" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="5" friction="0.3" restitution="0.05">
@@ -240,12 +364,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
       <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="l_fracture" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="12" name="Waist (12)" type="Waist" height="0" width="0" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" radius="25" density="10" ignorecollisions="False" angulardamping="1000" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="1" friction="0.3" restitution="0.05">
@@ -272,12 +408,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="a_fracture" strength="5" probability="0.5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <limb id="14" radius="13" width="0" height="35" name="RightForearm (14)" type="RightForearm" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="NaN" steerforce="0" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="3" friction="0.3" restitution="0.05">
@@ -294,12 +442,24 @@
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="a_fracture" strength="5" probability="0.5"/>
+      <RequiredAffliction identifier="lacerations,bitewounds,explosiondamage" minstrength="10"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="1"/>
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="5"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
+      <Affliction identifier="a_fracture" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma" minstrength="1"/>
       <Affliction identifier="dislocation" strength="5" probability="0.25"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="explosiondamage" minstrength="1"/>
+      <Affliction identifier="dislocation" strength="5" probability="0.4"/>
     </StatusEffect>
   </limb>
   <joint limb1="0" limb2="1" limb1anchor="-10.253771,67.140594" limb2anchor="-10.745748,-12.599744" name="Joint 0 - 1" canbesevered="True" severanceprobabilitymodifier="0" breaksound="gore" limitenabled="True" upperlimit="30" lowerlimit="-20" stiffness="0.5" scale="1" weldjoint="False" clockwiserotation="False" />
