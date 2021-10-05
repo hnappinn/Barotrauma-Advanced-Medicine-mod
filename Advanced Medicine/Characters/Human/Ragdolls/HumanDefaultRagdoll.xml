@@ -24,7 +24,15 @@
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="internaldamage,gunshotwound,blunttrauma,lacerations,bitewounds,explosiondamage" minstrength="5"/>
-      <Affliction identifier="pneumothorax" strength="5" probability="0.25"/>
+      <Affliction identifier="pneumothorax" strength="5" probability="0.3"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="lacerations,gunshotwound" minstrength="10"/>
+      <Affliction identifier="tamponade" strength="5" probability="0.2"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This">
+      <RequiredAffliction identifier="lacerations,bitewounds,gunshotwound,explosiondamage" minstrength="10"/>
+      <Affliction identifier="internalbleeding" strength="5" probability="0.3"/>
     </StatusEffect>
   </limb>
   <limb id="1" name="Head (1)" type="Head" height="0" width="0" notes="" scale="0.5" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="0" steerforce="0" radius="45" density="10" ignorecollisions="False" angulardamping="7" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="0" friction="0.3" restitution="0.05">

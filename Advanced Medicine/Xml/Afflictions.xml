@@ -2547,7 +2547,7 @@
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
     limbspecific="True"
-    showiconthreshold="20"
+    showiconthreshold="0"
     maxstrength="100">
 
     <Effect minstrength="0" maxstrength="20" strengthchange="0.3">
@@ -2577,7 +2577,7 @@
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
     limbspecific="True"
-    showiconthreshold="20"
+    showiconthreshold="0"
     maxstrength="100">
 
     <Effect minstrength="0" maxstrength="20" strengthchange="0.2"/>
@@ -2588,43 +2588,22 @@
     </Effect>
     <Effect minstrength="85" maxstrength="100" strengthchange="0.2">
     <StatusEffect target="Character">
-    <Affliction identifier="hypotension" amount="0.5"/>
+    <Affliction identifier="oxygenlow" amount="1"/>
+    <Affliction identifier="hypotension" amount="0.4"/>
     </StatusEffect>
     </Effect>
-    <PeriodicEffect mininterval="12" maxinterval="16">
-      <StatusEffect target="Character" comparison="and">
-      <Conditional pneumothorax="lt 80"/>
-        <Conditional ishuman="true" />
-        <Conditional ismale="true"/>
-        <Sound file="Mods/Advanced Medicine/Sound/malecough1.ogg" selectionmode="Random" />
-        <Sound file="Mods/Advanced Medicine/Sound/malecough2.ogg" />
-      </StatusEffect>
-      <StatusEffect target="Character" comparison="and">
-      <Conditional pneumothorax="lt 80"/>
-        <Conditional ishuman="true" />
-        <Conditional isfemale="true"/>
-        <Sound file="Mods/Advanced Medicine/Sound/femalecough1.ogg" selectionmode="Random" />
-        <Sound file="Mods/Advanced Medicine/Sound/femalecough2.ogg" />
-      </StatusEffect>
-      <StatusEffect target="Character">
-      <Conditional pneumothorax="gt 0"/>
-        <Affliction identifier="oxygenlow" strength="50"/>
-      </StatusEffect>
-    </PeriodicEffect>
 
-    <PeriodicEffect mininterval="12" maxinterval="16">
+    <PeriodicEffect mininterval="12" maxinterval="26">
       <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7">
       <Conditional pneumothorax="gt 85"/>
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
-      <Conditional pneumothorax="gt 85"/>
         <Conditional ishuman="true" />
         <Conditional ismale="true"/>
         <Sound file="Mods/Advanced Medicine/Sound/malecough1.ogg" selectionmode="Random" />
         <Sound file="Mods/Advanced Medicine/Sound/malecough2.ogg" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
-      <Conditional pneumothorax="gt 85"/>
         <Conditional ishuman="true" />
         <Conditional isfemale="true"/>
         <Sound file="Mods/Advanced Medicine/Sound/femalecough1.ogg" selectionmode="Random" />
@@ -2635,11 +2614,14 @@
         <Affliction identifier="stun" strength="0.1"/>
         <Affliction identifier="oxygenlow" strength="50"/>
       </StatusEffect>
-      <StatusEffect target="Character" targetlimbs="Head" duration="0.3">
-      <Conditional pneumothorax="gt 80"/>
+      <StatusEffect target="Character" targetlimbs="Head" comparison="And" duration="0.3">
+      <Conditional pneumothorax="gt 80" HideFace="eq False"/>
         <ParticleEmitter particle="blooddrop" copyentityangle="true" anglemin="-10" anglemax="10" particlespersecond="100" velocitymin="50" velocitymax="200" scalemin="0.1" scalemax="0.2" />
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.45" shockwave="false" underwaterbubble="false" />
-        <Conditional HideFace="eq False" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+      <Conditional pneumothorax="gt 0"/>
+        <Affliction identifier="oxygenlow" strength="50"/>
       </StatusEffect>
     </PeriodicEffect>
 
@@ -2655,11 +2637,7 @@
     showiconthreshold="20"
     maxstrength="100">
 
-    <Effect minstrength="0" maxstrength="100"
-      minscreendistort="0.0"
-      maxscreendistort="0.0"
-      minradialdistort="0.0"
-      maxradialdistort="0.0">
+    <Effect minstrength="0" maxstrength="100">
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -2671,17 +2649,50 @@
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
     limbspecific="True"
-    showiconthreshold="20"
+    showiconthreshold="0"
     maxstrength="100">
 
-    <Effect minstrength="0" maxstrength="100"
-      minscreendistort="0.0"
-      maxscreendistort="0.0"
-      minradialdistort="0.0"
-      maxradialdistort="0.0">
+    <Effect minstrength="0" maxstrength="30" strengthchange="0.2"/>
+    <StatusEffect target="Character">
+    <Affliction identifier="bloodloss" amount="0.2"/>
+    </StatusEffect>
+    <Effect minstrength="30" maxstrength="60" strengthchange="0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="bloodloss" amount="0.4"/>
+    </StatusEffect>
     </Effect>
+    <Effect minstrength="60" maxstrength="100" strengthchange="0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="bloodloss" amount="1"/>
+    </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="32" maxinterval="64">
+      <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" />
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional ismale="true"/>
+        <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
+        <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional isfemale="true"/>
+        <Sound file="Content/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
+        <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character">
+        <Affliction identifier="stun" strength="0.1"/>
+      </StatusEffect>
+      <StatusEffect target="Character" targetlimbs="Head" duration="1">
+        <ParticleEmitter particle="bloodsplash" copyentityangle="true" anglemin="-20" anglemax="5" particlespersecond="100" velocitymin="60" velocitymax="250" scalemin="0.2" scalemax="0.4" />
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="1.25" shockwave="false" underwaterbubble="false" />
+        <Conditional HideFace="eq False" />
+      </StatusEffect>
+    </PeriodicEffect>
 
-    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+    <icon texture="Content/UI/CommandUIAtlas.png" sourcerect="896,896,128,128" origin="0,0"/>
   </Affliction>
   <Override>
   <Affliction
