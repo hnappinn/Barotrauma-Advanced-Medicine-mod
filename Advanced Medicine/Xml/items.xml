@@ -2308,6 +2308,34 @@
         <Affliction identifier="anesthesia" amount="1" />
       </StatusEffect>
     </Projectile>
+  </Item> 
+
+  <Item name="Non-working right hand" identifier="armlock1" description="" scale="0.5">
+  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
+  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+  <Holdable selectkey="Action" pickkey="Use" slots="RightHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+  <StatusEffect tags="rlock" type="Always" target="Character" duration="0.1" stackable="false" />
+  <StatusEffect type="OnWearing" target="Character" lockhands="true" setvalue="true" comparison="And">
+  <Conditional HasStatusTag="llock" tra_amputation="gt 0"/>
+  </StatusEffect>
+  <StatusEffect type="onnotcontained" target="This" disabledeltatime="true">
+  <Remove />
+  </StatusEffect>
+  </Holdable>
+  </Item>
+
+  <Item name="Non-working left hand" identifier="armlock2" description="" scale="0.5">
+  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
+  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+  <Holdable selectkey="Action" pickkey="Use" slots="LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+  <StatusEffect tags="llock" type="Always" target="Character" duration="0.1" stackable="false" />
+  <StatusEffect type="Always" target="Character" lockhands="true" setvalue="true" comparison="And">
+  <Conditional HasStatusTag="rlock" tla_amputation="gt 0"/>
+  </StatusEffect>
+  <StatusEffect type="onnotcontained" target="This" disabledeltatime="true">
+  <Remove />
+  </StatusEffect>
+  </Holdable>
   </Item>
 
   </Items>
