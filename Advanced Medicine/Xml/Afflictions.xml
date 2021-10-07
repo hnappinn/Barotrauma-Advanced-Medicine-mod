@@ -529,34 +529,39 @@
     </Effect>
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
-  
+  <!--Factures-->
   <Affliction
     name="Humerus facture"
-    identifier="a_fracture"
+    identifier="ra_fracture"
     description=""
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" />
     <StatusEffect target="Character">
-    <Affliction identifier="stun" amount="3"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+    <Conditional HasStatusTag="!equals rlock"/>
+    <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
+    </StatusEffect>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
-    <Conditional afractures="gt 0"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
-    minvitalitydecrease="0"
-    maxvitalitydecrease="0.1"
-    multiplybymaxvitality="true">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
-    <Conditional afractures="gt 0"/>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  <Affliction
+    name="Humerus facture"
+    identifier="la_fracture"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" />
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals llock"/>
+    <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
     </StatusEffect>
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
@@ -568,32 +573,40 @@
   
   <Affliction
     name="Femoral fracture"
-    identifier="l_fracture"
+    identifier="rl_fracture"
     description=""
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
-    <StatusEffect target="Character">
-    <Affliction identifier="stun" amount="3"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="lleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
-    <Conditional lfractures="gt 0"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
-    minvitalitydecrease="0"
-    maxvitalitydecrease="0.1"
-    multiplybymaxvitality="true">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
-    <Conditional lfractures="gt 0"/>
-    </StatusEffect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Femoral fracture"
+    identifier="ll_fracture"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="rleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
@@ -609,27 +622,8 @@
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
-    <StatusEffect target="Character">
-    <Affliction identifier="stun" amount="3"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
-    <Conditional rfractures="gt 0"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
-    minvitalitydecrease="0"
-    maxvitalitydecrease="0.1"
-    multiplybymaxvitality="true">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
-    <Conditional rfractures="gt 0"/>
-    </StatusEffect>
+    
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
@@ -645,27 +639,8 @@
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
-    <StatusEffect target="Character">
-    <Affliction identifier="stun" amount="3"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
-    <Conditional nfractures="gt 0"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
-    minvitalitydecrease="0"
-    maxvitalitydecrease="0.1"
-    multiplybymaxvitality="true">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
-    <Conditional nfractures="gt 0"/>
-    </StatusEffect>
+    
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
@@ -681,26 +656,72 @@
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
+    
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  <Affliction
+    name="Dislocation"
+    identifier="dislocation1"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="lleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  <Affliction
+    name="Dislocation"
+    identifier="dislocation2"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="rleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
+    <StatusEffect target="Limb">
+    <Conditional boneclamp="eq 0"/>
+    <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  <Affliction
+    name="Dislocation"
+    identifier="dislocation3"
+    description=""
+    limbspecific="true"
+    type="fractures"
+    maxstrength="100">
+    
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" />
     <StatusEffect target="Character">
-    <Affliction identifier="stun" amount="3"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
-    <Conditional sfractures="gt 0"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
-    minvitalitydecrease="0"
-    maxvitalitydecrease="0.1"
-    multiplybymaxvitality="true">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
-    <Conditional sfractures="gt 0"/>
+    <Conditional HasStatusTag="!equals rlock"/>
+    <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
     </StatusEffect>
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
@@ -711,31 +732,17 @@
   </Affliction>
   <Affliction
     name="Dislocation"
-    identifier="dislocation"
+    identifier="dislocation4"
     description=""
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="2" strengthchange="1.5">
+    
+    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" />
     <StatusEffect target="Character">
-    <Affliction identifier="stun" amount="3"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
-    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="2" maxstrength="10"  strengthchange="1">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5">
-    <Conditional dislocation="gt 0"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="10" maxstrength="100"  strengthchange="1"
-    minvitalitydecrease="0"
-    maxvitalitydecrease="0.1"
-    multiplybymaxvitality="true">
-    <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.4">
-    <Conditional dislocation="gt 0"/>
+    <Conditional HasStatusTag="!equals llock"/>
+    <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
     </StatusEffect>
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
@@ -744,7 +751,7 @@
     </Effect>
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
-
+  <!--Arterial bleedings-->
   <Affliction
     name="Femoral artery bleeding"
     identifier="l_arterialcut"
@@ -832,38 +839,159 @@
     </Effect>
  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
-
+  <!--Nerves-->
   <Affliction
-    name="Open fracture"
-    identifier="ofracture"
+    name="Nerve injury"
+    identifier="nervecut1"
     description=""
     limbspecific="true"
     maxstrength="100"> 
-    <Effect minstrength="0" maxstrength="100" >
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="lleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
     </Effect>
- <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Nerve injury"
-    identifier="nervecut"
+    identifier="nervecut2"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="rleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Nerve injury"
+    identifier="nervecut3"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" />
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals rlock"/>
+    <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Nerve injury"
+    identifier="nervecut4"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" />
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals llock"/>
+    <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Nerve injury"
+    identifier="nervecut5"
     description=""
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
     </Effect>
- <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Nerve injury"
+    identifier="nervecut6"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  <!--Ligaments and tendons-->
+  <Affliction
+    name="Ligament and tendon injury"
+    identifier="clampcut1"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="lleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
     name="Ligament and tendon injury"
-    identifier="clampcut"
+    identifier="clampcut2"
     description=""
     limbspecific="true"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="rleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
     </Effect>
- <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Ligament and tendon injury"
+    identifier="clampcut3"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" />
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals rlock"/>
+    <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Ligament and tendon injury"
+    identifier="clampcut4"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="1" >
+    <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" />
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals llock"/>
+    <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   
   <Affliction
@@ -2332,6 +2460,7 @@
       maxscreendistort="0.0"
       minradialdistort="0.0"
       maxradialdistort="0.0">
+    <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" />
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals rlock"/>
     <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
@@ -2356,6 +2485,7 @@
       maxscreendistort="0.0"
       minradialdistort="0.0"
       maxradialdistort="0.0">
+    <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" />
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals llock"/>
     <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
@@ -2380,6 +2510,12 @@
       maxscreendistort="0.0"
       minradialdistort="0.0"
       maxradialdistort="0.0">
+      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="lleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -2399,7 +2535,13 @@
       minscreendistort="0.0"
       maxscreendistort="0.0"
       minradialdistort="0.0"
-      maxradialdistort="0.0">
+      maxradialdistort="0.0"> 
+      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="rleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -2420,6 +2562,7 @@
       maxscreendistort="0.0"
       minradialdistort="0.0"
       maxradialdistort="0.0">
+      <StatusEffect target="Character" minvitalitydecrease="1" maxvitalitydecrease="10"/>
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>

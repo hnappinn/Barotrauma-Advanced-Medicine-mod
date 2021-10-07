@@ -2316,7 +2316,7 @@
   <Holdable selectkey="Action" pickkey="Use" slots="RightHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
   <StatusEffect tags="rlock" type="Always" target="Character" duration="0.1" stackable="false" />
   <StatusEffect type="OnWearing" target="Character" lockhands="true" setvalue="true" comparison="And">
-  <Conditional HasStatusTag="llock" tra_amputation="gt 0"/>
+  <Conditional HasStatusTag="llock,rlock2,llock2"/>
   </StatusEffect>
   <StatusEffect type="onnotcontained" target="This" disabledeltatime="true">
   <Remove />
@@ -2330,7 +2330,7 @@
   <Holdable selectkey="Action" pickkey="Use" slots="LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
   <StatusEffect tags="llock" type="Always" target="Character" duration="0.1" stackable="false" />
   <StatusEffect type="Always" target="Character" lockhands="true" setvalue="true" comparison="And">
-  <Conditional HasStatusTag="rlock" tla_amputation="gt 0"/>
+  <Conditional HasStatusTag="rlockr,lock2,llock2"/>
   </StatusEffect>
   <StatusEffect type="onnotcontained" target="This" disabledeltatime="true">
   <Remove />
