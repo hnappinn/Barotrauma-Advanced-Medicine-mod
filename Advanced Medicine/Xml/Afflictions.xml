@@ -537,7 +537,16 @@
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
     <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" />
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals rlock"/>
@@ -557,7 +566,16 @@
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
     <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" />
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals llock"/>
@@ -578,7 +596,16 @@
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
       <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
@@ -600,7 +627,16 @@
     limbspecific="true"
     type="fractures"
     maxstrength="100">
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
       <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
@@ -623,7 +659,15 @@
     type="fractures"
     maxstrength="100">
     
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
@@ -640,7 +684,15 @@
     type="fractures"
     maxstrength="100">
     
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
@@ -657,7 +709,15 @@
     type="fractures"
     maxstrength="100">
     
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
     <StatusEffect target="Limb">
     <Conditional boneclamp="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
@@ -673,7 +733,15 @@
     type="fractures"
     maxstrength="100">
     
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
       <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
@@ -695,7 +763,15 @@
     type="fractures"
     maxstrength="100">
     
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
       <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
@@ -717,7 +793,15 @@
     type="fractures"
     maxstrength="100">
     
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
     <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" />
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals rlock"/>
@@ -738,7 +822,15 @@
     type="fractures"
     maxstrength="100">
     
-    <Effect minstrength="0" maxstrength="100" strengthchange="1.5">
+    <Effect minstrength="0" maxstrength="6" strengthchange="1.5">
+    <StatusEffect target="Character">
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
     <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" />
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals llock"/>
