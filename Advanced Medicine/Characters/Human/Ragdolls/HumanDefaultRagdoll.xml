@@ -5,7 +5,7 @@
     <sprite texture="" sourcerect="160,0,112,192" origin="0.5,0.5" depth="0.06" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="dislocation,h_arterialcut,h_fracture,l_arterialcut,l_fracture,a_arterialcut,a_fracture,n_fracture,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,tll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="h_arterialcut,h_fracture,ll_arterialcut,rl_arterialcut,la_arterialcut,ra_arterialcut,l_fracture,a_fracture,n_fracture,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,tll_amputation" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="gunshotwound,explosiondamage" minstrength="1"/>
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
@@ -28,7 +28,7 @@
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="lacerations,gunshotwound" minstrength="5"/>
-      <Affliction identifier="tamponade" strength="5" probability="0.15"/>
+      <Affliction identifier="tamponade" strength="5" probability="0.25"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This">
       <RequiredAffliction identifier="lacerations,bitewounds,gunshotwound,explosiondamage" minstrength="5"/>
@@ -40,7 +40,7 @@
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_heads_mask.png" />
     <huskmask texture="Content/Characters/Human/Human_husk_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="dislocation,t_arterialcut,t_fracture,l_arterialcut,l_fracture,a_arterialcut,a_fracture,n_fracture,pneumothorax,tamponade,eventration,tra_amputation,tla_amputation,trl_amputation,tll_amputation,sra_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="dislocation,t_arterialcut,t_fracture,ll_arterialcut,rl_arterialcut,l_fracture,la_arterialcut,ra_arterialcut,a_fracture,n_fracture,pneumothorax,tamponade,eventration,tra_amputation,tla_amputation,trl_amputation,tll_amputation,sra_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="internaldamage,blunttrauma,bitewounds,explosiondamage" minstrength="5"/>
       <Affliction identifier="concussion" strength="10" probability="0.25"/>
@@ -83,7 +83,7 @@
     <sprite texture="" sourcerect="272,0,64,96" origin="0.5,0.5" depth="0.02" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,l_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tla_amputation,trl_amputation,tll_amputation,sh_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,ll_arterialcut,rl_arterialcut,la_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tla_amputation,trl_amputation,tll_amputation,sh_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="gunshotwound,explosiondamage" minstrength="1"/>
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
@@ -122,7 +122,7 @@
     <sprite texture="" sourcerect="272,160,64,48" origin="0.44,0.4" depth="0.015" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,l_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tla_amputation,trl_amputation,tll_amputation,sh_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,ll_arterialcut,rl_arterialcut,la_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tla_amputation,trl_amputation,tll_amputation,sh_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional tra_amputation="gt 0" />
       <sprite texture="Mods/Advanced Medicine/Images/Human/Human_[GENDER].png" sourcerect="272,420,64,48" origin="0.44,0.4" depth="0.015" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
@@ -165,7 +165,7 @@
     <sprite texture="" sourcerect="336,0,64,96" origin="0.5,0.5" depth="0.14" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,l_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,trl_amputation,tll_amputation,sh_amputation,sra_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,ll_arterialcut,rl_arterialcut,ra_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,trl_amputation,tll_amputation,sh_amputation,sra_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="gunshotwound,explosiondamage" minstrength="1"/>
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
@@ -204,7 +204,7 @@
     <sprite texture="" sourcerect="336,160,64,48" origin="0.44,0.4" depth="0.16" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,l_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,trl_amputation,tll_amputation,sh_amputation,sra_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,ll_arterialcut,rl_arterialcut,ra_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,trl_amputation,tll_amputation,sh_amputation,sra_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional tla_amputation="gt 0" />
       <sprite texture="Mods/Advanced Medicine/Images/Human/Human_[GENDER].png" sourcerect="336,420,64,48" origin="0.44,0.4" depth="0.16" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
@@ -247,7 +247,7 @@
     <sprite texture="" sourcerect="80,0,80,128" origin="0.5,0.5" depth="0.13" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,a_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,rl_arterialcut,ra_arterialcut,la_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="gunshotwound,explosiondamage" minstrength="1"/>
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
@@ -286,7 +286,7 @@
     <sprite texture="" sourcerect="80,128,80,128" origin="0.5,0.5" depth="0.131" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,a_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,rl_arterialcut,ra_arterialcut,la_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional tll_amputation="gt 0" />
       <sprite texture="Mods/Advanced Medicine/Images/Human/Human_[GENDER].png" sourcerect="80,390,80,128" origin="0.5,0.5" depth="0.131" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
@@ -330,7 +330,7 @@
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <sound tag="footstep_metal" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,a_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,rl_arterialcut,ra_arterialcut,la_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional tll_amputation="gt 0" />
       <sprite texture="Mods/Advanced Medicine/Images/Human/Human_[GENDER].png" sourcerect="336,420,64,48" origin="0.5,0.65" depth="0.132" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
@@ -373,7 +373,7 @@
     <sprite texture="" sourcerect="0,0,80,128" origin="0.5,0.5" depth="0.12" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,a_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,ll_arterialcut,ra_arterialcut,la_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="gunshotwound,explosiondamage" minstrength="1"/>
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
@@ -412,7 +412,7 @@
     <sprite texture="" sourcerect="0,128,80,128" origin="0.5,0.5" depth="0.121" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,a_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,ll_arterialcut,ra_arterialcut,la_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional trl_amputation="gt 0" />
       <sprite texture="Mods/Advanced Medicine/Images/Human/Human_[GENDER].png" sourcerect="0,390,80,128" origin="0.5,0.5" depth="0.121" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
@@ -456,7 +456,7 @@
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <sound tag="footstep_metal" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,a_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,ll_arterialcut,ra_arterialcut,la_arterialcut,a_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,sh_amputation,sra_amputation,sla_amputation,srl_amputation" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional trl_amputation="gt 0" />
       <sprite texture="Mods/Advanced Medicine/Images/Human/Human_[GENDER].png" sourcerect="336,420,64,48" origin="0.5,0.65" depth="0.122" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
@@ -499,7 +499,7 @@
     <sprite texture="" sourcerect="160,192,112,64" origin="0.5,0.5" depth="0.121" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="dislocation,h_arterialcut,h_fracture,l_arterialcut,l_fracture,a_arterialcut,a_fracture,n_fracture,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,tll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="dislocation,h_arterialcut,h_fracture,ll_arterialcut,rl_arterialcut,la_arterialcut,ra_arterialcut,l_fracture,a_fracture,n_fracture,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,tll_amputation" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="gunshotwound,explosiondamage" minstrength="5"/>
       <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
@@ -513,7 +513,7 @@
     <sprite texture="" sourcerect="336,96,64,64" origin="0.5,0.5" depth="0.15" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,l_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,trl_amputation,tll_amputation,sh_amputation,sra_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,rl_arterialcut,ra_arterialcut,la_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tra_amputation,trl_amputation,tll_amputation,sh_amputation,sra_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True">
       <conditional tla_amputation="gt 0" />
       <sprite texture="Mods/Advanced Medicine/Images/Human/Human_[GENDER].png" sourcerect="336,356,64,64" origin="0.44,0.4" depth="0.16" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
@@ -556,7 +556,7 @@
     <sprite texture="" sourcerect="272,96,64,64" origin="0.5,0.5" depth="0.01" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,l_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tla_amputation,trl_amputation,tll_amputation,sh_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="t_arterialcut,t_fracture,rl_arterialcut,ra_arterialcut,la_arterialcut,l_fracture,h_arterialcut,h_fracture,n_fracture,pneumothorax,tamponade,eventration,t_paralysis,rupturedface,th_amputation,tla_amputation,trl_amputation,tll_amputation,sh_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
     <conditionalsprite exclusive="True"> 
       <conditional tra_amputation="gt 0" />
       <sprite texture="Mods/Advanced Medicine/Images/Human/Human_[GENDER].png" sourcerect="272,356,64,64" origin="0.44,0.4" depth="0.015" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />

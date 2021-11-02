@@ -494,8 +494,33 @@
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
 <Conditional retractedskin="gte 1" />
-<ReduceAffliction identifier="arterialcut" amount="1000" />
-<ReduceAffliction identifier="arteriesclamp" amount="1000" />
+<ReduceAffliction identifier="ll_arterialcut" amount="1000" />
+<ReduceAffliction identifier="arteriesclamp1" amount="1000" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
+<Conditional retractedskin="gte 1" />
+<ReduceAffliction identifier="rl_arterialcut" amount="1000" />
+<ReduceAffliction identifier="arteriesclamp2" amount="1000" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
+<Conditional retractedskin="gte 1" />
+<ReduceAffliction identifier="la_arterialcut" amount="1000" />
+<ReduceAffliction identifier="arteriesclamp3" amount="1000" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
+<Conditional retractedskin="gte 1" />
+<ReduceAffliction identifier="ra_arterialcut" amount="1000" />
+<ReduceAffliction identifier="arteriesclamp4" amount="1000" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
+<Conditional retractedskin="gte 1" />
+<ReduceAffliction identifier="t_arterialcut" amount="1000" />
+<ReduceAffliction identifier="arteriesclamp5" amount="1000" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
+<Conditional retractedskin="gte 1" />
+<ReduceAffliction identifier="h_arterialcut" amount="1000" />
+<ReduceAffliction identifier="arteriesclamp6" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
 <Conditional surgeryincision="gte 1" retractedskin="gte 1" clampedbleeders="gte 1" drilledbones="gte 1" boncut="gte 1"/>
@@ -591,11 +616,33 @@
   <SuitableTreatment identifier="arterialcut" suitability="50" />
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
 <RequiredSkill identifier="medical" level="30" />
-<StatusEffect type="OnUse" target="Limb, this" condition="-100">
-<Conditional arterialcut="gte 1" />
-<Affliction identifier="arteriesclamp" amount="100" />
+<StatusEffect type="OnUse" target="This" condition="-100">
 <Sound file="Content/Items/Medical/Bandage1.ogg" type="OnUse" range="500" />
 <Sound file="Content/Items/Medical/Bandage2.ogg" type="OnUse" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb">
+<Conditional ll_arterialcut="gte 1" />
+<Affliction identifier="arteriesclamp1" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb">
+<Conditional rl_arterialcut="gte 1" />
+<Affliction identifier="arteriesclamp2" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb">
+<Conditional la_arterialcut="gte 1" />
+<Affliction identifier="arteriesclamp3" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb">
+<Conditional ra_arterialcut="gte 1" />
+<Affliction identifier="arteriesclamp4" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb">
+<Conditional t_arterialcut="gte 1" />
+<Affliction identifier="arteriesclamp5" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb">
+<Conditional h_arterialcut="gte 1" />
+<Affliction identifier="arteriesclamp6" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnBroken" target="This">
   <Remove />
@@ -2316,9 +2363,13 @@
   <Holdable selectkey="Action" pickkey="Use" slots="RightHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
   <StatusEffect tags="rlock" type="Always" target="Character" duration="0.1" stackable="false" />
   <StatusEffect type="OnWearing" target="Character" lockhands="true" setvalue="true" comparison="And">
-  <Conditional HasStatusTag="llock,rlock2,llock2"/>
+  <Conditional HasStatusTag="llock"/>
   </StatusEffect>
   <StatusEffect type="onnotcontained" target="This" disabledeltatime="true">
+  <Remove />
+  </StatusEffect>
+  <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
+  <Conditional tra_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0"/>
   <Remove />
   </StatusEffect>
   </Holdable>
@@ -2330,11 +2381,84 @@
   <Holdable selectkey="Action" pickkey="Use" slots="LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
   <StatusEffect tags="llock" type="Always" target="Character" duration="0.1" stackable="false" />
   <StatusEffect type="Always" target="Character" lockhands="true" setvalue="true" comparison="And">
-  <Conditional HasStatusTag="rlockr,lock2,llock2"/>
+  <Conditional HasStatusTag="rlock"/>
   </StatusEffect>
   <StatusEffect type="onnotcontained" target="This" disabledeltatime="true">
   <Remove />
   </StatusEffect>
+  <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
+  <Conditional tla_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0"/>
+  <Remove />
+  </StatusEffect>
+  </Holdable>
+  </Item>
+
+  <Item name="Needle" identifier="needle" category="Material" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,syringe" description="A needle with a decompression valve to make the air or liquid drain out of the pleural cavity or pericardium" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5" />
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
+    <Price baseprice="500" soldeverywhere="false">
+      <Price locationtype="outpost" multiplier="1" sold="false"/>
+      <Price locationtype="city" multiplier="0.9" minavailable="1" />
+      <Price locationtype="research" multiplier="0.9" minavailable="1" />
+      <Price locationtype="military" multiplier="1.1" minavailable="1" />
+      <Price locationtype="mine" multiplier="1.1" sold="false"/>
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="40">
+      <RequiredSkill identifier="medical" level="20" />
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
+    </Fabricate>
+    <Deconstruct time="20">
+      <RequiredItem identifier="plastic" />
+      <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
+    </Deconstruct>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,704,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="188,210,37,69" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="65" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" comparison="And" delay="0.1">
+        <Conditional pneumothorax="eq 0"/>
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <Affliction identifier="pneumothorax" amount="1"/>
+      </StatusEffect>
+	    <RequiredSkill identifier="medical" level="40" />
+      <StatusEffect type="OnUse" target="Character" comparison="And">
+        <Conditional pneumothorax="gt 1"/>
+        <ReduceAffliction identifier="pneumothorax" amount="100"/>
+      </StatusEffect>
+	    <StatusEffect tags="medical" type="OnFailure" target="Character" targetlimb="Torso">
+	  	<Affliction identifier="organdamage" amount="10" />
+	  	<Affliction identifier="bleeding" amount="10" />
+	    </StatusEffect>
+    </MeleeWeapon>
+  </Item>
+
+  <Item name="Right arm" identifier="rarm" description="" scale="0.5">
+  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
+  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+  <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+  </Holdable>
+  </Item>
+
+  <Item name="Left arm" identifier="larm" description="" scale="0.5">
+  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
+  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+  <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+  </Holdable>
+  </Item>
+
+  <Item name="Right leg" identifier="rleg" description="" scale="0.5">
+  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
+  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+  <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+  </Holdable>
+  </Item>
+
+  <Item name="Left leg" identifier="lleg" description="" scale="0.5">
+  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
+  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
+  <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
   </Holdable>
   </Item>
 
