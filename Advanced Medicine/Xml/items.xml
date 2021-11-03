@@ -241,8 +241,18 @@
 <RequiredSkill identifier="medical" level="40" />
 <StatusEffect type="OnUse" target="Limb" comparison="and">
 <Conditional analgesia="gte 1" />
-<Affliction identifier="surgeryincision" amount="1" />
-<ReduceAffliction identifier="suturedi" amount="9999" />
+<Affliction identifier="surgeryincision1" amount="1" />
+<Affliction identifier="surgeryincision2" amount="1" />
+<Affliction identifier="surgeryincision3" amount="1" />
+<Affliction identifier="surgeryincision4" amount="1" />
+<Affliction identifier="surgeryincision5" amount="1" />
+<Affliction identifier="surgeryincision6" amount="1" />
+<ReduceAffliction identifier="suturedi1" amount="9999" />
+<ReduceAffliction identifier="suturedi2" amount="9999" />
+<ReduceAffliction identifier="suturedi3" amount="9999" />
+<ReduceAffliction identifier="suturedi4" amount="9999" />
+<ReduceAffliction identifier="suturedi5" amount="9999" />
+<ReduceAffliction identifier="suturedi6" amount="9999" />
 <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
 <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
 <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
@@ -284,16 +294,40 @@
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-90" reload="1.0">
 <RequiredSkill identifier="medical" level="30" />
 <StatusEffect type="OnUse" target="Limb" comparison="and">
-<Conditional surgeryincision="gte 99" />
+<Conditional surgeryincision1="gte 99" />
 <Conditional analgesia="gte 1" />
-<Affliction identifier="clampedbleeders" amount="1" />
-<ReduceAffliction identifier="surgeryincision" amount="9999" />
+<Affliction identifier="clampedbleeders1" amount="1" />
+<ReduceAffliction identifier="surgeryincision1" amount="9999" />
 </StatusEffect>
 <StatusEffect type="OnUse" target="Limb" comparison="and">
-<Conditional surgeryincision="gte 99" />
-<Conditional isdead="true" />
-<Affliction identifier="clampedbleeders" amount="1" />
-<ReduceAffliction identifier="surgeryincision" amount="9999" />
+<Conditional surgeryincision2="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="clampedbleeders2" amount="1" />
+<ReduceAffliction identifier="surgeryincision2" amount="9999" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional surgeryincision3="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="clampedbleeders3" amount="1" />
+<ReduceAffliction identifier="surgeryincision3" amount="9999" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional surgeryincision4="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="clampedbleeders4" amount="1" />
+<ReduceAffliction identifier="surgeryincision4" amount="9999" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional surgeryincision5="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="clampedbleeders5" amount="1" />
+<ReduceAffliction identifier="surgeryincision5" amount="9999" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional surgeryincision6="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="clampedbleeders6" amount="1" />
+<ReduceAffliction identifier="surgeryincision6" amount="9999" />
 </StatusEffect>
 </MeleeWeapon>
 </Item>
@@ -319,13 +353,42 @@
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,-5" holdangle="-20" reload="1.0">
 <RequiredSkill identifier="medical" level="45" />
 <StatusEffect type="OnUse" target="Limb" comparison="and">
-<Conditional retractedskin="gte 99" />
+<Conditional retractedskin1="gte 99" />
 <Conditional analgesia="gte 1" />
-<Affliction identifier="drilledbones" amount="1" />
+<Affliction identifier="drilledbones1" amount="1" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional retractedskin2="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="drilledbones2" amount="1" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional retractedskin3="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="drilledbones3" amount="1" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional retractedskin4="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="drilledbones4" amount="1" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional retractedskin5="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="drilledbones5" amount="1" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional retractedskin6="gte 99" />
+<Conditional analgesia="gte 1" />
+<Affliction identifier="drilledbones6" amount="1" />
 <Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
 </StatusEffect>
 <StatusEffect tags="medical" type="OnFailure" target="Limb">
-<Conditional surgeryincision="lt 1" />
 <Conditional analgesia="gte 1" /> 
 <Affliction identifier="bleeding" amount="15" />
 <Affliction identifier="internaldamage" amount="10" />
@@ -362,9 +425,45 @@
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
 <RequiredSkill identifier="medical" level="45" />
 <StatusEffect type="OnUse" target="Limb, this" comparison="and" Condition="-25.0">
-<Conditional drilledbones="gte 99" />
+<Conditional drilledbones1="gte 99" />
 <Conditional analgesia="gte 1" />
-<ReduceAffliction identifier="fractures" amount="9999" />
+<ReduceAffliction identifier="ll_fracture" amount="9999" />
+<ReduceAffliction identifier="boneclamp" amount="9999" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb, this" comparison="and" Condition="-25.0">
+<Conditional drilledbones2="gte 99" />
+<Conditional analgesia="gte 1" />
+<ReduceAffliction identifier="rl_fracture" amount="9999" />
+<ReduceAffliction identifier="boneclamp" amount="9999" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb, this" comparison="and" Condition="-25.0">
+<Conditional drilledbones3="gte 99" />
+<Conditional analgesia="gte 1" />
+<ReduceAffliction identifier="la_fracture" amount="9999" />
+<ReduceAffliction identifier="boneclamp" amount="9999" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb, this" comparison="and" Condition="-25.0">
+<Conditional drilledbones4="gte 99" />
+<Conditional analgesia="gte 1" />
+<ReduceAffliction identifier="la_fracture" amount="9999" />
+<ReduceAffliction identifier="boneclamp" amount="9999" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb, this" comparison="and" Condition="-25.0">
+<Conditional drilledbones5="gte 99" />
+<Conditional analgesia="gte 1" />
+<ReduceAffliction identifier="t_fracture" amount="9999" />
+<ReduceAffliction identifier="boneclamp" amount="9999" />
+<Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb, this" comparison="and" Condition="-25.0">
+<Conditional drilledbones6="gte 99" />
+<Conditional analgesia="gte 1" />
+<ReduceAffliction identifier="h_fracture" amount="9999" />
+<ReduceAffliction identifier="n_fracture" amount="9999" />
 <ReduceAffliction identifier="boneclamp" amount="9999" />
 <Sound file="Mods/Advanced Medicine/Sound/drill.ogg" range="500" />
 </StatusEffect>
@@ -405,13 +504,33 @@
 <RequiredSkill identifier="medical" level="40" />
 <StatusEffect type="OnUse" target="Limb" comparison="and">
 <Conditional analgesia="gte 1" />
-<Conditional clampedbleeders="gte 99" />
-<Affliction identifier="retractedskin" amount="1" />
+<Conditional clampedbleeders1="gte 99" />
+<Affliction identifier="retractedskin1" amount="1" />
 </StatusEffect>
 <StatusEffect type="OnUse" target="Limb" comparison="and">
-<Conditional isdead="true" />
-<Conditional clampedbleeders="gte 99" />
-<Affliction identifier="retractedskin" amount="1" />
+<Conditional analgesia="gte 1" />
+<Conditional clampedbleeders2="gte 99" />
+<Affliction identifier="retractedskin2" amount="1" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional analgesia="gte 1" />
+<Conditional clampedbleeders3="gte 99" />
+<Affliction identifier="retractedskin3" amount="1" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional analgesia="gte 1" />
+<Conditional clampedbleeders4="gte 99" />
+<Affliction identifier="retractedskin4" amount="1" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional analgesia="gte 1" />
+<Conditional clampedbleeders5="gte 99" />
+<Affliction identifier="retractedskin5" amount="1" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="and">
+<Conditional analgesia="gte 1" />
+<Conditional clampedbleeders6="gte 99" />
+<Affliction identifier="retractedskin6" amount="1" />
 </StatusEffect>
 <StatusEffect tags="medical" type="OnFailure" target="Limb">
 <Affliction identifier="internaldamage" amount="10" />
@@ -523,13 +642,58 @@
 <ReduceAffliction identifier="arteriesclamp6" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
-<Conditional surgeryincision="gte 1" retractedskin="gte 1" clampedbleeders="gte 1" drilledbones="gte 1" boncut="gte 1"/>
-<ReduceAffliction identifier="surgeryincision" amount="1000" />
+<Conditional surgeryincision1="gte 1" retractedskin1="gte 1" clampedbleeders1="gte 1" drilledbones1="gte 1" boncut="gte 1"/>
+<ReduceAffliction identifier="surgeryincision1" amount="1000" />
 <ReduceAffliction identifier="boncut" amount="1000" />
-<ReduceAffliction identifier="clampedbleeders" amount="1000"  />
-<ReduceAffliction identifier="drilledbones" amount="1000"  />
-<ReduceAffliction identifier="retractedskin" amount="1000"  />
-<Affliction identifier="suturedi" amount="100" />
+<ReduceAffliction identifier="clampedbleeders1" amount="1000"  />
+<ReduceAffliction identifier="drilledbones1" amount="1000"  />
+<ReduceAffliction identifier="retractedskin1" amount="1000"  />
+<Affliction identifier="suturedi1" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional surgeryincision2="gte 1" retractedskin2="gte 1" clampedbleeders2="gte 1" drilledbones2="gte 1" boncut="gte 1"/>
+<ReduceAffliction identifier="surgeryincision2" amount="1000" />
+<ReduceAffliction identifier="boncut" amount="1000" />
+<ReduceAffliction identifier="clampedbleeders2" amount="1000"  />
+<ReduceAffliction identifier="drilledbones2" amount="1000"  />
+<ReduceAffliction identifier="retractedskin2" amount="1000"  />
+<Affliction identifier="suturedi2" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional surgeryincision3="gte 1" retractedskin3="gte 1" clampedbleeders3="gte 1" drilledbones3="gte 1" boncut="gte 1"/>
+<ReduceAffliction identifier="surgeryincision3" amount="1000" />
+<ReduceAffliction identifier="boncut" amount="1000" />
+<ReduceAffliction identifier="clampedbleeders3" amount="1000"  />
+<ReduceAffliction identifier="drilledbones3" amount="1000"  />
+<ReduceAffliction identifier="retractedskin3" amount="1000"  />
+<Affliction identifier="suturedi3" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional surgeryincision4="gte 1" retractedskin4="gte 1" clampedbleeders4="gte 1" drilledbones4="gte 1" boncut="gte 1"/>
+<ReduceAffliction identifier="surgeryincision4" amount="1000" />
+<ReduceAffliction identifier="boncut" amount="1000" />
+<ReduceAffliction identifier="clampedbleeders4" amount="1000"  />
+<ReduceAffliction identifier="drilledbones4" amount="1000"  />
+<ReduceAffliction identifier="retractedskin4" amount="1000"  />
+<Affliction identifier="suturedi4" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional surgeryincision5="gte 1" retractedskin5="gte 1" clampedbleeders5="gte 1" drilledbones5="gte 1" boncut="gte 1"/>
+<ReduceAffliction identifier="surgeryincision5" amount="1000" />
+<ReduceAffliction identifier="boncut" amount="1000" />
+<ReduceAffliction identifier="clampedbleeders5" amount="1000"  />
+<ReduceAffliction identifier="drilledbones5" amount="1000"  />
+<ReduceAffliction identifier="retractedskin5" amount="1000"  />
+<Affliction identifier="suturedi5" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional surgeryincision6="gte 1" retractedskin6="gte 1" clampedbleeders6="gte 1" drilledbones6="gte 1" boncut="gte 1"/>
+<ReduceAffliction identifier="surgeryincision6" amount="1000" />
+<ReduceAffliction identifier="boncut" amount="1000" />
+<ReduceAffliction identifier="clampedbleeders6" amount="1000"  />
+<ReduceAffliction identifier="drilledbones6" amount="1000"  />
+<ReduceAffliction identifier="retractedskin6" amount="1000"  />
+<Affliction identifier="suturedi6" amount="100" />
 </StatusEffect>
 <StatusEffect tags="medical" type="OnUse" target="This, Limb" comparison="Or">
 <conditional Lacerations="gt 0" bitewounds="gt 0" explosiondamage="gt 0" gunshotwound="gt 0"/>
@@ -580,19 +744,41 @@
 	<Body width="65" height="65" density="50" />
 	<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,-5" holdangle="10" reload="1.0">
 		<RequiredSkill identifier="medical" level="30" />
-		<StatusEffect type="OnUse" target="limb" comparison="And">
-			<Conditional retractedskin="gte 50"/>
-			<Affliction identifier="lacerations" amount="5" />
-			<ReduceAffliction identifier="foreignbody" amount="5" />
-      <ReduceAffliction identifier="internaldamage" amount="5" />
-      <ReduceAffliction identifier="blunttrauma" amount="5" />
-      <ReduceAffliction identifier="necrosis" amount="5" />
-			<Sound file="Mods/Advanced Medicine/Sound/squelch1.ogg"/>
+		<StatusEffect type="OnUse" target="Limb" comparison="And" disabledeltatime="True">
+			<Conditional retractedskin1="gte 50"/>
+			<Affliction identifier="weirdthing11" amount="1"/>
+      <Sound file="Mods/Advanced Medicine/Sound/squelch1.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Limb" comparison="And" disabledeltatime="True">
+			<Conditional retractedskin2="gte 50"/>
+			<Affliction identifier="weirdthing12" amount="1" />
+      <Sound file="Mods/Advanced Medicine/Sound/squelch1.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Limb" comparison="And" disabledeltatime="True">
+			<Conditional retractedskin3="gte 50"/>
+			<Affliction identifier="weirdthing13" amount="1" />
+      <Sound file="Mods/Advanced Medicine/Sound/squelch1.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Limb" comparison="And" disabledeltatime="True">
+			<Conditional retractedskin4="gte 50"/>
+			<Affliction identifier="weirdthing14" amount="1" />
+      <Sound file="Mods/Advanced Medicine/Sound/squelch1.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Limb" comparison="And" disabledeltatime="True">
+			<Conditional retractedskin5="gte 50"/>
+			<Affliction identifier="weirdthing15" amount="1" />
+      <Sound file="Mods/Advanced Medicine/Sound/squelch1.ogg"/>
+		</StatusEffect>
+		<StatusEffect type="OnUse" target="Limb" comparison="And" disabledeltatime="True">
+			<Conditional retractedskin6="gte 50"/>
+			<Affliction identifier="weirdthing16" amount="1" />
+      <Sound file="Mods/Advanced Medicine/Sound/squelch1.ogg"/>
 		</StatusEffect>
 		<StatusEffect tags="medical" type="OnFailure" target="Limb, This" duration="0.5" comparison="And">
 			<Conditional Isdead="false" />
 			<Conditional retractedskin="gte 1" />
 			<Affliction identifier="internaldamage" amount="6" />
+      <Sound file="Mods/Advanced Medicine/Sound/squelch1.ogg"/>
 		</StatusEffect>
 	</MeleeWeapon>
 </Item>
@@ -637,12 +823,42 @@
 <Affliction identifier="arteriesclamp4" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnUse" target="Limb">
-<Conditional t_arterialcut="gte 1" />
-<Affliction identifier="arteriesclamp5" amount="100" />
-</StatusEffect>
-<StatusEffect type="OnUse" target="Limb">
 <Conditional h_arterialcut="gte 1" />
 <Affliction identifier="arteriesclamp6" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnBroken" target="This">
+  <Remove />
+</StatusEffect>
+</MeleeWeapon>
+</Item>
+
+<Item name="REBOA" identifier="REBOA" category="Equipment" maxstacksize="4" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery,syringe" description="is a procedure that involves placement of an endovascular balloon in the aorta to control bleeding, augment afterload and maintain blood pressure temporarily in traumatic hemorrhagic shock. REBOA is considered a minimally-invasive alternative to thoracotomy with aortic cross-clamping." useinhealthinterface="True" scale="0.250">
+<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+<PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
+<Fabricate suitablefabricators="medicalfabricator" outcondition="100.0" amount="2">
+<RequiredItem identifier="organicfiber" />
+<RequiredItem identifier="plastic" />
+<RequiredItem identifier="rubber" />
+</Fabricate>
+<Price baseprice="160" soldeverywhere="true">
+    <Price locationtype="outpost" multiplier="1" minavailable="5" />
+    <Price locationtype="city" multiplier="0.9" minavailable="10" />
+    <Price locationtype="research" multiplier="0.9" minavailable="5" />
+    <Price locationtype="military" multiplier="1" minavailable="15" />
+    <Price locationtype="mine" multiplier="0.75" minavailable="7" />
+</Price>
+<InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="384,0,64,64" origin="0.5,0.5"/>
+<Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="384,128,128,128" depth="0.55" origin="0.5,0.5" />
+<Body width="100" height="100" density="50" />
+  <SuitableTreatment identifier="arterialcut" suitability="50" />
+<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+<RequiredSkill identifier="medical" level="30" />
+<StatusEffect type="OnUse" target="This" condition="-100">
+<Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb">
+<Conditional t_arterialcut="gte 1" />
+<Affliction identifier="arteriesclamp5" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnBroken" target="This">
   <Remove />

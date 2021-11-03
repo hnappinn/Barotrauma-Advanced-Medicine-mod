@@ -370,11 +370,14 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="195,104,60,255" origin="0,0"/>
   </Affliction>
 
+  <!--Surgery incision-->
+
   <Affliction
-    name=""
-    identifier="surgeryincision"
+    name="Surgery incision"
+    identifier="surgeryincision1"
     description=""
     limbspecific="True"
+    type="surgeryincision"
     maxstrength="100">
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
     <StatusEffect target="Character">
@@ -387,10 +390,98 @@
   </Affliction>
 
   <Affliction
-    name=""
-    identifier="clampedbleeders"
+    name="Surgery incision"
+    identifier="surgeryincision2"
+    description=""
+    limbspecific="True"
+    type="surgeryincision"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+      <Affliction identifier="bloodloss" strength="0.7" />
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="2"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Surgery incision"
+    identifier="surgeryincision3"
+    description=""
+    limbspecific="True"
+    type="surgeryincision"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+      <Affliction identifier="bloodloss" strength="0.7" />
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="2"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Surgery incision"
+    identifier="surgeryincision4"
+    description=""
+    limbspecific="True"
+    type="surgeryincision"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+      <Affliction identifier="bloodloss" strength="0.7" />
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="2"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Surgery incision"
+    identifier="surgeryincision5"
+    description=""
+    limbspecific="True"
+    type="surgeryincision"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+      <Affliction identifier="bloodloss" strength="0.7" />
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="2"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Surgery incision"
+    identifier="surgeryincision6"
+    description=""
+    limbspecific="True"
+    type="surgeryincision"
+    maxstrength="100">
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+      <Affliction identifier="bloodloss" strength="0.7" />
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="2"/>
+    </StatusEffect>
+    </Effect>
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="0,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+
+  <!--Clamped bleeding-->
+
+  <Affliction
+    name="Clamped bleeding"
+    identifier="clampedbleeders1"
     description=""
     limbspecific="true"
+    type="clampedbleeders"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
     <StatusEffect target="Character">
@@ -400,6 +491,88 @@
     </Effect>
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
+
+  <Affliction
+    name="Clamped bleeding"
+    identifier="clampedbleeders2"
+    description=""
+    limbspecific="true"
+    type="clampedbleeders"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="0.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Clamped bleeding"
+    identifier="clampedbleeders3"
+    description=""
+    limbspecific="true"
+    type="clampedbleeders"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="0.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Clamped bleeding"
+    identifier="clampedbleeders4"
+    description=""
+    limbspecific="true"
+    type="clampedbleeders"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="0.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Clamped bleeding"
+    identifier="clampedbleeders5"
+    description=""
+    limbspecific="true"
+    type="clampedbleeders"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="0.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Clamped bleeding"
+    identifier="clampedbleeders6"
+    description=""
+    limbspecific="true"
+    type="clampedbleeders"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="0.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="128,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <!--Clamped arteries-->
   
   <Affliction
     name="Clamped arteries"
@@ -511,10 +684,12 @@
     </Effect>
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,128,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
+  
+  <!--Drilled bones-->
 
   <Affliction
-    name=""
-    identifier="drilledbones"
+    name="Drilled bones"
+    identifier="drilledbones1"
     description=""
     limbspecific="true"
     maxstrength="100"> 
@@ -528,10 +703,168 @@
   </Affliction>
 
   <Affliction
-    name=""
-    identifier="retractedskin"
+    name="Drilled bones"
+    identifier="drilledbones2"
     description=""
     limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="15">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Drilled bones"
+    identifier="drilledbones3"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="15">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Drilled bones"
+    identifier="drilledbones4"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="15">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Drilled bones"
+    identifier="drilledbones5"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="15">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Drilled bones"
+    identifier="drilledbones6"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="15">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="640,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <!--Retracted skin-->
+
+  <Affliction
+    name="Retracted skin"
+    identifier="retractedskin1"
+    description=""
+    limbspecific="true"
+    type="retractedskin"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Retracted skin"
+    identifier="retractedskin2"
+    description=""
+    limbspecific="true"
+    type="retractedskin"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Retracted skin"
+    identifier="retractedskin3"
+    description=""
+    limbspecific="true"
+    type="retractedskin"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Retracted skin"
+    identifier="retractedskin4"
+    description=""
+    limbspecific="true"
+    type="retractedskin"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Retracted skin"
+    identifier="retractedskin5"
+    description=""
+    limbspecific="true"
+    type="retractedskin"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Retracted skin"
+    identifier="retractedskin6"
+    description=""
+    limbspecific="true"
+    type="retractedskin"
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="10">
     <StatusEffect target="Character">
@@ -542,9 +875,61 @@
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,256,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   
+  <!--Stitched incision-->
+
   <Affliction
-    name=""
-    identifier="suturedi"
+    name="Stitched incision"
+    identifier="suturedi1"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Stitched incision"
+    identifier="suturedi2"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Stitched incision"
+    identifier="suturedi3"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Stitched incision"
+    identifier="suturedi4"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Stitched incision"
+    identifier="suturedi5"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-1" />
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,256,128,128" color="139,60,42,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Stitched incision"
+    identifier="suturedi6"
     description=""
     limbspecific="true"
     maxstrength="100"> 
@@ -3042,5 +3427,127 @@
     maxstrength="1">
 	  <Effect minstrength="0" maxstrength="1" strengthchange="0">
   	</Effect>
+	</Affliction>
+
+  <!--Tweezers magic-->
+
+  <Affliction
+	  name="What?!?"
+    identifier="weirdthing11"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100">
+      <StatusEffect target="limb" disabledeltatime="True">
+      <Affliction identifier="lacerations" amount="5" />
+			<ReduceAffliction identifier="foreignbody" amount="5" />
+      <ReduceAffliction identifier="internaldamage" amount="5" />
+      <ReduceAffliction identifier="blunttrauma" amount="5" />
+      <ReduceAffliction identifier="necrosis" amount="5" />
+      </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="What?!?"
+    identifier="weirdthing12"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100">
+      <StatusEffect target="limb" disabledeltatime="True">
+      <Affliction identifier="lacerations" amount="5" />
+			<ReduceAffliction identifier="foreignbody" amount="5" />
+      <ReduceAffliction identifier="internaldamage" amount="5" />
+      <ReduceAffliction identifier="blunttrauma" amount="5" />
+      <ReduceAffliction identifier="necrosis" amount="5" />
+      </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="What?!?"
+    identifier="weirdthing13"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100">
+      <StatusEffect target="limb" disabledeltatime="True">
+      <Affliction identifier="lacerations" amount="5" />
+			<ReduceAffliction identifier="foreignbody" amount="5" />
+      <ReduceAffliction identifier="internaldamage" amount="5" />
+      <ReduceAffliction identifier="blunttrauma" amount="5" />
+      <ReduceAffliction identifier="necrosis" amount="5" />
+      </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="What?!?"
+    identifier="weirdthing14"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100">
+      <StatusEffect target="limb" disabledeltatime="True">
+      <Affliction identifier="lacerations" amount="5" />
+			<ReduceAffliction identifier="foreignbody" amount="5" />
+      <ReduceAffliction identifier="internaldamage" amount="5" />
+      <ReduceAffliction identifier="blunttrauma" amount="5" />
+      <ReduceAffliction identifier="necrosis" amount="5" />
+      </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="What?!?"
+    identifier="weirdthing15"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100">
+      <StatusEffect target="limb" disabledeltatime="True">
+      <Affliction identifier="lacerations" amount="5" />
+			<ReduceAffliction identifier="foreignbody" amount="5" />
+      <ReduceAffliction identifier="internaldamage" amount="5" />
+      <ReduceAffliction identifier="blunttrauma" amount="5" />
+      <ReduceAffliction identifier="necrosis" amount="5" />
+      </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="What?!?"
+    identifier="weirdthing16"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100">
+      <StatusEffect target="limb" disabledeltatime="True">
+      <Affliction identifier="lacerations" amount="5" />
+			<ReduceAffliction identifier="foreignbody" amount="5" />
+      <ReduceAffliction identifier="internaldamage" amount="5" />
+      <ReduceAffliction identifier="blunttrauma" amount="5" />
+      <ReduceAffliction identifier="necrosis" amount="5" />
+      </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
 	</Affliction>
   </Afflictions>
