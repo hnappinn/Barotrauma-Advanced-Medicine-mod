@@ -612,32 +612,32 @@
 <Sound file="Mods/Advanced Medicine/Sound/suture.ogg" range="500" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-<Conditional retractedskin="gte 1" />
+<Conditional retractedskin1="gte 1" />
 <ReduceAffliction identifier="ll_arterialcut" amount="1000" />
 <ReduceAffliction identifier="arteriesclamp1" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-<Conditional retractedskin="gte 1" />
+<Conditional retractedskin2="gte 1" />
 <ReduceAffliction identifier="rl_arterialcut" amount="1000" />
 <ReduceAffliction identifier="arteriesclamp2" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-<Conditional retractedskin="gte 1" />
+<Conditional retractedskin3="gte 1" />
 <ReduceAffliction identifier="la_arterialcut" amount="1000" />
 <ReduceAffliction identifier="arteriesclamp3" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-<Conditional retractedskin="gte 1" />
+<Conditional retractedski4n="gte 1" />
 <ReduceAffliction identifier="ra_arterialcut" amount="1000" />
 <ReduceAffliction identifier="arteriesclamp4" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-<Conditional retractedskin="gte 1" />
+<Conditional retractedskin5="gte 1" />
 <ReduceAffliction identifier="t_arterialcut" amount="1000" />
 <ReduceAffliction identifier="arteriesclamp5" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-<Conditional retractedskin="gte 1" />
+<Conditional retractedskin6="gte 1" />
 <ReduceAffliction identifier="h_arterialcut" amount="1000" />
 <ReduceAffliction identifier="arteriesclamp6" amount="1000" />
 </StatusEffect>
@@ -799,7 +799,11 @@
 <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="384,0,64,64" origin="0.5,0.5"/>
 <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="384,128,128,128" depth="0.55" origin="0.5,0.5" />
 <Body width="100" height="100" density="50" />
-  <SuitableTreatment identifier="arterialcut" suitability="50" />
+  <SuitableTreatment identifier="arterialcut1" suitability="50" />
+  <SuitableTreatment identifier="arterialcut2" suitability="50" />
+  <SuitableTreatment identifier="arterialcut3" suitability="50" />
+  <SuitableTreatment identifier="arterialcut4" suitability="50" />
+  <SuitableTreatment identifier="arterialcut6" suitability="50" />
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
 <RequiredSkill identifier="medical" level="30" />
 <StatusEffect type="OnUse" target="This" condition="-100">
@@ -832,10 +836,10 @@
 </MeleeWeapon>
 </Item>
 
-<Item name="REBOA" identifier="REBOA" category="Equipment" maxstacksize="4" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery,syringe" description="is a procedure that involves placement of an endovascular balloon in the aorta to control bleeding, augment afterload and maintain blood pressure temporarily in traumatic hemorrhagic shock. REBOA is considered a minimally-invasive alternative to thoracotomy with aortic cross-clamping." useinhealthinterface="True" scale="0.250">
+<Item name="REBOA" identifier="REBOA" category="Equipment" maxstacksize="1" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery,syringe" description="is a procedure that involves placement of an endovascular balloon in the aorta to control bleeding, augment afterload and maintain blood pressure temporarily in traumatic hemorrhagic shock. REBOA is considered a minimally-invasive alternative to thoracotomy with aortic cross-clamping." useinhealthinterface="True" scale="0.250">
 <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
 <PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
-<Fabricate suitablefabricators="medicalfabricator" outcondition="100.0" amount="2">
+<Fabricate suitablefabricators="medicalfabricator" outcondition="100.0" amount="1">
 <RequiredItem identifier="organicfiber" />
 <RequiredItem identifier="plastic" />
 <RequiredItem identifier="rubber" />
@@ -850,7 +854,7 @@
 <InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="192,128,64,64" origin="0.5,0.5"/>
 <Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="512,256,128,128" depth="0.55" origin="0.5,0.5" />
 <Body width="100" height="100" density="50" />
-  <SuitableTreatment identifier="arterialcut" suitability="50" />
+  <SuitableTreatment identifier="arterialcut5" suitability="50" />
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
 <RequiredSkill identifier="medical" level="30" />
 <StatusEffect type="OnUse" target="This" condition="-100">
@@ -859,6 +863,38 @@
 <StatusEffect type="OnUse" target="Limb">
 <Conditional t_arterialcut="gte 1" />
 <Affliction identifier="arteriesclamp5" amount="100" />
+</StatusEffect>
+<StatusEffect type="OnBroken" target="This">
+  <Remove />
+</StatusEffect>
+</MeleeWeapon>
+</Item>
+
+<Item name="Drainage" identifier="drainage" category="Equipment" maxstacksize="1" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,surgery,syringe" description="Is the drainage of lung secretions. It is used to treat a variety of conditions that cause the build-up of secretions in the lungs." useinhealthinterface="True" scale="0.250">
+<PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
+<PreferredContainer primary="medcab" minamount="0" maxamount="1" spawnprobability="0.5" />
+<Fabricate suitablefabricators="medicalfabricator" outcondition="100.0" amount="1">
+<RequiredItem identifier="plastic" />
+<RequiredItem identifier="plastic" />
+</Fabricate>
+<Price baseprice="100" soldeverywhere="true">
+    <Price locationtype="outpost" multiplier="1" minavailable="5" />
+    <Price locationtype="city" multiplier="0.9" minavailable="10" />
+    <Price locationtype="research" multiplier="0.9" minavailable="5" />
+    <Price locationtype="military" multiplier="1" minavailable="15" />
+    <Price locationtype="mine" multiplier="0.75" minavailable="7" />
+</Price>
+<InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="192,128,64,64" origin="0.5,0.5"/>
+<Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="512,256,128,128" depth="0.55" origin="0.5,0.5" />
+<Body width="100" height="100" density="50" />
+<MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
+<RequiredSkill identifier="medical" level="30" />
+<StatusEffect type="OnUse" target="This" condition="-100">
+<Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb">
+<Conditional retractedskin5="gte 99" />
+<ReduceAffliction identifier="pneumothorax" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnBroken" target="This">
   <Remove />
@@ -2575,7 +2611,7 @@
   <Remove />
   </StatusEffect>
   <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
-  <Conditional tra_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0"/>
+  <Conditional tra_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0" dislocation3="eq 0"/>
   <Remove />
   </StatusEffect>
   </Holdable>
@@ -2593,7 +2629,7 @@
   <Remove />
   </StatusEffect>
   <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
-  <Conditional tla_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0"/>
+  <Conditional tla_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0" dislocation4="eq 0"/>
   <Remove />
   </StatusEffect>
   </Holdable>
@@ -2623,9 +2659,10 @@
 		<Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="640,256,128,128" depth="0.55" origin="0.5,0.5" />
 		<Body width="35" height="65" density="20" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
+      <Sound file="Content/Items/Medical/Syringe.ogg" range="500" /> 
+      </StatusEffect>
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" comparison="And" delay="0.1">
-        <Conditional pneumothorax="eq 0"/>
-        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
         <Affliction identifier="pneumothorax" amount="1"/>
       </StatusEffect>
 	    <RequiredSkill identifier="medical" level="40" />
@@ -2637,6 +2674,9 @@
 	  	<Affliction identifier="organdamage" amount="10" />
 	  	<Affliction identifier="bleeding" amount="10" />
 	    </StatusEffect>
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
     </MeleeWeapon>
   </Item>
 
