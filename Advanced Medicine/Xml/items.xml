@@ -1524,31 +1524,19 @@
     <Body radius="45" width="34" density="15" />
     
     <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="false">
-    <sprite texture="Mods\Advanced Medicine\Images/Suits/baghelmets.png" limb="Head" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="Torso" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" inheritorigin="true" sourcerect="16,0,128,240"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="Waist" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4397959,0.7111111" sourcerect="16,480,96,112"/> <!--0.4897959,0.6111111-->
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightHand" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.5576271,0.484375" sourcerect="320,32,64,112"/> <!--0.4576271,0.484375-->
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.5576271,0.484375" sourcerect="320,176,64,112"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightArm" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4868421,0.3658537" sourcerect="192,16,64,128"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4868421,0.3658537" sourcerect="192,176,64,128"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.6,0.5" sourcerect="144,336,96,160"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.6,0.5" sourcerect="272,336,96,160"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" inheritorigin="true" sourcerect="160,528,80,112"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" inheritorigin="true" sourcerect="272,528,80,112"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightFoot" sound="footstep_metal" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4520548,0.4117647" sourcerect="16,288,80,176"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftFoot" sound="footstep_metal" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4520548,0.4117647" sourcerect="16,288,80,176"/>
+    <sprite texture="Mods\Advanced Medicine\Images/Suits/baghelmets.png" limb="Head" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="Torso" 				hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="Waist" 				hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightHand" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/> 
+			<sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftHand" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightArm" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftArm" 		 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightThigh"	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftThigh" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightLeg" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftLeg" 			hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightFoot" 		hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftFoot"		 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="100.0" UseHullOxygen="false" />
       <StatusEffect tags="stasis" type="OnWearing" target="Character" duration="0.1" stackable="false" />
       <StatusEffect type="OnWearing" target="Character">
