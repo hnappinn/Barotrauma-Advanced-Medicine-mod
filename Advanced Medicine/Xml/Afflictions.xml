@@ -3234,19 +3234,19 @@
     showiconthreshold="0"
     maxstrength="100">
 
-    <Effect minstrength="0" maxstrength="20" strengthchange="0.3">
+    <Effect minstrength="0" maxstrength="20" strengthchange="0.25">
     </Effect>
-    <Effect minstrength="20" maxstrength="80" strengthchange="0.3">
+    <Effect minstrength="20" maxstrength="80" strengthchange="0.25">
     <StatusEffect target="Character">
     <Affliction identifier="hypotension" amount="0.25"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="80" maxstrength="95" strengthchange="0.3">
+    <Effect minstrength="80" maxstrength="95" strengthchange="0.25">
     <StatusEffect target="Character">
     <Affliction identifier="hypotension" amount="0.5"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="95" maxstrength="100" strengthchange="0.3">
+    <Effect minstrength="95" maxstrength="100" strengthchange="0.25">
     <StatusEffect target="Character">
     <Affliction identifier="hypotension" amount="0.75"/>
     </StatusEffect>
@@ -3284,14 +3284,22 @@
       <StatusEffect target="Character" comparison="and">
         <Conditional ishuman="true" />
         <Conditional ismale="true"/>
-        <Sound file="Mods/Advanced Medicine/Sound/malecough1.ogg" selectionmode="Random" />
-        <Sound file="Mods/Advanced Medicine/Sound/malecough2.ogg" />
+        <Conditional pneumothorax="gte 20"/>
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/male_cough1.ogg" selectionmode="Random" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/male_cough2.ogg" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/male_cough3.ogg" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/male_cough4.ogg" />
       </StatusEffect>
       <StatusEffect target="Character" comparison="and">
         <Conditional ishuman="true" />
         <Conditional isfemale="true"/>
-        <Sound file="Mods/Advanced Medicine/Sound/femalecough1.ogg" selectionmode="Random" />
-        <Sound file="Mods/Advanced Medicine/Sound/femalecough2.ogg" />
+        <Conditional pneumothorax="gte 20"/>
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/female_cough1.ogg" selectionmode="Random" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/female_cough2.ogg" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/female_cough3.ogg" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/female_cough4.ogg" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/female_cough5.ogg" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/female_cough6.ogg" />
       </StatusEffect>
       <StatusEffect target="Character">
       <Conditional pneumothorax="gt 85"/>
@@ -3550,4 +3558,370 @@
  
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
 	</Affliction>
+
+<!--Severed limbs spawn-->
+
+<Affliction
+	  name="What?!?"
+    identifier="weirdthing21"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="2">
+	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    <StatusEffect target="Character">
+    <Affliction identifier="severepain" amount="100"/>
+    <Affliction identifier="tll_amputation" amount="9999"/>
+    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
+    <SpawnItem identifier="lleg"/>
+    </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="What?!?"
+    identifier="weirdthing22"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="2">
+	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    <StatusEffect target="Character">
+    <Affliction identifier="severepain" amount="100"/>
+    <Affliction identifier="trl_amputation" amount="9999"/>
+    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
+    <SpawnItem identifier="rleg"/>
+    </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="What?!?"
+    identifier="weirdthing23"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="2">
+	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    <StatusEffect target="Character">
+    <Affliction identifier="severepain" amount="100"/>
+    <Affliction identifier="tla_amputation" amount="99999"/>
+    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
+    <SpawnItem identifier="larm"/>
+    </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+<Affliction
+	  name="What?!?"
+    identifier="weirdthing24"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="2">
+	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    <StatusEffect target="Character">
+    <Affliction identifier="severepain" amount="100"/>
+    <Affliction identifier="tra_amputation" amount="99999"/>
+    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
+    <SpawnItem identifier="rarm"/>
+    </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+<Affliction
+	  name="What?!?"
+    identifier="weirdthing25"
+    limbspecific="True"
+    showinhealthscannerthreshold="3"
+    showiconthreshold="3"
+    maxstrength="2">
+	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    <StatusEffect target="Character">
+    <Affliction identifier="severepain" amount="100"/>
+    <Affliction identifier="th_amputation" amount="99999"/>
+    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
+    </StatusEffect>
+  	</Effect>
+ 
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="512,640,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+<!-- HuHuHuHuhUhAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!! GOD IT HURTS SO MUCH!!! (Pain code )-->
+  <Affliction
+	  name="Acute severe pain"
+    identifier="severepain"
+    limbspecific="False"
+    maxstrength="5">
+	  <Effect minstrength="0" maxstrength="2" strengthchange="-1">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional ismale="true"/>
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/male_onfire1.ogg" selectionmode="Random" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/male_onfire2.ogg" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/male_onfire3.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional isfemale="true"/>
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/woman_agony1.ogg" selectionmode="Random" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/woman_agony2.ogg" />
+        <Sound file="Mods/Advanced Medicine/Sound/Voice/woman_agony3.ogg" />
+      </StatusEffect>
+    </Effect>
+ 
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="Pain"
+    identifier="pain"
+    limbspecific="True"
+    maxstrength="100">
+	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.1"/>
+    <StatusEffect target="Character">
+    </StatusEffect>
+    <Effect minstrength="10" maxstrength="25" strengthchange="-0.1">
+    <StatusEffect target="Character">
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-0.1">
+    <StatusEffect target="Character">
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-0.1">
+    <StatusEffect target="Character">
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-0.1">
+    <StatusEffect target="Character">
+    </StatusEffect>
+    </Effect>
+    <PeriodicEffect mininterval="32" maxinterval="64">
+      <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" />
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional ismale="true"/>
+        <Sound file="Content/Sounds/HUMAN_chokeMale1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/HUMAN_chokeMale2.ogg" />
+        <Sound file="Content/Sounds/HUMAN_chokeMale3.ogg" />
+      </StatusEffect>
+      <StatusEffect target="Character" comparison="and">
+        <Conditional ishuman="true" />
+        <Conditional isfemale="true"/>
+        <Sound file="Content/Sounds/HUMAN_chokeFemale1.ogg" selectionmode="Random" />
+        <Sound file="Content/Sounds/HUMAN_chokeFemale2.ogg" />
+        <Sound file="Content/Sounds/HUMAN_chokeFemale3.ogg" />
+      </StatusEffect>
+    </PeriodicEffect>
+ 
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="Pain"
+    identifier="pain1"
+    limbspecific="True"
+    maxstrength="100">
+	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.1"/>
+    </StatusEffect>
+    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.25"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="2.5"/>
+    </StatusEffect>
+    </Effect>
+ 
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="Pain"
+    identifier="pain2"
+    limbspecific="True"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.1"/>
+    </StatusEffect>
+    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.25"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="2.5"/>
+    </StatusEffect>
+    </Effect>
+ 
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="Pain"
+    identifier="pain3"
+    limbspecific="True"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.1"/>
+    </StatusEffect>
+    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.25"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="2.5"/>
+    </StatusEffect>
+    </Effect>
+ 
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="Pain"
+    identifier="pain4"
+    limbspecific="True"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.1"/>
+    </StatusEffect>
+    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.25"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="2.5"/>
+    </StatusEffect>
+    </Effect>
+ 
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="Pain"
+    identifier="pain5"
+    limbspecific="True"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.1"/>
+    </StatusEffect>
+    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.25"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="2.5"/>
+    </StatusEffect>
+    </Effect>
+ 
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
+  <Affliction
+	  name="Pain"
+    identifier="pain6"
+    limbspecific="True"
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.1"/>
+    </StatusEffect>
+    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="0.25"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
+    <StatusEffect target="Character">
+    <Affliction identifier="pain" amount="2.5"/>
+    </StatusEffect>
+    </Effect>
+ 
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
+	</Affliction>
+
   </Afflictions>
