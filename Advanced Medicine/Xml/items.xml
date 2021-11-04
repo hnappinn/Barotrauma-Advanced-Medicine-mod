@@ -2640,31 +2640,35 @@
     </MeleeWeapon>
   </Item>
 
-  <Item name="Right arm" identifier="rarm" description="" scale="0.5">
-  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
-  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
-  <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+  <Item name="Right arm" identifier="rarm" description="" scale="0.4">
+  <InventoryIcon texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5" />
+  <Sprite texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5" />
+	<Body width="46" height="90" density="20" />
+  <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" aimpos="85,-10" handle1="0,0" aimable="true">
   </Holdable>
   </Item>
 
-  <Item name="Left arm" identifier="larm" description="" scale="0.5">
-  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
-  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
-  <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+  <Item name="Left arm" identifier="larm" description="" scale="0.4">
+  <InventoryIcon texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5" />
+  <Sprite texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5" />
+	<Body width="46" height="90" density="20" />
+  <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" aimpos="85,-10" handle1="0,0" aimable="true">
   </Holdable>
   </Item>
 
-  <Item name="Right leg" identifier="rleg" description="" scale="0.5">
-  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
-  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
-  <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+  <Item name="Right leg" identifier="rleg" description="" scale="0.4">
+  <InventoryIcon texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5" />
+	<Body width="60" height="90" density="20" />
+  <Sprite texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5" />
+  <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" aimpos="85,-10" handle1="0,0" aimable="true">
   </Holdable>
   </Item>
 
-  <Item name="Left leg" identifier="lleg" description="" scale="0.5">
-  <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
-  <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
-  <Holdable selectkey="Action" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
+  <Item name="Left leg" identifier="lleg" description="" scale="0.4">
+  <InventoryIcon texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5" />
+  <Sprite texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5" />
+	<Body width="60" height="90" density="20" />
+  <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand"  aimpos="85,-10" handle1="0,0" aimable="true">
   </Holdable>
   </Item>
 
