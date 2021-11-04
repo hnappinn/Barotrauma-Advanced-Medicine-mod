@@ -847,8 +847,8 @@
     <Price locationtype="military" multiplier="1" minavailable="15" />
     <Price locationtype="mine" multiplier="0.75" minavailable="7" />
 </Price>
-<InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="384,0,64,64" origin="0.5,0.5"/>
-<Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="384,128,128,128" depth="0.55" origin="0.5,0.5" />
+<InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="192,128,64,64" origin="0.5,0.5"/>
+<Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="512,256,128,128" depth="0.55" origin="0.5,0.5" />
 <Body width="100" height="100" density="50" />
   <SuitableTreatment identifier="arterialcut" suitability="50" />
 <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0">
@@ -1524,31 +1524,19 @@
     <Body radius="45" width="34" density="15" />
     
     <Wearable slots="Any,OuterClothes" msg="ItemMsgEquipSelect" autoequipwhenfull="false">
-    <sprite texture="Mods\Advanced Medicine\Images/Suits/baghelmets.png" limb="Head" inheritlimbdepth="true" hidelimb="true" hideotherwearables="true" inherittexturescale="true" inheritorigin="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="Torso" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" inheritorigin="true" sourcerect="16,0,128,240"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="Waist" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4397959,0.7111111" sourcerect="16,480,96,112"/> <!--0.4897959,0.6111111-->
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightHand" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.5576271,0.484375" sourcerect="320,32,64,112"/> <!--0.4576271,0.484375-->
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftHand" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.5576271,0.484375" sourcerect="320,176,64,112"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightArm" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4868421,0.3658537" sourcerect="192,16,64,128"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftArm" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4868421,0.3658537" sourcerect="192,176,64,128"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightThigh" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.6,0.5" sourcerect="144,336,96,160"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftThigh" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.6,0.5" sourcerect="272,336,96,160"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightLeg" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" inheritorigin="true" sourcerect="160,528,80,112"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftLeg" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" inheritorigin="true" sourcerect="272,528,80,112"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="RightFoot" sound="footstep_metal" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4520548,0.4117647" sourcerect="16,288,80,176"/>
-      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" hideotherwearables="true" limb="LeftFoot" sound="footstep_metal" inheritlimbdepth="true" hidelimb="true" 
-	  inherittexturescale="true" origin="0.4520548,0.4117647" sourcerect="16,288,80,176"/>
+    <sprite texture="Mods\Advanced Medicine\Images/Suits/baghelmets.png" limb="Head" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" sourcerect="96,88,96,88" origin="0.5,0.5" />
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="Torso" 				hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="Waist" 				hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightHand" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/> 
+			<sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftHand" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightArm" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftArm" 		 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightThigh"	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftThigh" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightLeg" 	 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftLeg" 			hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="RightFoot" 		hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
+      <sprite texture="Mods\Advanced Medicine\Images/Suits/stasisbag.png" limb="LeftFoot"		 	hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true"/>
       <StatusEffect type="OnWearing" target="Character" OxygenAvailable="100.0" UseHullOxygen="false" />
       <StatusEffect tags="stasis" type="OnWearing" target="Character" duration="0.1" stackable="false" />
       <StatusEffect type="OnWearing" target="Character">
@@ -1646,13 +1634,13 @@
       <Sound file="Mods/Advanced Medicine/Sound/pump.ogg" range="500" />
     </StatusEffect>
     <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="cpr_buff" damagemultiplier="0.0" damagesound="LimbArmor"/>
-      <sprite name="AutoPulse" texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" limb="Torso" hidelimb="true" inherittexturescale="true" sourcerect="640,0,128,128" origin="0.5,0.6" />
+      <sprite name="AutoPulse" texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" limb="Torso" scale="0.8" hidelimb="false" inherittexturescale="true" sourcerect="640,0,128,128" origin="0.5,0.6" />
     </Wearable>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="battery">
       <Containable items="mobilebattery" />
     </ItemContainer>
   </Item>
-
+ 
   <Override>
   <Item name="" identifier="antibloodloss1" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,petfood1,petfood2,petfood3" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_soft">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
@@ -2609,7 +2597,7 @@
   </Holdable>
   </Item>
 
-  <Item name="Needle" identifier="needle" category="Material" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,syringe" description="A needle with a decompression valve to make the air or liquid drain out of the pleural cavity or pericardium" useinhealthinterface="true" scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="Needle" identifier="needle" category="Material" cargocontaineridentifier="chemicalcrate" Tags="smallitem,medical,syringe" description="A needle with a decompression valve to make the air or liquid drain out of the pleural cavity or pericardium" useinhealthinterface="true" scale="0.2" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="medcab" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="1" spawnprobability="0.5" />
     <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="1" spawnprobability="0.25" />
@@ -2629,10 +2617,10 @@
       <RequiredItem identifier="plastic" />
       <RequiredItem identifier="aluminium" mincondition="0.25" usecondition="true"/>
     </Deconstruct>
-    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="896,704,64,64" origin="0.5,0.5" />
-    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="188,210,37,69" depth="0.6" origin="0.5,0.5" />
-    <Body width="35" height="65" density="20" />
-    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+		<InventoryIcon texture="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" sourcerect="256,128,64,64" origin="0.5,0.5"/>
+		<Sprite texture="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" sourcerect="640,256,128,128" depth="0.55" origin="0.5,0.5" />
+		<Body width="35" height="65" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
       <StatusEffect type="OnUse" target="Character" disabledeltatime="true" comparison="And" delay="0.1">
         <Conditional pneumothorax="eq 0"/>
         <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
