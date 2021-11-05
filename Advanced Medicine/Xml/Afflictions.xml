@@ -670,6 +670,24 @@
   </Affliction>
 
   <Affliction
+    name="Needle in chest"
+    identifier="needlec"
+    description="Normalizes the pressure in the pleural cavity"
+    limbspecific="false"
+    indicatorlimb="Torso"
+    maxstrength="100"
+    type="resistance"
+    isbuff="true"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.15">
+		<StatusEffect target="Character">
+			<Conditional pneumothorax="gte 5"/>
+			<ReduceAffliction identifier="pneumothorax" amount="1"/>
+		</StatusEffect>
+    </Effect>
+		<icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
     name=""
     identifier="ointmented"
     description=""
@@ -949,10 +967,57 @@
       maxvitalitydecrease="0.8"/>
     <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="384,256,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
+
+  <!--Bones Sawed-->
   
   <Affliction
-    name=""
-    identifier="boncut"
+    name="Bones Sawed"
+    identifier="boncut1"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Bones Sawed"
+    identifier="boncut2"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Bones Sawed"
+    identifier="boncut3"
+    description=""
+    limbspecific="true"
+    maxstrength="100"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="10">
+    <StatusEffect target="Character">
+    <Conditional table="eq 0"/>
+    <Affliction identifier="traumaticshock" amount="1.5"/>
+    </StatusEffect>
+    </Effect>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="768,256,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+  
+  <Affliction
+    name="Bones Sawed"
+    identifier="boncut4"
     description=""
     limbspecific="true"
     maxstrength="100"> 
@@ -1288,16 +1353,21 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
     <StatusEffect target="Limb">
-    <Conditional arteriesclamp="eq 0"/>
-      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+    <Conditional arteriesclamp1="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
       <Affliction identifier="bloodloss" strength="1.5" />
     </StatusEffect>
     <StatusEffect target="Character" conditional="or">
-    <Conditional speciesname="Husk" />
-    <Conditional speciesname="Humanhusk" />
+    <Conditional ishuman="False" />
     <ReduceAffliction identifier="arterialcut" amount="999"/>
     </StatusEffect>
     </Effect>
+    <PeriodicEffect mininterval="6" maxinterval="6">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional arteriesclamp1="eq 0"/>
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+    </PeriodicEffect>
  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
   
@@ -1310,16 +1380,21 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
     <StatusEffect target="Limb">
-    <Conditional arteriesclamp="eq 0"/>
-      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+    <Conditional arteriesclamp2="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
       <Affliction identifier="bloodloss" strength="1.5" />
     </StatusEffect>
     <StatusEffect target="Character" conditional="or">
-    <Conditional speciesname="Husk" />
-    <Conditional speciesname="Humanhusk" />
+    <Conditional ishuman="False" />
     <ReduceAffliction identifier="arterialcut" amount="999"/>
     </StatusEffect>
     </Effect>
+    <PeriodicEffect mininterval="6" maxinterval="6">
+      <Conditional arteriesclamp2="eq 0"/>
+      <StatusEffect target="Character" comparison="and">
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+    </PeriodicEffect>
  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
@@ -1332,16 +1407,21 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
     <StatusEffect target="Limb">
-    <Conditional arteriesclamp="eq 0"/>
-      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+    <Conditional arteriesclamp3="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
       <Affliction identifier="bloodloss" strength="1.5" />
     </StatusEffect>
     <StatusEffect target="Character" conditional="or">
-    <Conditional speciesname="Husk" />
-    <Conditional speciesname="Humanhusk" />
+    <Conditional ishuman="False" />
     <ReduceAffliction identifier="arterialcut" amount="999"/>
     </StatusEffect>
     </Effect>
+    <PeriodicEffect mininterval="6" maxinterval="6">
+      <StatusEffect target="Character" comparison="and">
+        <Conditional arteriesclamp3="eq 0"/>
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+    </PeriodicEffect>
  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
@@ -1354,16 +1434,21 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
     <StatusEffect target="Limb">
-    <Conditional arteriesclamp="eq 0"/>
-      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+    <Conditional arteriesclamp4="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
       <Affliction identifier="bloodloss" strength="1.5" />
     </StatusEffect>
     <StatusEffect target="Character" conditional="or">
-    <Conditional speciesname="Husk" />
-    <Conditional speciesname="Humanhusk" />
+    <Conditional ishuman="False" />
     <ReduceAffliction identifier="arterialcut" amount="999"/>
     </StatusEffect>
     </Effect>
+    <PeriodicEffect mininterval="6" maxinterval="6">
+      <StatusEffect target="Character" comparison="and">
+      <Conditional arteriesclamp4="eq 0"/>
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+    </PeriodicEffect>
  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
@@ -1376,16 +1461,21 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
     <StatusEffect target="Limb">
-    <Conditional arteriesclamp="eq 0"/>
-      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
-      <Affliction identifier="bloodloss" strength="1.5" />
+    <Conditional arteriesclamp5="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+      <Affliction identifier="bloodloss" strength="2" />
     </StatusEffect>
     <StatusEffect target="Character" conditional="or">
-    <Conditional speciesname="Husk" />
-    <Conditional speciesname="Humanhusk" />
+    <Conditional ishuman="False" />
     <ReduceAffliction identifier="arterialcut" amount="999"/>
     </StatusEffect>
     </Effect>
+    <PeriodicEffect mininterval="6" maxinterval="6">
+      <StatusEffect target="Character" comparison="and">
+      <Conditional arteriesclamp5="eq 0"/>
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+    </PeriodicEffect>
  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
 
@@ -1398,16 +1488,21 @@
     maxstrength="100"> 
     <Effect minstrength="0" maxstrength="100" strengthchange="1" >
     <StatusEffect target="Limb">
-    <Conditional arteriesclamp="eq 0"/>
-      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.75" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
+    <Conditional arteriesclamp6="eq 0"/>
+      <ParticleEmitter particle="bloodsplash" particlespersecond="50" scalemin="0.5" scalemax="0.45" velocitymin="0" velocitymax="40" anglemin="0" anglemax="360" />
       <Affliction identifier="bloodloss" strength="1.5" />
     </StatusEffect>
     <StatusEffect target="Character" conditional="or">
-    <Conditional speciesname="Husk" />
-    <Conditional speciesname="Humanhusk" />
+    <Conditional ishuman="False" />
     <ReduceAffliction identifier="arterialcut" amount="999"/>
     </StatusEffect>
     </Effect>
+    <PeriodicEffect mininterval="6" maxinterval="6">
+      <StatusEffect target="Character" comparison="and">
+      <Conditional arteriesclamp6="eq 0"/>
+        <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.85" shockwave="false" underwaterbubble="false" />
+      </StatusEffect>
+    </PeriodicEffect>
  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="896,0,128,128" color="139,60,42,255" origin="0,0"/>
   </Affliction>
   <!--Nerves-->
@@ -3118,6 +3213,10 @@
       maxscreendistort="0.0"
       minradialdistort="0.0"
       maxradialdistort="0.0">
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals rlock"/>
+    <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
+    </StatusEffect>
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -3138,6 +3237,10 @@
       maxscreendistort="0.0"
       minradialdistort="0.0"
       maxradialdistort="0.0">
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals llock"/>
+    <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
+    </StatusEffect>
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -3158,6 +3261,12 @@
       maxscreendistort="0.0"
       minradialdistort="0.0"
       maxradialdistort="0.0">
+      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="lleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -3177,8 +3286,15 @@
       minscreendistort="0.0"
       maxscreendistort="0.0"
       minradialdistort="0.0"
-      maxradialdistort="0.0">
+      maxradialdistort="0.0"> 
+      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
+      <StatusEffect target="Character" comparison="And" disabledeltatime="True">
+      <Conditional stun="lt 1" HasStatusTag="rleglock"/>
+      <Affliction identifier="stun" amount="1"/>
+      </StatusEffect>
     </Effect>
+
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
@@ -3284,7 +3400,7 @@
       <StatusEffect target="Character" comparison="and">
         <Conditional ishuman="true" />
         <Conditional ismale="true"/>
-        <Conditional pneumothorax="gte 20"/>
+        <Conditional pneumothorax="gte 0"/>
         <Sound file="Mods/Advanced Medicine/Sound/Voice/male_cough1.ogg" selectionmode="Random" />
         <Sound file="Mods/Advanced Medicine/Sound/Voice/male_cough2.ogg" />
         <Sound file="Mods/Advanced Medicine/Sound/Voice/male_cough3.ogg" />
@@ -3293,7 +3409,7 @@
       <StatusEffect target="Character" comparison="and">
         <Conditional ishuman="true" />
         <Conditional isfemale="true"/>
-        <Conditional pneumothorax="gte 20"/>
+        <Conditional pneumothorax="gte 0"/>
         <Sound file="Mods/Advanced Medicine/Sound/Voice/female_cough1.ogg" selectionmode="Random" />
         <Sound file="Mods/Advanced Medicine/Sound/Voice/female_cough2.ogg" />
         <Sound file="Mods/Advanced Medicine/Sound/Voice/female_cough3.ogg" />
@@ -3312,7 +3428,7 @@
         <Explosion range="0.0" structuredamage="0" itemdamage="0" force="0.0" severlimbsprobability="0.0" decal="blood" decalsize="0.45" shockwave="false" underwaterbubble="false" />
       </StatusEffect>
       <StatusEffect target="Character">
-      <Conditional pneumothorax="gt 0"/>
+      <Conditional pneumothorax="gt 20"/>
         <Affliction identifier="oxygenlow" strength="50"/>
       </StatusEffect>
     </PeriodicEffect>
@@ -3567,12 +3683,13 @@
     limbspecific="True"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
-    maxstrength="2">
-	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
     <StatusEffect target="Character">
     <Affliction identifier="severepain" amount="100"/>
     <Affliction identifier="tll_amputation" amount="9999"/>
-    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
+    <Affliction identifier="ll_fracture" amount="99999"/>
+    <Affliction identifier="ll_arterialcut" amount="99999"/>
     <SpawnItem identifier="lleg"/>
     </StatusEffect>
   	</Effect>
@@ -3586,12 +3703,13 @@
     limbspecific="True"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
-    maxstrength="2">
-	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
     <StatusEffect target="Character">
     <Affliction identifier="severepain" amount="100"/>
     <Affliction identifier="trl_amputation" amount="9999"/>
-    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
+    <Affliction identifier="rl_fracture" amount="99999"/>
+    <Affliction identifier="rl_arterialcut" amount="99999"/>
     <SpawnItem identifier="rleg"/>
     </StatusEffect>
   	</Effect>
@@ -3605,12 +3723,13 @@
     limbspecific="True"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
-    maxstrength="2">
-	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
     <StatusEffect target="Character">
     <Affliction identifier="severepain" amount="100"/>
     <Affliction identifier="tla_amputation" amount="99999"/>
-    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
+    <Affliction identifier="la_fracture" amount="99999"/>
+    <Affliction identifier="la_arterialcut" amount="99999"/>
     <SpawnItem identifier="larm"/>
     </StatusEffect>
   	</Effect>
@@ -3624,12 +3743,13 @@
     limbspecific="True"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
-    maxstrength="2">
-	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
     <StatusEffect target="Character">
     <Affliction identifier="severepain" amount="100"/>
     <Affliction identifier="tra_amputation" amount="99999"/>
-    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
+    <Affliction identifier="ra_fracture" amount="99999"/>
+    <Affliction identifier="ra_arterialcut" amount="99999"/>
     <SpawnItem identifier="rarm"/>
     </StatusEffect>
   	</Effect>
@@ -3643,12 +3763,11 @@
     limbspecific="True"
     showinhealthscannerthreshold="3"
     showiconthreshold="3"
-    maxstrength="2">
-	  <Effect minstrength="0" maxstrength="2" strengthchange="-1" disabledeltatime="True">
+    maxstrength="1">
+	  <Effect minstrength="0" maxstrength="1" strengthchange="-100" disabledeltatime="True">
     <StatusEffect target="Character">
     <Affliction identifier="severepain" amount="100"/>
     <Affliction identifier="th_amputation" amount="99999"/>
-    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" />
     </StatusEffect>
   	</Effect>
  

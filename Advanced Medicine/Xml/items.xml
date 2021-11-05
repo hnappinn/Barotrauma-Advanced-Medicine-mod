@@ -558,8 +558,35 @@
 <RequiredSkill identifier="medical" level="50" />
 <StatusEffect type="OnUse" target="Limb" comparison="And">
 <Conditional analgesia="gte 1"/>
-<Conditional retractedskin="gte 99"/>
-<Affliction identifier="boncut" amount="1" />
+<Conditional retractedskin1="gte 99"/>
+<Affliction identifier="boncut1" amount="1" />
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="And">
+<Conditional analgesia="gte 1"/>
+<Conditional retractedskin2="gte 99"/>
+<Affliction identifier="boncut2" amount="1" />
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="And">
+<Conditional analgesia="gte 1"/>
+<Conditional retractedskin3="gte 99"/>
+<Affliction identifier="boncut3" amount="1" />
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
+    <sound file="Mods/Advanced Medicine/Sound/bonebreak1.ogg"  range="500"/>
+</StatusEffect>
+<StatusEffect type="OnUse" target="Limb" comparison="And">
+<Conditional analgesia="gte 1"/>
+<Conditional retractedskin4="gte 99"/>
+<Affliction identifier="boncut4" amount="1" />
     <sound file="Mods/Advanced Medicine/Sound/bonebreak4.ogg"  selectionmode="random" range="500"/>
     <sound file="Mods/Advanced Medicine/Sound/bonebreak3.ogg"  range="500"/>
     <sound file="Mods/Advanced Medicine/Sound/bonebreak2.ogg"  range="500"/>
@@ -611,6 +638,26 @@
 <StatusEffect type="OnUse" tags="medical" target="This, Limb">
 <Sound file="Mods/Advanced Medicine/Sound/suture.ogg" range="500" />
 </StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional boncut1="gte 99"/>
+<Affliction identifier="sll_amputation" amount="1000" />
+<ReduceAffliction identifier="tll_amputation" amount="1000" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional boncut2="gte 99"/>
+<Affliction identifier="srl_amputation" amount="1000" />
+<ReduceAffliction identifier="trl_amputation" amount="1000" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional boncut3="gte 99"/>
+<Affliction identifier="sla_amputation" amount="1000" />
+<ReduceAffliction identifier="tla_amputation" amount="1000" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional boncut4="gte 99"/>
+<Affliction identifier="sra_amputation" amount="1000" />
+<ReduceAffliction identifier="tra_amputation" amount="1000" />
+</StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
 <Conditional retractedskin1="gte 1" />
 <ReduceAffliction identifier="ll_arterialcut" amount="1000" />
@@ -627,7 +674,7 @@
 <ReduceAffliction identifier="arteriesclamp3" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-<Conditional retractedski4n="gte 1" />
+<Conditional retractedski4="gte 1" />
 <ReduceAffliction identifier="ra_arterialcut" amount="1000" />
 <ReduceAffliction identifier="arteriesclamp4" amount="1000" />
 </StatusEffect>
@@ -642,54 +689,56 @@
 <ReduceAffliction identifier="arteriesclamp6" amount="1000" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
-<Conditional surgeryincision1="gte 1" retractedskin1="gte 1" clampedbleeders1="gte 1" drilledbones1="gte 1" boncut="gte 1"/>
+<Conditional retractedskin5="gte 99"/>
+<ReduceAffliction identifier="tamponade" amount="1000" />
+</StatusEffect>
+<StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
+<Conditional surgeryincision1="gte 1" retractedskin1="gte 1" clampedbleeders1="gte 1" drilledbones1="gte 1" boncut1="gte 1"/>
 <ReduceAffliction identifier="surgeryincision1" amount="1000" />
-<ReduceAffliction identifier="boncut" amount="1000" />
+<ReduceAffliction identifier="boncut1" amount="1000" />
 <ReduceAffliction identifier="clampedbleeders1" amount="1000"  />
 <ReduceAffliction identifier="drilledbones1" amount="1000"  />
 <ReduceAffliction identifier="retractedskin1" amount="1000"  />
 <Affliction identifier="suturedi1" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
-<Conditional surgeryincision2="gte 1" retractedskin2="gte 1" clampedbleeders2="gte 1" drilledbones2="gte 1" boncut="gte 1"/>
+<Conditional surgeryincision2="gte 1" retractedskin2="gte 1" clampedbleeders2="gte 1" drilledbones2="gte 1" boncut2="gte 1"/>
 <ReduceAffliction identifier="surgeryincision2" amount="1000" />
-<ReduceAffliction identifier="boncut" amount="1000" />
+<ReduceAffliction identifier="boncut2" amount="1000" />
 <ReduceAffliction identifier="clampedbleeders2" amount="1000"  />
 <ReduceAffliction identifier="drilledbones2" amount="1000"  />
 <ReduceAffliction identifier="retractedskin2" amount="1000"  />
 <Affliction identifier="suturedi2" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
-<Conditional surgeryincision3="gte 1" retractedskin3="gte 1" clampedbleeders3="gte 1" drilledbones3="gte 1" boncut="gte 1"/>
+<Conditional surgeryincision3="gte 1" retractedskin3="gte 1" clampedbleeders3="gte 1" drilledbones3="gte 1" boncut3="gte 1"/>
 <ReduceAffliction identifier="surgeryincision3" amount="1000" />
-<ReduceAffliction identifier="boncut" amount="1000" />
+<ReduceAffliction identifier="boncut3" amount="1000" />
 <ReduceAffliction identifier="clampedbleeders3" amount="1000"  />
 <ReduceAffliction identifier="drilledbones3" amount="1000"  />
 <ReduceAffliction identifier="retractedskin3" amount="1000"  />
 <Affliction identifier="suturedi3" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
-<Conditional surgeryincision4="gte 1" retractedskin4="gte 1" clampedbleeders4="gte 1" drilledbones4="gte 1" boncut="gte 1"/>
+<Conditional surgeryincision4="gte 1" retractedskin4="gte 1" clampedbleeders4="gte 1" drilledbones4="gte 1" boncut4="gte 1"/>
 <ReduceAffliction identifier="surgeryincision4" amount="1000" />
-<ReduceAffliction identifier="boncut" amount="1000" />
+<ReduceAffliction identifier="boncut4" amount="1000" />
 <ReduceAffliction identifier="clampedbleeders4" amount="1000"  />
 <ReduceAffliction identifier="drilledbones4" amount="1000"  />
 <ReduceAffliction identifier="retractedskin4" amount="1000"  />
 <Affliction identifier="suturedi4" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
-<Conditional surgeryincision5="gte 1" retractedskin5="gte 1" clampedbleeders5="gte 1" drilledbones5="gte 1" boncut="gte 1"/>
+<Conditional surgeryincision5="gte 1" retractedskin5="gte 1" clampedbleeders5="gte 1" drilledbones5="gte 1"/>
 <ReduceAffliction identifier="surgeryincision5" amount="1000" />
-<ReduceAffliction identifier="boncut" amount="1000" />
 <ReduceAffliction identifier="clampedbleeders5" amount="1000"  />
 <ReduceAffliction identifier="drilledbones5" amount="1000"  />
 <ReduceAffliction identifier="retractedskin5" amount="1000"  />
 <Affliction identifier="suturedi5" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="Or">
-<Conditional surgeryincision6="gte 1" retractedskin6="gte 1" clampedbleeders6="gte 1" drilledbones6="gte 1" boncut="gte 1"/>
+<Conditional surgeryincision6="gte 1" retractedskin6="gte 1" clampedbleeders6="gte 1" drilledbones6="gte 1"/>
 <ReduceAffliction identifier="surgeryincision6" amount="1000" />
-<ReduceAffliction identifier="boncut" amount="1000" />
 <ReduceAffliction identifier="clampedbleeders6" amount="1000"  />
 <ReduceAffliction identifier="drilledbones6" amount="1000"  />
 <ReduceAffliction identifier="retractedskin6" amount="1000"  />
@@ -895,6 +944,7 @@
 <StatusEffect type="OnUse" target="Limb">
 <Conditional retractedskin5="gte 99" />
 <ReduceAffliction identifier="pneumothorax" amount="100" />
+<ReduceAffliction identifier="needlec" amount="100" />
 </StatusEffect>
 <StatusEffect type="OnBroken" target="This">
   <Remove />
@@ -1132,7 +1182,7 @@
       <Item identifier="organicfiber" mincondition="0.1" outcondition="0.5"/>
     </Deconstruct>
     <SuitableTreatment identifier="bleeding" suitability="9" />
-    <SuitableTreatment identifier="bonecut" suitability="50" />
+    <SuitableTreatment identifier="boncut" suitability="50" />
     <SuitableTreatment identifier="infectedwound" suitability="10" />
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,448,64,64" origin="0.5,0.5" />
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="310,33,26,42" depth="0.6" origin="0.5,0.5" />
@@ -1438,7 +1488,7 @@
     <Body width="25" height="40" density="20" />
     <SuitableTreatment identifier="bleeding" suitability="32" />
     <SuitableTreatment identifier="burn" suitability="35" />
-    <SuitableTreatment identifier="bonecut" suitability="50" />
+    <SuitableTreatment identifier="boncut" suitability="50" />
     <SuitableTreatment identifier="infectedwound" suitability="6" />
     <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,0" handle1="-5,0" holdangle="10" reload="1.0" msg="ItemMsgPickUpSelect">
       <RequiredSkill identifier="medical" level="22"></RequiredSkill>
@@ -2611,7 +2661,7 @@
   <Remove />
   </StatusEffect>
   <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
-  <Conditional tra_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0" dislocation3="eq 0"/>
+  <Conditional tra_amputation="eq 0" sra_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0" dislocation3="eq 0"/>
   <Remove />
   </StatusEffect>
   </Holdable>
@@ -2629,7 +2679,7 @@
   <Remove />
   </StatusEffect>
   <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
-  <Conditional tla_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0" dislocation4="eq 0"/>
+  <Conditional tla_amputation="eq 0" sla_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0" clampcut4="eq 0" dislocation4="eq 0"/>
   <Remove />
   </StatusEffect>
   </Holdable>
@@ -2662,13 +2712,12 @@
       <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true">
       <Sound file="Content/Items/Medical/Syringe.ogg" range="500" /> 
       </StatusEffect>
-      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" comparison="And" delay="0.1">
+      <StatusEffect type="OnUse" target="Character" disabledeltatime="true" comparison="And">
         <Affliction identifier="pneumothorax" amount="1"/>
       </StatusEffect>
 	    <RequiredSkill identifier="medical" level="40" />
       <StatusEffect type="OnUse" target="Character" comparison="And">
-        <Conditional pneumothorax="gt 1"/>
-        <ReduceAffliction identifier="pneumothorax" amount="100"/>
+        <Affliction identifier="Needlec" amount="100"/>
       </StatusEffect>
 	    <StatusEffect tags="medical" type="OnFailure" target="Character" targetlimb="Torso">
 	  	<Affliction identifier="organdamage" amount="10" />
@@ -2680,36 +2729,88 @@
     </MeleeWeapon>
   </Item>
 
-  <Item name="Right arm" identifier="rarm" description="" scale="0.4">
+  <Item name="Right arm" identifier="rarm" description="" scale="0.4" useinhealthinterface="True">
   <InventoryIcon texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5" />
   <Sprite texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5" />
 	<Body width="46" height="90" density="20" />
-  <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" aimpos="85,-10" handle1="0,0" aimable="true">
-  </Holdable>
+  <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+  <StatusEffect target="Character" type="OnSpawn">
+    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" range="500"/>
+  </StatusEffect>
+  <StatusEffect type="OnUse" target="Limb, This" Condition="-100.0" disabledeltatime="true" comparison="And">
+  <Conditional boncut4="gt 50"/>
+  <ReduceAffliction identifier="tra_amputation" amount="100"/>
+  <ReduceAffliction identifier="boncut4" amount="100"/>
+  </StatusEffect>
+      <StatusEffect type="Always" target="This" comparison="And" condition="-0.1">
+      </StatusEffect>
+  <StatusEffect type="OnBroken" target="This">
+  <Remove />
+  </StatusEffect>
+  </Throwable>
   </Item>
 
-  <Item name="Left arm" identifier="larm" description="" scale="0.4">
+  <Item name="Left arm" identifier="larm" description="" scale="0.4" useinhealthinterface="True">
   <InventoryIcon texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="0,0,46,90" origin="0.5,0.5" />
   <Sprite texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="0,0,46,90" depth="0.6" origin="0.5,0.5" />
 	<Body width="46" height="90" density="20" />
-  <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" aimpos="85,-10" handle1="0,0" aimable="true">
-  </Holdable>
+  <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+  <StatusEffect target="Character" type="OnSpawn">
+    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" range="500"/>
+  </StatusEffect>
+  <StatusEffect type="OnUse" target="Limb, This" Condition="-100.0" disabledeltatime="true" comparison="And">
+  <Conditional boncut3="gt 50"/>
+  <ReduceAffliction identifier="tla_amputation" amount="100"/>
+  <ReduceAffliction identifier="boncut3" amount="100"/>
+  </StatusEffect>
+      <StatusEffect type="Always" target="This" comparison="And" condition="-0.1">
+      </StatusEffect>
+  <StatusEffect type="OnBroken" target="This">
+  <Remove />
+  </StatusEffect>
+  </Throwable>
   </Item>
 
-  <Item name="Right leg" identifier="rleg" description="" scale="0.4">
+  <Item name="Right leg" identifier="rleg" description="" scale="0.4" useinhealthinterface="True">
   <InventoryIcon texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5" />
 	<Body width="60" height="90" density="20" />
   <Sprite texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5" />
-  <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand" aimpos="85,-10" handle1="0,0" aimable="true">
-  </Holdable>
+  <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+  <StatusEffect target="Character" type="OnSpawn">
+    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" range="500"/>
+  </StatusEffect>
+  <StatusEffect Condition="-100.0" type="OnUse" target="Limb, This" disabledeltatime="true" comparison="And">
+  <Conditional boncut2="gt 50"/>
+  <ReduceAffliction identifier="trl_amputation" amount="100"/>
+  <ReduceAffliction identifier="boncut2" amount="100"/>
+  </StatusEffect>
+      <StatusEffect type="Always" target="This" comparison="And" condition="-0.1">
+      </StatusEffect>
+  <StatusEffect type="OnBroken" target="This">
+  <Remove />
+  </StatusEffect>
+  </Throwable>
   </Item>
 
-  <Item name="Left leg" identifier="lleg" description="" scale="0.4">
+  <Item name="Left leg" identifier="lleg" description="" scale="0.4" useinhealthinterface="True">
   <InventoryIcon texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="57,0,60,90" origin="0.5,0.5" />
   <Sprite texture="Mods/Advanced Medicine/Images/limbs.png" sourcerect="57,0,60,90" depth="0.6" origin="0.5,0.5" />
 	<Body width="60" height="90" density="20" />
-  <Holdable msg="ItemMsgPickUpSelect" slots="Any,RightHand,LeftHand"  aimpos="85,-10" handle1="0,0" aimable="true">
-  </Holdable>
+  <Throwable characterusable="true" canbecombined="true" removeoncombined="true" slots="Any,RightHand,LeftHand" throwforce="4.0" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+  <StatusEffect target="Character" type="OnSpawn">
+    <Sound file="Mods/Advanced Medicine/Sound/severed.ogg" range="500"/>
+  </StatusEffect>
+  <StatusEffect Condition="-100.0" type="OnUse" target="Limb, This" disabledeltatime="true" comparison="And">
+  <Conditional boncut1="gt 50"/>
+  <ReduceAffliction identifier="tll_amputation" amount="100"/>
+  <ReduceAffliction identifier="boncut1" amount="100"/>
+  </StatusEffect>
+      <StatusEffect type="Always" target="This" comparison="And" condition="-0.1">
+      </StatusEffect>
+  <StatusEffect type="OnBroken" target="This">
+  <Remove />
+  </StatusEffect>
+  </Throwable>
   </Item>
 
   </Items>
