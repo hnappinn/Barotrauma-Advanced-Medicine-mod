@@ -2699,7 +2699,7 @@
     </Projectile>
   </Item> 
 
-  <Item name="Non-working right hand" identifier="armlock1" description="" scale="0.5">
+  <Item name="Non-working right hand" identifier="armlock1" description="" scale="0.5" nonplayerteaminteractable="True" category="hidden">
   <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
   <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
   <Holdable selectkey="Action" pickkey="Use" slots="RightHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
@@ -2717,7 +2717,7 @@
   </Holdable>
   </Item>
 
-  <Item name="Non-working left hand" identifier="armlock2" description="" scale="0.5">
+  <Item name="Non-working left hand" identifier="armlock2" description="" scale="0.5" nonplayerteaminteractable="True" category="hidden">
   <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="0,0,1,1" origin="0.5,0.5" />
   <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,1,1" depth="0.6" origin="0.5,0.5" />
   <Holdable selectkey="Action" pickkey="Use" slots="LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true">
