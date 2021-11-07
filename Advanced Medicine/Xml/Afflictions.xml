@@ -634,9 +634,83 @@
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="640,128,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
+  <!--Splint-->
+
   <Affliction
-    name=""
-    identifier="boneclamp"
+    name="Splint"
+    identifier="boneclamp1"
+    description=""
+    limbspecific="true"
+    maxstrength="100"
+    type="resistance"
+    isbuff="true"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Splint"
+    identifier="boneclamp2"
+    description=""
+    limbspecific="true"
+    maxstrength="100"
+    type="resistance"
+    isbuff="true"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Splint"
+    identifier="boneclamp3"
+    description=""
+    limbspecific="true"
+    maxstrength="100"
+    type="resistance"
+    isbuff="true"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Splint"
+    identifier="boneclamp4"
+    description=""
+    limbspecific="true"
+    maxstrength="100"
+    type="resistance"
+    isbuff="true"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Splint"
+    identifier="boneclamp5"
+    description=""
+    limbspecific="true"
+    maxstrength="100"
+    type="resistance"
+    isbuff="true"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Splint"
+    identifier="boneclamp6"
+    description=""
+    limbspecific="true"
+    maxstrength="100"
+    type="resistance"
+    isbuff="true"> 
+    <Effect minstrength="0" maxstrength="100" strengthchange="-0.1"/>
+		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="384,128,128,128" color="10,193,114,255" origin="0,0"/>
+  </Affliction>
+
+  <Affliction
+    name="Splint"
+    identifier="boneclamp7"
     description=""
     limbspecific="true"
     maxstrength="100"
@@ -1047,13 +1121,15 @@
     </StatusEffect>
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
-    <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" />
+    <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false">
+    <Conditional boneclamp4="eq 0"/>
+    </StatusEffect>
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals rlock"/>
     <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
     </StatusEffect>
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp4="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
@@ -1076,13 +1152,15 @@
     </StatusEffect>
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
-    <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" />
+    <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false">
+    <Conditional boneclamp3="eq 0"/>
+    </StatusEffect>
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals llock"/>
     <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
     </StatusEffect>
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp3="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
@@ -1106,14 +1184,16 @@
     </StatusEffect>
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
-      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false">
+      <Conditional boneclamp2="eq 0"/>
+      </StatusEffect>
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
       <Conditional stun="lt 1" HasStatusTag="lleglock"/>
       <Affliction identifier="stun" amount="1"/>
       </StatusEffect>
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp2="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
@@ -1137,14 +1217,16 @@
     </StatusEffect>
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
-      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false">
+      <Conditional boneclamp1="eq 0"/>
+      </StatusEffect>
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
       <Conditional stun="lt 1" HasStatusTag="rleglock"/>
       <Affliction identifier="stun" amount="1"/>
       </StatusEffect>
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp1="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
@@ -1169,10 +1251,16 @@
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp5="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
+    <PeriodicEffect mininterval="60" maxinterval="120">
+    <StatusEffect target="Limb" comparison="And">
+    <Conditional boneclamp5="eq 0" pneumothorax="eq 0"/>
+    <Affliction identifier="pneumothorax" amount="5" probability="0.3" />
+    </StatusEffect>
+    </PeriodicEffect>
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   
@@ -1194,10 +1282,16 @@
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp6="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
+    <PeriodicEffect mininterval="30" maxinterval="60">
+    <StatusEffect target="Limb" comparison="And">
+    <Conditional boneclamp6="eq 0" t_paralysis="eq 0"/>
+    <Affliction identifier="t_paralysis" amount="5" probability="0.6" />
+    </StatusEffect>
+    </PeriodicEffect>
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   
@@ -1223,6 +1317,13 @@
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
+    <PeriodicEffect mininterval="30" maxinterval="60">
+    <StatusEffect target="Limb" comparison="And">
+    <Conditional boneclamp7="eq 0" hypoxia="eq 0"/>
+    <Affliction identifier="hypoxia" amount="20" probability="0.5" />
+    <Affliction identifier="hypoxia" amount="30" probability="0.15" />
+    </StatusEffect>
+    </PeriodicEffect>
 		<icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="512,0,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
   <Affliction
@@ -1242,14 +1343,16 @@
     </StatusEffect>
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
-      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect tags="rleglock" target="Character" duration="0.1" stackable="false">
+      <Comparison boneclamp1="eq 0"/>
+      </StatusEffect>
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
       <Conditional stun="lt 1" HasStatusTag="lleglock"/>
       <Affliction identifier="stun" amount="1"/>
       </StatusEffect>
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp1="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
@@ -1272,14 +1375,16 @@
     </StatusEffect>
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
-      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false" />
+      <StatusEffect tags="lleglock" target="Character" duration="0.1" stackable="false">
+      <Comparison boneclamp2="eq 0"/>
+      </StatusEffect>
       <StatusEffect target="Character" SpeedMultiplier="0.5" setvalue="true"/>
       <StatusEffect target="Character" comparison="And" disabledeltatime="True">
       <Conditional stun="lt 1" HasStatusTag="rleglock"/>
       <Affliction identifier="stun" amount="1"/>
       </StatusEffect>
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp2="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
@@ -1302,13 +1407,15 @@
     </StatusEffect>
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
-    <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" />
+    <StatusEffect tags="rlock2" target="Character" duration="0.1" stackable="false" >
+    <Comparison boneclamp3="eq 0"/>
+    </StatusEffect>
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals rlock"/>
     <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
     </StatusEffect>
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp3="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
@@ -1331,13 +1438,15 @@
     </StatusEffect>
     </Effect>
     <Effect minstrength="6" maxstrength="100" strengthchange="1.5">
-    <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" />
+    <StatusEffect tags="llock2" target="Character" duration="0.1" stackable="false" >
+    <Comparison boneclamp4="eq 0"/>
+    </StatusEffect>
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals llock"/>
     <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
     </StatusEffect>
     <StatusEffect target="Limb">
-    <Conditional boneclamp="eq 0"/>
+    <Conditional boneclamp4="eq 0"/>
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
@@ -3092,6 +3201,9 @@
     <Conditional HasStatusTag="!equals rlock"/>
     <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
     </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <ReduceAffliction identifier="rap" amount="100"/>
+    </StatusEffect>
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -3115,6 +3227,9 @@
     <StatusEffect target="Character">
     <Conditional HasStatusTag="!equals llock"/>
     <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <ReduceAffliction identifier="lap" amount="100"/>
     </StatusEffect>
     </Effect>
 
@@ -3142,6 +3257,9 @@
       <Conditional stun="lt 1" HasStatusTag="lleglock"/>
       <Affliction identifier="stun" amount="1"/>
       </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <ReduceAffliction identifier="rlp" amount="100"/>
+    </StatusEffect>
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -3168,6 +3286,9 @@
       <Conditional stun="lt 1" HasStatusTag="rleglock"/>
       <Affliction identifier="stun" amount="1"/>
       </StatusEffect>
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <ReduceAffliction identifier="llp" amount="100"/>
+    </StatusEffect>
     </Effect>
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
@@ -3318,6 +3439,122 @@
 
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
   </Affliction>
+    <Affliction
+    name="Bionic prosthesis"
+    identifier="llp"
+    description=""
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="True"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="3" strengthchange="-1"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Affliction identifier="sll_amputation" amount="100"/>
+    </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="3" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Bionic prosthesis"
+    identifier="rlp"
+    description=""
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="True"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="3" strengthchange="-1"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Affliction identifier="srl_amputation" amount="100"/>
+    </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="3" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Bionic prosthesis"
+    identifier="lap"
+    description=""
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="True"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="3" strengthchange="-1"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Affliction identifier="sla_amputation" amount="100"/>
+    </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="3" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
+    <Affliction
+    name="Bionic prosthesis"
+    identifier="rap"
+    description=""
+    causeofdeathdescription=""
+    selfcauseofdeathdescription=""
+    limbspecific="True"
+    showiconthreshold="20"
+    maxstrength="100">
+
+    <Effect minstrength="0" maxstrength="3" strengthchange="-1"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    <StatusEffect target="Limb" disabledeltatime="True">
+    <Affliction identifier="sra_amputation" amount="100"/>
+    </StatusEffect>
+    </Effect>
+
+    <Effect minstrength="3" maxstrength="100"
+      minscreendistort="0.0"
+      maxscreendistort="0.0"
+      minradialdistort="0.0"
+      maxradialdistort="0.0">
+    </Effect>
+
+    <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="896,896,128,128" color="195,136,60,255" origin="0,0"/>
+  </Affliction>
 
     <Affliction
     name="Spinal cord injury"
@@ -3452,7 +3689,7 @@
   </Affliction>
     <Affliction
     name="Internal bleeding"
-    identifier="Internalbleeding"
+    identifier="internalbleeding"
     description="The patient has blood loss and vomiting with blood"
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
