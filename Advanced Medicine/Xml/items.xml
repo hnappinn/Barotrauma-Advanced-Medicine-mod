@@ -3299,5 +3299,136 @@
         </Throwable>
     </Item>
 
-
+<Override>
+<Item name="" identifier="wrench" category="Equipment" Tags="smallitem,tool,simpletool,mechanicalrepairtool,wrenchitem" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" useinhealthinterface="True">
+    <PreferredContainer primary="engcab" minamount="1" maxamount="4" spawnprobability="1"/>
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="0" maxamount="3" spawnprobability="0.25"/>
+    <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="2" spawnprobability="0.5"/>
+    <PreferredContainer primary="outposttrashcan" minamount="0" maxamount="1" spawnprobability="0.25" />
+    <Price baseprice="10" >
+      <Price locationtype="outpost" multiplier="1" minavailable="10" />
+      <Price locationtype="city" multiplier="0.9" minavailable="15" />
+      <Price locationtype="research" multiplier="1.25" minavailable="10" />
+      <Price locationtype="military" multiplier="1.25" minavailable="10" />
+      <Price locationtype="mine" multiplier="1" minavailable="10" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="iron" />
+    </Deconstruct>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="mechanical" level="20" />
+      <RequiredItem identifier="iron" />
+    </Fabricate>
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="450,0,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Tools/tools.png" sourcerect="161,235,64,20" depth="0.55" origin="0.5,0.5" />
+    <Body width="60" height="15" density="50" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="-8,0" holdangle="60" reload="1.0" range="50" combatpriority="8" msg="ItemMsgPickUpSelect">
+      <Attack structuredamage="2" itemdamage="2" targetimpulse="5">
+        <Affliction identifier="blunttrauma" strength="4" />
+        <Affliction identifier="stun" strength="0.2" />
+        <Sound file="Content/Items/Weapons/Smack1.ogg" range="800" />
+      </Attack>
+    <RequiredSkill identifier="medical" level="35"/>
+    <StatusEffect target="Limb" tags="medical" type="OnUse">
+    <Conditional dislocation1="gt 0"/>
+    <ReduceAffliction identifier="dislocation1" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" tags="medical" type="OnUse">
+    <Conditional dislocation2="gt 0"/>
+    <ReduceAffliction identifier="dislocation2" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" tags="medical" type="OnUse">
+    <Conditional dislocation3="gt 0"/>
+    <ReduceAffliction identifier="dislocation3" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" tags="medical" type="OnUse">
+    <Conditional dislocation4="gt 0"/>
+    <ReduceAffliction identifier="dislocation4" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" tags="medical" type="OnUse">
+    <Conditional dislocation4="gt 0"/>
+    <ReduceAffliction identifier="dislocation4" amount="100"/>
+    </StatusEffect>
+    <StatusEffect target="Limb" tags="OnFailure" type="OnUse" comparison="Or">
+    <Conditional dislocation1="gt 0" dislocation2="gt 0" dislocation3="gt 0" dislocation4="gt 0"/>
+    <Affliction identifier="la_fracture" amount="1"/>
+    <Affliction identifier="ra_fracture" amount="1"/>
+    <Affliction identifier="ll_fracture" amount="1"/>
+    <Affliction identifier="rl_fracture" amount="1"/>
+    <Affliction identifier="severepain" amount="2"/>
+    </StatusEffect>
+    </MeleeWeapon>
+    <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
+    <Quality>
+      <QualityStat stattype="RepairSpeed" value="0.1"/>
+    </Quality>
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+  </Item>
+</Override>
+<Override>
+<Item name="" identifier="antinarc" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
+    <Upgrade gameversion="0.10.0.0" scale="0.5" />
+    <PreferredContainer primary="medcab" spawnprobability="0.8" />
+    <PreferredContainer primary="wreckmedcab,abandonedmedcab" minamount="0" maxamount="2" spawnprobability="0.4" />
+    <PreferredContainer primary="outpostmedcompartment" minamount="0" maxamount="2" spawnprobability="0.25" />
+    <Price baseprice="160" >
+      <Price locationtype="outpost" multiplier="1" minavailable="5" />
+      <Price locationtype="city" multiplier="0.9" minavailable="5" />
+      <Price locationtype="research" multiplier="0.9" minavailable="7" />
+      <Price locationtype="military" multiplier="1.1" minavailable="5" />
+      <Price locationtype="mine" multiplier="1.1" minavailable="5" />
+    </Price>
+    <Fabricate suitablefabricators="medicalfabricator" requiredtime="30" >
+      <RequiredSkill identifier="medical" level="23" />
+      <RequiredItem identifier="antidama1" />
+      <RequiredItem identifier="stabilozine" />
+    </Fabricate>
+    <Deconstruct time="20">
+      <Item identifier="antidama1" copycondition="true" mincondition="0.1" />
+      <Item identifier="stabilozine" copycondition="true" mincondition="0.1" />
+    </Deconstruct>
+    <SuitableTreatment identifier="opiateaddiction" suitability="60" />
+    <SuitableTreatment identifier="opiatewithdrawal" suitability="60" />
+    <SuitableTreatment identifier="opiateoverdose" suitability="60" />
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="704,448,64,64" origin="0.5,0.5" />
+    <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="186,0,38,69" depth="0.6" origin="0.5,0.5" />
+    <Body width="35" height="70" density="20" />
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="40,5" handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <RequiredSkill identifier="medical" level="39"></RequiredSkill>
+      <StatusEffect tags="medical" type="OnUse" target="Character" duration="30.0">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="opiatewithdrawal" amount="2.0" />
+        <ReduceAffliction identifier="opiateaddiction" amount="2.0" />
+        <ReduceAffliction identifier="opiateoverdose" amount="2.0" />
+        <ReduceAffliction identifier="analgesia" amount="2.0" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnFailure" target="Character" duration="30.0">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+        <ReduceAffliction identifier="opiatewithdrawal" amount="1.0" />
+        <ReduceAffliction identifier="opiateaddiction" amount="1.0" />
+        <ReduceAffliction identifier="opiateoverdose" amount="1.0" />
+        <ReduceAffliction identifier="analgesia" amount="2.0" />
+        <Affliction identifier="oxygenlow" amount="1.0" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
+    <Projectile characterusable="false" launchimpulse="20.0" sticktocharacters="true" launchrotation="-90">
+      <StatusEffect type="OnImpact" target="This" Condition="-100.0" disabledeltatime="true">
+        <Sound file="Content/Items/Medical/Syringe.ogg" range="500" />
+      </StatusEffect>
+      <StatusEffect tags="medical" type="OnImpact" target="Character" duration="30">
+        <ReduceAffliction identifier="opiatewithdrawal" amount="1.0" />
+        <ReduceAffliction identifier="opiateaddiction" amount="1.0" />
+        <ReduceAffliction identifier="opiateoverdose" amount="1.0" />
+        <ReduceAffliction identifier="analgesia" amount="2.0" />
+        <Affliction identifier="oxygenlow" amount="1.0" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+</Override>
 </Items>

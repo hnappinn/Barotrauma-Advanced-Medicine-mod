@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.14.9.0" steamworkshopid="2488816950" installtime="1630422428">
+<contentpackage name="Advanced Medicine" path="Mods/Advanced Medicine/filelist.xml" corepackage="false" gameversion="0.15.13.0" steamworkshopid="2488816950" installtime="1636295118">
   <None file="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" />
   <None file="Mods/Advanced Medicine/Images/InGameItemIconAtlas.png" />
   <None file="Mods/Advanced Medicine/Images/InventoryItemIconAtlas.png" />
@@ -26,5 +26,54 @@
   <None file="Mods/Advanced Medicine/Sound/spray.ogg" />
   <None file="Mods/Advanced Medicine/Sound/pump.ogg" />
   <None file="Mods/Advanced Medicine/Sound/hypospray.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/blood.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/severed.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/fatigue1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/fatigue2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/fatigue3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/female_cough1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/female_cough2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/female_cough3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/female_cough4.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/female_cough5.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/female_cough6.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/female_cry1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/female_cry2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_cough1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_cough2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_cough3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_cough4.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_cry1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_cry2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_moan1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_moan2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_moan3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_onfire1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_onfire2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/male_onfire3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/man_pain1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/man_pain2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/man_pain3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_pain1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_pain2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_pain3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_pain4.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_agony1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_agony2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_agony3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/scream_woman_1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/scream_male_1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/scream_male_2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/scream_male_3.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_agony1.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_agony2.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/woman_agony3.ogg" />
   <Character file="Mods/Advanced Medicine/Characters/Human/Human.xml" />
+  <None file="Mods/Advanced Medicine/Images/Human/Human_female.png" />
+  <None file="Mods/Advanced Medicine/Images/Human/Human_male.png" />
+  <None file="Mods/Advanced Medicine/Sound/severed.ogg" />
+  <None file="Mods/Advanced Medicine/Sound/blood.ogg" />
+  <None file="Mods/Advanced Medicine/Images/limbs.png" />
+  <None file="Mods/Advanced Medicine/Characters/Human/Ragdolls/HumanDefaultRagdoll.xml" />
+  <None file="Mods/Advanced Medicine/Sound/Voice/screams_woman_2.ogg" />
 </contentpackage>
