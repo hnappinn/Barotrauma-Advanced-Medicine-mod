@@ -2505,9 +2505,9 @@
     causeofdeathdescription="Burned to death"
     selfcauseofdeathdescription="You have burned to death."
     limbspecific="true"
-    maxstrength="100"
+    maxstrength="200"
     burnoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
+    <Effect minstrength="0" maxstrength="20" multiplybymaxvitality="true"
       minvitalitydecrease="0"
       maxvitalitydecrease="0.1">
     <StatusEffect target="Limb" comparison="And">
@@ -2518,7 +2518,7 @@
 		<Affliction identifier="immunity" amount="-0.1"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="10" maxstrength="25" multiplybymaxvitality="true"
+    <Effect minstrength="20" maxstrength="50" multiplybymaxvitality="true"
       minvitalitydecrease="0.1"
       maxvitalitydecrease="0.25">
     <StatusEffect target="Limb" comparison="And">
@@ -2529,7 +2529,7 @@
 		<Affliction identifier="immunity" amount="-0.45"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="25" maxstrength="50" multiplybymaxvitality="true"
+    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
       minvitalitydecrease="0.25"
       maxvitalitydecrease="0.50">
     <StatusEffect target="Limb" comparison="And">
@@ -2540,7 +2540,7 @@
 		<Affliction identifier="immunity" amount="-0.95"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="50" maxstrength="75" multiplybymaxvitality="true"
+    <Effect minstrength="100" maxstrength="150" multiplybymaxvitality="true"
       minvitalitydecrease="0.5"
       maxvitalitydecrease="0.75">
     <StatusEffect target="Limb" comparison="And">
@@ -2551,7 +2551,7 @@
 		<Affliction identifier="immunity" amount="-1.15"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="75" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="150" maxstrength="200" multiplybymaxvitality="true"
       minvitalitydecrease="0.75"
       maxvitalitydecrease="1">
     <StatusEffect target="Limb" comparison="And">
