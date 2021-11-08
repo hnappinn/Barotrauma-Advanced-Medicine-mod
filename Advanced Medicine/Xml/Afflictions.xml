@@ -1286,7 +1286,7 @@
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
-    <PeriodicEffect mininterval="30" maxinterval="60">
+    <PeriodicEffect mininterval="20" maxinterval="50">
     <StatusEffect target="Limb" comparison="And">
     <Conditional boneclamp6="eq 0" t_paralysis="eq 0"/>
     <Affliction identifier="t_paralysis" amount="5" probability="0.6" />
@@ -2505,9 +2505,9 @@
     causeofdeathdescription="Burned to death"
     selfcauseofdeathdescription="You have burned to death."
     limbspecific="true"
-    maxstrength="100"
+    maxstrength="200"
     burnoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
+    <Effect minstrength="0" maxstrength="20" multiplybymaxvitality="true"
       minvitalitydecrease="0"
       maxvitalitydecrease="0.1">
     <StatusEffect target="Limb" comparison="And">
@@ -2518,7 +2518,7 @@
 		<Affliction identifier="immunity" amount="-0.1"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="10" maxstrength="25" multiplybymaxvitality="true"
+    <Effect minstrength="20" maxstrength="50" multiplybymaxvitality="true"
       minvitalitydecrease="0.1"
       maxvitalitydecrease="0.25">
     <StatusEffect target="Limb" comparison="And">
@@ -2529,7 +2529,7 @@
 		<Affliction identifier="immunity" amount="-0.45"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="25" maxstrength="50" multiplybymaxvitality="true"
+    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
       minvitalitydecrease="0.25"
       maxvitalitydecrease="0.50">
     <StatusEffect target="Limb" comparison="And">
@@ -2540,7 +2540,7 @@
 		<Affliction identifier="immunity" amount="-0.95"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="50" maxstrength="75" multiplybymaxvitality="true"
+    <Effect minstrength="100" maxstrength="150" multiplybymaxvitality="true"
       minvitalitydecrease="0.5"
       maxvitalitydecrease="0.75">
     <StatusEffect target="Limb" comparison="And">
@@ -2551,7 +2551,7 @@
 		<Affliction identifier="immunity" amount="-1.15"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="75" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="150" maxstrength="200" multiplybymaxvitality="true"
       minvitalitydecrease="0.75"
       maxvitalitydecrease="1">
     <StatusEffect target="Limb" comparison="And">
@@ -3568,10 +3568,18 @@
     maxstrength="100">
 
     
-    <Effect minstrength="0" maxstrength="3">
+    <Effect minstrength="0" maxstrength="100">
     <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0"/>
     <StatusEffect target="Character">
     <Affliction identifier="analgesia" amount="10"/>
+    </StatusEffect>
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals llock"/>
+    <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
+    </StatusEffect>
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals rlock"/>
+    <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
     </StatusEffect>
     </Effect>
 

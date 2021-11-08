@@ -41,7 +41,7 @@
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_heads_mask.png" />
     <huskmask texture="Content/Characters/Human/Human_husk_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
-    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="ll_fracture,rl_fracture,la_fracture,ra_fracture,boncut1,boncut2,boncut3,boncut4,arteriesclamp1,arteriesclamp2,arteriesclamp3,arteriesclamp4,arteriesclamp5,drilledbones1,drilledbones2,drilledbones3,drilledbones4,drilledbones5,weirdthing11,weirdthing12,weirdthing13,weirdthing14,weirdthing15,suturedi1,suturedi2,suturedi3,suturedi4,suturedi5,retractedskin1,retractedskin2,retractedskin3,retractedskin4,retractedskin5,clampedbleeders1,clampedbleeders2,clampedbleeders3,clampedbleeders4,clampedbleeders5,surgeryincision1,surgeryincision2,surgeryincision3,surgeryincision4,surgeryincision5,dislocation,t_arterialcut,t_fracture,ll_arterialcut,rl_arterialcut,l_fracture,la_arterialcut,ra_arterialcut,a_fracture,n_fracture,pneumothorax,tamponade,eventration,tra_amputation,tla_amputation,trl_amputation,tll_amputation,sra_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="ll_fracture,rl_fracture,la_fracture,ra_fracture,boncut1,boncut2,boncut3,boncut4,arteriesclamp1,arteriesclamp2,arteriesclamp3,arteriesclamp4,arteriesclamp5,drilledbones1,drilledbones2,drilledbones3,drilledbones4,drilledbones5,weirdthing11,weirdthing12,weirdthing13,weirdthing14,weirdthing15,suturedi1,suturedi2,suturedi3,suturedi4,suturedi5,retractedskin1,retractedskin2,retractedskin3,retractedskin4,retractedskin5,clampedbleeders1,clampedbleeders2,clampedbleeders3,clampedbleeders4,clampedbleeders5,surgeryincision1,surgeryincision2,surgeryincision3,surgeryincision4,surgeryincision5,dislocation,t_arterialcut,t_fracture,ll_arterialcut,rl_arterialcut,l_fracture,la_arterialcut,ra_arterialcut,a_fracture,pneumothorax,tamponade,eventration,tra_amputation,tla_amputation,trl_amputation,tll_amputation,sra_amputation,sla_amputation,srl_amputation,sll_amputation" probabilitymultiplier="1" damageparticle="" />
     <StatusEffect type="OnDamaged" target="This"> 
       <RequiredAffliction identifier="internaldamage,blunttrauma,bitewounds,explosiondamage" minstrength="5"/>
       <Affliction identifier="concussion" strength="10" probability="0.25"/>
@@ -66,9 +66,10 @@
       <RequiredAffliction identifier="gunshotwound" minstrength="1"/>
       <Affliction identifier="h_fracture" strength="5" probability="0.3"/>
     </StatusEffect>
-    <StatusEffect type="OnDamaged" target="This"> 
-      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="10"/>
-      <Affliction identifier="h_fracture" strength="5" probability="0.25"/>
+    <StatusEffect type="OnDamaged" target="This" comparison="Or"> 
+      <RequiredAffliction identifier="internaldamage,blunttrauma,explosiondamage" minstrength="5"/>
+      <Conditional h_fracture="eq 0"/>
+      <Affliction identifier="n_fracture" strength="100" probability="0.15"/>
     </StatusEffect>
     <StatusEffect type="OnDamaged" target="This" comparison="Or"> 
       <RequiredAffliction identifier="internaldamage,blunttrauma,gunshotwound,lacerations,bitewounds,explosiondamage" minstrength="5"/>
@@ -617,6 +618,15 @@
     <tintmask texture="Content/Characters/Human/Human_[GENDER]_mask.png" />
     <damagemodifier damagemultiplier="0.5" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="gunshotwound,lacerations,blunttrauma" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
     <damagemodifier damagemultiplier="0.75" armorsector="0,360" deflectprojectiles="False" afflictionidentifiers="bleeding,bitewounds" damagesound="" afflictiontypes="" probabilitymultiplier="1" damageparticle="" />
+    <damagemodifier armorsector="0,360" afflictiontypes="" damagemultiplier="0" damagesound="LimbArmor" deflectprojectiles="True" afflictionidentifiers="ll_fracture,rl_fracture,la_fracture,ra_fracture,boncut1,boncut2,boncut3,boncut4,arteriesclamp1,arteriesclamp2,arteriesclamp3,arteriesclamp4,arteriesclamp6,drilledbones1,drilledbones2,drilledbones3,drilledbones4,drilledbones6,weirdthing11,weirdthing12,weirdthing13,weirdthing14,weirdthing16,suturedi1,suturedi2,suturedi3,suturedi4,suturedi5,retractedskin1,retractedskin2,retractedskin3,retractedskin4,retractedskin5,clampedbleeders1,clampedbleeders2,clampedbleeders3,clampedbleeders4,clampedbleeders5,surgeryincision1,surgeryincision2,surgeryincision3,surgeryincision4,surgeryincision6,dislocation,h_arterialcut,h_fracture,ll_arterialcut,rl_arterialcut,la_arterialcut,ra_arterialcut,l_fracture,a_fracture,n_fracture,t_paralysis,rupturedface,th_amputation,tra_amputation,tla_amputation,trl_amputation,tll_amputation" probabilitymultiplier="1" damageparticle="" />
+    <StatusEffect type="OnDamaged" target="This"> 
+      <RequiredAffliction identifier="gunshotwound,explosiondamage" minstrength="5"/>
+      <Affliction identifier="foreignbody" strength="5" probability="0.75"/>
+    </StatusEffect>
+    <StatusEffect type="OnDamaged" target="This">
+      <RequiredAffliction identifier="lacerations,bitewounds,gunshotwound,explosiondamage" minstrength="5"/>
+      <Affliction identifier="internalbleeding" strength="5" probability="0.4"/>
+    </StatusEffect>
   </limb>
   <limb id="13" radius="13" width="0" height="35" name="LeftForearm (13)" type="LeftForearm" notes="" scale="1" flip="True" mirrorvertically="False" mirrorhorizontally="False" hide="False" spriteorientation="180" steerforce="0" density="10" ignorecollisions="False" angulardamping="50" attackpriority="1" pullpos="0,0" stepoffset="0,0" refjoint="-1" mouthpos="0,0" constanttorque="0" constantangle="0" attackforcemultiplier="1" minseverancedamage="1" severedfadeouttime="10" applytailangle="False" sinefrequencymultiplier="1" sineamplitudemultiplier="1" blinkfrequency="0" blinkdurationin="0.2" blinkdurationout="0.5" blinkholdtime="0" blinkrotationin="0" blinkrotationout="45" blinkforce="50" blinktransitionin="Linear" blinktransitionout="Linear" healthindex="2" friction="0.3" restitution="0.05" inheritlimbdepth="None" onlyblinkinwater="False">
     <sprite texture="" sourcerect="336,96,64,64" origin="0.5,0.5" depth="0.15" color="255,255,255,255" deadcolor="255,255,255,255" deadcolortime="0" ignoretint="False" />

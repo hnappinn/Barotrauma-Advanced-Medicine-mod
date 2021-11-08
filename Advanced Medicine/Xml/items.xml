@@ -57,7 +57,6 @@
             <StatusEffect type="OnUse" target="Character" setvalue="true" delay="0" comparison="And">
                 <Conditional vf="eq 0" vt="eq 0"/>
                 <Sound file="Mods/Advanced Medicine/Sound/Defib2.ogg" range="500"/>
-                <Affliction identifier="t_paralysis" amount="100"/>
             </StatusEffect>
 
         </MeleeWeapon>
@@ -3038,7 +3037,7 @@
             </StatusEffect>
             <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
                 <Conditional tra_amputation="eq 0" sra_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0"
-                             clampcut4="eq 0" dislocation3="eq 0"/>
+                             clampcut4="eq 0" dislocation3="eq 0" t_paralysis="eq 0"/>
                 <Remove/>
             </StatusEffect>
         </Holdable>
@@ -3059,7 +3058,7 @@
             </StatusEffect>
             <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
                 <Conditional tla_amputation="eq 0" sla_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0"
-                             clampcut4="eq 0" dislocation4="eq 0"/>
+                             clampcut4="eq 0" dislocation4="eq 0" t_paralysis="eq 0"/>
                 <Remove/>
             </StatusEffect>
         </Holdable>
@@ -3431,4 +3430,28 @@
     </Projectile>
   </Item>
 </Override>
+
+<Item name="Spinal Cord Implant" identifier="spinalimplant" description="" scale="0.4" useinhealthinterface="True">
+        <Price baseprice="750" soldeverywhere="false">
+            <Price locationtype="outpost" multiplier="1.2" sold="false"/>
+            <Price locationtype="city" multiplier="1.3" sold="false"/>
+            <Price locationtype="research" multiplier="1" sold="true" minavailable="2"/>
+            <Price locationtype="military" multiplier="1.2" sold="false"/>
+            <Price locationtype="mine" multiplier="1.3" sold="false"/>
+        </Price>
+        <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6"/>
+        <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" depth="0.55" origin="0.5,0.5"/>
+        <Body width="60" height="90" density="20"/>
+       <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="5,5"
+                     handle1="0,0" holdangle="220" reload="1.0" msg="ItemMsgPickUpSelect">
+            <StatusEffect Condition="-100.0" type="OnUse" target="Limb, This" disabledeltatime="true" comparison="And">
+                <Conditional retractedskin6="gt 50"/>
+                <ReduceAffliction identifier="t_paralysis" amount="100"/>
+            </StatusEffect>
+            <StatusEffect type="OnBroken" target="This">
+                <Remove/>
+            </StatusEffect>
+        </MeleeWeapon>
+</Item>
+
 </Items>
