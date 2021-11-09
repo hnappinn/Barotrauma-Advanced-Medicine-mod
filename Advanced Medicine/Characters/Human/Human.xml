@@ -64,22 +64,26 @@
     <Limb name="LeftArm">
       <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,0,126,374" highlightarea="1,69,27,140" />
       <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="379,515,126,374" />
-      <VitalityMultiplier type="damage" multiplier="0" />
+      <VitalityMultiplier type="damage" multiplier="0.15" />
+      <VitalityMultiplier type="burn" multiplier="0.15" />
     </Limb>
     <Limb name="RightArm">
       <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,0,126,374" highlightarea="100,69,27,140" />
       <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="127,515,126,374" />
-      <VitalityMultiplier type="damage" multiplier="0" />
+      <VitalityMultiplier type="damage" multiplier="0.15" />
+      <VitalityMultiplier type="burn" multiplier="0.15" />
     </Limb>
     <Limb name="LeftLeg">
       <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,0,126,374" highlightarea="3,180,57,194" />
       <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="505,515,126,374" />
-      <VitalityMultiplier type="damage" multiplier="0" />
+      <VitalityMultiplier type="damage" multiplier="0.15" />
+      <VitalityMultiplier type="burn" multiplier="0.15" />
     </Limb>
     <Limb name="RightLeg">
       <Sprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,0,126,374" highlightarea="68,180,57,194" />
       <Highlightsprite texture="Content/UI/Health/MedUIAtlas.png" sourcerect="253,515,126,374" />
-      <VitalityMultiplier type="damage" multiplier="0" />
+      <VitalityMultiplier type="damage" multiplier="0.15" />
+      <VitalityMultiplier type="burn" multiplier="0.15" />
     </Limb>
   </health>
   <inventory arrowslot="9" slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface"/>
