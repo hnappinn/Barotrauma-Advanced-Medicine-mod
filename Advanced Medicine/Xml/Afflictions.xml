@@ -33,7 +33,7 @@
       </StatusEffect>
     </Effect>
 
-    <Effect minstrength="30" maxstrength="98" resistancefor="vt" strengthchange="2">
+    <Effect minstrength="30" maxstrength="98" strengthchange="2">
       <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0.5"/>
       <StatusEffect target="Character">
         <Affliction identifier="hypotension" amount="0.7" />
@@ -170,7 +170,7 @@
     </StatusEffect>
 
     <Effect minstrength="0" maxstrength="1" strengthchange="-0.5">
-      <StatusEffect target="Character"  disabledeltatime="true">
+      <StatusEffect target="Character" disabledeltatime="true">
       <Affliction identifier="hypotension" amount="1" />
       <Affliction identifier="stun" strength="15" probability="0.4" />
       <ReduceAffliction identifier="asys" amount="9999"/>
@@ -1286,7 +1286,7 @@
     <Affliction identifier="internaldamage" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
-    <PeriodicEffect mininterval="30" maxinterval="60">
+    <PeriodicEffect mininterval="20" maxinterval="50">
     <StatusEffect target="Limb" comparison="And">
     <Conditional boneclamp6="eq 0" t_paralysis="eq 0"/>
     <Affliction identifier="t_paralysis" amount="5" probability="0.6" />
@@ -2244,14 +2244,14 @@
     causeofdeathdescription="Died of internal injuries"
     selfcauseofdeathdescription="You have succumbed to your internal injuries."
     limbspecific="true"
-    maxstrength="100"
+    maxstrength="200"
     damageoverlayalpha="1">
     <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true"
       minvitalitydecrease="0"
       maxvitalitydecrease="0.5"/>
-    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true"
 				minvitalitydecrease="0.5"
-				maxvitalitydecrease="1">
+				maxvitalitydecrease="2">
 			</Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,768,128,128" color="195,136,60,255" origin="0,0"/>
   </InternalDamage>
@@ -2267,14 +2267,14 @@
 	  causeofdeathdescription=""
 	  selfcauseofdeathdescription=""
 	  limbspecific="true"
-	  maxstrength="100"
+	  maxstrength="200"
 	  damageoverlayalpha="1">
     <Effect minstrength="0" maxstrength="50" multiplybymaxvitality="true"
 			minvitalitydecrease="0"
 			maxvitalitydecrease="0.5"/>
-    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true"
 				minvitalitydecrease="0.5"
-				maxvitalitydecrease="1">
+				maxvitalitydecrease="2">
       </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="768,896,128,128" color="195,136,60,255" origin="0,0"/>
   </InternalDamage>
@@ -2290,7 +2290,7 @@
 	  causeofdeathdescription=""
 	  selfcauseofdeathdescription=""
 	  limbspecific="true"
-	  maxstrength="100"
+	  maxstrength="200"
 	  damageoverlayalpha="1">
     <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
 			minvitalitydecrease="0"
@@ -2325,9 +2325,9 @@
 		<Affliction identifier="immunity" amount="-0.5"/>
     </StatusEffect>
 		</Effect>
-    <Effect minstrength="65" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="65" maxstrength="200" multiplybymaxvitality="true"
 				minvitalitydecrease="0.5"
-				maxvitalitydecrease="1">
+				maxvitalitydecrease="2">
 		<StatusEffect target="Limb" comparison="And">
 			<Conditional ointmented="eq 0" immunity="lte 500"/>
 			<Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1"/>
@@ -2350,7 +2350,7 @@
 	  causeofdeathdescription="Mauled to death"
 	  selfcauseofdeathdescription="You have been mauled to death."
 	  limbspecific="true"
-	  maxstrength="100"
+	  maxstrength="200"
 	  damageoverlayalpha="1">
     <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
 			minvitalitydecrease="0"
@@ -2374,9 +2374,9 @@
 		<Affliction identifier="immunity" amount="-0.3"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true"
 				minvitalitydecrease="0.5"
-				maxvitalitydecrease="1">
+				maxvitalitydecrease="2">
     <StatusEffect target="Limb" comparison="And">
 		<Affliction identifier="immunity" amount="-0.6"/>
     </StatusEffect>
@@ -2398,7 +2398,7 @@
 	  causeofdeathdescription="Shot to death"
 	  selfcauseofdeathdescription="You have died of gunshot wounds."
 	  limbspecific="true"
-	  maxstrength="100"
+	  maxstrength="200"
 	  karmachangeonapplied="-1"
 	  damageoverlayalpha="1">
     <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
@@ -2425,9 +2425,9 @@
 		<Affliction identifier="immunity" amount="-0.5"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="50" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="50" maxstrength="200" multiplybymaxvitality="true"
 		  minvitalitydecrease="0.5"
-		  maxvitalitydecrease="1"
+		  maxvitalitydecrease="2"
 		  dialogflag="GunshotWound">
         <StatusEffect target="Limb" comparison="And">
         <Conditional ointmented="eq 0"/>
@@ -2452,11 +2452,11 @@
 	  selfcauseofdeathdescription=""
 	  limbspecific="false"
     indicatorlimb="Torso"
-	  maxstrength="100"
+	  maxstrength="200"
 	  damageoverlayalpha="1">
-    <Effect minstrength="0" maxstrength="100" multiplybymaxvitality="true" strengthchange="-0.03"
+    <Effect minstrength="0" maxstrength="200" multiplybymaxvitality="true" strengthchange="-0.03"
 			minvitalitydecrease="0"
-			maxvitalitydecrease="1"/>
+			maxvitalitydecrease="2"/>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="128,384,128,128" color="195,136,60,255" origin="0,0"/>
   </InternalDamage>
   </Override>
@@ -2471,7 +2471,7 @@
     causeofdeathdescription=""
     selfcauseofdeathdescription=""
     limbspecific="true"
-    maxstrength="100"
+    maxstrength="200"
     damageoverlayalpha="1">
     <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true"
 			minvitalitydecrease="0"
@@ -2484,9 +2484,9 @@
     <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.1"/>
     </StatusEffect>
     </Effect>
-    <Effect minstrength="45" maxstrength="100" multiplybymaxvitality="true"
+    <Effect minstrength="45" maxstrength="200" multiplybymaxvitality="true"
 				minvitalitydecrease="0.45"
-				maxvitalitydecrease="1">
+				maxvitalitydecrease="2">
         <StatusEffect target="Limb" comparison="And">
         <Conditional ointmented="eq 0"/>
         <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="0.15"/>
@@ -2553,7 +2553,7 @@
     </Effect>
     <Effect minstrength="150" maxstrength="200" multiplybymaxvitality="true"
       minvitalitydecrease="0.75"
-      maxvitalitydecrease="1">
+      maxvitalitydecrease="2">
     <StatusEffect target="Limb" comparison="And">
 		<Conditional ointmented="eq 0" immunity="lte 500"/>
     <Affliction identifier="infectedwound" indicatorlimb="Limb" amount="1.8"/>
@@ -3568,10 +3568,18 @@
     maxstrength="100">
 
     
-    <Effect minstrength="0" maxstrength="3">
+    <Effect minstrength="0" maxstrength="100">
     <StatusEffect target="Character" setvalue="true" SpeedMultiplier="0"/>
     <StatusEffect target="Character">
     <Affliction identifier="analgesia" amount="10"/>
+    </StatusEffect>
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals llock"/>
+    <SpawnItem identifier="armlock2" spawnposition="ThisInventory"/>
+    </StatusEffect>
+    <StatusEffect target="Character">
+    <Conditional HasStatusTag="!equals rlock"/>
+    <SpawnItem identifier="armlock1" spawnposition="ThisInventory"/>
     </StatusEffect>
     </Effect>
 
@@ -4043,23 +4051,13 @@
     limbspecific="True"
     maxstrength="100">
 	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.1"/>
-    <StatusEffect target="Character">
-    </StatusEffect>
     <Effect minstrength="10" maxstrength="25" strengthchange="-0.1">
-    <StatusEffect target="Character">
-    </StatusEffect>
     </Effect>
     <Effect minstrength="25" maxstrength="50" strengthchange="-0.1">
-    <StatusEffect target="Character">
-    </StatusEffect>
     </Effect>
     <Effect minstrength="50" maxstrength="75" strengthchange="-0.1">
-    <StatusEffect target="Character">
-    </StatusEffect>
     </Effect>
     <Effect minstrength="75" maxstrength="100" strengthchange="-0.1">
-    <StatusEffect target="Character">
-    </StatusEffect>
     </Effect>
     <PeriodicEffect mininterval="32" maxinterval="64">
       <StatusEffect target="Character" SpeedMultiplier="0.0" setvalue="true" duration="1.7" />
@@ -4087,30 +4085,6 @@
     identifier="pain1"
     limbspecific="True"
     maxstrength="100">
-	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.1"/>
-    </StatusEffect>
-    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.25"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1.5"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="2.5"/>
-    </StatusEffect>
-    </Effect>
  
     <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
 	</Affliction>
@@ -4120,30 +4094,6 @@
     identifier="pain2"
     limbspecific="True"
     maxstrength="1">
-	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.1"/>
-    </StatusEffect>
-    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.25"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1.5"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="2.5"/>
-    </StatusEffect>
-    </Effect>
  
     <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
 	</Affliction>
@@ -4153,30 +4103,6 @@
     identifier="pain3"
     limbspecific="True"
     maxstrength="1">
-	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.1"/>
-    </StatusEffect>
-    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.25"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1.5"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="2.5"/>
-    </StatusEffect>
-    </Effect>
  
     <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
 	</Affliction>
@@ -4186,32 +4112,6 @@
     identifier="pain4"
     limbspecific="True"
     maxstrength="1">
-	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.1"/>
-    </StatusEffect>
-    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.25"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1.5"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="2.5"/>
-    </StatusEffect>
-    </Effect>
- 
-    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
 	</Affliction>
 
   <Affliction
@@ -4219,30 +4119,6 @@
     identifier="pain5"
     limbspecific="True"
     maxstrength="1">
-	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.1"/>
-    </StatusEffect>
-    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.25"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1.5"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="2.5"/>
-    </StatusEffect>
-    </Effect>
  
     <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
 	</Affliction>
@@ -4252,30 +4128,6 @@
     identifier="pain6"
     limbspecific="True"
     maxstrength="1">
-	  <Effect minstrength="0" maxstrength="10" strengthchange="-0.2"/>
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.1"/>
-    </StatusEffect>
-    <Effect minstrength="10" maxstrength="25" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="0.25"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="25" maxstrength="50" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="50" maxstrength="75" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="1.5"/>
-    </StatusEffect>
-    </Effect>
-    <Effect minstrength="75" maxstrength="100" strengthchange="-0.2">
-    <StatusEffect target="Character">
-    <Affliction identifier="pain" amount="2.5"/>
-    </StatusEffect>
-    </Effect>
  
     <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="256,0,128,128" color="68,157,198,255" origin="0,0"/>
 	</Affliction>
