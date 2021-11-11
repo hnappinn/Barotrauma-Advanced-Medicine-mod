@@ -8,6 +8,8 @@
   <None file="Mods/Advanced Medicine/Images/Suits/stasisbag.png" />
   <None file="Mods/Advanced Medicine/Images/Suits/baghelmets.png" />
   <None file="Mods/Advanced Medicine/Images/Suits/bag.png" />
+  <None file= "Mods/Advanced Medicine/Images/HandBook.png" />
+  <None file= "Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" />
   <Afflictions file="Mods/Advanced Medicine/Xml/Afflictions.xml" />
   <Item file="Mods/Advanced Medicine/Xml/items.xml" />
   <Text file="Mods/Advanced Medicine/Localization/Russian/Russian.xml" />
