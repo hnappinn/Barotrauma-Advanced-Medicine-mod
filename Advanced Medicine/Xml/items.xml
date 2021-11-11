@@ -3461,7 +3461,7 @@
 
 
     <!-- GUIDES -->
-    <Item name="" identifier="thal_guidegen" spritecolor="180,255,220,255" InventoryIconColor="180,255,220,255" category="Equipment" Tags="smallitem" canflipx="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" showcontentsintooltip="true">
+    <Item name="" identifier="am_guide" spritecolor="180,255,220,255" InventoryIconColor="180,255,220,255" category="Equipment" Tags="smallitem" canflipx="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" showcontentsintooltip="true">
         <Sprite texture="Mods/Advanced Medicine/Images/HandBook.png" sourcerect="0,0,89,100" depth="0.6" origin="0.5,0.5" />
         <Body width="25" height="40" density="8" />
         <Holdable slots="Any,RightHand+LeftHand" holdpos="57,15" holdangle="-20" aimable="false" handle1="-25,-5" handle2="-27,-5" msg="ItemMsgPickUpSelect">
@@ -3470,121 +3470,97 @@
         <Deconstruct time="10">
         </Deconstruct>
         -->
-        <ItemContainer capacity="1" hideitems="true" itempos="16,-15" canbeselected="true" containedspritedepth="0.56" drawhudwhenequipped="true" uilabel="apcbat" spawnwithid="thal_guidegen_intro" drawinventory="false">
+        <ItemContainer capacity="1" hideitems="true" itempos="16,-15" canbeselected="true" containedspritedepth="0.56" drawhudwhenequipped="true" uilabel="apcbat" spawnwithid="am_guide_intro" drawinventory="false">
             <Containable items="guidepage" />
             <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,1,1" />
             <CustomInterface canbeselected="false" drawhudwhenequipped="true">
                 <GuiFrame relativesize="0.20,0.7" anchor="TopRight" absoluteoffset="20,20" style="ItemUI" color="0,0,0,0" />
-                <Button text="thal_guidegen_introlabel">
+                <Button text="introlabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
                         <RemoveItem />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
-                        <SpawnItem identifier="thal_guidegen_intro" spawnposition="ThisInventory" />
+                        <SpawnItem identifier="am_guide_intro" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
-                <Button text="thal_guidegen_indexlabel">
+                <Button text="am_guide_indexlabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
                         <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
-                        <SpawnItem identifier="thal_guidegen_index" spawnposition="ThisInventory" />
+                        <SpawnItem identifier="am_guide_index" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
-                <Button text="thal_guidegen_scannerlabel">
+                <Button text="am_guide_mainlabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
                         <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
-                        <SpawnItem identifier="thal_guidegen_scanner" spawnposition="ThisInventory" />
+                        <SpawnItem identifier="am_guide_main" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
-                <Button text="thal_guidegen_dnalabel">
+                <Button text="am_guide_toolslabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
                         <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
-                        <SpawnItem identifier="thal_guidegen_dna" spawnposition="ThisInventory" />
+                        <SpawnItem identifier="am_guide_tools" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
-                <Button text="thal_guidegen_splicelabel">
+                <Button text="am_guide_operationslabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
                         <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
-                        <SpawnItem identifier="thal_guidegen_splice" spawnposition="ThisInventory" />
+                        <SpawnItem identifier="am_guide_operations" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
-                <Button text="thal_guidegen_graftslabel">
+                <Button text="am_guide_medicallabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
                         <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
-                        <SpawnItem identifier="thal_guidegen_grafts" spawnposition="ThisInventory" />
+                        <SpawnItem identifier="am_guide_medical" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
-                <Button text="thal_guidegen_mutationlabel">
+                <Button text="am_guide_bloodtablelabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
                         <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
-                        <SpawnItem identifier="thal_guidegen_mutation" spawnposition="ThisInventory" />
-                    </StatusEffect>
-                </Button>
-                <Button text="thal_guidegen_transplantlabel">
-                    <StatusEffect type="OnUse" targettype="Contained">
-                        <RemoveItem />
-                        <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
-                    </StatusEffect>
-                    <StatusEffect type="OnUse" delay="0.1" target="This">
-                        <SpawnItem identifier="thal_guidegen_transplant" spawnposition="ThisInventory" />
-                    </StatusEffect>
-                </Button>
-                <Button text="thal_guidegen_clonelabel">
-                    <StatusEffect type="OnUse" targettype="Contained">
-                        <RemoveItem />
-                        <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
-                    </StatusEffect>
-                    <StatusEffect type="OnUse" delay="0.1" target="This">
-                        <SpawnItem identifier="thal_guidegen_clone" spawnposition="ThisInventory" />
+                        <SpawnItem identifier="am_guide_bloodtable" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
             </CustomInterface>
         </ItemContainer>
     </Item>
     <!-- pages -->
-    <Item name="" identifier="thal_guidegen_intro" Tags="guidepage" hideinmenus="true">
+    <Item name="" identifier="am_guide_intro" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
-    <Item name="" identifier="thal_guidegen_index" Tags="guidepage" hideinmenus="true">
+    <Item name="" identifier="am_guide_index" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
-    <Item name="" identifier="thal_guidegen_scanner" Tags="guidepage" hideinmenus="true">
+    <Item name="" identifier="am_guide_tools" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
-    <Item name="" identifier="thal_guidegen_dna" Tags="guidepage" hideinmenus="true">
+    <Item name="" identifier="am_guide_main" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
-    <Item name="" identifier="thal_guidegen_splice" Tags="guidepage" hideinmenus="true">
+    <Item name="" identifier="am_guide_operations" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
-    <Item name="" identifier="thal_guidegen_grafts" Tags="guidepage" hideinmenus="true">
+    <Item name="" identifier="am_guide_medical" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
-    <Item name="" identifier="thal_guidegen_mutation" Tags="guidepage" hideinmenus="true">
-        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
-    </Item>
-    <Item name="" identifier="thal_guidegen_transplant" Tags="guidepage" hideinmenus="true">
-        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
-    </Item>
-    <Item name="" identifier="thal_guidegen_clone" Tags="guidepage" hideinmenus="true">
+    <Item name="" identifier="am_guide_bloodtable" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
 </Items>
