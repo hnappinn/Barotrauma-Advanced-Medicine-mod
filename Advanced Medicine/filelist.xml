@@ -10,9 +10,12 @@
   <None file="Mods/Advanced Medicine/Images/Suits/bag.png" />
   <Afflictions file="Mods/Advanced Medicine/Xml/Afflictions.xml" />
   <Item file="Mods/Advanced Medicine/Xml/items.xml" />
-  <Text file="Mods/Advanced Medicine/Localization/Russian.xml" />
-  <Text file="Mods/Advanced Medicine/Localization/English.xml" />
-  <Text file="Mods/Advanced Medicine/Localization/French.xml" />
+  <Text file="Mods/Advanced Medicine/Localization/Russian/Russian.xml" />
+  <Text file="Mods/Advanced Medicine/Localization/Russian/Russian_Guide.xml" />
+  <Text file="Mods/Advanced Medicine/Localization/English/English.xml" />
+  <Text file="Mods/Advanced Medicine/Localization/English/English_Guide.xml" />
+  <Text file="Mods/Advanced Medicine/Localization/French/French.xml" />
+  <Text file="Mods/Advanced Medicine/Localization/French/French_Guide.xml" />
   <None file="Mods/Advanced Medicine/Sound/drill.ogg" />
   <None file="Mods/Advanced Medicine/Sound/squelch1.ogg" />
   <None file="Mods/Advanced Medicine/Sound/Defib1.ogg" />
