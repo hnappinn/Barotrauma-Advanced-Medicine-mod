@@ -138,10 +138,10 @@
 	<afflictioncauseofdeath.necrosis>Умер от некроза.</afflictioncauseofdeath.necrosis>
 	<afflictioncauseofdeathself.necrosis>Вы умерли от некроза.</afflictioncauseofdeathself.necrosis>
 
-	<afflictionname.septicwound>Сепсис</afflictionname.septicwound>
-	<afflictiondescription.septicwound>Гнойная рана</afflictiondescription.septicwound>
-	<afflictioncauseofdeath.septicwound>Умер от сепсиса.</afflictioncauseofdeath.septicwound>
-	<afflictioncauseofdeathself.septicwound>Вы умерли от сепсиса.</afflictioncauseofdeathself.septicwound>
+	<afflictionname.sepsis>Сепсис</afflictionname.sepsis>
+	<afflictiondescription.sepsis>Гнойная рана</afflictiondescription.sepsis>
+	<afflictioncauseofdeath.sepsis>Умер от сепсиса.</afflictioncauseofdeath.sepsis>
+	<afflictioncauseofdeathself.sepsis>Вы умерли от сепсиса.</afflictioncauseofdeathself.sepsis>
 
 	<afflictionname.infectedwound>Зараженная рана</afflictionname.infectedwound>
 	<afflictiondescription.infectedwound>Рана выглядит опухшей и гнойной.</afflictiondescription.infectedwound>

@@ -2947,12 +2947,12 @@
                 <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true"/>
                 <StatusEffect type="OnFailure" target="This" Condition="-100.0" disabledeltatime="true"/>
                 <RequiredSkill identifier="medical" level="40"/>
-                <StatusEffect tags="medical" type="OnUse" target="Character" duration="30.0">
+                <StatusEffect tags="medical" type="OnUse" target="Character" duration="15.0">
                     <Affliction identifier="organdamage" amount="0.25"/>
                     <Affliction identifier="hemotransfusionshock" amount="0.0125"/>
                     <ReduceAffliction identifier="bloodloss" amount="0.5"/>
                 </StatusEffect>
-                <StatusEffect tags="medical" type="OnFailure" target="Character" duration="30.0">
+                <StatusEffect tags="medical" type="OnFailure" target="Character" duration="15.0">
                     <Affliction identifier="organdamage" amount="0.5"/>
                     <Affliction identifier="hemotransfusionshock" amount="0.025"/>
                     <ReduceAffliction identifier="bloodloss" amount="0.5"/>
@@ -3462,14 +3462,18 @@
 
     <!-- GUIDES -->
     <Item name="" identifier="am_guide" spritecolor="180,255,220,255" InventoryIconColor="180,255,220,255" category="Equipment" Tags="smallitem" canflipx="true" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft" showcontentsintooltip="true">
-        <Sprite texture="Mods/Advanced Medicine/Images/HandBook.png" sourcerect="0,0,89,100" depth="0.6" origin="0.5,0.5" />
-        <Body width="25" height="40" density="8" />
+        <Sprite texture="Mods/Advanced Medicine/Images/HandBook.jpg" sourcerect="0,0,89,100" depth="0.6" origin="0.5,0.5" />
+        <Body width="60" height="60" density="8" />
         <Holdable slots="Any,RightHand+LeftHand" holdpos="57,15" holdangle="-20" aimable="false" handle1="-25,-5" handle2="-27,-5" msg="ItemMsgPickUpSelect">
         </Holdable>
         <!-- Removed due to crashing when contained guide left in deconstructor
         <Deconstruct time="10">
         </Deconstruct>
         -->
+        <Fabricate suitablefabricators="medicalfabricator" requiredtime="10">
+            <RequiredItem identifier="plastic"/>
+        </Fabricate>
+        
         <ItemContainer capacity="1" hideitems="true" itempos="16,-15" canbeselected="true" containedspritedepth="0.56" drawhudwhenequipped="true" uilabel="apcbat" spawnwithid="am_guide_intro" drawinventory="false">
             <Containable items="guidepage" />
             <ContainedStateIndicator texture="Content/UI/ContainerIndicators.png" sourcerect="0,157,1,1" />
@@ -3477,7 +3481,7 @@
                 <GuiFrame relativesize="0.20,0.7" anchor="TopRight" absoluteoffset="20,20" style="ItemUI" color="0,0,0,0" />
                 <Button text="introlabel">
                     <StatusEffect type="OnUse" targettype="Contained">
-                        <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
                         <RemoveItem />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
@@ -3487,7 +3491,7 @@
                 <Button text="am_guide_indexlabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
-                        <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
                         <SpawnItem identifier="am_guide_index" spawnposition="ThisInventory" />
@@ -3496,25 +3500,52 @@
                 <Button text="am_guide_mainlabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
-                        <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
                         <SpawnItem identifier="am_guide_main" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
+                <Button text="am_guide_mainlabel2">
+                    <StatusEffect type="OnUse" targettype="Contained">
+                        <RemoveItem />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
+                    </StatusEffect>
+                    <StatusEffect type="OnUse" delay="0.1" target="This">
+                        <SpawnItem identifier="am_guide_main2" spawnposition="ThisInventory" />
+                    </StatusEffect>
+                </Button>
                 <Button text="am_guide_toolslabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
-                        <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
                         <SpawnItem identifier="am_guide_tools" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
+                <Button text="am_guide_toolslabel2">
+                    <StatusEffect type="OnUse" targettype="Contained">
+                        <RemoveItem />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
+                    </StatusEffect>
+                    <StatusEffect type="OnUse" delay="0.1" target="This">
+                        <SpawnItem identifier="am_guide_tools2" spawnposition="ThisInventory" />
+                    </StatusEffect>
+                </Button>
+                <Button text="am_guide_toolslabel3">
+                    <StatusEffect type="OnUse" targettype="Contained">
+                        <RemoveItem />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
+                    </StatusEffect>
+                    <StatusEffect type="OnUse" delay="0.1" target="This">
+                        <SpawnItem identifier="am_guide_tools3" spawnposition="ThisInventory" />
+                    </StatusEffect>
+                </Button>
                 <Button text="am_guide_operationslabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
-                        <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
                         <SpawnItem identifier="am_guide_operations" spawnposition="ThisInventory" />
@@ -3523,16 +3554,25 @@
                 <Button text="am_guide_medicallabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
-                        <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
                         <SpawnItem identifier="am_guide_medical" spawnposition="ThisInventory" />
                     </StatusEffect>
                 </Button>
+                <Button text="am_guide_medicallabel2">
+                    <StatusEffect type="OnUse" targettype="Contained">
+                        <RemoveItem />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
+                    </StatusEffect>
+                    <StatusEffect type="OnUse" delay="0.1" target="This">
+                        <SpawnItem identifier="am_guide_medical2" spawnposition="ThisInventory" />
+                    </StatusEffect>
+                </Button>
                 <Button text="am_guide_bloodtablelabel">
                     <StatusEffect type="OnUse" targettype="Contained">
                         <RemoveItem />
-                        <Sound file="Mods/Advanced Medicine/Sound/Misc/Pageturn.ogg" range="300" />
+                        <Sound file="Mods/Advanced Medicine/Sound/Pageturn.ogg" range="300" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" delay="0.1" target="This">
                         <SpawnItem identifier="am_guide_bloodtable" spawnposition="ThisInventory" />
@@ -3551,13 +3591,25 @@
     <Item name="" identifier="am_guide_tools" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
+    <Item name="" identifier="am_guide_tools2" Tags="guidepage" hideinmenus="true">
+        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+    </Item>
+    <Item name="" identifier="am_guide_tools3" Tags="guidepage" hideinmenus="true">
+        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+    </Item>
     <Item name="" identifier="am_guide_main" Tags="guidepage" hideinmenus="true">
+        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+    </Item>
+    <Item name="" identifier="am_guide_main2" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
     <Item name="" identifier="am_guide_operations" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
     <Item name="" identifier="am_guide_medical" Tags="guidepage" hideinmenus="true">
+        <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
+    </Item>
+    <Item name="" identifier="am_guide_medical2" Tags="guidepage" hideinmenus="true">
         <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="223,69,38,70" depth="0.6" origin="0.5,0.5" />
     </Item>
     <Item name="" identifier="am_guide_bloodtable" Tags="guidepage" hideinmenus="true">

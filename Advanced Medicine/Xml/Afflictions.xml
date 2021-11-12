@@ -2906,6 +2906,8 @@
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="256,896,128,128" color="10,193,114,255" origin="0,0"/>
   </Affliction>
 
+    <!--Blood groups--> 
+    
   <Affliction
     name="O-"
     identifier="ominus"
