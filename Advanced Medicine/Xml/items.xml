@@ -3036,7 +3036,7 @@
                 <Remove/>
             </StatusEffect>
             <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
-                <Conditional tra_amputation="eq 0" sra_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0"
+                <Conditional tra_amputation="eq 0" sra_amputation="eq 0" ra_fracture="eq 0" nervecut4="eq 0"
                              clampcut4="eq 0" dislocation3="eq 0" t_paralysis="eq 0"/>
                 <Remove/>
             </StatusEffect>
