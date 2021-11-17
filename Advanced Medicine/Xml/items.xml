@@ -744,7 +744,7 @@
                 <ReduceAffliction identifier="arteriesclamp3" amount="1000"/>
             </StatusEffect>
             <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-                <Conditional retractedski4="gte 1"/>
+                <Conditional retractedskin4="gte 1"/>
                 <ReduceAffliction identifier="ra_arterialcut" amount="1000"/>
                 <ReduceAffliction identifier="arteriesclamp4" amount="1000"/>
             </StatusEffect>
