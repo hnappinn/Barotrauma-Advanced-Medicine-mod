@@ -744,7 +744,7 @@
                 <ReduceAffliction identifier="arteriesclamp3" amount="1000"/>
             </StatusEffect>
             <StatusEffect type="OnUse" tags="medical" target="This, Limb" comparison="And">
-                <Conditional retractedski4="gte 1"/>
+                <Conditional retractedskin4="gte 1"/>
                 <ReduceAffliction identifier="ra_arterialcut" amount="1000"/>
                 <ReduceAffliction identifier="arteriesclamp4" amount="1000"/>
             </StatusEffect>
@@ -3036,7 +3036,7 @@
                 <Remove/>
             </StatusEffect>
             <StatusEffect type="Always" target="Character,This" disabledeltatime="true" comparison="And">
-                <Conditional tra_amputation="eq 0" sra_amputation="eq 0" la_fracture="eq 0" nervecut4="eq 0"
+                <Conditional tra_amputation="eq 0" sra_amputation="eq 0" ra_fracture="eq 0" nervecut4="eq 0"
                              clampcut4="eq 0" dislocation3="eq 0" t_paralysis="eq 0"/>
                 <Remove/>
             </StatusEffect>
