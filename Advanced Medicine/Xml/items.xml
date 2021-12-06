@@ -3303,7 +3303,7 @@
     </Item>
 
 <Override>
-<Item name="" identifier="wrench" category="Equipment" Tags="smallitem,tool,simpletool,mechanicalrepairtool,wrenchitem" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" useinhealthinterface="True">
+<Item name="" identifier="wrench" category="Equipment" Tags="smallitem,tool,simpletool,mechanicalrepairtool,wrenchitem,medical" cargocontaineridentifier="metalcrate" Scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True" useinhealthinterface="True">
     <PreferredContainer primary="engcab" minamount="1" maxamount="4" spawnprobability="1"/>
     <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" minamount="0" maxamount="3" spawnprobability="0.25"/>
     <PreferredContainer primary="outpostcrewcabinet" minamount="1" maxamount="2" spawnprobability="0.5"/>
@@ -3333,32 +3333,28 @@
       </Attack>
     <RequiredSkill identifier="medical" level="35"/>
     <StatusEffect target="Limb" tags="medical" type="OnUse">
-    <Conditional dislocation1="gt 0"/>
-    <ReduceAffliction identifier="dislocation1" amount="100"/>
+      <Conditional dislocation1="gt 0"/>
+      <ReduceAffliction identifier="dislocation1" amount="100"/>
     </StatusEffect>
     <StatusEffect target="Limb" tags="medical" type="OnUse">
-    <Conditional dislocation2="gt 0"/>
-    <ReduceAffliction identifier="dislocation2" amount="100"/>
+     <Conditional dislocation2="gt 0"/>
+     <ReduceAffliction identifier="dislocation2" amount="100"/>
     </StatusEffect>
     <StatusEffect target="Limb" tags="medical" type="OnUse">
-    <Conditional dislocation3="gt 0"/>
-    <ReduceAffliction identifier="dislocation3" amount="100"/>
+     <Conditional dislocation3="gt 0"/>
+     <ReduceAffliction identifier="dislocation3" amount="100"/>
     </StatusEffect>
     <StatusEffect target="Limb" tags="medical" type="OnUse">
-    <Conditional dislocation4="gt 0"/>
-    <ReduceAffliction identifier="dislocation4" amount="100"/>
-    </StatusEffect>
-    <StatusEffect target="Limb" tags="medical" type="OnUse">
-    <Conditional dislocation4="gt 0"/>
-    <ReduceAffliction identifier="dislocation4" amount="100"/>
+      <Conditional dislocation4="gt 0"/>
+      <ReduceAffliction identifier="dislocation4" amount="100"/>
     </StatusEffect>
     <StatusEffect target="Limb" tags="OnFailure" type="OnUse" comparison="Or">
-    <Conditional dislocation1="gt 0" dislocation2="gt 0" dislocation3="gt 0" dislocation4="gt 0"/>
-    <Affliction identifier="la_fracture" amount="1"/>
-    <Affliction identifier="ra_fracture" amount="1"/>
-    <Affliction identifier="ll_fracture" amount="1"/>
-    <Affliction identifier="rl_fracture" amount="1"/>
-    <Affliction identifier="severepain" amount="2"/>
+      <Conditional dislocation1="gt 0" dislocation2="gt 0" dislocation3="gt 0" dislocation4="gt 0"/>
+      <Affliction identifier="la_fracture" amount="1"/>
+      <Affliction identifier="ra_fracture" amount="1"/>
+      <Affliction identifier="ll_fracture" amount="1"/>
+      <Affliction identifier="rl_fracture" amount="1"/>
+      <Affliction identifier="severepain" amount="2"/>
     </StatusEffect>
     </MeleeWeapon>
     <aitarget sightrange="500" soundrange="500" fadeouttime="1" />
@@ -3369,6 +3365,67 @@
   </Item>
 </Override>
 <Override>
+  <Item name="" identifier="wrenchdementonite" descriptionidentifier="dementonitetool" variantof="wrench" inventoryiconcolor="136,142,166,255" spritecolor="136,142,166" addedrepairspeedmultiplier="0.4">
+    <PreferredContainer primary="reactorcab" spawnprobability="0" />
+    <PreferredContainer secondary="wreckstoragecab,abandonedstoragecab" spawnprobability="0" />
+    <PreferredContainer primary="outpostcrewcabinet" spawnprobability="0" />
+    <PreferredContainer primary="outposttrashcan" spawnprobability="0" />
+    <Price baseprice="+200">
+      <Price locationtype="outpost" multiplier="1" sold="false" />
+      <Price locationtype="city" multiplier="0.9" sold="false" />
+      <Price locationtype="research" multiplier="1.25" sold="false" />
+      <Price locationtype="military" multiplier="1.25" sold="false" />
+      <Price locationtype="mine" multiplier="1" sold="false" />
+    </Price>
+    <Deconstruct>
+      <Item identifier="iron" />
+      <Item identifier="dementonite" />
+    </Deconstruct>
+    <Fabricate requiresrecipe="true">
+      <RequiredItem identifier="wrench" />
+      <RequiredItem identifier="dementonite" />
+    </Fabricate>
+    <MeleeWeapon reload="*0.7">
+      <Attack targetimpulse="8">
+        <Affliction identifier="blunttrauma" strength="8.5" />
+        <Affliction identifier="psychosis" strength="5" />
+        <Affliction identifier="stun" strength="0.2" />
+      </Attack>
+    </MeleeWeapon>
+  </Item>
+</Override>
+<Override>
+  <Item name="" identifier="wrenchhardened" variantof="wrench" inventoryiconcolor="110,120,110,255" spritecolor="110,120,110" addedrepairspeedmultiplier="0.25">
+    <PreferredContainer />
+    <PreferredContainer />
+    <PreferredContainer />
+    <PreferredContainer />
+    <Price baseprice="+150">
+      <Price locationtype="outpost" multiplier="1" sold="false" />
+      <Price locationtype="city" multiplier="0.9" sold="false" />
+      <Price locationtype="research" multiplier="1.25" sold="false" />
+      <Price locationtype="military" multiplier="1.25" sold="false" />
+      <Price locationtype="mine" multiplier="1" sold="false" />
+    </Price>
+    <Deconstruct>
+      <Item identifier="iron" />
+      <Item identifier="depletedfuel" />
+      <Item identifier="depletedfuel" />
+    </Deconstruct>
+    <Fabricate requiresrecipe="true">
+      <RequiredItem identifier="wrench" />
+      <RequiredItem identifier="depletedfuel" />
+      <RequiredItem identifier="depletedfuel" />
+    </Fabricate>
+    <MeleeWeapon reload="*1.3">
+      <Attack targetimpulse="8" penetration="0.25">
+        <Affliction identifier="blunttrauma" strength="10" />
+        <Affliction identifier="radiationsickness" strength="1" />
+        <Affliction identifier="stun" strength="0.3" />
+      </Attack>
+    </MeleeWeapon>
+  </Item>
+</Override>
 <Item name="" identifier="antinarc" category="Material" maxstacksize="8" cargocontaineridentifier="mediccrate" Tags="smallitem,chem,medical,syringe" useinhealthinterface="true" description="" scale="0.5" impactsoundtag="impact_metal_light" RequireAimToUse="True">
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
     <PreferredContainer primary="medcab" spawnprobability="0.8" />
