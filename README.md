@@ -20,8 +20,8 @@ Surgery, override vanilla medicine, arrhythmias, fractures, arterial bleeding an
 
 Link | Up to date? | Language
 -- | -- | --
-<https://docs.google.com/document/d/1YDvj8geY_CdumwoogSW73Anz7nhhu64ASTH2nLnu2nU> | Mostly up to date | English
-<https://steamcommunity.com/sharedfiles/filedetails/?id=2572094170> | Mostly up to date | Russian
+<https://steamcommunity.com/sharedfiles/filedetails/?id=2572094170> | Up to date | Russian
+<https://docs.google.com/document/d/1YDvj8geY_CdumwoogSW73Anz7nhhu64ASTH2nLnu2nU> | Outdated | English
 <https://gist.github.com/hnappinn/c23018ba9573ae70b7ccf120b4fbe2d0> | Outdated | English
 <https://steamcommunity.com/sharedfiles/filedetails/?id=2508051334> | Outdated | Russian
 
