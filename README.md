@@ -22,9 +22,9 @@ Link | Up to date? | Language
 -- | -- | --
 <https://steamcommunity.com/sharedfiles/filedetails/?id=2572094170> | Up to date | Russian
 <https://docs.google.com/document/d/1N9mofyBbT0meC5sgUooYB9Etq-eCcZnFcz4OiqrSZdI> | Outdated | English
-<https://docs.google.com/document/d/1YDvj8geY_CdumwoogSW73Anz7nhhu64ASTH2nLnu2nU> | Outdated | English
-<https://gist.github.com/hnappinn/c23018ba9573ae70b7ccf120b4fbe2d0> | Outdated | English
-<https://steamcommunity.com/sharedfiles/filedetails/?id=2508051334> | Outdated | Russian
+<https://docs.google.com/document/d/1YDvj8geY_CdumwoogSW73Anz7nhhu64ASTH2nLnu2nU> | Abandoned | English
+<https://gist.github.com/hnappinn/c23018ba9573ae70b7ccf120b4fbe2d0> | Abandoned | English
+<https://steamcommunity.com/sharedfiles/filedetails/?id=2508051334> | Abandoned | Russian
 
 ---
 
