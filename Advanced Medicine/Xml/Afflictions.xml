@@ -57,7 +57,7 @@
       </StatusEffect>
     </Effect>
 
-    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="0,133,128,128" color="0,255,0,255" origin="0,0"/>
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="0,128,128,128" color="0,255,0,255" origin="0,0"/>
   </Affliction>
 
   <Affliction
@@ -154,7 +154,7 @@
       </StatusEffect>
     </Effect>
 
-    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="0,6,128,128" color="0,255,0,255" origin="0,0"/>
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="0,0,128,128" color="0,255,0,255" origin="0,0"/>
   </Affliction>
 
 <Affliction
@@ -209,7 +209,7 @@
     </StatusEffect>
     </Effect>
 
-  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="124,6,128,128" color="106,106,198,255" origin="0,0"/>
+  <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="128,0,128,128" color="106,106,198,255" origin="0,0"/>
     
   </Affliction>
 
@@ -270,7 +270,7 @@
     </Effect>
 
 
-    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="124,133,128,128" color="68,157,198,255" origin="0,0"/>
+    <icon texture="Mods/Advanced Medicine/Images/AfflictionIconAtlas.png" sourcerect="128,128,128,128" color="68,157,198,255" origin="0,0"/>
   </Affliction>
   
    <Affliction
