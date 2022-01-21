@@ -71,8 +71,8 @@
 	<entityname.bloodpackoplus>Blood Pack O+</entityname.bloodpackoplus>
 	<!-- <entitydescription.bloodpackoplus></entitydescription.bloodpackoplus> -->
 
-	<entityname.antibloodloss2>Blood Pack O-</entityname.antibloodloss2>
-	<!-- <entitydescription.antibloodloss2></entitydescription.antibloodloss2> -->
+	<entityname.bloodpackominus>Blood Pack O-</entityname.bloodpackominus>
+	<!-- <entitydescription.bloodpackominus></entitydescription.bloodpackominus> -->
 
 	<entityname.bloodpackaplus>Blood Pack A+</entityname.bloodpackaplus>
 	<!-- <entitydescription.bloodpackaplus></entitydescription.bloodpackaplus> -->
@@ -91,9 +91,13 @@
 
 	<entityname.bloodpackabminus>Blood Pack AB-</entityname.bloodpackabminus>
 	<!-- <entitydescription.bloodpackabminus></entitydescription.bloodpackabminus> -->
-
+	
 	<entityname.antibloodloss3>Filtered Blood Pack</entityname.antibloodloss3>
+	<!-- (this one is deprecated) -->
 	<!-- <entitydescription.antibloodloss3></entitydescription.antibloodloss3> -->
+	
+	<entityname.antibloodloss2>Filtered Blood Pack</entityname.antibloodloss2>
+	<!-- <entitydescription.antibloodloss2></entitydescription.antibloodloss2> -->
 
 	<entityname.antiseptic>Antiseptic</entityname.antiseptic>
 	<!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
