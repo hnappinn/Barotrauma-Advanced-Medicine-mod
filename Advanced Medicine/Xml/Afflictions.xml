@@ -2865,7 +2865,6 @@
     <Effect minstrength="0" maxstrength="100" strengthchange="-1">
     <StatusEffect target="Character">
         <ReduceAffliction identifier="vf" amount="1" />
-        <ReduceAffliction identifier="vt" amount="1" />
         <ReduceAffliction identifier="asys" amount="1.5" />
         <ReduceAffliction identifier="oxygenlow" amount="1" />
         <ReduceAffliction identifier="hypoxia" amount="0.3" />
