@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Simplified Chinese" nowhitespace="false" translatedname="中文(简体)">
+
+<!-- MESSAGES -->
+	<stasisbugequipconfirmation>你确定要把自己装进停滞袋吗?</stasisbugequipconfirmation>
+<!-- ITEMS -->
+
+	<entityname.aed>自动体外除颤器</entityname.aed>
+	<entitydescription.aed>一种向心脏提供电击以稳定心脏心律失常的医疗设备。用于处于室性心动过速或心室颤动状态的患者.</entitydescription.aed>
+	
+	<entityname.advscalpel>手术刀</entityname.advscalpel>
+	<entitydescription.advscalpel>手术过程中用来切开患者皮肤的工具.</entitydescription.advscalpel>
+	
+	<entityname.advhemostat>止血钳</entityname.advhemostat>
+	<entitydescription.advhemostat>手术过程中用来夹住患者血管的工具.</entitydescription.advhemostat>
+
+	<entityname.advretractors>牵开器</entityname.advretractors>
+	<entitydescription.advretractors>手术过程中用来牵开患者皮肤的工具.</entitydescription.advretractors>
+
+	<entityname.autocpr>自动心肺复苏器</entityname.autocpr>
+	<entitydescription.autocpr>一种自动、便携、电池供电的心肺复苏装置.</entitydescription.autocpr>
+	
+	<entityname.bvm>急救呼吸袋</entityname.bvm>
+	<entitydescription.bvm>袋阀式面罩(BVM),是一种手持式设备，通常用于为停止呼吸或者呼吸不畅的患者提供氧气.</entitydescription.bvm>
+
+	<entityname.stasisbag>停滞袋</entityname.stasisbag>
+	<entitydescription.stasisbag>使身体进入休眠状态，防止大脑缺氧.</entitydescription.stasisbag>
+
+	<entityname.surgerysaw>手术锯</entityname.surgerysaw>
+	<entitydescription.surgerysaw>手术过程中用来锯穿患者骨头的工具.</entitydescription.surgerysaw>		
+	
+	<entityname.suture>缝合线</entityname.suture>
+	<entitydescription.suture>可生物降解的缝线，用于缝合撕裂伤和手术切口.</entitydescription.suture>
+
+	<entityname.surgicaldrill>手术钻</entityname.surgicaldrill>
+	<entitydescription.surgicaldrill>手术过程中用来给患者骨头钻孔的工具.</entitydescription.surgicaldrill>
+
+	<entityname.mannitol>甘露醇+</entityname.mannitol>
+	<entitydescription.mannitol>一种高度复杂且昂贵的药物化合物，加入了些许木卫二画皮虫卵的成分，强化了其药效，能刺激神经组织的再生.</entitydescription.mannitol>
+	
+	<entityname.osteosynthesisimplants>骨合成植入物</entityname.osteosynthesisimplants>
+	<entitydescription.osteosynthesisimplants>钛质的骨合成植入物用于治愈骨折的开放性复位手术.</entitydescription.osteosynthesisimplants>
+	
+	<entityname.operatingtable>手术台</entityname.operatingtable>
+	<entitydescription.operatingtable>一个内置基本人工通风的手术台.</entitydescription.operatingtable>
+
+	<entityname.ointment>抗生素软膏</entityname.ointment>
+	<entitydescription.ointment>一种高度抗菌的凝胶，能促进烧伤的恢复并且对轻微的感染也有效果.</entitydescription.ointment>
+
+	<entityname.tweezers>镊子</entityname.tweezers>
+	<entitydescription.tweezers>一种在手术中用于取出子弹以及受损或坏死组织的小工具.</entitydescription.tweezers>
+
+	<entityname.tourniquet>止血带</entityname.tourniquet>
+	<entitydescription.tourniquet>一种通过向肢体动脉施加压力来减缓血液流动的装置，一般用于四肢动脉大出血的急救.</entitydescription.tourniquet>
+	
+	<entityname.vialrack>试管架</entityname.vialrack>
+	<entitydescription.vialrack>存放试管和小瓶的架子.</entitydescription.vialrack>
+
+	<entityname.bloodanalyzer>血液分析仪</entityname.bloodanalyzer>
+	<entitydescription.bloodanalyzer>全自动血型测定仪器.</entitydescription.bloodanalyzer>
+
+	<entityname.bloodcollector>采血盒</entityname.bloodcollector>
+	<entitydescription.bloodcollector>一个空的采血盒，请将它插入«血液分析仪»</entitydescription.bloodcollector>
+
+	<entityname.emptybloodpack>空血袋</entityname.emptybloodpack>
+	<entitydescription.emptybloodpack>研究表明，木卫二最受欢迎的血型为O+与O-</entitydescription.emptybloodpack>
+
+	<entityname.bloodrefinery>血液加工站</entityname.bloodrefinery>
+	<entitydescription.bloodrefinery>用来加工"志愿者"们贡献的鲜血，使其变为需要的血型.</entitydescription.bloodrefinery>
+
+	<entityname.bloodpackoplus>血袋(O+)</entityname.bloodpackoplus>
+	<entitydescription.bloodpackoplus>经验丰富的医生们都知道它该如何处理.</entitydescription.bloodpackoplus>
+
+	<entityname.bloodpackominus>血袋(O-)</entityname.bloodpackominus>
+	<entitydescription.bloodpackominus>你可以将它用在任何人的身上，是的，任何人.</entitydescription.bloodpackominus>
+
+	<entityname.bloodpackaplus>血袋(A+)</entityname.bloodpackaplus>
+	<!-- <entitydescription.bloodpackaplus></entitydescription.bloodpackaplus> -->
+
+	<entityname.bloodpackbplus>血袋(B+)</entityname.bloodpackbplus>
+	<!-- <entitydescription.bloodpackbplus></entitydescription.bloodpackbplus> -->
+
+	<entityname.bloodpackabplus>血袋(AB+)</entityname.bloodpackabplus>
+	<!-- <entitydescription.bloodpackabplus></entitydescription.bloodpackabplus> -->
+
+	<entityname.bloodpackaminus>血袋(A-)</entityname.bloodpackaminus>
+	<!-- <entitydescription.bloodpackaminus></entitydescription.bloodpackaminus> -->
+
+	<entityname.bloodpackbminus>血袋(B-)</entityname.bloodpackbminus>
+	<!-- <entitydescription.bloodpackbminus></entitydescription.bloodpackbminus> -->
+
+	<entityname.bloodpackabminus>血袋(AB-)</entityname.bloodpackabminus>
+	<!-- <entitydescription.bloodpackabminus></entitydescription.bloodpackabminus> -->
+	
+	<entityname.antibloodloss3>过滤血袋</entityname.antibloodloss3>
+	<!-- (this one is deprecated) -->
+	<!-- <entitydescription.antibloodloss3></entitydescription.antibloodloss3> -->
+	
+	<entityname.antibloodloss2>过滤血袋</entityname.antibloodloss2>
+	<!-- <entitydescription.antibloodloss2></entitydescription.antibloodloss2> -->
+
+	<entityname.antiseptic>消毒剂</entityname.antiseptic>
+	<!-- <entitydescription.antiseptic></entitydescription.antiseptic> -->
+
+	<entityname.antisepticspray>消毒喷雾器</entityname.antisepticspray>
+	<!-- <entitydescription.antisepticspray></entitydescription.antisepticspray> -->
+	
+	<entityname.propofol>异丙酚</entityname.propofol>
+	<entitydescription.propofol>异丙酚，一种短效药物，会导致意识模糊与失忆.一般用于开始和保持全身麻醉，紧急情况下可以使用它就地手术，无需手术台.</entitydescription.propofol>
+	<entityname.reboa>主动脉内球囊</entityname.reboa>
+	<entitydescription.reboa>是一种在主动脉内放置血管内球囊以控制出血、增加后负荷并在创伤性失血休克中暂时维持血压的急救用具。REBOA被认为是主动脉阻断开胸术的微创替代方法</entitydescription.reboa>
+	<entityname.drainage>引流管</entityname.drainage>
+	<entitydescription.drainage>通过手术引出肺部的积液。治疗因肺部积液引起的各种疾病.</entitydescription.drainage>
+	<entityname.ominuscard>血型O-</entityname.ominuscard>
+	<entityname.opluscard>血型O+</entityname.opluscard>
+	<entityname.aminuscard>血型A-</entityname.aminuscard>
+	<entityname.apluscard>血型A+</entityname.apluscard>
+	<entityname.bminuscard>血型B-</entityname.bminuscard>
+	<entityname.bpluscard>血型B+</entityname.bpluscard>
+	<entityname.abminuscard>血型AB-</entityname.abminuscard>
+	<entityname.abpluscard>血型AB+</entityname.abpluscard>
+	<entityname.armlock1>受伤的右臂</entityname.armlock1>
+	<entityname.armlock2>受伤的左臂</entityname.armlock2>
+	<entityname.needle>气胸针</entityname.needle>
+	<entitydescription.needle>带减压阀的针头，使空气或液体从胸膜腔或心包排出.</entitydescription.needle>
+	<entityname.rarm>右臂</entityname.rarm>
+	<entityname.larm>左臂</entityname.larm>
+	<entityname.rleg>右腿</entityname.rleg>
+	<entityname.lleg>左腿</entityname.lleg>
+	<entityname.llegp>左腿仿生假肢</entityname.llegp>
+	<entityname.rlegp>右腿仿生假肢</entityname.rlegp>
+	<entityname.larmp>左臂仿生假肢</entityname.larmp>
+	<entityname.rarmp>右臂仿生假肢</entityname.rarmp>
+	<!-- AFFLICTIONS -->
+	
+	
+	<!-- TEMPLATE -->
+	
+	<!-- <afflictionname.organdamage>Повреждение органа</afflictionname.organdamage> -->
+	<!-- <afflictiondescription.organdamage>Пациент страдает от резкой боли в одном из внутренних органов. Видимых повреждений на коже нет.</afflictiondescription.organdamage> -->
+	<!-- <afflictioncauseofdeath.organdamage>Смерть из-за отказа внутреннего органа.</afflictioncauseofdeath.organdamage> -->
+	<!-- <afflictioncauseofdeathself.organdamage>Вы погибли из-за отказа внутреннего органа.</afflictioncauseofdeathself.organdamage> -->
+	
+	<!-- TEMPLATE -->
+	
+	<afflictionname.vt>室性心动过速</afflictionname.vt>
+	<afflictiondescription.vt>因缺氧或低血压引发的心动过速.</afflictiondescription.vt>
+	
+	<afflictionname.vf>心室颤动</afflictionname.vf>
+	<afflictiondescription.vf>心电图检测到不规则心率.</afflictiondescription.vf>
+	
+	<afflictionname.asys>心脏停搏</afflictionname.asys>
+	<afflictiondescription.asys>心电图未检测到心率.</afflictiondescription.asys>
+	
+	<afflictionname.hypotension>低血压</afflictionname.hypotension>
+	<afflictiondescription.hypotension>脉搏减弱.</afflictiondescription.hypotension>
+	
+	<afflictionname.hypoxia>脑缺氧</afflictionname.hypoxia>
+	<afflictiondescription.hypoxia>患者有神经和大脑损伤的迹象.</afflictiondescription.hypoxia>
+	<afflictioncauseofdeath.hypoxia>脑死亡</afflictioncauseofdeath.hypoxia>
+	<afflictioncauseofdeathself.hypoxia>你死于脑缺氧.</afflictioncauseofdeathself.hypoxia>
+	
+	<afflictionname.surgeryincision>手术切口</afflictionname.surgeryincision>
+	<afflictiondescription.surgeryincision>一个手术刀划出的切口.</afflictiondescription.surgeryincision>
+		
+	<afflictionname.clampedbleeders>夹闭血管</afflictionname.clampedbleeders>
+	<afflictiondescription.clampedbleeders>手术中的出血已经止住了.</afflictiondescription.clampedbleeders>
+	
+	<afflictionname.arteriesclamp>夹闭动脉</afflictionname.arteriesclamp>
+	<afflictiondescription.arteriesclamp>动脉出血暂时止住了.</afflictiondescription.arteriesclamp>
+	
+	<afflictionname.boneclamp>夹板</afflictionname.boneclamp>
+	<afflictiondescription.boneclamp>骨折已经用夹板固定.</afflictiondescription.boneclamp>
+	
+	<afflictionname.drilledbones>钻骨</afflictionname.drilledbones>
+	<afflictiondescription.drilledbones>这些骨折的骨头已经可以进行矫形手术了.</afflictiondescription.drilledbones>
+	
+	<afflictionname.retractedskin>牵开皮肤</afflictionname.retractedskin>
+	<afflictiondescription.retractedskin>切开的皮肤由牵开器保持打开状态.</afflictiondescription.retractedskin>
+	
+	<afflictionname.suturedi>缝合切口</afflictionname.suturedi>
+	<afflictiondescription.suturedi>一个手术切口已通过缝线缝合.</afflictiondescription.suturedi>
+	
+	<afflictionname.suturedw>缝合伤口</afflictionname.suturedw>
+	<afflictiondescription.suturedw>伤口已被缝合.</afflictiondescription.suturedw>
+	
+	<afflictionname.boncut>锯骨</afflictionname.boncut>
+	<afflictiondescription.boncut>骨头已被锯开.</afflictiondescription.boncut>
+	
+	<afflictionname.fracture>骨折</afflictionname.fracture>
+	<afflictiondescription.fracture>一根或多根骨头断裂，导致剧烈疼痛和运动障碍.</afflictiondescription.fracture>
+	
+	<afflictionname.arterialcut>动脉出血</afflictionname.arterialcut>
+	<afflictiondescription.arterialcut>动脉破裂，导致严重失血.</afflictiondescription.arterialcut>
+	
+	<afflictionname.traumaticshock>创伤性休克</afflictionname.traumaticshock>
+	<afflictiondescription.traumaticshock>患者承受了剧烈的痛苦和压力.</afflictiondescription.traumaticshock>
+		
+	<afflictionname.analgesia>镇痛</afflictionname.analgesia>
+	<afflictiondescription.analgesia>患者对疼痛不敏感.</afflictiondescription.analgesia>
+
+	<afflictionname.anesthesia>麻醉</afflictionname.anesthesia>
+	<afflictiondescription.anesthesia>患者处于药物引起的失忆与镇静状态.</afflictiondescription.anesthesia>
+
+	<afflictionname.necrosis>坏死</afflictionname.necrosis>
+	<afflictiondescription.necrosis>坏死的组织正在逐渐增加并导致一些致命的并发症.</afflictiondescription.necrosis>
+	<afflictioncauseofdeath.necrosis>死于坏死.</afflictioncauseofdeath.necrosis>
+	<afflictioncauseofdeathself.necrosis>你死于伤口坏死.</afflictioncauseofdeathself.necrosis>
+
+	<afflictionname.sepsis>败血症</afflictionname.sepsis>
+	<afflictiondescription.sepsis>致病细菌侵入血液循环，产生毒素导致全身急性感染.</afflictiondescription.sepsis>
+	<afflictioncauseofdeath.sepsis>死于败血症.</afflictioncauseofdeath.sepsis>
+	<afflictioncauseofdeathself.sepsis>你死于败血症.</afflictioncauseofdeathself.sepsis>
+
+	<afflictionname.infectedwound>伤口感染</afflictionname.infectedwound>
+	<afflictiondescription.infectedwound>伤口看起来红肿发炎了.</afflictiondescription.infectedwound>
+	
+	<afflictionname.bandaged>包扎</afflictionname.bandaged>
+	<afflictiondescription.bandaged>无菌绷带包扎形成的防护层可以防止伤口感染.</afflictiondescription.bandaged>
+
+	<afflictionname.ointmented>药膏</afflictionname.ointmented>
+	<afflictiondescription.ointmented>药膏形成的防护层可以保护并清洁伤口，使其免受细菌的侵害.</afflictiondescription.ointmented>
+	<afflictionname.cpr_buff>心肺复苏术</afflictionname.cpr_buff>
+	<afflictionname.surgeryincision1>手术切口</afflictionname.surgeryincision1>
+	<afflictionname.surgeryincision2>手术切口</afflictionname.surgeryincision2>
+	<afflictionname.surgeryincision3>手术切口</afflictionname.surgeryincision3>
+	<afflictionname.surgeryincision4>手术切口</afflictionname.surgeryincision4>
+	<afflictionname.surgeryincision5>手术切口</afflictionname.surgeryincision5>
+	<afflictionname.surgeryincision6>手术切口</afflictionname.surgeryincision6>
+	<afflictionname.clampedbleeders1>夹闭血管</afflictionname.clampedbleeders1>
+	<afflictionname.clampedbleeders2>夹闭血管</afflictionname.clampedbleeders2>
+	<afflictionname.clampedbleeders3>夹闭血管</afflictionname.clampedbleeders3>
+	<afflictionname.clampedbleeders4>夹闭血管</afflictionname.clampedbleeders4>
+	<afflictionname.clampedbleeders5>夹闭血管</afflictionname.clampedbleeders5>
+	<afflictionname.clampedbleeders6>夹闭血管</afflictionname.clampedbleeders6>
+	<afflictionname.arteriesclamp1>夹闭动脉</afflictionname.arteriesclamp1>
+	<afflictionname.arteriesclamp2>夹闭动脉</afflictionname.arteriesclamp2>
+	<afflictionname.arteriesclamp3>夹闭动脉</afflictionname.arteriesclamp3>
+	<afflictionname.arteriesclamp4>夹闭动脉</afflictionname.arteriesclamp4>
+	<afflictionname.arteriesclamp5>夹闭动脉</afflictionname.arteriesclamp5>
+	<afflictionname.arteriesclamp6>夹闭动脉</afflictionname.arteriesclamp6>
+	<afflictionname.boneclamp1>夹板</afflictionname.boneclamp1>
+	<afflictionname.boneclamp2>夹板</afflictionname.boneclamp2>
+	<afflictionname.boneclamp3>夹板</afflictionname.boneclamp3>
+	<afflictionname.boneclamp4>夹板</afflictionname.boneclamp4>
+	<afflictionname.boneclamp5>夹板</afflictionname.boneclamp5>
+	<afflictionname.boneclamp6>夹板</afflictionname.boneclamp6>
+	<afflictionname.boneclamp7>夹板</afflictionname.boneclamp7>
+	<afflictionname.needlec>气胸减压</afflictionname.needlec>
+	<afflictiondescription.needlec>使胸膜腔内的压力正常，只可救急，无法根治.</afflictiondescription.needlec>
+	<afflictionname.drilledbones1>钻骨</afflictionname.drilledbones1>
+	<afflictionname.drilledbones2>钻骨</afflictionname.drilledbones2>
+	<afflictionname.drilledbones3>钻骨</afflictionname.drilledbones3>
+	<afflictionname.drilledbones4>钻骨</afflictionname.drilledbones4>
+	<afflictionname.drilledbones5>钻骨</afflictionname.drilledbones5>
+	<afflictionname.drilledbones6>钻骨</afflictionname.drilledbones6>
+	<afflictionname.retractedskin1>牵开皮肤</afflictionname.retractedskin1>
+	<afflictionname.retractedskin2>牵开皮肤</afflictionname.retractedskin2>
+	<afflictionname.retractedskin3>牵开皮肤</afflictionname.retractedskin3>
+	<afflictionname.retractedskin4>牵开皮肤</afflictionname.retractedskin4>
+	<afflictionname.retractedskin5>牵开皮肤</afflictionname.retractedskin5>
+	<afflictionname.retractedskin6>牵开皮肤</afflictionname.retractedskin6>
+	<afflictionname.suturedi1>缝合切口</afflictionname.suturedi1>
+	<afflictionname.suturedi2>缝合切口</afflictionname.suturedi2>
+	<afflictionname.suturedi3>缝合切口</afflictionname.suturedi3>
+	<afflictionname.suturedi4>缝合切口</afflictionname.suturedi4>
+	<afflictionname.suturedi5>缝合切口</afflictionname.suturedi5>
+	<afflictionname.suturedi6>缝合切口</afflictionname.suturedi6>
+	<afflictionname.boncut1>锯骨</afflictionname.boncut1>
+	<afflictionname.boncut2>锯骨</afflictionname.boncut2>
+	<afflictionname.boncut3>锯骨</afflictionname.boncut3>
+	<afflictionname.boncut4>锯骨</afflictionname.boncut4>
+	<afflictionname.ra_fracture>肱骨骨折</afflictionname.ra_fracture>
+	<afflictionname.la_fracture>肱骨骨折</afflictionname.la_fracture>
+	<afflictionname.rl_fracture>股骨骨折</afflictionname.rl_fracture>
+	<afflictionname.ll_fracture>股骨骨折</afflictionname.ll_fracture>
+	<afflictionname.t_fracture>肋骨骨折</afflictionname.t_fracture>
+	<afflictionname.n_fracture>颈骨骨折</afflictionname.n_fracture>
+	<afflictionname.h_fracture>颅骨骨折</afflictionname.h_fracture>
+	<afflictionname.dislocation1>脱臼</afflictionname.dislocation1>
+	<afflictionname.dislocation2>脱臼</afflictionname.dislocation2>
+	<afflictionname.dislocation3>脱臼</afflictionname.dislocation3>
+	<afflictionname.dislocation4>脱臼</afflictionname.dislocation4>
+	<afflictionname.ll_arterialcut>股动脉出血</afflictionname.ll_arterialcut>
+	<afflictionname.rl_arterialcut>股动脉出血</afflictionname.rl_arterialcut>
+	<afflictionname.la_arterialcut>肱动脉出血</afflictionname.la_arterialcut>
+	<afflictionname.ra_arterialcut>肱动脉出血</afflictionname.ra_arterialcut>
+	<afflictionname.t_arterialcut>主动脉出血</afflictionname.t_arterialcut>
+	<afflictionname.h_arterialcut>颈动脉出血</afflictionname.h_arterialcut>
+	<afflictionname.nervecut1>神经损伤</afflictionname.nervecut1>
+	<afflictionname.nervecut2>神经损伤</afflictionname.nervecut2>
+	<afflictionname.nervecut3>神经损伤</afflictionname.nervecut3>
+	<afflictionname.nervecut4>神经损伤</afflictionname.nervecut4>
+	<afflictionname.nervecut5>神经损伤</afflictionname.nervecut5>
+	<afflictionname.nervecut6>神经损伤</afflictionname.nervecut6>
+	<afflictionname.clampcut1>肌腱损伤</afflictionname.clampcut1>
+	<afflictionname.clampcut2>肌腱损伤</afflictionname.clampcut2>
+	<afflictionname.clampcut3>肌腱损伤</afflictionname.clampcut3>
+	<afflictionname.clampcut4>肌腱损伤</afflictionname.clampcut4>
+	<afflictionname.oxygenlow>低氧</afflictionname.oxygenlow>
+	<afflictiondescription.oxygenlow>嘴唇发青，皮肤苍白，大量出汗.</afflictiondescription.oxygenlow>
+	<afflictionname.table>疗养</afflictionname.table>
+	<afflictionname.immunity>免疫力</afflictionname.immunity>
+	<afflictionname.hemotransfusionshock>输血休克</afflictionname.hemotransfusionshock>
+	<afflictiondescription.hemotransfusionshock>患者经历幻觉，神情焦虑，呼吸急促，感到窒息，胸部伴随呼吸感到疼痛.</afflictiondescription.hemotransfusionshock>
+	<afflictionname.rupturedface>面部破裂</afflictionname.rupturedface>
+	<afflictiondescription.rupturedface>患者在饮食和说话方面有困难.</afflictiondescription.rupturedface>
+	<afflictionname.foreignbody>异物</afflictionname.foreignbody>
+	<afflictiondescription.foreignbody>异物卡在身体里面.</afflictiondescription.foreignbody>
+	<afflictionname.tra_amputation>外伤性截肢</afflictionname.tra_amputation>
+	<afflictiondescription.tra_amputation>右臂的大部分组织被撕下.</afflictiondescription.tra_amputation>
+	<afflictionname.tla_amputation>外伤性截肢</afflictionname.tla_amputation>
+	<afflictiondescription.tla_amputation>左臂的大部分组织被撕下.</afflictiondescription.tla_amputation>
+	<afflictionname.trl_amputation>外伤性截肢</afflictionname.trl_amputation>
+	<afflictiondescription.trl_amputation>右腿的大部分组织被撕下.</afflictiondescription.trl_amputation>
+	<afflictionname.tll_amputation>外伤性截肢</afflictionname.tll_amputation>
+	<afflictiondescription.tll_amputation>左腿的大部分组织被撕下.</afflictiondescription.tll_amputation>
+	<afflictionname.sra_amputation>截肢</afflictionname.sra_amputation>
+	<afflictiondescription.sra_amputation>右臂被手术切除.</afflictiondescription.sra_amputation>
+	<afflictionname.sla_amputation>截肢</afflictionname.sla_amputation>
+	<afflictiondescription.sla_amputation>左臂被手术切除.</afflictiondescription.sla_amputation>
+	<afflictionname.srl_amputation>截肢</afflictionname.srl_amputation>
+	<afflictiondescription.srl_amputation>右腿被手术切除.</afflictiondescription.srl_amputation>
+	<afflictionname.sll_amputation>截肢</afflictionname.sll_amputation>
+	<afflictiondescription.sll_amputation>左腿被手术切除.</afflictiondescription.sll_amputation>
+	<afflictionname.sh_amputation>砍头</afflictionname.sh_amputation>
+	<afflictiondescription.sh_amputation>头部被手术切除.</afflictiondescription.sh_amputation>
+	<afflictionname.llp>仿生假体</afflictionname.llp>
+	<afflictionname.rlp>仿生假体</afflictionname.rlp>
+	<afflictionname.lap>仿生假体</afflictionname.lap>
+	<afflictionname.rap>仿生假体</afflictionname.rap>
+	<afflictionname.t_paralysis>脊髓损伤</afflictionname.t_paralysis>
+	<afflictiondescription.t_paralysis>病人无法控制身体.</afflictiondescription.t_paralysis>
+	<afflictionname.pneumothorax>气胸</afflictionname.pneumothorax>
+	<afflictiondescription.pneumothorax>患者呼吸困难，按压胸部时可听见异响.</afflictiondescription.pneumothorax>
+	<afflictionname.eventration>开肠破肚</afflictionname.eventration>
+	<afflictiondescription.eventration>腹部的内容物从伤口中流出来.</afflictiondescription.eventration>
+	<afflictionname.internalbleeding>内出血</afflictionname.internalbleeding>
+	<afflictiondescription.internalbleeding>病人失血过多，并伴有呕血.</afflictiondescription.internalbleeding>
+	<afflictionname.invertcontrols>混乱</afflictionname.invertcontrols>
+	<afflictionname.respiratoryarrest>停止呼吸</afflictionname.respiratoryarrest>
+	<afflictiondescription.respiratoryarrest>患者停止了自主呼吸.</afflictiondescription.respiratoryarrest>
+	<afflictionname.severepain>剧痛</afflictionname.severepain>
+	<afflictionname.pain>疼痛</afflictionname.pain>
+	<afflictionname.pain1>疼痛</afflictionname.pain1>
+	<afflictionname.pain2>疼痛</afflictionname.pain2>
+	<afflictionname.pain3>疼痛</afflictionname.pain3>
+	<afflictionname.pain4>疼痛</afflictionname.pain4>
+	<afflictionname.pain5>疼痛</afflictionname.pain5>
+	<afflictionname.pain6>疼痛</afflictionname.pain6>
+</infotexts>
